@@ -1,0 +1,81 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+              <h3>
+              {%- if site.author -%}
+                {{ site.author | escape }}
+              {%- else -%}
+                {{ site.title | escape }}
+              {%- endif -%}
+              </h3>
+              <p>Stampa digitale su tessuto</p>
+            </li>
+            <li><address>Loc. Sant'Antonio <br> 37031 Illasi (VR)</address></li>
+            <li><p>P.I.: 01628380238</p></li>
+            <li><span class="grigo-icons grigo-phone"></span><span>+39 045 7834054</span></li>
+            <li><span class="grigo-icons grigo-fax"></span><span>+39 045 6520415</span></li>
+            {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}"><span class="grigo-icons grigo-mail"></span><span>{{ site.email }}</span></a></li>
+            {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <h4>Esplora</h4>
+        <div class="link_footer">
+        <ul>
+        {% for page in site.pages %}
+            {% unless page.exclude %}
+               <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+            {{ page.title }}
+            </a></li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+        <h5>prodotti</h5>
+        <ul>
+          {% for node in site.products %}
+            {% if page.url == node.url %}
+              <li><a class="page-link active" href="{{ node.url }}">
+              {{ node.title }}
+              </a>
+            </li>
+            {% else %}
+             <li><a href="{{node.url}}">{{node.title}}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <h4>Contattaci</h4>
+        <form action="">
+          <div class="form-col"><input type="text" name="name" placeholder="Nome" required></div>
+          <div class="form-col"><input type="text" name="company" placeholder="Azienda" required></div>
+          <div class="form-col"><input type="tel" name="telephone" placeholder="123456789" required></div>
+          <div class="form-col"><input type="email" name="email" placeholder="info@example.com" required></div>
+          <div class="form-col-textarea"><textarea name="message" id="" cols="30" rows="5" placeholder="Il tuo messaggio..." required></textarea></div>
+          <div class="form-col-textare ">
+            <label class="form-checkbox">Accettazione dei <a href="">Termini e condizioni</a>
+            <input type="checkbox" name="Termini e condizioni" value="Termini e condizioni"><span class="checkmark"></span> </label>
+          </div>
+          <div class="form-col-textarea"><button type="submit" value="submit" 
+class="g-recaptcha btn btn-default btn-large"
+data-sitekey="6Lfw23EUAAAAAP_vsoHA3Yc69VNjTZT9essKsDwV"
+data-callback="YourOnSubmitFn">
+Invia
+</button></div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "it" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <div id="st-container" class="st-container">
+      <nav class="st-menu" id="menu">
+        <ul>
+          {% for node in site.products %}
+            {% if page.url == node.url %}
+              <li><a class="page-link active" href="{{ node.url }}">
+              {{ node.title }}
+              </a>
+            </li>
+            {% else %}
+             <li><a href="{{node.url}}">{{node.title}}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="st-pusher">
+        <div class="st-content">
+         {%- include header.html -%}
+          <div class="st-content-inner">
+            <main class="page-content" aria-label="Content">
+              <div class="wrapper">
+                {{ content }}
+              </div>
+            </main>
+
+            {%- include footer.html -%}
+            {%- include static_link.html -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{{'/assets/javascript/menu.js'}}"></script>
+  </body>
+
+</html>

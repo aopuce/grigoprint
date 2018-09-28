@@ -1,0 +1,71 @@
+html
+  +fluid-type($min_width, $max_width, $min_font, $max_font)
+
+
+body
+  font-size: inherit
+  font-family: $text_font_family
+  font-weight: 300
+  line-height: 160%
+  +fluid-type($min_width, $max_width, $min_font, $max_font)
+  color: $long-text
+
+h1, h2, h3, h4, h5, h6
+  font-family: $h-font-family
+  text-transform: uppercase
+
+
+// Heding wid fluid-type
+$mod_1: 1.2 // mobile
+$mod_2: 1.5 // desktop
+
+h1
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+  font-weight: 900
+
+h2
+  font-size: $mod_1*$mod_1*$mod_1 *1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+  font-weight: 900
+
+h3
+  font-size: $mod_1*$mod_1 *1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font)
+  font-weight: 900
+h4
+  font-size: 1.2rem
+  +fluid-type($min_width, $max_width, $mod_1*$min_font, $mod_2*$min_font)
+  font-weight: 900
+h5
+  font-size: 1rem
+  +fluid-type($min_width, $max_width, $mod_1, $mod_2)
+  font-weight: 500
+  font-style: italic
+
+h1, h2, h3, h4, h5, h6
+  line-height: 160%
+
+a, a:hover, a:focus
+  text-decoration: none
+
+button
+  font-size: inherit
+
+p
+  +leader(.5)
+  +trailer(.5)
+  @media screen and ($screen-sm)
+    +leader(.7)
+    +trailer(.7)
+  @media screen and ($screen-md)
+    +leader(.85)
+    +trailer(.85)
+  @media screen and ($screen-lg)
+    +leader(1)
+    +trailer(1)
+strong, b
+  font-weight: 700
+em, i
+  font-style: italic
+  

@@ -1,0 +1,153 @@
+.site-footer
+	background: $long-text 
+	padding-bottom: 60px
+	@media screen and (min-width: $screen-sm)
+		padding-bottom: 0
+	color: $back-full-text
+	font-weight: bold
+	a
+		color: $back-full-text
+		font-family: $text_font_family, sans-serif
+		font-weight: 400
+		font-style: italic
+		&:hover
+			text-decoration: underline
+.footer-col-wrapper
+	display: flex
+	flex-wrap: wrap
+.footer-col
+	flex: 0 0 100%
+	padding: gutter($susy-mobile)
+	@media screen and (min-width: $screen-sm)
+		+susy-use($susy-tablet)
+			flex: 0 0 span(4 narrow of 8 narrow )
+			padding-left: gutter()
+			padding-right: 0
+			&:first-child
+				flex: 0 0 100%
+			&:nth-child(2)
+				border-bottom: none
+			// &:last-child
+			// 	padding: gutter($susy-tablet) 0
+	@media screen and (min-width: $screen-md)
+		+susy-use($susy-laptop)
+			flex: 0 0 span(4 of 12 )
+			padding: gutter() / 2
+			border: none
+			&:first-child
+				flex: 0 0 span(4  of 12 )
+	@media screen and (min-width: $screen-lg)
+		+susy-use($susy-large)
+			flex: 0 0 span(4 wide)
+			padding: gutter() / 2 0 gutter() / 2 gutter()
+			&:first-child
+				flex: 0 0 span(4 wide)
+				padding: gutter() / 2 0 gutter() / 2 gutter()
+				margin-left: span(2)
+	li
+		text-transform: capitalize
+	border-bottom: 1px solid $back-full-text
+	h4
+		+leader(1)
+		+trailer(1)
+	p
+		margin-top: 0
+	form
+		+clearfix
+	.form-col, .form-col-textarea
+		+susy-use($susy-mobile)
+			padding-bottom: gutter()
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				padding: gutter()
+		@media screen and ( min-width: $screen-lg)
+			+susy-use($susy-large)
+				padding: gutter()
+	.form-col-textarea
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				padding-left: 0
+				padding-right: 0
+	.form-col
+		@media screen and (min-width: $screen-sm)
+			float: left
+			width: span(2 wide of 4 wide)
+			&:nth-child(even)
+				padding-right: 0
+			&:nth-child(odd)
+				padding-left: 0
+	input:focus, textarea:focus
+		outline: none
+	input[type="text"], input[type="email"], input[type="tel"], textarea
+		padding: 0.5rem
+		font-family: $text_font_family
+		border: 1px solid $link-back-full
+		+border-radius(2px)
+		+transition
+		width: 100%
+		&:focus, &:active
+			+box-shadow(inset 0 0 5px $link-back-full)
+			border: 1px solid $link-back-full
+		&:placeholder
+	input[type="checkbox"]
+		position: absolute
+		opacity: 0
+		cursor: pointer
+	.form-checkbox
+		display: block
+		position: relative
+		cursor: pointer
+		padding-left: 35px
+		+user-select(none)
+		font-weight: 400
+	.checkmark
+		position: absolute
+		top: 0
+		left: 0
+		height: 25px
+		width: 25px
+		background: $default-gradient
+		border: 1px solid $link-back-full
+		border-radius: 2px
+	.form-checkbox:hover input ~ .checkmark
+		background: #ccc
+	.form-checkbox input:checked ~ .checkmark
+		background: $primary-gradient
+	.checkmark:after
+		content: ""
+		position: absolute
+		display: none	
+	.form-checkbox input:checked ~ .checkmark:after	
+		display: block
+	.form-checkbox .checkmark:after
+		left: 9px
+		top: 5px
+		width: 5px
+		height: 10px
+		border: solid white
+		border-width: 0 3px 3px 0
+		+transform(rotate(45deg))
+	&:last-child
+		border: none
+
+.form-checkbox
+	@media screen and (min-width: $screen-lg)
+		font-size: .9rem
+
+.footer-col.footer-col-2 .link_footer
+	h5
+		background: $back-full-text
+		color: $long-text
+		width: 100%
+		padding-left: 10px
+	li
+		display: inline-block
+		padding: 5px
+		a
+			border-right: 1px solid
+			padding-right: 5px
+			&.active
+				font-weight: bold
+				font-style: normal
+				background: $back-full-text
+				color: $long-text

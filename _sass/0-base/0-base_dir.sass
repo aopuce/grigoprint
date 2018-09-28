@@ -1,0 +1,87 @@
+@import "susy"
+@import "plugins/svg-grid"
+
+*
+	+global-reset
+	box-sizing: border-box
+
+//minima
+@charset "utf-8"
+
+// Define defaults for each variable.
+
+$base-font-weight: 400 !default
+$small-font-size:  $base-font-size * 0.875 !default
+
+$spacing-unit:     30px !default
+
+
+$background-color: #fdfdfd !default
+$brand-color:      #2a7ae2 !default
+
+$grey-color:       #828282 !default
+$grey-color-light: lighten($grey-color, 40%) !default
+$grey-color-dark:  darken($grey-color, 25%) !default
+
+$table-text-align: left !default
+
+
+
+//mixin tipografia fluida
+@function strip-unit($value)
+	@return $value / ($value * 0 + 1)
+
+=fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size)
+	$u1 : unit($min-vw)
+	$u2 : unit($max-vw)
+	$u3 : unit($min-font-size)
+	$u4 : unit($max-font-size)
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4
+		&
+			font-size: $min-font-size
+			@media screen and (min-width: $min-vw)
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+			@media screen and (min-width: $max-vw)
+				font-size: $max-font-size
+
+//grids susy
+
+$susy: (columns: susy-repeat(4), gutters: 30px, spread: 'wider', container-spread: 'wider' )
+$susy-mobile: (columns: susy-repeat(4), gutters: .30, spread: 'wider', container-spread: 'wider' )
+$susy-tablet: (columns: susy-repeat(8), gutters: .25, spread: 'wider', container-spread: 'wider')
+$susy-laptop: (columns: susy-repeat(12), gutters: .30, spread: 'wide', container-spread: 'wide')
+$susy-large: (columns: susy-repeat(16), gutters: .25, spread: 'narrow', container-spread: 'narrow')
+$susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-spread: 'wider')
+=susy-use($settings)
+	$settings: susy-compile($settings)
+	$global: $susy
+	$susy: map-merge($susy, $settings) !global
+	@content
+	$susy: $global !global
+.wrapper, .head-wrapper
+	// background: susy-svg-grid($susy-mobile) no-repeat scroll
+	width: span(4, $susy-mobile)
+	
+	@media screen and (min-width: $screen-sm)
+		+susy-use($susy-tablet)
+			// background: susy-svg-grid() no-repeat scroll
+			width: span(8)
+	
+	@media screen and (min-width: $screen-md)
+		+susy-use($susy-laptop)
+			// background: susy-svg-grid($susy-laptop) no-repeat scroll
+			width: span(12)
+ 
+	@media screen and (min-width: $screen-lg)
+		+susy-use($susy-large)
+			// background: susy-svg-grid($susy-large) no-repeat scroll
+			width: span(16)
+.page-content
+	position: relative
+	width: 100%
+.wrapper
+	position: relative
+	width: 100%
+	+transform(translateX(0))
+	+transition()
