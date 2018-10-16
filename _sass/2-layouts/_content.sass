@@ -33,6 +33,8 @@
 	background: $default_gradient
 	border-top: 5px solid $back-link-button
 	margin-top: -1em
+	h3
+		text-align: center
 	&.contatti-page
 		border-top: 0
 		margin-top: 0
@@ -200,7 +202,6 @@
 		@media screen and (min-width: $screen-lg)
 			+susy-use($susy-large)
 				flex: 1 1 span(3 wide of 16 wide)
-				text-align: justify
 				&:nth-child(even)
 					background: $primary-gradient
 				&:nth-child(odd)
@@ -263,7 +264,12 @@
 				padding: 0 
 				&:last-child
 					padding-right: 0
-				
+	.mv_title, .mv_content
+		flex: 0 0 100%
+		display: flex
+		.col_tile, .col_content
+			flex: 1 1 20%
+
 
 .product-content .row
 	@media screen and (min-width: $screen-lg)
@@ -273,7 +279,7 @@
 				border: 0
 				background: none
 			&:nth-child(odd)
-				background: $back-link-button
+				background: $primary-gradient
 				color: $back-full-text
 			&:nth-child(even)
 				background: $back-full-text
@@ -284,7 +290,7 @@
 					background: $back-full-text
 					color: $long-text
 				&:nth-child(even)
-					background: $back-link-button
+					background: $primary-gradient
 					color: $back-full-text
 
 .row
@@ -339,6 +345,7 @@
 		bottom: 200px
 		span
 			background: $back-full-text
+			padding: 0 .5rem
 		+susy-use($susy-mobile)
 			width: 90%
 			margin-left: gutter()
@@ -413,7 +420,7 @@ body.provona
 			padding: gutter() / 2
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
-			flex: 0 0 span(4)
+			flex: 0 0 span(5)
 			padding-right: gutter()
 			padding-left: span(1) + gutter()
 .col-form
@@ -431,7 +438,7 @@ body.provona
 			padding: gutter() / 2
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
-			flex: 0 0 span(12)
+			flex: 0 0 span(11)
 			padding-right: span(1) + gutter() 
 			padding-left: gutter()
 
@@ -459,7 +466,6 @@ body.provona
 	background: $long-text
 	padding: 0
 	a
-		color: $back-full-text
 		&:hover
 			text-decoration: underline
 	li
@@ -467,3 +473,30 @@ body.provona
 		padding: .5rem
 	@media screen and (max-width: $screen-sm - 1px)
 		padding-bottom: 60px
+
+.text_columns
+	h4
+		column-span: all
+		+trailer(1)
+		+leader(1)
+	ul
+		list-style: square
+		list-style-position: inside
+	@media screen and (min-width: $screen-sm)
+		+susy-use($susy-tablet)
+			width: span(8)
+			padding: 0 gutter()
+		column-count: 2
+		column-gap: gutter()
+		column-rule: 1px solid shade($back-full-text, 30%)
+	@media screen and (min-width: $screen-md)
+		column-count: 3
+		column-gap: gutter()
+		+susy-use($susy-laptop)
+			width: span(10)
+			padding: 0
+	@media screen and (min-width: $screen-lg)
+		column-gap: gutter() * 3
+		+susy-use($susy-large)
+			width: span(14)
+			

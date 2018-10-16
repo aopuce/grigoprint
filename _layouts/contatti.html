@@ -1,3 +1,6 @@
+{% raw %}
+<?php session_start() ?>
+{% endraw %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
 
@@ -6,16 +9,7 @@
   <body>
 
     <div id="st-container" class="st-container">
-      <nav class="st-menu" id="menu">
-        <ul>
-          {% for page in site.products %}
-            <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-            {{ page.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
+      {%- include menu.html -%}
       <div class="st-pusher">
         <div class="st-content">
          {%- include header.html -%}

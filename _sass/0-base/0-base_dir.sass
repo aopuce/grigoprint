@@ -60,22 +60,22 @@ $susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-s
 	@content
 	$susy: $global !global
 .wrapper, .head-wrapper
-	// background: susy-svg-grid($susy-mobile) no-repeat scroll
+	background: susy-svg-grid($susy-mobile) no-repeat scroll
 	width: span(4, $susy-mobile)
 	
 	@media screen and (min-width: $screen-sm)
 		+susy-use($susy-tablet)
-			// background: susy-svg-grid() no-repeat scroll
+			background: susy-svg-grid() no-repeat scroll
 			width: span(8)
 	
 	@media screen and (min-width: $screen-md)
 		+susy-use($susy-laptop)
-			// background: susy-svg-grid($susy-laptop) no-repeat scroll
+			background: susy-svg-grid($susy-laptop) no-repeat scroll
 			width: span(12)
  
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
-			// background: susy-svg-grid($susy-large) no-repeat scroll
+			background: susy-svg-grid($susy-large) no-repeat scroll
 			width: span(16)
 .page-content
 	position: relative
@@ -85,3 +85,20 @@ $susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-s
 	width: 100%
 	+transform(translateX(0))
 	+transition()
+
+a
+	color: $link-back-full
+	&:hover
+		color: $back-link-button
+	&:visited
+		color: $long-text
+*
+	&::-moz-selection
+		color: $back-full-text
+		background: $link-back-full
+		text-shadow: 1px 1px 0 $long-text
+*
+	&::selection
+		color: $back-full-text
+		background: $link-back-full
+		text-shadow: 1px 1px 0 $long-text	

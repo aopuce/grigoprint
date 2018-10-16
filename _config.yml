@@ -35,6 +35,8 @@ sass:
   load_paths: 
     - "/home/puce/.rvm/gems/ruby-2.4.1/gems/compass-core-1.0.3/stylesheets/"
     - "/home/puce/Documents/Website/staticGrigo/grigostatic/node_modules/susy/sass"
+lang: it
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -48,4 +50,6 @@ sass:
 #   - vendor/ruby/
 collections:
   products:
+    output: true
+  kits:
     output: true

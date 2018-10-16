@@ -1,3 +1,6 @@
+{% raw %}
+<?php session_start() ?>
+{% endraw %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
 
@@ -6,20 +9,7 @@
   <body>
 
     <div id="st-container" class="st-container">
-      <nav class="st-menu" id="menu">
-        <ul>
-          {% for node in site.products %}
-            {% if page.url == node.url %}
-              <li><a class="page-link active" href="{{ node.url }}">
-              {{ node.title }}
-              </a>
-            </li>
-            {% else %}
-             <li><a href="{{node.url}}">{{node.title}}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
+      {%- include menu.html -%}
       <div class="st-pusher">
         <div class="st-content">
          {%- include header.html -%}

@@ -15,6 +15,7 @@
 .footer-col-wrapper
 	display: flex
 	flex-wrap: wrap
+	justify-content: center
 .footer-col
 	flex: 0 0 100%
 	padding: gutter($susy-mobile)
@@ -38,12 +39,11 @@
 				flex: 0 0 span(4  of 12 )
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
-			flex: 0 0 span(4 wide)
+			flex: 0 0 span(5 wide)
 			padding: gutter() / 2 0 gutter() / 2 gutter()
 			&:first-child
 				flex: 0 0 span(4 wide)
 				padding: gutter() / 2 0 gutter() / 2 gutter()
-				margin-left: span(2)
 	li
 		text-transform: capitalize
 	border-bottom: 1px solid $back-full-text

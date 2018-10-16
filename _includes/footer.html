@@ -30,13 +30,8 @@
         <h4>Esplora</h4>
         <div class="link_footer">
         <ul>
-        {% for page in site.pages %}
-            {% unless page.exclude %}
-               <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-            {{ page.title }}
-            </a></li>
-            {% endunless %}
-          {% endfor %}
+        <li><a href="0.0.0.0">Home</a></li>
+        <li><a href="about.html">Contatti</a></li>
         </ul>
         <h5>prodotti</h5>
         <ul>
