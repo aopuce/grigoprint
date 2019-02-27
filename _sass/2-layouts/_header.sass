@@ -1,10 +1,15 @@
 .site-header
 	+box-shadow(0 0 20px rgba($long-text, $alpha))
 	background: rgba($back-full-text, 0.7)
+	height: 100px
+	+transition
+	&.header-scroll
+		height: 80px
+		background: rgba($back-full-text, 1)
 	@media screen and (min-width: $screen-sm)
 		border-bottom: 1px solid $back-link-button
-		background: $back-full-text
-		position: sticky
+		// background: $back-full-text
+		position: fixed
 		top: 0
 		width: 100%
 		z-index: 1000

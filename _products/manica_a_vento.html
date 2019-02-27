@@ -1,12 +1,18 @@
 ---
-layout: default
+layout: product
 title: Maniche a Vento
 exlude: false
 description: La manica a vento &eacute; un prodotto per la misurazione del vento, tessuto di qualit&agrave;, disponibile nella classica colorazione bianca e rossa o personalizzata in digitale. Varie misure disponibili.
 ---
+<div class="image-title">
+    <div class="landscape">
+    {% responsive_image path: assets/images/maniche_a_vento/background_landscape.jpg alt: "Maniche a vento" title: "Maniche a vento" %}</div>
+    <div class="portrait">
+    {% responsive_image path: assets/images/maniche_a_vento/background_portrait.jpg alt: "Maniche a vento" title: "Maniche a vento" %}</div>
+</div>
+<div class="wrapper">
 <div class="head-back">
 	<h2><span>maniche a vento</span></h2>
-	<img src="{{'assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg' | relative_url}}" alt="bandiere istituzionali">
 </div>
 <div class="product-content">
 	<h2 class="middle-title">i.c.a.o. bianca e rossa</h2>
@@ -18,11 +24,15 @@ description: La manica a vento &eacute; un prodotto per la misurazione del vento
 			<p>Le giunture vengono realizzate con <strong>filato di poliestere resistente, cucitura con punto inglese e ribattuto con macchinari a doppio ago</strong>, per dare una maggiore resistenza al prodotto</p>
 			<p><strong>Prodotto 100% italiano</strong>, fornita con un cerchio in vetroresina e cordini di aggancio.</p>
 		</div>
-		<div class="col-half"></div>
+		<div class="col-half">
+			{% responsive_image path: assets/images/maniche_a_vento/manica_a_vento_standard.png alt: "Maniche a vento i.c.a.o" title: "Maniche a vento i.c.a.o" %}
+		</div>
 	</div>
 	<h2 class="middle-title">personalizzata</h2>
 	<div class="row">
-		<div class="col-half"></div>
+		<div class="col-half">
+			{% responsive_image path: assets/images/maniche_a_vento/manica_a_vento_personalizata.png alt: "Maniche a vento personalizzata" title: "Maniche a vento personalizzata" %}
+		</div>
 		<div class="col-half">
 			<h5>descrizione</h5>
 			<p>La manica a vento personalizzata ha tutte le caratteristiche tecniche di quella standard: tessuto di poliestere impearmibilizzato, doppie cuciture e cerchio in vetroresina.</p>
@@ -104,4 +114,5 @@ description: La manica a vento &eacute; un prodotto per la misurazione del vento
 			<div class="col_content">40cm</div>
 		</div>
 	</div>
+</div>
 </div>

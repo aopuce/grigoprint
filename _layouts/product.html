@@ -11,13 +11,11 @@
     <div id="st-container" class="st-container">
       {%- include menu.html -%}
       <div class="st-pusher">
-        <div class="st-content" id="scroller">
+        <div class="st-content"  id="scroller">
          {%- include header.html -%}
           <div class="st-content-inner">
             <main class="page-content" aria-label="Content">
-              <div class="wrapper">
-                {{ content }}
-              </div>
+              {{ content }}
             </main>
             {%- include footer.html -%}
             {%- include static_link.html -%}
@@ -27,7 +25,6 @@
     </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="{{'/assets/javascript/menu.js'}}"></script>
-  <script src="{{'/assets/javascript/effext.js'}}"></script>
   </body>
 
 </html>

@@ -18,7 +18,7 @@
 	justify-content: center
 .footer-col
 	flex: 0 0 100%
-	padding: gutter($susy-mobile)
+	padding: gutter($susy-mobile) / 2 gutter($susy-mobile)
 	@media screen and (min-width: $screen-sm)
 		+susy-use($susy-tablet)
 			flex: 0 0 span(4 narrow of 8 narrow )
@@ -40,16 +40,12 @@
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
 			flex: 0 0 span(5 wide)
-			padding: gutter() / 2 0 gutter() / 2 gutter()
+			padding: gutter() / 2
 			&:first-child
 				flex: 0 0 span(4 wide)
-				padding: gutter() / 2 0 gutter() / 2 gutter()
+				padding: gutter() / 2
 	li
 		text-transform: capitalize
-	border-bottom: 1px solid $back-full-text
-	h4
-		+leader(1)
-		+trailer(1)
 	p
 		margin-top: 0
 	form
