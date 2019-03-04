@@ -1,35 +1,38 @@
- <nav class="st-menu" id="menu">
-    <button class="close-menu" id="close-menu-trigger"><span class="grigo-icons grigo-close"></span></button>
-    <div class="container-selector">
-      <span class="label-swich" id="kits">Kits</span>
-      <div class="switch-container">
-        <div class="switch"></div>
-        <span class="selector-switch"></span>
-      </div>
-    <span class="label-swich" id="prodotti">Prodotti</span>
+<nav>
+  <div class="container-selector" id="select">
+    <span class="label-swich" id="kits">Kits</span>
+    <div class="switch-container">
+      <div class="switch"></div>
+      <span class="selector-switch"></span>
     </div>
-        <ul class="menu-kit">
-          {% for node in site.kits %}
-            {% if page.url == node.url %}
-              <li><a class="page-link active" href="{{ node.url }}">
-              {{ node.title }}
-              </a>
-            </li>
-            {% else %}
-             <li><a href="{{node.url}}">{{node.title}}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <ul class="menu-prodotti">
-          {% for node in site.products %}
-            {% if page.url == node.url %}
-              <li><a class="page-link active" href="{{ node.url }}">
-              {{ node.title }}
-              </a>
-            </li>
-            {% else %}
-             <li><a href="{{node.url}}">{{node.title}}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
+  <span class="label-swich" id="prodotti">Prodotti</span>
+  </div>
+  <div class="scroller menu-kit">
+  <ul class="">
+    {% for node in site.kits %}
+      {% if page.url == node.url %}
+        <li><a class="page-link active" href="{{ node.url }}">
+        {{ node.title }}
+        </a>
+      </li>
+      {% else %}
+       <li><a href="{{node.url}}">{{node.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+<div class="scroller menu-prodotti">
+  <ul class="">
+    {% for node in site.products %}
+      {% if page.url == node.url %}
+        <li><a class="page-link active" href="{{ node.url }}">
+        {{ node.title }}
+        </a>
+      </li>
+      {% else %}
+       <li><a href="{{node.url}}">{{node.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  </div>
+</nav>

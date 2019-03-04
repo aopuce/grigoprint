@@ -1,4 +1,8 @@
 .site-header
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 2
 	.head-wrapper
 		height: 100%
 	.site-nav
@@ -10,24 +14,22 @@
 			+transition
 			+susy-use($susy-mobile)
 				width: span(4)
-				padding: gutter() / 2 0
+				padding: 0
 				height: 100%
 				// background: $back-full-text
 			@media screen and (max-width: $screen-sm - 1) and (orientation: landscape)
 				max-height: 50px
-				padding: 1% 0
 			@media screen and (max-width: $screen-xs - 1)
 				z-index: 9999
-				box-shadow: 0 0 5px $long-text
 			@media screen and (min-width: $screen-sm)
 				+susy-use($susy-tablet)
-					padding: gutter() gutter()
+					padding: 0 gutter()
 			@media screen and (min-width: $screen-md)
 				+susy-use($susy-laptop)
-					padding: gutter() gutter() / 2 
+					padding: 0 gutter() / 2 
 			@media screen and (min-width: $screen-lg)
 				+susy-use($susy-large)
-					padding: gutter() span(1 wide)
+					padding: 0 span(1 wide)
 
 			img
 				margin: 0 auto
@@ -49,6 +51,7 @@
 			border-top: 1px solid $back-link-button
 			position: fixed
 			bottom: 0
+			height: 50px
 			z-index: 1000
 			background: $back-full-text
 			left: 0 
@@ -56,17 +59,20 @@
 			@media screen and (min-width: $screen-sm)
 				+susy-use($susy-tablet)
 					flex: 0 0 span(4)
-					padding: gutter() /2 0
+					//padding: gutter() /2 0
 				position: relative
 				border-top: none
 				background: none
+				height: 100%
 			@media screen and (min-width: $screen-md)
+				height: 100%
 				+susy-use($susy-laptop)
 					flex: 0 0 span(4 wide of 12 wide)
 			@media screen and (min-width: $screen-lg)
+				height: 100%
 				+susy-use($susy-large)
 					flex: 0 0 span(6)
-					padding: gutter() /2 span(1)
+					//padding: gutter() /2 span(1)
 			.nav_bar
 				text-align: center
 				color: $long-text
@@ -103,8 +109,6 @@
 							padding-left: gutter(of 4) / 2
 						&:last-child
 							padding-right: gutter(of 4) / 2
-				// @media screen and (min-width: $screen-lg)
-				// 	padding: 0 gutter($susy-large) / 2
 				@media screen and (min-width: $screen-lg)
 					+susy-use($susy-large)
 						padding-left: gutter(of 4)
@@ -118,20 +122,7 @@
 				&:last-child
 					border-left: 1px solid $back-link-button
 					@media screen and (min-width: $screen-sm)
-						border: none
-					// @media screen and (min-width: $screen-md)
-					// 	margin-left: gutter($susy-laptop)
-					// @media screen and (min-width: $screen-lg)
-					// 	margin-left: gutter($susy-large)
-				// &:first-child
-				// 	@media screen and (min-width: $screen-sm)
-				// 		padding-right: gutter($susy-tablet)
-				// 	@media screen and (min-width: $screen-md)
-				// 		padding-right: gutter($susy-laptop)
-				// 	@media screen and (min-width: $screen-lg)
-				// 		padding-right: gutter($susy-large)
-
-						
+						border: none				
 
 				a, button
 					color: $long-text
@@ -139,177 +130,67 @@
 					display: block
 					margin: 0
 					padding: 0
-					line-height: 2
+					//line-height: 2
 					width: 100%
+					+transition
 					@media screen and (min-width: $screen-sm)
-						line-height: 1
+						//line-height: 1
+					@media screen and (min-width: $screen-lg)
+						padding-bottom: 5px
 
 					&:hover, &:focus, &:active
 						color: $back-link-button
 						cursor: pointer
 
 				.nav_bar_text
+					+transition
 					display: none
-					@media screen and (min-width: $screen-sm)
+					@media screen and (min-width: $screen-md)
 						display: block
-						padding: 0.25rem
+						padding: 0 0.25rem
 						letter-spacing: 0.05rem
+						line-height: 20px
+						font-size: .8rem
+					@media screen and (min-width: $screen-lg)
+						line-height: 20px
+						font-size: 1rem
 
 				.grigo-icons
+					line-height: 49px
+					+transition
 					@media screen and (min-width: $screen-sm)
 						font-size: 1.5rem
+					@media screen and (min-width: $screen-md)
+						line-height: 35px
+						font-size: 1rem
+					@media screen and (min-width: $screen-lg)
+						line-height: 30px
+						font-size: 1.5rem
 
-				
-			
 
-			// @media screen and (min-width: $screen-sm)
-			// 	.nav_bar
-			// 		width: span(1, $susy-tablet)
-			// 		position: relative
+	// &.header-scroll
+	// 	.site-nav
+	// 		.logo
+	// 			+susy-use($susy-mobile)
+	// 			padding: gutter() / 4 0
+	// 			@media screen and (min-width: $screen-sm)
+	// 				+susy-use($susy-tablet)
+	// 					padding: gutter() / 2 gutter()
+	// 			@media screen and (min-width: $screen-md)
+	// 				+susy-use($susy-laptop)
+	// 					padding: gutter() / 2 
+	// 			@media screen and (min-width: $screen-lg)
+	// 				+susy-use($susy-large)
+	// 					padding: gutter() /2 span(1 wide)
 
-			// @media screen and (min-width: $screen-md)
-			// 	.nav_bar
-			// 		width: span(1, $susy-laptop)
-
-			// @media screen and (min-width: $screen-lg)
-			// 	.nav_bar
-			// 		width: span(1, $susy-large)
-	&.header-scroll
-		.site-nav
-			.logo
-				+susy-use($susy-mobile)
-				padding: gutter() / 4 0
-				@media screen and (min-width: $screen-sm)
-					+susy-use($susy-tablet)
-						padding: gutter() / 2 gutter()
-				@media screen and (min-width: $screen-md)
-					+susy-use($susy-laptop)
-						padding: gutter() / 2 
-				@media screen and (min-width: $screen-lg)
-					+susy-use($susy-large)
-						padding: gutter() /2 span(1 wide)
-
-.st-container, .st-pusher, .st-content
-	height: 100%
-.st-content, .st-content-inner
-	position: relative
-.st-content
-	// overflow-y: scroll
-.st-container
-	position: relative
-	.st-pusher
-		position: relative
-		right: 0
-		z-index: 99
-		perspective: 1000px
-		+transition()
-		&::after
-			position: absolute
-			top: 0
-			right: 0
-			width: 0
-			height: 0
-			background: rgba(0,0,0,0.2)
-			content: ' '
-			opacity: 0
-			+transition()
-	.st-menu
-		position: absolute
-		top: 0
-		right: 0
-		visibility: hidden
-		width: 300px
-		background: $back-full-text
-		+transition
-		z-index: 1
-		ul
-			width: 292px
-			position: absolute
-		@media screen and (min-width: $screen-md)
-			width: 400px
-			ul
-				width: 392px
-				
-
-		&::after
-			display: none
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			background: rgba(0,0,0,.2)
-			content: ' '
-			opacity: 1
-			+transition()
-		a
-			display: block
-			padding: 1rem .5rem
-			color: $long-text
-			font-weight: bold
-			border-bottom: 1px solid tint($long-text, 80%)
-			+transition()
-			&:hover, &:focus
-				color: $back-full-text
-				background: $back-link-button
-			&:active, &:focus
-				outline: none
-			&.active
-				background: $primary-gradient
-				color: $back-full-text
-				text-shadow: 1px 1px 1px $long-text
-		.close-menu
-			display: none
-			z-index: 9000
-			@media screen and (max-width: $screen-sm - 1)
-				display: block
-				position: fixed
-				bottom: 0
-				right: 0
-				margin: 1rem
-				width: 50px
-				height: 50px
-				+border-radius(50%)
-				+box-shadow(0px 3px 10px $long-text)
-				line-height: 50px
-				font-size: 1.5rem
-				span
-					line-height: 50px
-				&:active, &:focus
-					outline: none
-				&:active
-					bottom: -3px
-					+box-shadow(0 0 2px $long-text)
-
-.st-container.st-menu-open
-	overflow: hidden
-	.st-menu
-		visibility: visible
-		height: 100vh
-		overflow-y: scroll
-		overflow-x: hidden
-		&::after
-			width: 0
-			height: 0
-			opacity: 0
-			+transition()
-	.st-pusher
-		+transform(translate3d(-300px, 0, 0))
-		&::after
-			width: 100%
-			height: 100%
-			opacity: 1
-			+transition()
-		@media screen and (min-width: $screen-md)
-			+transform(translate3d(-400px, 0, 0))
-
-.switch-container
+//switcher tra i due menu
+.switch-container 
 	position: relative
 	padding: 10px
 	.switch
 		width: 80px
 		height: 35px
-		+border-radius(1rem)
+		+border-radius(2rem)
 		border: 2px solid #dedede
 		+box-shadow(inset 0 0 10px rgba(0, 0, 0, .7))
 	.selector-switch
@@ -330,50 +211,131 @@
 			font-family: $grigo-icons
 			content: "\e911"
 			font-size: 30px
-			padding: 7px 1px
+			line-height: 35px
+			text-align: center
+			//padding: 9px 1px
 			+transform-origin(50%)
 			color: #fff
 			+transition()
-			@media screen and (min-width: $screen-sm)
-				padding: 0px 1px
-			@media screen and (min-width: $screen-md)
-				padding: 1px 1px
-			@media screen and (min-width: $screen-lg)
-				padding: 0 1px
 
-.st-menu.on-products .switch-container
+.switching
 	.selector-switch
 		left: 60px
 		+transform(rotate(-90deg))
 		+box-shadow( 3px 0 10px 0 rgba(0, 0, 0, .3))
 
 .label-swich, .switch-container
-	float: left
+	flex: 1 1 33%
 	margin: 5px
 .container-selector
 	padding: 5px
+	display: flex
+	width: 300px
+	@media screen and (min-width: $screen-sm)
+		width: 400px
 	+clearfix
+	+box-shadow( 0 1px $long-text, 0 2px $link-back-full) 
 .label-swich
 	line-height: 55px
 	font-weight: 700
 	font-family: $h-font-family
-
+	text-align: center
 .container-selector
 	cursor: pointer
 
-.st-menu 
-	.menu-kit
-		left: 0
-		+transition()
-	.menu-prodotti
-		left: -300px
-		+transition()
-		@media screen and (min-width: $screen-md)
-			left: -400px
-	&.on-products
-		.menu-kit
-			left: 300px
-			@media screen and (min-width: $screen-md)
-				left: 400px
-		.menu-prodotti
+
+
+//gestione lista prodotti 
+.nav-list
+	width: 0
+	position: fixed
+	bottom: 50px
+	right: -1px
+	top: 60px
+	overflow: hidden
+	z-index: 2
+	+transition
+	border-left: 1px solid $long-text
+	background: $back-full-text
+	@media screen and (min-width: $screen-sm)
+		font-size: .8rem
+		bottom: 0
+		top: 70px
+	@media screen and (min-width: $screen-md)
+		top: 80px
+	@media screen and (min-width: $screen-lg)
+		top: 100px
+	.scroller
+		height: 100%
+	.scroller
+		position: absolute
+		width: 300px
+		@media screen and (min-width: $screen-sm)
+			width: 400px
+		+transition
+		a
+			display: block
+			padding: 1rem 1.5rem
+			color: $long-text
+			font-weight: bold
+			border-bottom: 1px solid tint($long-text, 80%)
+			+transition()
+			&:hover, &:focus
+				color: $back-full-text
+				background: $back-link-button
+			&:active, &:focus
+				outline: none
+			&.active
+				background: $primary-gradient
+				color: $back-full-text
+				text-shadow: 1px 1px 1px $long-text
+		&.menu-kit
 			left: 0
+		&.menu-prodotti
+			left: 300px
+			@media screen and (min-width: $screen-sm)
+				left: 400px
+			ul
+				padding-bottom: 5rem
+	&.switching
+
+		.menu-kit
+			left: -300px
+			@media screen and (min-width: $screen-sm)
+				left: -400px
+		.menu-prodotti
+			left: 0px
+	//contenitore del menu a scomparsa
+	nav 
+		width: 615px
+		position: absolute
+		overflow: hidden
+		height: 100%
+		z-index: 2
+		@media screen and (min-width: $screen-sm)
+			width: 815px
+
+#container
+	position: fixed
+	background: rgba(0, 0, 0, 1)
+	opacity: 0
+	+transition
+	top: 0
+	right: 0
+	bottom: 0
+	left: 100%
+	z-index: 1
+.opened
+	overflow-y: hidden
+	.nav-list
+		width: 300px
+		@media screen and (min-width: $screen-sm)
+			width: 400px
+	#container
+		opacity: .7
+		overflow: hidden
+		left: 0
+#scroll-sobstitute
+	width: 100%
+	height: 100%
+	overflow-y: scroll

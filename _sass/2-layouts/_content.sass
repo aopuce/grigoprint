@@ -19,7 +19,7 @@
 	background: $default-gradient
 	padding-bottom: 2rem
 .jumbotron
-	height: 100%
+	height: 100vh
 	h1
 		text-align: center
 		@media screen and (min-width: $screen-sm)
@@ -27,10 +27,11 @@
 
 	.row
 		align-items: center !important
+		height: 100%
 		.col-half
 			@media screen and (min-width: $screen-sm)
 				+susy-use($susy-tablet)
-					padding: 0 0 10% gutter()
+					padding: 0 gutter()
 					flex: 0 0 span(4 wide)
 					// &:first-child
 					// 	padding-right: gutter() / 2
@@ -44,7 +45,7 @@
 			@media screen and (min-width: $screen-lg)
 				+susy-use($susy-large)
 					flex: 0 0 span(8) 
-					padding: 0  0 10% gutter()  
+					padding: 0  gutter()  
 // .page-content
 // 	background: $default_gradient
 .image-title
@@ -52,6 +53,7 @@
 	position: fixed
 	z-index: -1
 	height: 100%
+	background: $primary-gradient
 	@media screen and (orientation: portrait)
 		bottom: 0
 		.landscape
@@ -66,10 +68,10 @@
 			height: 100%
 
 	img
-		min-width: 100%
-		min-height: 100%
+		object-fit: cover
 		position: absolute
 		right: 0
+		min-height: 100%
 
 .product-content
 	// background: $default_gradient
@@ -125,7 +127,6 @@
 	&.row_stretch
 		align-items: stretch
 	.col-half
-		background: $back-full-text
 		padding-top: 2% !important
 		+susy-use($susy-mobile)
 			flex: 0 0 100%
@@ -365,8 +366,10 @@
 
 .head-back
 	position: relative
-	min-height: 80vh
+	min-height: calc(100vh - 50px)
 	border-bottom: 5px solid $back-link-button
+	@media screen and (min-width: $screen-sm)
+		height: 100vh
 	// &#bandiere_tavolo
 	// 	@media screen and (orientation: portrait) 
 	// 		background-image: url('/assets/images/bandiere_da_tavolo/portrait_cover.jpg') 

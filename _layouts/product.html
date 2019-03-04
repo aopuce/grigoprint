@@ -6,24 +6,21 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body id="add-class">
 
-    <div id="st-container" class="st-container">
+     <div id="scroll-sobstitute" class="scroller">
+    <div class="nav-list" id="nav-commander">
       {%- include menu.html -%}
-      <div class="st-pusher">
-        <div class="st-content"  id="scroller">
-         {%- include header.html -%}
-          <div class="st-content-inner">
-            <main class="page-content" aria-label="Content">
+    </div>
+    {%- include header.html -%}
+    <div id="container">
+    </div>
+      <main class="page-content" aria-label="Content">
               {{ content }}
             </main>
             {%- include footer.html -%}
             {%- include static_link.html -%}
           </div>
-        </div>
-      </div>
-    </div>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="{{'/assets/javascript/menu.js'}}"></script>
   </body>
 
