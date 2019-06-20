@@ -7,11 +7,11 @@
     {%- if page_paths -%}
       <nav class="site-nav">
         <div class="logo">
-          <a href="{{ site.url }}"><img src="{{'assets/images/logo.svg' | relative_url}}" alt="Grigolini | Stampa digitale su tessuto"></a>
+          <a href="{{site.url}}"><img src="{{'assets/images/logo.svg' | relative_url}}" alt="Grigolini | Stampa digitale su tessuto"></a>
         </div>
         <div class="nav-container">
           <div class="nav_bar contacts hidden-xs">
-            <a href="/about">
+            <a href="{{site.url}}{% link contatti.html %}">
               <span class="grigo-icons grigo-contacts"></span>
               <span class="nav_bar_text">Contattaci</span>
             </a>

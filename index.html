@@ -1,58 +1,67 @@
 ---
 layout: default
 exclude: true
+title: Ombrellificio Grigolini di Grigolini Marcello
 ---
 <div class="jumbotron">
-	<div class="row">
-		<h1 class="col-half">Soluzioni per<br>la stampa su<br> tessuto</h1>
-		<div class="col-half">
-			<p>L'azienda Grigolini produce Bandiere, Striscioni in TNT e PVC, Cornici e Allestimenti in tessuto, Ombrelli e Ombrelloni pubblicitari. Specializzati in stampa digitale  sublimatica. Utilizza i migliori macchinari sul mercato per garantire qualità e velocità di produzione.</p>
-			<p>Laboratorio di cucitura interno garantisce un controllo qualitativo su tutta la filiera produttiva.</p>
-			<a href="/about.html" class="btn btn-primary">contattaci</a>
-		</div>
-	</div>
+    <div id="my-slider">
+        {% cloudinary jumbotron /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg class="image" alt="Bandiere Istituzionali" %}
+        {% cloudinary jumbotron /assets/images/bandiere_da_tavolo/bandiere_da_tavolo_landscape.png class="image" alt="Bandiere Istituzionali" %}
+        {% cloudinary jumbotron /assets/images/3d/background_landscape.png class="image" alt="Oggetti in tessuto 3d" %}
+        {% cloudinary jumbotron /assets/images/maniche_a_vento/maniche_a_vento_landscape.png class="image" alt="Maniche a vento" %}
+    </div>
+    <div class="backcover"></div>
+    <div class="row">
+        <h1 class="col-half">Soluzioni per<br>la stampa su<br> tessuto</h1>
+        <div class="col-half">
+            <p>L'azienda Grigolini produce Bandiere, Striscioni in TNT e PVC, Cornici e Allestimenti in tessuto, Ombrelli e Ombrelloni pubblicitari. Specializzati in stampa digitale sublimatica. Utilizza i migliori macchinari sul mercato per garantire qualità e velocità di produzione.</p>
+            <p>Laboratorio di cucitura interno garantisce un controllo qualitativo su tutta la filiera produttiva.</p>
+            <a href="/contatti.html" class="btn btn-primary">contattaci</a>
+        </div>
+    </div>
 </div>
-<div class="row">
-	<div class="col-half">
-		<img srcset="assets/images/BandiereVisual.jpg 320w,
-		assets/images/BandiereVisual@2x.jpg 800w"	src="{{'assets/images/BandiereVisual.jpg' | relative_url}}" alt="Bandiere personalizzate">
-	</div>
-	<div class="col-half about-us">
-		<h2>Chi siamo</h2>
-		<p>Ombrellificio Grigolini nasce più di trent'anni fa per creare ombrelli robusti e d'impatto atti ad aumentare la visibilità e l'attrattività dei propri clienti.</p>
-		<p>Si è evoluta, poi, in produzione di bandiere e gonfaloni specializzandosi nella stampa digitale su tessuto in poliestere e pvc, ampliando così i prodotti pubblicitari personalizzati.</p>
-		<p>Passiamo dalla produzione di striscioni a bandiere personalizzate, con soluzioni complete per la pubblicità su taxi, come i copri poggiatesta e copri specchietti personalizzati a soluzioni per la promozione di eventi come gazebo, tappeti e beachflag.</p>
-		<h2>Mission</h2>
-		<p>Creare prodotti di qualità, che aumentino la visibilità del cliente ad un prezzo interessante.</p>
-	</div>
+<div class="row obj_cover">
+    <div class="col-half order-first about-us">
+        {% cloudinary halfscreen /assets/images/bandiere_bifacciali/particolare_stampa.png alt="bandiere bifacciali personalizzate partricolare stampa" class="orizontal-image index_image" %}
+    </div>
+    <div class="col-half about-us">
+        <h2>Chi siamo</h2>
+        <p>Ombrellificio Grigolini nasce più di trent'anni fa per creare ombrelli robusti e d'impatto atti ad aumentare la visibilità e l'attrattività dei propri clienti.</p>
+        <p>Si &egrave; evoluta, poi, in produzione di bandiere e gonfaloni specializzandosi nella stampa digitale su tessuto in poliestere e pvc, ampliando così i prodotti pubblicitari personalizzati.</p>
+        <p>Passiamo dalla produzione di striscioni a bandiere personalizzate, con soluzioni complete per la pubblicità su taxi, come i copri poggiatesta e copri specchietti personalizzati a soluzioni per la promozione di eventi come gazebo, tappeti e beachflag.</p>
+        <h2>Mission</h2>
+        <p>Creare prodotti di qualità, che aumentino la visibilità del cliente ad un prezzo interessante.</p>
+    </div>
 </div>
 <h2 class="middle-title">servizi</h2>
 <div class="row row_stretch">
-	
-	<div class="col quality"><div class="service-content">
-		<h4>
-		<span class="grigo-icons grigo-quality"></span>
-		qualit&agrave;
-		</h4>
-		<p>Siamo alla continua ricerca di perfezionamento, ogni prodotto non viene consegnato se non rispetta i nostri standard qualitativi.</p>
-		<p>Grazie alla tecnologia impiegata abbiamo, sulle bandiere, un passaggio colore del 95% e una resa cromatica e brillantezza ai massimi livelli.</p>
-	</div>
-</div>
-<div class="col"><div class="service-content">
-	<h4>
-	<span class="grigo-icons grigo-fast"></span>
-	velocit&agrave;
-	</h4>
-	<p>Hai bisogno di una realizzazione in tempi rapidi. Non esitare a contattarci.</p>
-	<p>Grazie al laboratorio di cucitura interno e alla presenza di macchinari all'avanguardia del settore riusciamo a consegnare bandiere personalizzare in tempi rapidi, in alcuni casi anche in giornata.</p>
-</div>
-</div>
-<div class="personalize col"><div class="service-content">
-<h4>
-<span class="grigo-icons grigo-account"></span>
-personalizzazioni
-</h4>
-<p>In caso si necessitasse di lavorazioni particolari siamo in grado di studiare la soluzione adatta per ogni contesto di stampa digitale su tessuto, come bandiere personalizzate di grande dimensione o cornici particolari. Anche se non hai esperinza nella stampa su tessuto non esitare a contattarci, ti consiglieremo al meglio per aumentare la visibilità del tuo brand.</p>
-</div>
-</div>
+    <div class="col quality index_service">
+        <div class="service-content">
+            <h4>
+                <span class="grigo-icons grigo-quality"></span>
+                qualit&agrave;
+            </h4>
+            <p>Siamo alla continua ricerca di perfezionamento, ogni prodotto non viene consegnato se non rispetta i nostri standard qualitativi.</p>
+            <p>Grazie alla tecnologia impiegata abbiamo, sulle bandiere, un passaggio colore del 95% e una resa cromatica e brillantezza ai massimi livelli.</p>
+        </div>
+    </div>
+    <div class="col index_service">
+        <div class="service-content">
+            <h4>
+                <span class="grigo-icons grigo-fast"></span>
+                velocit&agrave;
+            </h4>
+            <p>Hai bisogno di una realizzazione in tempi rapidi. Non esitare a contattarci.</p>
+            <p>Grazie al laboratorio di cucitura interno e alla presenza di macchinari all'avanguardia del settore riusciamo a consegnare bandiere personalizzare in tempi rapidi, in alcuni casi anche in giornata.</p>
+        </div>
+    </div>
+    <div class="personalize col index_service">
+        <div class="service-content">
+            <h4>
+                <span class="grigo-icons grigo-account"></span>
+                personalizzazioni
+            </h4>
+            <p>In caso si necessitasse di lavorazioni particolari siamo in grado di studiare la soluzione adatta per ogni contesto di stampa digitale su tessuto, come bandiere personalizzate di grande dimensione o cornici particolari. Anche se non hai esperinza nella stampa su tessuto non esitare a contattarci, ti consiglieremo al meglio per aumentare la visibilità del tuo brand.</p>
+        </div>
+    </div>
 </div>

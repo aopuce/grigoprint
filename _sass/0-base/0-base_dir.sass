@@ -40,20 +40,23 @@ $table-text-align: left !default
 	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4
 		&
 			font-size: $min-font-size
+			line-height: $min-font-size
 			@media screen and (min-width: $min-vw)
 				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+				line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
 			@media screen and (min-width: $max-vw)
 				font-size: $max-font-size
+				line-height: $max-font-size
 				
 
 //grids susy
 
 $susy: (columns: susy-repeat(4), gutters: 30px, spread: 'wider', container-spread: 'wider' )
 $susy-mobile: (columns: susy-repeat(4), gutters: .30, spread: 'wider', container-spread: 'wider' )
-$susy-tablet: (columns: susy-repeat(8), gutters: .25, spread: 'wider', container-spread: 'wider')
+$susy-tablet: (columns: susy-repeat(8), gutters: .25, spread: 'wide', container-spread: 'wide')
 $susy-laptop: (columns: susy-repeat(12), gutters: .30, spread: 'wide', container-spread: 'wide')
 $susy-large: (columns: susy-repeat(16), gutters: .25, spread: 'narrow', container-spread: 'narrow')
-$susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-spread: 'wider')
+// $susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-spread: 'wider')
 =susy-use($settings)
 	$settings: susy-compile($settings)
 	$global: $susy
@@ -78,12 +81,15 @@ $susy-test: (columns: susy-repeat(8), gutters: .20, spread: 'wider', container-s
 		+susy-use($susy-large)
 			// background: susy-svg-grid($susy-large) no-repeat scroll
 			width: span(16)
+
 .page-content
 	position: relative
 	width: 100%
+	@media screen and (max-width: $screen-sm - 1px) and (orientation: landscape)
+		width: 90%
+		margin-left: 10%
 .wrapper
 	position: relative
-	width: 100%
 	+transform(translateX(0))
 	+transition()
 
@@ -93,6 +99,8 @@ a
 		color: $back-link-button
 	&:visited
 		color: $long-text
+a, button
+	cursor: pointer
 *
 	&::-moz-selection
 		color: $back-full-text

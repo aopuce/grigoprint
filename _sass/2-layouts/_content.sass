@@ -1,116 +1,151 @@
-// main
-// 	-webkit-background-size: cover
-// 	-moz-background-size: cover
-// 	background-size: cover
-// 	background-attachment: fixed
-// 	background-size: cover
-// 	background-repeat: no-repeat
-// 	background-position: center center
-// 	max-width: 100%
-// 	&.bandiere_istituzionali
-// 		background-image: url('/assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg')
-// 	&.bandiere_tavolo
-// 		@media screen and (orientation: portrait) 
-// 			background-image: url('/assets/images/bandiere_da_tavolo/portrait_cover.jpg') 
-// 		@media screen and (orientation: landscape) 
-// 			background-image: url('/assets/images/bandiere_da_tavolo/landscape_cover.jpg') 
-
-.product-content
-	background: $default-gradient
-	padding-bottom: 2rem
-.jumbotron
-	height: 100vh
-	h1
+.loader
+	height: 100%
+	width: 100%
+	svg
+		display: block
+		margin: auto
+		width: 100px
+		height: 100%
+.pag_404
+	flex: 0 0 100%
+	h1, p
+		width: 100%
 		text-align: center
+	a
+		margin: auto
+		display: block
+		width: 300px
+		text-align: center
+.product-content
+	background: $back-full-text
+	padding-bottom: 2rem
+	.row
+		@media screen and (min-width: 2000px)
+			width: 80%
+			margin: auto
+.jumbotron
+	position: relative
+	height: 100vh
+	background: $long-text
+	h1.col-half
+		text-align: center
+		@media screen and (max-width: $screen-sm - 1px)
+			+transform(translateY(50%))
+			padding: 0
+			font-size: 2rem
+			line-height: 1.618
 		@media screen and (min-width: $screen-sm)
 			text-align: right
-
+	.backcover
+		background: rgba(255, 255, 255, .8)
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
 	.row
-		align-items: center !important
+		align-items: center
+		position: absolute
 		height: 100%
+		top: 0
+		z-index: 1000
 		.col-half
 			@media screen and (min-width: $screen-sm)
-				+susy-use($susy-tablet)
-					padding: 0 gutter()
-					flex: 0 0 span(4 wide)
-					// &:first-child
-					// 	padding-right: gutter() / 2
-					// &:last-child
-					// 	padding-left: gutter() / 2
-			@media screen and (min-width: $screen-md)
-				+susy-use($susy-laptop)
-					flex: 0 0 span(6)
-					padding-right: gutter() / 2
-					padding-left: gutter() / 2
-			@media screen and (min-width: $screen-lg)
-				+susy-use($susy-large)
-					flex: 0 0 span(8) 
-					padding: 0  gutter()  
-// .page-content
-// 	background: $default_gradient
-.image-title
-	width: 100%
-	position: fixed
-	z-index: -1
-	height: 100%
-	background: $primary-gradient
-	@media screen and (orientation: portrait)
-		bottom: 0
-		.landscape
+				padding-bottom: 2%
+	#my-slider
+		position: relative
+		margin: 0 auto
+		width: 100%
+		height: 100%
+		overflow: hidden
+		&> img
 			display: none
-		.portrait
+			width: 100%
 			height: 100%
-	@media screen and (orientation: landscape)
-		top: 0
-		.portrait
-			display: none
-		.landscape
-			height: 100%
+			object-fit: cover
+			&:first-child
+				display: block
+.row
+	// align-items: center !important
+	// height: 100%
+	display: flex
+	flex-wrap: wrap
+	align-items: stretch
+	position: relative
+	.col-half
+		padding-top: 2% !important
+		position: relative
+		+susy-use($susy-mobile)
+			flex: 0 0 100%
+			padding: 0 gutter() gutter() gutter() 
+			min-width: 0
+		&.order-first
+			padding-left: 0
+			padding-right: 0
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				padding: 0 gutter()
+				flex: 0 0 span(4)
+				@media screen and (max-width: $screen-md - 1px)
+					&:first-child
+						padding-right: gutter() / 2
+					&:last-child
+						padding-left: gutter() / 2
+			&.order-first
+				padding-left: 0
+				padding-right: 0
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				flex: 0 0 span(6)
+				padding-right: gutter() / 2
+				padding-left: gutter() / 2
+			&.order-first
+				padding-left: 0
+				padding-right: 0
+		@media screen and (min-width: $screen-lg)
+			+susy-use($susy-large)
+				flex: 1	 0 span(7)
+				padding: 0 gutter() / 2
+				&:nth-child(1)
+					padding-left: span(1 wide)
+				&:nth-child(2)
+					padding-right: span(1 wide)
+			&.order-first
+				padding-left: 0
+				padding-right: 0
 
-	img
-		object-fit: cover
-		position: absolute
-		right: 0
-		min-height: 100%
 
 .product-content
-	// background: $default_gradient
-	//border-top: 5px solid $back-link-button
-	// margin-top: -1em
 	h3
 		text-align: center
 	&.contatti-page
 		border-top: 0
 		margin-top: 0
-	.row .col-half
-		@media screen and (min-width: $screen-sm)
-			+susy-use($susy-tablet)
-				flex: 0 0 span(4 narrow)
-				padding-left: gutter()
-				padding-right: 0
-		@media screen and (min-width: $screen-md)
-			+susy-use($susy-laptop)
-				flex: 0 0 span(6)
-				padding-left: gutter() / 2
-				padding-right: gutter() / 2
-		@media screen and (min-width: $screen-lg)
-			+susy-use($susy-large)
-				flex: 0 0 50%
-				&:first-child
-					padding-left: span(2) + gutter()
-					padding-right: gutter() / 2
-				&:last-child
-					padding-right: span(2) + gutter()
-					padding-left: gutter() / 2
-
+		padding-top: 80px
+	// .row .col-half
+	// 	@media screen and (min-width: $screen-sm)
+	// 		+susy-use($susy-tablet)
+	// 			flex: 0 0 span(4 narrow)
+	// 			padding-left: gutter()
+	// 			padding-right: 0
+	// 	@media screen and (min-width: $screen-md)
+	// 		+susy-use($susy-laptop)
+	// 			flex: 0 0 span(6)
+	// 			padding-left: gutter() / 2
+	// 			padding-right: gutter() / 2
+	// 	@media screen and (min-width: $screen-lg)
+	// 		+susy-use($susy-large)
+	// 			flex: 0 0 50%
+	// 			&:first-child
+	// 				padding-left: span(2) + gutter()
+	// 				padding-right: gutter() / 2
+	// 			&:last-child
+	// 				padding-right: span(2) + gutter()
+	// 				padding-left: gutter() / 2
+		
 
 .row
-	display: flex
-	flex-wrap: wrap
-	align-items: center
-	//background: $back-full-text
-	position: relative
-	//padding: 20px 0
 	h2
 		flex: 0 0 100%
 		padding: gutter() / 2 gutter() / 2 gutter() / 2 gutter() 
@@ -118,33 +153,26 @@
 		text-align: center
 	&#contatti
 		background: $back-full-text
+		.telefono, .fax, .mail, .pec
+			padding-top: .5rem
+			margin-bottom: 0
 	&.row-intern
 		background: none
-		// img
-		// 	width: 100%
-		// 	@media screen and (min-width: $screen-sm)
-		// 		+susy-use($susy-tablet)
 	&.row_stretch
 		align-items: stretch
 	.col-half
-		padding-top: 2% !important
-		+susy-use($susy-mobile)
-			flex: 0 0 100%
-			padding: 0 gutter() gutter() gutter() 
-			min-width: 0
-			img
-				width: 100%
-				height: auto
 		@media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px)
-			+susy-use($susy-tablet)
-				flex: 0 0 span(8 wide of 8 wide)
-				padding: 0 gutter() gutter() gutter()
+			// max-height: 100vh
+			// // margin: 0 auto
+			// +susy-use($susy-tablet)
+			// 	flex: 0 0 span(8 wide of 8 wide)
+			// 	padding: 0 gutter() gutter() gutter()
 			&.about-us
 				+susy-use($susy-tablet)
-					position: absolute
+					// position: absolute
+					flex: 1 1 100%
 					top: 0
 					bottom: 0
-					background: linear-gradient(140deg, rgba(8,65,92,0.89), rgba(32,124,168,0.89))
 					p
 						width: span(6 narrow of 8 narrow)
 						text-align: justify
@@ -152,22 +180,12 @@
 						margin-right: auto
 		@media screen and (min-width: $screen-md)
 			+susy-use($susy-laptop)
-				flex: 0 0 span(6)
-				padding: 0 gutter() / 2 gutter() / 2 gutter() / 2
 				.center-helper
 					display: inline-block
 					height: 100%
 					vertical-align: middle
-				img
-					display: block
-					// max-width: 100%
-					// height: 100%
-					margin: 0 auto
-					vertical-align: middle
 		@media screen and (min-width: $screen-lg)
 			+susy-use($susy-large)
-				flex: 0 0 span(8 wide of 16 wide)
-				padding: 0 gutter() / 2 gutter() gutter() / 2
 				&.about-us
 					padding: 0 span(1 wider of 18 narrow) gutter() span(1 wider of 18 narrow)
 		table
@@ -188,21 +206,14 @@
 				&:first-child
 					text-align: right
 	&.descrizione
-		background: $back-full-text
 		h5
 			text-align: center
-	&.beachflags
-		background: $back-full-text
-		align-items: center
 
 	.col-accessories
 		+susy-use($susy-mobile)
 			flex: 0 0 100%
 			padding: gutter() / 2 gutter()
-			img
-				display: block
-				margin: auto
-			h4, img
+			h4
 				padding-bottom: .8rem
 			&:nth-child(even)
 				background: $primary-gradient
@@ -211,88 +222,83 @@
 				background: $default-gradient
 		@media screen and (min-width: $screen-sm)
 			+susy-use($susy-tablet)
-				flex: 1 1 span(2 wide)
+				flex: 0 0 calc(100% / 3)
 				padding: gutter() / 2 gutter() / 2
-				img
-					max-width: span(2 of 4)
-					max-height: 95px
-					// float: left
-					// padding-right: gutter()
-				&:nth-child(4n), &:last-child 
-					padding-right: gutter()
-				&:first-child, &:nth-child(5n)
-					padding-left: gutter()
 			@media screen and (max-width: $screen-md - 1)
 				h4
 					min-height: 4.5rem
 				.description
 					font-size: .8rem
-				// &:nth-child(odd), &:nth-child(even)
-				// 	background: $back-full-text
-				// 	color: $long-text
-		@media screen and (min-width: $screen-md)
-			+susy-use($susy-laptop)
-				flex: 1 1 span(3 wide)
-				padding: gutter() / 2
-				img
-					max-height: 150px
-					width: auto
-					padding-right: gutter(of 4)
-					float: none
-				&:nth-child(4n), &:last-child
-					flex: 1 1 span(3 wide)
-					padding-right: gutter() / 2
-				&:first-child, &:nth-child(5n)
-					padding-left: gutter() / 2
-		@media screen and (min-width: $screen-lg)
-			+susy-use($susy-large)
-				flex: 1 1 span(3 wide of 16 wide)
-				&:nth-child(even)
-					background: $primary-gradient
-				&:nth-child(odd)
-					background: $default-gradient
-				&:nth-child(4n), &:last-child
-					flex: 1 1 span(3 wide of 16 wide)
-				
-
-
-	.col
-		flex: 0 0 100%
-		padding: gutter($susy-mobile) / 2 gutter($susy-mobile)
-		@media screen and (min-width: $screen-sm)
-			+susy-use($susy-tablet)
-				flex: 0 0 span(4 narrow of 8 narrow)
-				padding-left: gutter()
-				padding-right: 0
 		@media screen and (min-width: $screen-md)
 			+susy-use($susy-laptop)
 				flex: 0 0 span(4)
 				padding: gutter() / 2
 		@media screen and (min-width: $screen-lg)
 			+susy-use($susy-large)
-				flex: 0 0 span(4 wide)
+				flex: 1 1 span(3)
+				
+	.col
+		+susy-use($susy-mobile)
+			flex: 0 0 100%
+			padding: gutter()
+		@media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px)
+			+susy-use($susy-tablet)
+				flex: 0 0 span(4)
+				padding: gutter() gutter() / 2
+				&:nth-child(3)
+					flex: 0 0 span(8)					
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				flex: 0 0 span(4)
 				padding: gutter() / 2
-	// .personalize.col
-	// 	@media screen and (min-width: $screen-sm)
-	// 		+susy-use($susy-tablet)
-	// 			margin-left: span(2 narrow of 8 wider)
-	// 	@media screen and (min-width: $screen-md)
-	// 		+susy-use($susy-laptop)
-	// 			flex: 0 0 span(4)
-	// 			padding: gutter() / 2
-	// 			margin-left: 0		
-	// 	@media screen and (min-width: $screen-lg)
-	// 		+susy-use($susy-large)
-	// 			flex: 0 0 span(4 wide)
-	// 			padding: gutter() / 2 0 gutter() / 2 gutter()
-
+				align-self: stretch
+		@media screen and (min-width: $screen-lg)
+			+susy-use($susy-large)
+				flex: 1 1 span(5)
+				padding: gutter()
+		@media screen and (min-width: 1500px)
+			+susy-use($susy-large)
+				flex: 0 0 span(4 wide)
+				padding: gutter()
+				padding-right: 0
+				&:first-child
+					margin-left: span(2 narrow)
+	.col.index_service
+		padding: 0
+		background: $back-full-text
+		border: 1px solid shade(#fff,10%)
+		+border-radius($radius)
+		+susy-use($susy-mobile)
+			flex: 0 0 span(4) - gutter()
+			margin: gutter() / 2
+		@media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px)
+			+susy-use($susy-tablet)
+				flex: 0 0 span(4) - gutter()
+				margin: gutter() gutter() / 2
+				&:nth-child(3)
+					flex: 0 0 span(8) - gutter()					
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				flex: 0 0 span(4) - gutter()
+				margin: gutter() / 2
+				align-self: stretch
+		@media screen and (min-width: $screen-lg)
+			+susy-use($susy-large)
+				flex: 1 1 span(5)
+				margin: gutter()
+		@media screen and (min-width: 1500px)
+			+susy-use($susy-large)
+				flex: 0 0 span(4 wide)
+				margin: gutter()
+				margin-right: 0
+				&:first-child
+					margin-left: span(2 narrow) + gutter()
+		
 	.columns_4
 		flex: 0 0 100%
 		padding-left: gutter() / 2
 		padding-right: gutter() / 2
 		padding-top: gutter()
-		img
-			width: 100%
 		@media screen and (min-width: $screen-sm)
 			+susy-use($susy-tablet)
 				flex: 0 0 span(4 wide)
@@ -312,41 +318,59 @@
 	.mv_title, .mv_content
 		flex: 0 0 100%
 		display: flex
+		padding: .5rem 1.5rem 0
+		text-align: center
+		@media screen and (min-width: $screen-md)
+			flex: 0 0 80%
+			margin: auto
+		&> div:first-child
+			font-weight: 700
+			font-style: italic
+			@media screen and (min-width: $screen-sm)
+				text-align: left
 		.col_tile, .col_content
 			flex: 1 1 20%
+	.mv_title
+		border-bottom: 1px solid $link-back-full
+		font-weight: 700
+		font-style: italic
+	.mv_content:nth-child(2n+1)
+		background: tint($long-text, 90%)
 
 
 .product-content .row
-	@media screen and (min-width: $screen-lg)
-		.columns_4
+	.columns_4
+		background: $default-gradient
+		&:nth-child(odd)
+			background: $primary-gradient
+			color: $back-full-text
+		&:nth-child(even)
+			background: $default-gradient
+			color: $long-text
+		@media screen and (min-width: $screen-sm) and (max-width $screen-md - 1px)
+			&:first-child, &:last-child
+				background: $primary-gradient
+				color: $back-full-text
+		@media screen and (min-width: $screen-lg)
 			.service-content
 				+border-radius(0)
 				border: 0
 				background: none
-			&:nth-child(odd)
-				background: $primary-gradient
-				color: $back-full-text
-			&:nth-child(even)
-				background: $back-full-text
 	&:last-child
 		.columns_4
 			@media screen and (min-width: $screen-lg)
 				&:nth-child(odd)
-					background: $back-full-text
+					background: $default-gradient
 					color: $long-text
 				&:nth-child(even)
 					background: $primary-gradient
 					color: $back-full-text
 
 .row
-	justify-content: center
-	//background: $back-full-text 
 	.service-content
 		height: 100%
 		padding: 15px
-		background: $back-full-text
-		border: 1px solid shade(#fff,10%)
-		+border-radius($radius)
+		
 		.grigo-icons
 			display: block
 			font-size: 40px
@@ -359,7 +383,7 @@
 	@media screen and (min-width: $screen-sm)
 		width: 60%
 
-.about-us
+.about-us:last-child
 	background: $primary-gradient
 	color: $back-full-text
 	font-weight: 500
@@ -370,30 +394,9 @@
 	border-bottom: 5px solid $back-link-button
 	@media screen and (min-width: $screen-sm)
 		height: 100vh
-	// &#bandiere_tavolo
-	// 	@media screen and (orientation: portrait) 
-	// 		background-image: url('/assets/images/bandiere_da_tavolo/portrait_cover.jpg') 
-	// 	@media screen and (orientation: landscape) 
-	// 		background-image: url('/assets/images/bandiere_da_tavolo/landscape_cover.jpg') 
-	// &#bandiere_istituzionali
-	// 	background-image: url('/assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg')
-				
-	// img
-	// 	display: block
-	// 	position: absolute
-	// 	width: 100%
-	// 	height: 100%
-	// 	bottom: 0px
-	// 	z-index: -1
-	// 	@media screen and (min-width: $screen-sm)
-	// 		height: 90%
-	// 		bottom: 0px
-	// 	@media screen and (min-width: $screen-lg)
-	// 		width: 100%
-	// 		height: auto
 	h2
 		position: absolute
-		bottom: 20px
+		bottom: 15%
 		font-size: 2rem
 		line-height: 3rem
 		span
@@ -416,19 +419,117 @@
 			+susy-use($susy-large)
 				width: span(8)
 				margin-left: span(1 wide)
-
-
-// .row.tessuti-istituzionali, .row.descrizione
-// 	border-top: 3px solid $back-link-button
-
-
-
-.row .col-half img.img-intern-50, .row .columns_4 img.img-intern-50
-	display: block
+// start blog experiment
+.product-content-blog 
+	background: $back-full-text
+	padding: 0 10% 1.5rem 10%
+	.row
+		display: grid
+		// background: susy-svg-grid($susy-mobile) no-repeat scroll
+		grid-template-columns: repeat(12, 1fr)
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				// background: susy-svg-grid() no-repeat scroll
+				grid-template-columns: repeat(8, 1fr)
+		
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				// background: susy-svg-grid($susy-laptop) no-repeat scroll
+				grid-template-columns: repeat(12, 1fr)
+	 
+		@media screen and (min-width: $screen-lg)
+			+susy-use($susy-large)
+				// background: susy-svg-grid($susy-large) no-repeat scroll
+				grid-template-columns: 15rem repeat(12, 1fr) 15rem
+				grid-row-gap: calc(1rem + .5vw)
+				figure
+					grid-row-start: 1
+					grid-row-end: 4
+					object-fit: contain
+					position: relative
+					img
+						height: 100%
+						width: 100%	
+						object-fit: cover
+					figcaption
+						text-align: center
+						width: 100%
+						background: $primary-gradient
+						color: $back-full-text
+						position: absolute
+						bottom: 0
+.product-content-blog
+	@media screen and (min-width: $screen-lg)
+		.row			
+			&.image-right
+				h4, h5, p, ul
+					grid-column-start: 1
+					grid-column-end: 8
+				figure
+					grid-column-start: 8
+					grid-column-end: 15
+				p, ul
+					padding: 0 10px
+					margin-bottom: 0
+					&.full-columns
+						grid-column-end: 14
+			&.image-left
+				h4, h5, p, ul
+					grid-column-start: 8
+					grid-column-end: 15
+				p, ul
+					padding: 0 10px
+					margin-bottom: 0
+					&.full-columns
+						grid-column-start: 2
+				figure
+					grid-column-start: 1
+					grid-column-end: 8
+.head-blog
+	position: relative
+	min-height: calc(100vh - 50px)
+	border-bottom: 5px solid $back-link-button
+	.title-container
+		position: absolute
+		bottom: 0
+		h6
+			font-size: 1rem
+			line-height: 1.61rem
+			font-style: italic
+			text-transform: none
+			margin: 10px .5rem 1.5rem .5rem
+			span
+				background: $back-full-text
+		+susy-use($susy-mobile)
+			width: 90%
+			margin-left: gutter()
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				width: span(4)
+				margin-left: gutter()	
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				width: span(6)
+				margin-left: gutter() / 2 
+		@media screen and (min-width: $screen-lg)
+			h2
+				position: relative
+				font-size: 3rem
+				line-height: 4.5rem
+				padding: 10px
+			+susy-use($susy-large)
+				width: span(8)
+				margin-left: span(1 wide)
 	@media screen and (min-width: $screen-sm)
-		+susy-use($susy-tablet)
-			width: 50%
-			margin: auto
+		height: 100vh
+	h2
+		font-size: 2rem
+		line-height: 3rem
+		span
+			background: $back-full-text
+			padding: 0 .5rem
+// end blog experiment
+
 .table-wrapper
 	position: relative
 	overflow-x: hidden
@@ -439,7 +540,7 @@
 			display: block
 			white-space: nowrap
 
-@media screen and (max-width: $screen-sm)
+@media screen and (max-width: $screen-sm - 1px)
 	.order-first
 		order: 1
 	.order-second
@@ -451,7 +552,7 @@
 		padding: 0 gutter()
 	@media screen and (min-width: $screen-sm)
 		+susy-use($susy-tablet)
-			flex: 0 0 span(3 wider)
+			flex: 0 0 span(3)
 			padding-left: gutter()
 			padding-right: gutter() / 2
 			border-right: 1px solid tint($long-text, 80% )
@@ -470,7 +571,7 @@
 		padding: gutter()
 	@media screen and (min-width: $screen-sm)
 		+susy-use($susy-tablet)
-			flex: 0 0 span(5 wide)
+			flex: 0 0 span(5)
 			padding-left: gutter() / 2
 			padding-right: gutter() 
 	@media screen and (min-width: $screen-md)
@@ -482,7 +583,6 @@
 			flex: 0 0 span(11)
 			padding-right: span(1) + gutter() 
 			padding-left: gutter()
-
 
 .undertext
 	padding: gutter()
@@ -504,6 +604,8 @@
 				flex: 0 0 span(8)
 
 .law_link
+	height: auto
+	justify-content: center
 	ul
 		margin-bottom: auto
 	background: $long-text
@@ -537,55 +639,22 @@
 	@media screen and (min-width: $screen-lg)
 		+susy-use($susy-large)
 			width: span(14)
-			
-// .container_image
-// 	position: relative
-// 	height: 100%
-// 	width: 100%
-// 	img
-// 		position: absolute
-// 		width: auto
-// 		height: 100%
-// 		z-index: 1
-// 	.under_image
-// 		width: 100%
-// 		height: 100px
-// 		background: $back-link-button
-// 		position: absolute
-// 		bottom: 0
-
-// .row
-// 	.col-1o3
-// 		@media screen and (min-width: $screen-lg)
-// 			+susy-use($susy-large)
-// 				flex: 0 0 span(4)
-// 				padding: gutter() gutter() / 2
-
-// 	.col-2o3
-// 		ul
-// 			list-style: square
-// 			list-style-position: inside
-// 		@media screen and (min-width: $screen-lg)
-// 			+susy-use($susy-large)
-// 				flex: 0 0 span(10)
-// 				padding: gutter() gutter() / 2
-// 			&.col_text
-// 				column-count: 2
-// 				column-gap: gutter()
-// 				p:first-child
-// 					margin-top: 0
 
 .descrizione_lunga
 	h4
-		padding-top: 0
+		padding-top: 1.5rem
+		margin-left: auto
+		margin-right: auto
 	.col_text
 		background: $default-gradient
 		+border-radius(3px)
 		+box-shadow(0 0 3px $long-text)
 		+susy-use($susy-mobile)
-			flex: 0 0 span(4) - gutter()
-			padding: gutter()
+			flex: 0 0 span(4) - gutter() * 2
+			padding: gutter() / 2
 			column-count: 1
+			margin-left: gutter()
+			margin-right: gutter()
 		@media screen and (min-width: $screen-sm) 
 			+susy-use($susy-tablet)
 				flex: 0 0 span(8) - gutter()
@@ -593,45 +662,170 @@
 				column-count: 2
 				column-gap: gutter() * 2
 				column-rule: 1px solid $long-text
+				margin-left: gutter()
+				margin-right: gutter()
 		@media screen and (min-width: $screen-md)
 			+susy-use($susy-laptop)
-				flex: 0 0 span(12)
+				flex: 0 0 span(12) - gutter()
 				padding: gutter()
 				column-count: 3
 				column-gap: gutter() * 2
+				margin-left: gutter() / 2
+				margin-right: gutter() / 2
 		@media screen and (min-width: $screen-lg)	
 			+susy-use($susy-large)
 				flex: 0 0 span(14)
 				padding: gutter() gutter() / 2
 				column-count: 4
 				column-gap: gutter() * 2
+				margin-left: span(1) + gutter()
+				margin-right: span(1) + gutter()
 	&:last-child
 		.col_text
 			border-bottom: none
-
-			// p:first-child
-			// 	margin-top: 0
-	// h4
-	// 	flex: 0 0 100%
-.container_image
-	position: relative
-	height: 80vh
-	z-index: 1
-	background: $primary-gradient
-	+susy-use($susy-large)
-		flex: 0 0 span(3)
-		padding: gutter() gutter() / 2
-	img
-		z-index: 1
-	.under_image
-		width: 100%
-		height: 100px
-		background: $back-link-button
-		position: absolute
-		bottom: 0
-		z-index: -1
 
 .separatore
 	height: 5px
 	background: $back-link-button
 
+.container-grids
+	display: grid
+	grid-template-columns: minmax(280px, 1fr)
+	grid-auto-rows: 250px
+	grid-row-gap: 15px
+	grid-column-gap: gutter() / 2
+	@media screen and (min-width: $screen-sm)
+		+susy-use($susy-tablet)
+			grid-column-gap: gutter()
+			grid-template-columns: repeat(2, 1fr)
+	@media screen and (min-width: $screen-md)
+		+susy-use($susy-tablet)
+			grid-template-columns: repeat(3, 1fr)
+			grid-column-gap: gutter()
+	@media screen and (min-width: $screen-lg)
+		+susy-use($susy-large)
+			grid-template-columns: repeat(auto-fill, minmax(324px, 1fr))
+			grid-column-gap: gutter() / 2
+			grid-auto-flow: dense
+	
+	// 	grid-template-columns: repeat(auto-fill, minmax(span(4) - gutter(), 1fr))
+	// 	grid-row-gap: 25px
+	// 	// width: span(4) - gutter() * 2
+	// 	// padding-left: gutter()
+	// 	margin-left: gutter()
+	// 	margin-right: gutter()
+	// @media screen and (min-width: $screen-sm)
+	// 	+susy-use($susy-tablet)
+	// 		grid-column-gap: gutter()
+	// 		grid-row-gap: gutter()
+	// 		width: span(8)
+	// 		padding-left: gutter()
+	// 		margin-left: 0
+	// 		margin-right: 0
+	// @media screen and (min-width: $screen-md)
+	// 	+susy-use($susy-laptop)
+	// 		grid-column-gap: gutter()
+	// 		grid-row-gap: gutter()
+	// 		width: span(12) - gutter() / 2
+	// 		padding-left: gutter() / 2
+	// @media screen and (min-width: $screen-lg)
+	// 	grid-template-columns: repeat(auto-fill, minmax(25%, 1fr))
+	// 	+susy-use($susy-large)
+	// 		grid-column-gap: gutter()
+	// 		grid-row-gap: gutter()
+	// 		width: span(16)
+	// 		padding-left: 0
+	// 		// padding-left: span(1) + gutter()
+	.item
+		position: relative
+		overflow: hidden
+		background: $primary-gradient
+		a
+			position: absolute
+			height: 100%
+			+transition
+			z-index: 10
+			background: rgba(8,65,92,.7)
+			color: $back-full-text
+			transform: translateY(-2rem)
+			width: 100%
+			bottom: -100%
+			padding: .5rem
+			@media screen and (min-width: $screen-md)
+				transform: translateY(-3.5rem)
+			@media screen and (min-width: $screen-lg)
+				// transform: translateY(180px)
+			h4
+				padding-top: 0
+			p
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+				&:first-child
+					padding-top: 2rem
+				&:last-child
+					position: relative
+					border-top: 1px solid $back-full-text
+					font-style: italic
+					strong
+						font-weight: 200
+					span
+						position: absolute
+						right: 0
+						+transform(rotate(-90deg))
+						top: 5px
+		@media screen and (min-width: $screen-lg)
+			&.orizontal-item
+				grid-column-end: span 2
+				grid-row-end: span 2
+			&.vertical-item
+				grid-row-end: span 2
+		&:hover 
+			a
+				transform: translateY(-100%)
+.prodotti_correlati
+	background: $back-full-text
+	.img-wrapper
+		height: 100px
+		width: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	h5
+		// text-align: center
+		font-style: normal
+		font-weight: 700
+		border-bottom: 2px solid $link-back-full
+	.row 
+		margin: 0
+		padding-bottom: 1.5rem
+		justify-content: center
+		.col-correlati
+			display: block
+			+susy-use($susy-mobile)
+				flex: 0 0 span(2 narrow)
+				margin-left: gutter()
+			
+			@media screen and (min-width: $screen-sm)
+				+susy-use($susy-tablet)
+					flex: 0 0 span(4)
+					margin-left: 0
+					padding-left: gutter() / 2
+					padding-right: gutter() / 2
+					p
+						font-size: .75rem
+						line-height: 1.168
+			@media screen and (min-width: $screen-md)
+				+susy-use($susy-laptop)
+					flex: 0 0 span(4)
+					margin-left: 0
+					padding-left: gutter()
+			@media screen and (min-width: $screen-lg)
+				+susy-use($susy-large)
+					flex: 0 0 span(3 wide)
+					padding: 0 gutter() / 2
+					// &:nth-child(odd)
+					// 	padding-right: gutter() / 2
+					// &:nth-child(even)
+					// 	padding-left: gutter() / 2

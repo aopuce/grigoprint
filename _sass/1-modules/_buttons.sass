@@ -4,7 +4,8 @@ input, button, submit
   text-transform: uppercase
   font-family: $h-font-family
   +border-radius(2rem)
-  +transition
+  +transition-property(width)
+  +transition-duration(.3s)
   +fluid-type($min_width, $max_width, $min_font, $min_font)
   border: none
   font-weight: 700
@@ -71,3 +72,40 @@ input, button, submit
     display: block
     width: 100%
     padding: .8rem  
+  &.btn-form
+    margin: auto
+    margin-top: 1rem
+    &.standard
+      &:after
+        content: "INVIA"
+    &.onclick
+      width: 57px
+      height: 57px
+      margin: auto
+      background: none
+      border: 3px solid tint($long-text, 90%)
+      border-left-color: $link-back-full
+      animation: rotating 2s 0.25s linear infinite 
+      &:after
+        content: ""
+    &.validate
+      font-family: $grigo-icons
+      background: $success-gradient
+      &:after
+        content: "\e915"
+    &.error
+      background: $allert-gradient
+      &:after
+        content: "ERRORE"
+
+footer .btn.btn-form
+  &.validate, &.error
+    color: $back-full-text
+
+
+
+@keyframes rotating 
+  from 
+    transform: rotate(0deg)
+  to 
+    transform: rotate(360deg)

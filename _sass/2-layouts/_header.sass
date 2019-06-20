@@ -18,7 +18,7 @@
 		z-index: 1000
 		&:after
 			content: " "
-			display: tablet
+			display: table
 			clear: both
 	@media screen and (min-width: $screen-md)
 		padding: 15px 0
@@ -26,49 +26,49 @@
 	@media screen and (min-width: $screen-lg)
 		padding: 20px 0
 		height: 100px
-	&:hover
-		background: rgba($back-full-text, 1)
+	// &:hover
+	// 	background: rgba($back-full-text, 1)
 	&.header_scroll
 		background: rgba($back-full-text, 1)
 		+box-shadow(0 0 20px rgba($long-text, $alpha))
 		border-bottom: 1px solid $back-link-button
-		@media screen and (min-width: $screen-sm)
-			height: 40px
-			padding-top: 10px
-			padding-bottom: 10px
-			.site-nav .nav-container
-				.nav_bar
-					a
-						line-height: 19px
-						.grigo-icons
-							font-size: 1rem
-							line-height: 19px
-					&:hover
-						&::after
-							width: 0	
+		// @media screen and (min-width: $screen-sm)
+		// 	// height: 40px
+		// 	padding-top: 10px
+		// 	padding-bottom: 10px
+		// 	.site-nav .nav-container
+		// 		.nav_bar
+		// 			a
+		// 				line-height: 19px
+		// 				.grigo-icons
+		// 					font-size: 1rem
+		// 					line-height: 19px
+		// 			&:hover
+		// 				&::after
+		// 					width: 0	
 
-		@media screen and (min-width: $screen-md)
-			height: 50px
-			padding-top: 10px
-			padding-bottom: 10px
-			.site-nav .nav-container
-				.nav_bar
-					a
-						line-height: 29px
-					.nav_bar_text
-						height: 0
-						font-size: 0
-		@media screen and (min-width: $screen-lg)
-			height: 60px
-			padding-top: 10px
-			padding-bottom: 10px
-			.site-nav .nav-container
-				.nav_bar
-					a
-						line-height: 39px
-						.grigo-icons
-							font-size: 1.4rem
-							line-height: 39px
+		// @media screen and (min-width: $screen-md)
+		// 	// height: 50px
+		// 	padding-top: 10px
+		// 	padding-bottom: 10px
+		// 	.site-nav .nav-container
+		// 		.nav_bar
+		// 			a
+		// 				line-height: 29px
+		// 			.nav_bar_text
+		// 				height: 0
+		// 				font-size: 0
+		// @media screen and (min-width: $screen-lg)
+		// 	// height: 60px
+		// 	padding-top: 10px
+		// 	padding-bottom: 10px
+		// 	.site-nav .nav-container
+		// 		.nav_bar
+		// 			a
+		// 				line-height: 39px
+		// 				.grigo-icons
+		// 					font-size: 1.4rem
+		// 					line-height: 39px
 .opened
 	.site-header
 		background: rgba($back-full-text, 1)

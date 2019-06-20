@@ -1,0 +1,62 @@
+---
+layout: compress
+---
+<html lang="{{ page.lang | default: site.lang | default: "it" }}">
+
+{%- include head.html -%}
+
+<body id="add-class">
+
+    <div id="scroll-sobstitute" class="scroll">
+        <div class="nav-list" id="nav-commander">
+            {%- include menu.html -%}
+        </div>
+        {%- include header.html -%}
+        <div id="container">
+        </div>
+        <main class="page-content" id="page-content" aria-label="Content">
+            <div class="image-title" id="{{page.title | replace: ' ', '-' | downcase}}">
+            	{% for item in page.image %}
+                	{% cloudinary {{item.config}} {{item.path}} alt="{{item.alt}}" class="{{item.class}}" %}
+                {% endfor %}
+            </div>
+            <div class="wrapper">
+                <header class="head-blog">
+                    <div class="title-container">
+                    	<h2><span>{{page.title | replace: ' ', '</span><span>'}}</span></h2>
+                        <h6><span>{{page.description}}</span></h6>
+                    </div>
+                </header>
+                <article class="product-content">
+                    {{ content }}
+                </article>
+            </div>
+            {% comment%}
+            <!-- {% if page.correlati%}
+              <div class="wrapper">
+              {%- include prodotti_correlati.html -%}
+              </div>
+              {% endif %} -->
+            {% endcomment %}
+        </main>
+        {%- include footer.html -%}
+        {%- include static_link.html -%}
+    </div>
+
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+        {% minibundle js %}
+            source_dir: assets/javascript
+            destination_path: assets/javascript/app
+            baseurl: '{{ site.baseurl }}/'
+            assets:
+            - form_it
+            - menu
+            attributes:
+                async: async
+        {% endminibundle %}
+    {% else %}
+        <script src="{{'/assets/javascript/menu.js'}}"></script>
+    {%- endif -%}
+</body>
+
+</html>

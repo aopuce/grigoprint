@@ -1,5 +1,5 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="{{site.url}}"></data>
 
   <div class="wrapper">
 
@@ -30,20 +30,22 @@
         <h4>Esplora</h4>
         <div class="link_footer">
         <ul>
-        <li><a href="0.0.0.0">Home</a></li>
-        <li><a href="about.html">Contatti</a></li>
+        <li><a href="{{site.url}}">Home</a></li>
+        <li><a href="{{site.url}}{% link contatti.html %}">Contatti</a></li>
         </ul>
         <h5>prodotti</h5>
         <ul>
-          {% for node in site.products %}
-            {% if page.url == node.url %}
-              <li><a class="page-link active" href="{{ node.url }}">
-              {{ node.title }}
-              </a>
-            </li>
-            {% else %}
-             <li><a href="{{node.url}}">{{node.title}}</a></li>
-            {% endif %}
+          {% for node in site.prodotti %}
+            {% unless node.exclude %}
+              {% if page.url == node.url %}
+                <li><a class="page-link active" href="{{ node.url }}">
+                {{ node.title }}
+                </a>
+              </li>
+              {% else %}
+               <li><a href="{{node.url}}">{{node.title}}</a></li>
+              {% endif %}
+            {% endunless %}
           {% endfor %}
         </ul>
         </div>
@@ -51,26 +53,7 @@
 
       <div class="footer-col footer-col-3">
         <h4>Contattaci</h4>
-        <form action="">
-          <div class="form-col"><input type="text" name="name" placeholder="Nome" required></div>
-          <div class="form-col"><input type="text" name="company" placeholder="Azienda" required></div>
-          <div class="form-col"><input type="tel" name="telephone" placeholder="123456789" required></div>
-          <div class="form-col"><input type="email" name="email" placeholder="info@example.com" required></div>
-          <div class="form-col-textarea"><textarea name="message" id="" cols="30" rows="5" placeholder="Il tuo messaggio..." required></textarea></div>
-          <div class="form-col-textare ">
-            <label class="form-checkbox">Accettazione dei <a href="">Termini e condizioni</a>
-            <input type="checkbox" name="Termini e condizioni" value="Termini e condizioni"><span class="checkmark"></span> </label>
-          </div>
-          <div class="form-col-textarea">
-           <!--  <div id='recaptcha' class="g-recaptcha"
-          data-sitekey="6Lfw23EUAAAAAP_vsoHA3Yc69VNjTZT9essKsDwV"
-          data-callback="onSubmit"
-          data-size="invisible"></div> -->
-            <button type="submit" value="submit" class="btn btn-default btn-large"> 
-              Invia
-            </button>
-          </div>
-        </form>
+        {%- include form.html -%}
       </div>
     </div>
 

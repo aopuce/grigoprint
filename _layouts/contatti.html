@@ -1,31 +1,39 @@
-{% raw %}
-<?php session_start() ?>
-{% endraw %}
-<!DOCTYPE html>
+---
+layout: compress
+---
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
 
   {%- include head.html -%}
 
-  <body>
-
-    <div id="st-container" class="st-container">
+  <body id="add-class" >
+    <div id="scroll-sobstitute" class="scroll">
+    <div class="nav-list" id="nav-commander">
       {%- include menu.html -%}
-      <div class="st-pusher">
-        <div class="st-content">
-         {%- include header.html -%}
-          <div class="st-content-inner">
-            <main class="page-content" aria-label="Content">
-              <div class="wrapper">
-                {{ content }}
-              </div>
-            </main>
-            {%- include static_link.html -%}
-          </div>
-        </div>
-      </div>
     </div>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="{{'/assets/javascript/menu.js'}}"></script>
-  </body>
+    {%- include header.html -%}
+    <div id="container">
+    </div>
+      <main class="page-content" id="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+      {%- include static_link.html -%}
+       </div>
 
+       {%- if jekyll.environment == 'production' and site.google_analytics -%}
+       {% minibundle js %}
+           source_dir: assets/javascript
+           destination_path: assets/javascript/app
+           baseurl: '{{ site.baseurl }}/'
+           assets:
+           - form_it
+           - menu
+           attributes:
+               async: async
+       {% endminibundle %}
+   {% else %}
+       <script src="{{'/assets/javascript/menu.js'}}"></script>
+ {%- endif -%}
+  </body>
 </html>

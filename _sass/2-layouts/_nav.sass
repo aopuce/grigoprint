@@ -3,8 +3,11 @@
 	top: 0
 	width: 100%
 	z-index: 2
+	@media screen and (max-width: $screen-sm - 1) and (orientation: landscape)
+		position: relative
 	.head-wrapper
 		height: 100%
+		width: 100%
 	.site-nav
 		display: flex
 		flex-wrap: wrap
@@ -47,19 +50,27 @@
 
 		.nav-container
 			display: flex
-			width: 100%
 			border-top: 1px solid $back-link-button
+			width: 100%
 			position: fixed
 			bottom: 0
 			height: 50px
 			z-index: 1000
 			background: $back-full-text
 			left: 0 
-			flex: 1 1 span(2 narrow of 4 narrow)
+			justify-content: space-between
+			// flex: 1 1 span(2 narrow of 4 narrow)
+			@media screen and (max-width: $screen-sm - 1px) and (orientation: landscape)
+				width: 10%
+				height: 100%
+				flex-direction: column-reverse
+				border-top: 0
+				border-right: 1px solid $back-link-button
 			@media screen and (min-width: $screen-sm)
 				+susy-use($susy-tablet)
 					flex: 0 0 span(4)
-					//padding: gutter() /2 0
+					padding-right: gutter() / 2
+					padding-left: gutter() / 2
 				position: relative
 				border-top: none
 				background: none
@@ -67,11 +78,14 @@
 			@media screen and (min-width: $screen-md)
 				height: 100%
 				+susy-use($susy-laptop)
-					flex: 0 0 span(4 wide of 12 wide)
+					flex: 0 0 span(4 of 12)
+					padding: 0 gutter() / 2
 			@media screen and (min-width: $screen-lg)
 				height: 100%
 				+susy-use($susy-large)
 					flex: 0 0 span(6)
+					padding: 0
+					// padding-left: gutter()
 					//padding: gutter() /2 span(1)
 			.nav_bar
 				text-align: center
@@ -83,12 +97,17 @@
 				@media screen and (min-width: $screen-sm)
 					font-size: 1rem
 					+susy-use($susy-tablet)
-						width: span(2 of 4)
-						padding: 0 gutter(of 4) / 2
-						&:first-child
-							padding-left: gutter(of 4)
-						&:last-child
-							padding-right: gutter(of 4)
+						flex: 0 0 span(2 of 4)
+						@media screen and (max-width: $screen-md - 1px)
+							&:first-child
+								padding-right: gutter(of 4) / 2
+							&:last-child
+								padding-left: gutter(of 4) / 2
+						// padding: 0 gutter(of 4) / 2
+						// &:first-child
+						// 	padding-left: gutter(of 4)
+						// &:last-child
+						// 	padding-right: gutter(of 4)
 					&::after
 						content: ''
 						display: block
@@ -97,28 +116,26 @@
 						background-color: $back-link-button
 						+transition-property(width)
 						+transition-duration(0.2s)
-					&:hover
+					&:active
 						&::after
 							width: 100%	
 				@media screen and (min-width: $screen-md)
 					+susy-use($susy-laptop)
-						width: span(2 narrow of 4 narrow)
-						padding-right: gutter( of 4) / 2
-						padding-left: gutter( of 4) / 2
-						&:first-child
-							padding-left: gutter(of 4) / 2
-						&:last-child
-							padding-right: gutter(of 4) / 2
+						flex: 0 0 span(2 narrow of 4 narrow)
 				@media screen and (min-width: $screen-lg)
 					+susy-use($susy-large)
-						padding-left: gutter(of 4)
-						padding-right: 0
-						&:first-child
-							padding-left: gutter(of 4)
-							padding-right: 0
-						&:last-child
-							padding-left: gutter(of 4) 
-							padding-right: 0
+						flex: 0 0 span(3 narrow of 6 narrow)
+						padding: 0
+						&:first-child, &:last-child
+							padding: 0
+						// padding-left: gutter(of 4)
+						// padding-right: 0
+						// &:first-child
+						// 	padding-left: gutter(of 4)
+						// 	padding-right: 0
+						// &:last-child
+						// 	padding-left: gutter(of 4) 
+						// 	padding-right: 0
 				&:last-child
 					border-left: 1px solid $back-link-button
 					@media screen and (min-width: $screen-sm)
@@ -133,12 +150,16 @@
 					//line-height: 2
 					width: 100%
 					+transition
+					@media screen and (max-width: $screen-sm - 1px) and (orientation: landscape)
+						height: 50vh
+						span:first-child
+							line-height: 50vh
 					@media screen and (min-width: $screen-sm)
 						//line-height: 1
 					@media screen and (min-width: $screen-lg)
 						padding-bottom: 5px
 
-					&:hover, &:focus, &:active
+					&:focus, &:active
 						color: $back-link-button
 						cursor: pointer
 
@@ -209,7 +230,7 @@
 		&:before
 			display: block
 			font-family: $grigo-icons
-			content: "\e911"
+			content: "\e903"
 			font-size: 30px
 			line-height: 35px
 			text-align: center
@@ -240,6 +261,12 @@
 	font-weight: 700
 	font-family: $h-font-family
 	text-align: center
+	text-transform: uppercase
+	.grigo-arrow
+		+transform(rotate(-90deg))
+		vertical-align: middle
+		padding-left: 4px
+		font-size: 1rem
 .container-selector
 	cursor: pointer
 
@@ -257,6 +284,10 @@
 	+transition
 	border-left: 1px solid $long-text
 	background: $back-full-text
+	@media screen and (max-width: $screen-sm - 1px) and (orientation: landscape)
+		bottom: 0 
+		top: 0
+		z-index: 5
 	@media screen and (min-width: $screen-sm)
 		font-size: .8rem
 		bottom: 0
@@ -280,7 +311,7 @@
 			font-weight: bold
 			border-bottom: 1px solid tint($long-text, 80%)
 			+transition()
-			&:hover, &:focus
+			&:active, &:focus
 				color: $back-full-text
 				background: $back-link-button
 			&:active, &:focus
@@ -290,11 +321,13 @@
 				color: $back-full-text
 				text-shadow: 1px 1px 1px $long-text
 		&.menu-kit
-			left: 0
+			//left: 0
 		&.menu-prodotti
-			left: 300px
-			@media screen and (min-width: $screen-sm)
-				left: 400px
+			overflow-y: auto
+			left: 0
+			//left: 300px
+			// @media screen and (min-width: $screen-sm)
+			// 	left: 400px
 			ul
 				padding-bottom: 5rem
 	&.switching
@@ -326,16 +359,17 @@
 	left: 100%
 	z-index: 1
 .opened
-	overflow-y: hidden
+	// overflow-y: hidden
 	.nav-list
 		width: 300px
 		@media screen and (min-width: $screen-sm)
-			width: 400px
+			width: 380px
 	#container
 		opacity: .7
 		overflow: hidden
 		left: 0
 #scroll-sobstitute
-	width: 100%
-	height: 100%
-	overflow-y: scroll
+	// width: 100%
+	// height: 100%
+	//overflow-y: scroll
+

@@ -1,0 +1,44 @@
+<form>
+    <div class="form-col animated-label" id="name">
+        <input type="text" name="name" placeholder="Inserisci il tuo nome">
+        <label for="name">Nome</label>
+        <span>Almeno tre caratteri</span>
+    </div>
+    <div class="form-col animated-label" id="company">
+        <input type="text" name="company" placeholder="Azienda">
+        <label for="company">Azienda</label>
+    </div>
+    <div class="form-col animated-label" id="telephone">
+        <input type="tel" name="telephone" placeholder="0443123456">
+        <label for="telephone">Telefono</label>
+        <span>Numero non corretto</span>
+    </div>
+    <div class="form-col animated-label" id="email">
+        <input type="email" name="email" placeholder="latua@email.com">
+        <label for="email">e-Mail</label>
+        <span>Errore messaggio</span>
+    </div>
+    <div class="form-col-textarea animated-label" id="message">
+        <textarea name="message" id="" cols="30" rows="5" placeholder="Messaggio..."></textarea>
+        <label for="message">Messaggio</label>
+        <span>Errore messaggio</span>
+    </div>
+    <div class="form-col-textarea" id="agree">
+        <label class="form-checkbox">
+                Confermi l'accettazione della nostra
+            <input type="checkbox" name="agree" value="Termini e condizioni"><span class="checkmark"></span> 
+        </label>
+        <span>
+          <a href="#privacy_policy"> Privacy Policy</a>
+        </span>
+    </div>
+    {% if jekyll.environment == 'production' %}
+    <div class="form-col-textarea">
+            <div id='recaptcha' class="g-recaptcha"
+          data-sitekey="6Lfw23EUAAAAAP_vsoHA3Yc69VNjTZT9essKsDwV"
+          data-callback="onSubmit"
+          data-size="invisible"></div>
+    {% endif %}
+    <button type="button" id="btn-send" class="btn btn-default btn-large btn-form standard" onclick="sendMail()">
+    </button>
+</form>

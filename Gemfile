@@ -23,6 +23,8 @@ group :jekyll_plugins do
   gem "jekyll-compass"
   gem 'jekyll-responsive-image'
   gem 'jekyll-cloudinary'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-minibundle'
 end
 
 

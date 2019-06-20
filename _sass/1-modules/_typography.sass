@@ -28,45 +28,45 @@ $mod_2: 1.5 // desktop
 
 
 h1
-  // font-size: $mod_1*$mod_1*$mod_1*1rem
-  // +fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+  font-size: $mod_1*$mod_1*$mod_1*1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
   font-weight: 900
   font-size: $h1
-  line-height: $h1
+  // line-height: $h1
   padding-top: calc((#{$baseline} - #{$h1}) + #{$baseline} * 2)
 
 h2
-  // font-size: $mod_1*$mod_1*$mod_1 *1rem
-  // +fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
+  font-size: $mod_1*$mod_1*$mod_1 *1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font)
   font-weight: 900
   font-size: $h2
-  line-height: $h2
+  // line-height: $h2
   padding-top: calc((#{$baseline} - #{$h2}) + #{$baseline} * 2)
   // margin: $baseline 0
 
 h3
-  // font-size: $mod_1*$mod_1 *1rem
-  // +fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font)
+  font-size: $mod_1*$mod_1 *1rem
+  +fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font)
   font-weight: 900
   font-size: $h3
-  line-height: $h3
+  // line-height: $h3
   padding-top: calc((#{$baseline} - #{$h3}) + #{$baseline} * 2)
 h4
-  // font-size: 1.2rem
-  // +fluid-type($min_width, $max_width, $mod_1*$min_font, $mod_2*$min_font)
+  font-size: 1.2rem
+  +fluid-type($min_width, $max_width, $mod_1*$min_font, $mod_2*$min_font)
   font-weight: 900
   font-size: $h4
-  line-height: $h4
+  // line-height: $h4
   padding-top: calc((#{$baseline} - #{$h4}) + #{$baseline} * 2)
 .service-content h4
   padding-top: $baseline
+  font-size: 1rem
 
 h5
-  // font-size: 1rem
-  // +fluid-type($min_width, $max_width, $mod_1, $mod_2)
+  +fluid-type($min_width, $max_width, $mod_1, $mod_2)
   font-weight: 500
   font-size: $h5
-  line-height: $h5
+  // line-height: $h5
   padding-top: calc((#{$baseline} - #{$h5}) + #{$baseline})
   font-style: italic
 .link_footer h5
@@ -75,6 +75,7 @@ h5
 
 a, a:hover, a:focus
   text-decoration: none
+  // font-family: $h-font-family
 
 button
   font-size: inherit
@@ -91,4 +92,15 @@ strong, b
   font-weight: 700
 em, i
   font-style: italic
+  
+.col-half
+  p:last-child
+    margin-bottom: 0
+ol
+  list-style-type: decimal
+  li
+    padding-bottom: 1.5rem 
+.row .col-half
+  ul
+    list-style: square inside
   

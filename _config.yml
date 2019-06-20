@@ -13,17 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Grigolini
+title: Ombrellificio Grigolini di Grigolini Marcello
 email: info@bandieregrigolini.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Grigolini Textile Digital Printing di Illasi, Verona, si occupa della 
+  Grigolini di Illasi, Verona, si occupa della 
   stampa digitale su tessuto in poliestere, quali bandiere personalizzate, ombrelloni,
   poster, striscioni in TNT e molto altro.
+logo: /assets/images/logo.svg
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "localhost" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.grigoprint.it" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
-
+google_analytics: UA-139665476-1
 # Build settings
 markdown: kramdown
 theme: minima
@@ -31,12 +32,28 @@ plugins:
   - jekyll-feed
   - jekyll-compass
   - jekyll-responsive-image
+  - jekyll-sitemap
+  - jekyll/minibundle
 sass:
+  style: compressed
   sass_dir: _sass
   load_paths: 
     - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
     - "/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass"
 lang: it
+compress_html:
+  clippings: [all]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
+# minifying js
+minibundle:
+  minifier_commands:
+    js: node_modules/.bin/uglifyjs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -49,8 +66,20 @@ lang: it
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+defaults:
+  -
+    scope:
+      path:  "_kits/*.html"
+    values:
+      sitemap: false
+  -
+    scope:
+      path:  "landing/*.html"
+    values:
+      sitemap: false  
+      
 collections:
-  products:
+  prodotti:
     output: true
   kits:
     output: true
@@ -125,6 +154,7 @@ cloudinary:
   cloud_name: dezvcrrlj
   only_prod: true
   verbose: true
+  origin_url: https://www.grigoprint.it
   presets:
     default:
       min_width: 320
@@ -140,7 +170,19 @@ cloudinary:
       sizes: "(min-width: 50rem) 50rem, 100vw"
     halfscreen:
       min_width: 320
-      max_width: 1600
+      max_width: 1000
       fallback_max_width: 800
       steps: 5
       sizes: "(min-width: 50rem) 10rem, 50vw"
+    onethird:
+      min_width: 110
+      max_width: 535
+      fallback_max_width: 300
+      steps: 3
+      sizes: "(min-width: 50rem) 17rem, 30vw"
+    onequater:
+      min_width: 80
+      max_width: 400
+      fallback_max_width: 300
+      steps: 3
+      sizes: "(min-width: 50rem) 15rem, 25vw"
