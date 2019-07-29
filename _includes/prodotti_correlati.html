@@ -1,18 +1,31 @@
+{% assign moreThanfour = false %}
+{% for i in page.correlati %}
+	{% if forloop.rindex0 >= 4 %}
+		{% assign moreThanfour = true %}
+	{% endif %}
+{% endfor %}
 <div class="prodotti_correlati">
 	<h4 class="middle-title">prodotti correlati</h4>
-		<ul class="row">
-		{% for i in page.correlati %}
-			{% for node in site.prodotti %}
-		        {% if {{i}} == node.title %}
-		        <li class="col-correlati">
-		        	<a href="{{node.url}}" >
-		        		<div class="img-wrapper">{% cloudinary onequater {{node.path_image}} %}</div>
-		        		<h5>{{node.title}}</h5>
-		        		<p>{{node.description}}</p>
-		        	</a>
-		        </li>
-		        {% endif %}
-		    {% endfor %}
-		{% endfor %}
-	</div>
+		<div class="row">
+				{% if moreThanfour %}
+					<ul class="correlati_content morethanfour">
+				{% else %}
+					<ul class="correlati_content">
+				{% endif %}
+				{% for i in page.correlati %}
+					{% for node in site.prodotti %}
+				        {% if {{i}} == node.title %}
+				        <li class="col-correlati">
+				        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+				        		<div class="img-wrapper">
+				        		{% cloudinary onequater {{node.image[0].path}} alt="{{ node.title }}" %}</div>
+				        		<h5>{{node.title}}</h5>
+				        		<p>{{node.description}}</p>
+				        	</a>
+				        </li>
+				        {% endif %}
+				    {% endfor %}
+				{% endfor %}
+			</ul>
+		</div>
 </div>

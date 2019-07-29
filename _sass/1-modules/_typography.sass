@@ -12,7 +12,7 @@ body
   color: $long-text
   line-height: $baseline
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5
   font-family: $h-font-family
   text-transform: uppercase
 
@@ -34,6 +34,8 @@ h1
   font-size: $h1
   // line-height: $h1
   padding-top: calc((#{$baseline} - #{$h1}) + #{$baseline} * 2)
+  span
+    display: inline-block
 
 h2
   font-size: $mod_1*$mod_1*$mod_1 *1rem
@@ -64,7 +66,7 @@ h4
 
 h5
   +fluid-type($min_width, $max_width, $mod_1, $mod_2)
-  font-weight: 500
+  font-weight: 700
   font-size: $h5
   // line-height: $h5
   padding-top: calc((#{$baseline} - #{$h5}) + #{$baseline})
@@ -86,6 +88,8 @@ button
   h3, h4, h5
     margin-bottom: $baseline / 2 
     padding-top: $baseline / 2
+  .p-name h4
+    margin-bottom: 0
   p, ul
     margin-bottom: $baseline / 2
 strong, b
@@ -96,6 +100,11 @@ em, i
 .col-half
   p:last-child
     margin-bottom: 0
+  &.text_index
+    p
+      @media screen and (max-width: $screen-sm - 1px)
+        +text-shadow(0 1px 0 $back-full-text)
+        font-weight: 400
 ol
   list-style-type: decimal
   li

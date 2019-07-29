@@ -1,4 +1,4 @@
-<head>
+<head>  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=yes">
@@ -6,7 +6,7 @@
   <!-- SeoTag -->
   <title>
     {% if page.title %}
-      {{ page.title }}
+      {{site.title}} | {{ page.title }}
     {% else %}
       {{ site.title}}
     {% endif %}
@@ -54,19 +54,7 @@
         "Friday",
         "Saturday"
       ],
-      "opens": "08:30",
-      "closes": "12:30"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "14:00",
+      "opens": "09:00",
       "closes": "18:00"
     }
   ]
@@ -77,10 +65,10 @@
     <script type="application/ld+json">
       {
         "@context" : "http://schema.org",
-        "@type" : "Product",
-        "name" : "{{page.title}}",
+        "@type" : "CreativeWork",
+        "headline" : "{{page.title}}",
         "image" : "{{site.url}}{{page.path_image}}",
-        "description" : "{{page.description}}",
+        "text" : "{{page.description}}",
         "url" : "{{site.url}}{{page.url}}"
       }
       </script>
@@ -90,6 +78,11 @@
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
+    <script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"lang":"it","siteId":1582385,"cookiePolicyId":70578249, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#4b4b4b","customizeButtonCaptionColor":"white","position":"float-bottom-center","textColor":"white","backgroundColor":"#000001" }};
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
   {%- endif -%}
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/apple-touch-icon-144x144.png" | relative_url }}" />
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/apple-touch-icon-152x152.png" | relative_url }}" />
@@ -99,8 +92,8 @@
 <meta name="msapplication-TileColor" content="#062A3B" />
 <meta name="msapplication-TileImage" content="{{ "/mstile-144x144.png" | relative_url }}" />
 <meta name="theme-color" content="#062A3B">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700|Montserrat:400i,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Montserrat:700,900&display=swap" rel="stylesheet" lazyload>
   <!-- script -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src="{{'/assets/javascript/form_it.js'}}"></script>
+  <script src='https://www.google.com/recaptcha/api.js' async></script>
+  {% comment %}<script src="{{'/assets/javascript/form_it.js'}}" async></script>{% endcomment %}
 </head>

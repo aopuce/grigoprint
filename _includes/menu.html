@@ -1,7 +1,7 @@
 <nav>
   {% comment %} tasto tutti i prodotti {% endcomment %}
   <div class="container-selector">
-    <a href="/prodotti" class="label-swich">tutti i prodotti <span class="grigo-icons grigo-arrow"></span></a>
+    <a href="/prodotti" class="label-swich" title="Tutti i Prodotti">tutti i prodotti <span class="grigo-icons grigo-arrow"></span></a>
   </div>
   {% comment %} <div class="container-selector" id="select">
     <span class="label-swich" id="kits">Kits</span>
@@ -32,12 +32,12 @@
     {% for node in site.prodotti %}
       {% unless node.exclude %}
         {% if page.url == node.url %}
-          <li><a class="page-link active" href="{{ node.url }}">
+          <li><a class="page-link active" title="{{ node.description | truncate 50 }}" href="{{ node.url }}">
           {{ node.title }}
           </a>
         </li>
         {% else %}
-         <li><a href="{{node.url}}">{{node.title}}</a></li>
+         <li><a href="{{node.url}}" title="{{ node.description | truncate 50 }}">{{node.title}}</a></li>
         {% endif %}
       {% endunless %}
     {% endfor %}

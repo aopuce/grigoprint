@@ -9,6 +9,9 @@
 			height: auto
 			object-fit: cover
 			max-height: 100vh
+			&#part_striscione
+				@media screen and (min-width: $screen-lg)
+					+transform(translate(50%, 50%) scaleX(-1))
 		// 	@media screen and (min-width: $screen-sm)
 		// 		height: 100%
 		// 	// object-fit: contain
@@ -124,7 +127,7 @@
 		width: 100%
 		height: auto
 		bottom: 0
-	&#tovaglie
+	&#tovaglie-pubblicitarie
 		img
 			width: auto
 			height: 80%
@@ -149,35 +152,17 @@
 			height: 100%
 			object-fit: cover
 			object-position: right
-	&#foulard-e-pochette
+	&#foulard
 		img
-			&:first-child
-				width: 75%
-				bottom: 0
-				right: 10px
-				z-index: 1
-			&:last-child
-				width: 40%
-				bottom: 0
-				left: 0
+			width: 90%
+			bottom: 50%
+			+transform(translate(50%, 50%))
+			right: 50%
 			@media screen and (min-width: $screen-sm)
-				&:first-child
-					width: 40%
-				&:last-child
-					width: 40%
+				width: 40%
 			@media screen and (min-width: $screen-lg)
-				&:first-child
-					right: 5%
-					width: 30%
-					bottom: 0							
-				&:last-child
-					width: 30%
-					left: 5%
-					bottom: 0
-	&#foulard-e-pochette
-		img
-			width: auto
-			max-height: 90vh
+				width: 30%
+				right: 30%
 	&#gonfaloni
 		img
 			&:first-child
@@ -198,13 +183,14 @@
 					top: 10%
 					left: 12%
 			@media screen and (min-width: $screen-lg)
+				max-height: 90vh
 				&:first-child
-					width: 30%
+					width: auto
 					top: 50%
 					+transform(translateY(-50%))
 					right: 12%
 				&:last-child
-					width: 30%
+					width: auto
 					top: 50%
 					+transform(translateY(-50%))
 	&#tessuto-3d
@@ -274,6 +260,11 @@
 				&:last-child
 					left: 2%
 					top: 45%
+	&#bandiere-personalizzate
+		img
+			@media screen and (min-width: $screen-md)
+				width: 25%
+
 	&#gagliardetti
 		img
 			height: 50vh
@@ -324,7 +315,7 @@
 				&:nth-child(2)
 					right: 50%
 					transform: translateX(28%)		
-	&#bandiere-istituzionali
+	&#bandiere-istituzionali, &#ombrelloni
 		img
 			@media screen and (orientation: landscape)
 				top: 0
@@ -347,7 +338,7 @@
 			position: absolute
 			object-fit: contain
 			margin: auto
-			bottom: 0
+			bottom: 50px
 			max-height: 100%
 			@media screen and (orientation: portrait)
 				&.landscape
@@ -355,20 +346,55 @@
 				&.portrait
 					display: block
 			@media screen and (orientation: landscape)
+				bottom: 0
 				&.portrait
 					display: none
 				&.landscape
 					display: block
-			
+			@media screen and (min-width: $screen-sm)
+				bottom: 0
+	&#poster
+		img
+			bottom: 50%
+			left: 50%
+			+transform(translate(-50%, 50%))
+			@media screen and (min-width: $screen-sm)
+				max-height: 80%
+				width: auto
+	&#striscioni
+		img
+			height: 100%			
+	&#bean-banner
+		img
+			width: 100%
+			object-fit: cover
+			bottom: 50px
+			@media screen and (min-width: $screen-sm)
+				bottom: 0	
+	&#filari-di-bandierine
+		img
+			height: 100%
+			width: 100%
+			object-fit: cover
+	&#ombrelli-personalizzati
+		img
+			height: 100%
+			width: 100%
+			object-fit: contain
+	&#tappeto-personalizzato
+		img
+			height: calc(100% + 50px)
+			object-fit: cover
+			bottom: -50px
 .row .col-half img.img-intern-50, .row .columns_4 img.img-intern-50
 	display: block
 	width: 100%
 	margin: auto
+	height: auto
 	@media screen and (min-width: $screen-sm)
 		+susy-use($susy-tablet)
-			width: 50%
+			width: 60%
 			margin: auto
-			height: auto
 			position: relative
 			bottom: auto
 			right: auto

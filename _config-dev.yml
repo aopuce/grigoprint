@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Grigolini
+title: Grigoprint
 email: info@bandieregrigolini.it
 description: >- # this means to ignore newlines until "baseurl:"
   Grigolini di Illasi, Verona, si occupa della 
@@ -30,26 +30,35 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-compass
   - jekyll-responsive-image
   - jekyll-sitemap
   - jekyll/minibundle
+ # - jekyll-compass
 sass:
   style: expanded
   sass_dir: _sass
   load_paths: 
-    - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
     - "/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass"
+    #- "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
 lang: it
+# compress_html:
+#   clippings: [all]
+#   comments: ["<!-- ", " -->"]
+#   endings: [all]
+#   ignore:
+#     envs: []
+#   blanklines: true
+#   profile: false
+#   startings: [html, head, body]
 compress_html:
-  clippings: [all]
-  comments: ["<!-- ", " -->"]
-  endings: [all]
+  clippings: all
+  comments: [""]
+  startings: [html, body]
+  endings: [html, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
   ignore:
     envs: []
-  blanklines: true
-  profile: false
-  startings: [html, head, body]
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -61,6 +70,7 @@ compress_html:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude: [_kits/*.html, landing/*.html, _prodotti/canotte_personalizzate.html, _prodotti/coperture_gazebo.html, _prodotti/gazebo.html, _prodotti/roll_up.html, _prodotti/spille.html]
 defaults:
   -
     scope:

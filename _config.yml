@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ombrellificio Grigolini di Grigolini Marcello
+title: Grigoprint
 email: info@bandieregrigolini.it
 description: >- # this means to ignore newlines until "baseurl:"
   Grigolini di Illasi, Verona, si occupa della 
@@ -30,26 +30,26 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-compass
   - jekyll-responsive-image
   - jekyll-sitemap
   - jekyll/minibundle
+  #- jekyll-compass
 sass:
   style: compressed
   sass_dir: _sass
   load_paths: 
-    - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
     - "/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass"
+  #  - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
 lang: it
 compress_html:
-  clippings: [all]
-  comments: ["<!-- ", " -->"]
-  endings: [all]
+  clippings: all
+  comments: [""]
+  startings: [html, body]
+  endings: [html, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
   ignore:
     envs: []
-  blanklines: true
-  profile: false
-  startings: [html, head, body]
 # minifying js
 minibundle:
   minifier_commands:
@@ -66,6 +66,7 @@ minibundle:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude: [400.html, 401.html, 403.html, 404.html, node_modules/*.*, _kits/*.html, landing/*.html, _prodotti/canotte-personalizzate.html, _prodotti/coperture-gazebo.html, _prodotti/gazebo.html, _prodotti/roll-up.html, _prodotti/spille.html]
 defaults:
   -
     scope:
@@ -75,6 +76,11 @@ defaults:
   -
     scope:
       path:  "landing/*.html"
+    values:
+      sitemap: false  
+  -
+    scope:
+      path:  "node_modules/*.*"
     values:
       sitemap: false  
       
@@ -151,7 +157,7 @@ responsive_image:
     - assets/avatars/*.{jpeg,jpg}
 
 cloudinary:
-  cloud_name: dezvcrrlj
+  cloud_name: dum2puxhq
   only_prod: true
   verbose: true
   origin_url: https://www.grigoprint.it
@@ -167,22 +173,22 @@ cloudinary:
       max_width: 2000
       fallback_max_width: 800
       steps: 5
-      sizes: "(min-width: 50rem) 50rem, 100vw"
+      sizes: "(min-width: 100rem) 100rem, 100vw"
     halfscreen:
       min_width: 320
-      max_width: 1000
+      max_width: 1200
       fallback_max_width: 800
       steps: 5
-      sizes: "(min-width: 50rem) 10rem, 50vw"
+      sizes: "(min-width: 50rem) 50rem, 50vw"
     onethird:
-      min_width: 110
+      min_width: 250
       max_width: 535
       fallback_max_width: 300
-      steps: 3
+      steps: 5
       sizes: "(min-width: 50rem) 17rem, 30vw"
     onequater:
-      min_width: 80
-      max_width: 400
+      min_width: 250
+      max_width: 600
       fallback_max_width: 300
-      steps: 3
-      sizes: "(min-width: 50rem) 15rem, 25vw"
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 50vw"

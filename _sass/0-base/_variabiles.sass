@@ -30,6 +30,16 @@ $h2: 1.5rem
 $h3: 1.25rem
 $h4: 1rem
 $h5: .875rem
+$radius: .3rem
+//style box
+=style_box
+	+border-radius($radius)
+	+box-shadow(0 3px 7px rgba(0, 0, 0, .4))
+=button_box
+	+border-radius($radius)
+	+box-shadow(0 2px 5px rgba(0, 0, 0, .3))
+	&:active
+		+box-shadow(inset 0 0 2px rgba(0, 0, 0, .3))
 
 //transition variabiles
 $default-transition-property : all
@@ -37,27 +47,90 @@ $default-transition-duration : 0.3s
 $default-transition-function : ease-in-out
 $default-transition-delay    : false
 //Colors
-$back-link-button: rgba(8,65,92,1)
+$back-link-button: #08415c
 $back-full-text: #fff
 
 $allert: #912306
 $positive: #062A3B
-$link-back-full: rgba(32,124,168,1)
+$link-back-full: #207ca8
 $long-text: #29353B
-$warning: rgba(254, 235, 147, 1)
-$success: rgba(0, 200, 0, 1)
+$warning: #feeb93
+$success: #00c800
 $alpha: 0.30
 //gradient background
 $default-gradient: linear-gradient(330deg, #fff, shade(#fff, 4%))
 $primary-gradient: linear-gradient(330deg, $back-link-button, $link-back-full)
-$secondary-gradient: linear-gradient(40deg, $link-back-full, tint($link-back-full, 25%))
-$success-gradient: linear-gradient(40deg, $success, tint($success, 25%))
-$allert-gradient: linear-gradient(40deg, $allert, tint($allert, 25%))
-$warning-gradient: linear-gradient(40deg, $warning, tint($warning, 25%))
-$long-text-gradient: linear-gradient(40deg, $long-text, tint($long-text, 10%))
+$secondary-gradient: linear-gradient(40deg, $link-back-full, tint(#207ca8, 25%))
+$success-gradient: linear-gradient(40deg, $success, tint(#00c800, 25%))
+$allert-gradient: linear-gradient(40deg, $allert, tint(#912306, 25%))
+$warning-gradient: linear-gradient(40deg, $warning, tint(#feeb93, 25%))
+$long-text-gradient: linear-gradient(40deg, $long-text, tint(#29353B, 10%))
 
 $brand-primary: #08415c
 $testo: #29353B
 $background: #ffffff
 
-// prova
+// utils
+// mixin cross browser
+=crossBrowser($property, $css)
+	-webkit-#{$property} : $css
+	-moz-#{$property} : $css
+	-o-#{$property} : $css
+	#{$property} : $css
+
+// mixin transform
+=transform($kind)
+	+crossBrowser(transform, $kind)
+=transform-origin($transform-origin)
+	+crossBrowser(transform-origin, $transform-origin)
+// mixin transition
+=transition
+	+crossBrowser(transition-delay, $default-transition-delay)
+	+crossBrowser(transition-property, $default-transition-property)
+	+crossBrowser(transition-duration, $default-transition-duration)
+	+crossBrowser(transition-function, $default-transition-function)
+=transition-property($transition-property)
+	+crossBrowser(transition-property, $transition-property)
+=transition-duration($transition-duration)
+	+crossBrowser(transition-duration, $transition-duration)
+
+// mixin text-shadow
+=text-shadow($text-shadow-property)
+	+crossBrowser(text-shadow, $text-shadow-property)
+// border-radius
+=border-radius($border-property)
+	+crossBrowser(border-radius, $border-property)
+=box-shadow($box-shadow-property...)
+	+crossBrowser(box-shadow,  $box-shadow-property)
+
+
+
+
+
+
+// clearfix
+
+=clearfix
+	&::before, &::after 
+		content: ""
+		display: table
+	&::after 
+		clear: both
+    
+// //color
+// /// Slightly lighten a color
+// /// @access public
+// /// @param {Color} $color - color to tint
+// /// @param {Number} $percentage - percentage of `$color` in returned color
+// /// @return {Color}
+// @function tint($color, $percentage) 
+// 	@return mix(white, $color, $percentage)
+
+
+// /// Slightly darken a color
+// /// @access public
+// /// @param {Color} $color - color to shade
+// /// @param {Number} $percentage - percentage of `$color` in returned color
+// /// @return {Color}
+// @function shade($color, $percentage) 
+// 	@return mix(black, $color, $percentage)

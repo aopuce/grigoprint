@@ -1,10 +1,9 @@
 ---
 layout: compress
 ---
+<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
-
   {%- include head.html -%}
-
   <body id="add-class" >
     <div id="scroll-sobstitute" class="scroll">
     <div class="nav-list" id="nav-commander">
@@ -14,7 +13,7 @@ layout: compress
     <div id="container">
     </div>
       <main class="page-content" id="page-content" aria-label="Content">
-        <div class="wrapper">
+        <div class="wrapper" style="overflow: hidden;">
           {{ content }}
         </div>
       </main>

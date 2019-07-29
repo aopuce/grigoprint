@@ -1,6 +1,7 @@
 ---
 layout: compress
 ---
+<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
 
 {%- include head.html -%}
@@ -23,7 +24,7 @@ layout: compress
             <div class="wrapper">
                 <header class="head-blog">
                     <div class="title-container">
-                    	<h2><span>{{page.title | replace: ' ', '</span><span>'}}</span></h2>
+                    	<h1><span>{{page.title | replace: ' ', ' </span><span>'}}</span></h1>
                         <h6><span>{{page.description}}</span></h6>
                     </div>
                 </header>
@@ -31,13 +32,11 @@ layout: compress
                     {{ content }}
                 </article>
             </div>
-            {% comment%}
-            <!-- {% if page.correlati%}
+        {% if page.correlati%}
               <div class="wrapper">
               {%- include prodotti_correlati.html -%}
               </div>
-              {% endif %} -->
-            {% endcomment %}
+              {% endif %}
         </main>
         {%- include footer.html -%}
         {%- include static_link.html -%}

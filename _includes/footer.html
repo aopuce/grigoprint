@@ -7,13 +7,10 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-              <h3>
-              {%- if site.author -%}
-                {{ site.author | escape }}
-              {%- else -%}
-                {{ site.title | escape }}
-              {%- endif -%}
-              </h3>
+              <h4>
+              ombrellificio grigolini
+              </h4>
+              <span>di Grigolini Marcello</span>
               <p>Stampa digitale su tessuto</p>
             </li>
             <li><address>Loc. Sant'Antonio <br> 37031 Illasi (VR)</address></li>
@@ -21,7 +18,7 @@
             <li><span class="grigo-icons grigo-phone"></span><span>+39 045 7834054</span></li>
             <li><span class="grigo-icons grigo-fax"></span><span>+39 045 6520415</span></li>
             {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}"><span class="grigo-icons grigo-mail"></span><span>{{ site.email }}</span></a></li>
+            <li><a class="u-email" href="mailto:{{ site.email }}" title="email"><span class="grigo-icons grigo-mail"></span><span>{{ site.email }}</span></a></li>
             {%- endif -%}
         </ul>
       </div>
@@ -30,20 +27,20 @@
         <h4>Esplora</h4>
         <div class="link_footer">
         <ul>
-        <li><a href="{{site.url}}">Home</a></li>
-        <li><a href="{{site.url}}{% link contatti.html %}">Contatti</a></li>
+        <li><a href="{{site.url}}" title="Home page Grigoprint">Home</a></li>
+        <li><a href="{{site.url}}{% link contatti.html %}" title="Pagina Contatti">Contatti</a></li>
         </ul>
         <h5>prodotti</h5>
         <ul>
           {% for node in site.prodotti %}
             {% unless node.exclude %}
               {% if page.url == node.url %}
-                <li><a class="page-link active" href="{{ node.url }}">
+                <li><a class="page-link active" title="{{ node.description | truncate: 40 }}" href="{{ node.url }}">
                 {{ node.title }}
                 </a>
               </li>
               {% else %}
-               <li><a href="{{node.url}}">{{node.title}}</a></li>
+               <li><a href="{{node.url}}" title="{{ node.description | truncate: 40 }}">{{node.title}}</a></li>
               {% endif %}
             {% endunless %}
           {% endfor %}
