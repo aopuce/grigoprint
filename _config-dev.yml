@@ -169,27 +169,42 @@ cloudinary:
       fallback_max_width: 800
       steps: 5
       sizes: "(min-width: 50rem) 50rem, 90vw"
+      attributes:
+        class: "lazyload"
+        loading: "lazy"
     jumbotron:
       min_width: 320
       max_width: 2000
       fallback_max_width: 800
       steps: 5
       sizes: "(min-width: 50rem) 50rem, 100vw"
+      attributes:
+        class: "lazyload"
+        loading: "lazy"
     halfscreen:
       min_width: 320
       max_width: 1000
       fallback_max_width: 800
       steps: 5
       sizes: "(min-width: 50rem) 10rem, 50vw"
+      attributes:
+        class: "lazyload"
+        loading: "lazy"
     onethird:
       min_width: 110
       max_width: 535
       fallback_max_width: 300
       steps: 3
       sizes: "(min-width: 50rem) 17rem, 30vw"
+      attributes:
+        class: "lazyload"
+        loading: "lazy"
     onequater:
       min_width: 80
       max_width: 400
       fallback_max_width: 300
       steps: 3
       sizes: "(min-width: 50rem) 15rem, 25vw"
+      attributes:
+        class: "lazyload"
+        loading: "lazy"

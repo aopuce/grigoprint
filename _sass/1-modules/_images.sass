@@ -1,4 +1,5 @@
 //immagine di contenuto su mezza colonna
++critical(true)
 .row 
 	.col-half
 		overflow-y: hidden
@@ -54,7 +55,8 @@
 			@media screen and (min-width: $screen-lg)
 				img
 					object-fit: cover
-
+		&.temp_height
+			min-height: 350px		
 	&.obj_contain
 		@media screen and (min-width: $screen-lg)
 			align-items: center
@@ -73,7 +75,8 @@
 			img.orizontal-image
 				max-width: 100%
 				height: auto
-
+		&.temp_height
+			min-height: 350px
 	.col-accessories
 		img
 			width: 100%
@@ -107,11 +110,46 @@
 		figure
 			position: relative
 // immagine di background titolo
+
+.row.gallery
+	.col-half
+		.container
+			max-width: 800px
+			margin: auto
+			background-color: white
+			.panel-main
+				height: 100%
+				padding-bottom: 10px
+				// @media screen and (min-width: $screen-sm)
+				// 	height: 600px
+			.panel-main img, .thumbs img
+				width: 100%
+				height: auto
+				padding: 5px
+				@media screen and (min-width: $screen-sm)
+					position: relative
+					+transform(none)
+					bottom: auto
+					right: auto
+
+			.thumbs
+				display: grid
+				grid-template-columns: repeat(5, 1fr)
+				grid-gap: 5px
+				height: auto
+	@keyframes fadeIn
+		to 
+			opacity: 1
+	.fade-in
+		opacity: 0
+		animation: fadeIn .5s ease-in 1 forwards
+
 .image-title
 	width: 100%
 	position: fixed
 	z-index: -1
-	height: 100vh
+	height: calc(100vh - 50px)
+	top: 0
 	background: $primary-gradient
 	@media screen and (orientation: portrait)
 		bottom: 0
@@ -121,7 +159,8 @@
 		top: 0
 		.portrait
 			display: none
-
+	@media screen and (min-width: $screen-sm)
+		height: 100vh
 	img
 		position: absolute
 		width: 100%
@@ -340,6 +379,7 @@
 			margin: auto
 			bottom: 50px
 			max-height: 100%
+			bottom: 0
 			@media screen and (orientation: portrait)
 				&.landscape
 					display: none
@@ -367,10 +407,9 @@
 	&#bean-banner
 		img
 			width: 100%
+			height: 100%
 			object-fit: cover
-			bottom: 50px
-			@media screen and (min-width: $screen-sm)
-				bottom: 0	
+			bottom: 0
 	&#filari-di-bandierine
 		img
 			height: 100%
@@ -378,14 +417,44 @@
 			object-fit: cover
 	&#ombrelli-personalizzati
 		img
-			height: 100%
-			width: 100%
-			object-fit: contain
+			height: 90%
+			width: auto
+			object-fit: cover
+			left: -150px
+			@media screen and (min-width: $screen-md)
+				object-fit: contain
+			@media screen and (min-width: $screen-lg)
+				position: relative
+				margin: auto
+				left: auto
+				display: block
 	&#tappeto-personalizzato
 		img
 			height: calc(100% + 50px)
 			object-fit: cover
-			bottom: -50px
+			bottom: 0
+			&.small-img
+				display: none
+				@media screen and (max-width: $screen-sm - 1px) and (orientation: portrait)
+					display: initial
+
+			&.md-img
+				display: none
+				@media screen and (min-width: $screen-sm ) and (orientation: portrait)
+					display: initial
+					/* style */
+			&.xl-img
+				display: none
+				@media screen and (orientation: landscape)
+					display: initial
+	&#tappeto-sottomoto
+		img
+			height: 100%
+			width: auto
+			@media screen and (min-width: $screen-md)
+				object-fit: cover
+				bottom: -60px
+				width: 100%			
 .row .col-half img.img-intern-50, .row .columns_4 img.img-intern-50
 	display: block
 	width: 100%

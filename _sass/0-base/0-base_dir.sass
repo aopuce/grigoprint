@@ -1,85 +1,62 @@
 @import "susy"
 @import "plugins/svg-grid"
-
+@import "utility"
+@import "variabiles"
 
 // reset
- 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video 
-	margin: 0
-	padding: 0
-	border: 0
-	font-size: 100%
-	font: inherit
-	vertical-align: baseline
++critical(ture) 
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video 
+		margin: 0
+		padding: 0
+		border: 0
+		font-size: 100%
+		font: inherit
+		vertical-align: baseline
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section 
-	display: block
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section 
+		display: block
 
-body 
-	line-height: 1
+	body 
+		line-height: 1
 
-ol, ul 
-	list-style: none
+	ol, ul 
+		list-style: none
 
-blockquote, q 
-	quotes: none
+	blockquote, q 
+		quotes: none
 
-blockquote:before, blockquote:after,
-q:before, q:after 
-	content: ''
-	content: none
+	blockquote:before, blockquote:after,
+	q:before, q:after 
+		content: ''
+		content: none
 
-table 
-	border-collapse: collapse
-	border-spacing: 0
+	table 
+		border-collapse: collapse
+		border-spacing: 0
 
-// end reset
-
-
-*
-	box-sizing: border-box
-
-//minima
-@charset "utf-8"
+	// end reset
 
 
-//mixin tipografia fluida
-@function strip-unit($value)
-	@return $value / ($value * 0 + 1)
+	*
+		box-sizing: border-box
 
-=fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size)
-	$u1 : unit($min-vw)
-	$u2 : unit($max-vw)
-	$u3 : unit($min-font-size)
-	$u4 : unit($max-font-size)
+	// //minima
+	// @charset "utf-8"
 
-	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4
-		&
-			font-size: $min-font-size
-			line-height: $min-font-size
-			@media screen and (min-width: $min-vw)
-				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
-				line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
-			@media screen and (min-width: $max-vw)
-				font-size: $max-font-size
-				line-height: $max-font-size
-				
-
-//grids susy
 
 $susy: (columns: susy-repeat(4), gutters: 30px, spread: 'wider', container-spread: 'wider' )
 $susy-mobile: (columns: susy-repeat(4), gutters: .30, spread: 'wider', container-spread: 'wider' )
@@ -93,51 +70,50 @@ $susy-large: (columns: susy-repeat(16), gutters: .25, spread: 'narrow', containe
 	$susy: map-merge($susy, $settings) !global
 	@content
 	$susy: $global !global
-.wrapper, .head-wrapper
-	// background: susy-svg-grid($susy-mobile) no-repeat scroll
-	width: span(4, $susy-mobile)
-	
-	@media screen and (min-width: $screen-sm)
-		+susy-use($susy-tablet)
-			// background: susy-svg-grid() no-repeat scroll
-			width: span(8)
-	
-	@media screen and (min-width: $screen-md)
-		+susy-use($susy-laptop)
-			// background: susy-svg-grid($susy-laptop) no-repeat scroll
-			width: span(12)
- 
-	@media screen and (min-width: $screen-lg)
-		+susy-use($susy-large)
-			// background: susy-svg-grid($susy-large) no-repeat scroll
-			width: span(16)
++critical(true)
+	.wrapper, .head-wrapper
+		background: susy-svg-grid($susy-mobile) no-repeat scroll
+		width: span(4, $susy-mobile)
+		@media screen and (max-height: $screen-xs) and (orientation: landscape)
+			+susy-use($susy-tablet)
+				background: susy-svg-grid() no-repeat scroll
+				width: span(8)
+		@media screen and (min-width: $screen-sm)
+			+susy-use($susy-tablet)
+				background: susy-svg-grid() no-repeat scroll
+				width: span(8)
+		@media screen and (min-width: $screen-md)
+			+susy-use($susy-laptop)
+				background: susy-svg-grid($susy-laptop) no-repeat scroll
+				width: span(12)
+		@media screen and (min-width: $screen-lg)
+			+susy-use($susy-large)
+				background: susy-svg-grid($susy-large) no-repeat scroll
+				width: span(16)
+	.page-content
+		position: relative
+		width: 100%
 
-.page-content
-	position: relative
-	width: 100%
-	@media screen and (max-width: $screen-sm - 1px) and (orientation: landscape) and (min-aspect-ratio: 13/9)
-		width: 90%
-		margin-left: 10%
-.wrapper
-	position: relative
-	+transform(translateX(0))
-	+transition()
-
-a
-	color: $link-back-full
-	&:hover
-		color: $back-link-button
-	&:visited
-		color: $long-text
-a, button
-	cursor: pointer
-*
-	&::-moz-selection
-		color: $back-full-text
-		background: $link-back-full
-		text-shadow: 1px 1px 0 $long-text
-*
-	&::selection
-		color: $back-full-text
-		background: $link-back-full
-		text-shadow: 1px 1px 0 $long-text	
+	.wrapper
+		position: relative
+		+transform(translateX(0))
+		+transition()
++critical(false)
+	a
+		color: $link-back-full
+		&:hover
+			color: $back-link-button
+		&:visited
+			color: $long-text
+	a, button
+		cursor: pointer
+	*
+		&::-moz-selection
+			color: $back-full-text
+			background: $link-back-full
+			text-shadow: 1px 1px 0 $long-text
+	*
+		&::selection
+			color: $back-full-text
+			background: $link-back-full
+			text-shadow: 1px 1px 0 $long-text	

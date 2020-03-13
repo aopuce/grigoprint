@@ -11,19 +11,18 @@ image:
       config: jumbotron
 ---
 
-		<div class="row descrizione obj_contain">
+<div class="row descrizione obj_contain ">
     <div class="col-half order-second">
         <h5>descrizione</h5>
         <p>Realizziamo ombrelli personalizzati di varie misure e qualit&agrave;, siamo specializzati in ombrelli sia stampati allover, cioè con stampa che ricopre l'intera calotta dell'ombrello, sia in ombrelli con stampa personalizata su spicchio</p>
-        <p>Grazie alla variet&agrave; di prodotti riusciamo a servire ogni necessit&agrave; pubblicitaria. Realizziamo ombrelli di vario tipo e misura</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore assumenda vitae inventore earum delectus recusandae quidem distinctio, impedit necessitatibus nisi nesciunt, dolores cum. Rem iste dicta, aliquam voluptate. Quo, porro.</p>
+        <p>Grazie alla variet&agrave; di prodotti riusciamo a servire ogni necessit&agrave; pubblicitaria. Realizziamo ombrelli di vari tipi e misure</p>
     </div>
     <div class="col-half order-first">
         {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_interno.png alt="Ombrelli personalizzati modello UK interno" class="orizontal-image" %}
     </div>
 </div>
 <h2 class="middle-title">ombrello personalizzato</h2>
-<div class="row obj_contain">
+<div class="row obj_contain temp_height">
     <div class="col-half order-first">
         {% cloudinary halfscreen /assets/images/ombrelli/ombrello_personalizzato.png alt="Ombrelli personalizzati modello UK" class="orizontal-image" %}
     </div>
@@ -42,13 +41,13 @@ image:
             Sposato con foto o complicate grafiche non divorzia, è fedele e la sua durata è testimoniata dalla scheda
             tecnica che ha il suo bel pedigree:</p>
         <ul>
-            <li>108x108 cm</li>
-            <li>Fusto in acciaio cromato</li>
-            <li>diametro 14 mm.</li>
+            <li>108x108 cm.</li>
+            <li>Fusto in acciaio cromato.</li>
+            <li>diametro palo centrale 14 mm.</li>
             <li>Bacchette in acciaio al carbonio verniciato nero.</li>
             <li>Manico dritto o curvo in legno.</li>
-            <li>Puntine zona arrotondata nichelate</li>
-            <li>lacetto 75x8</li>
+            <li>Puntine nichelate alla estremit&agrave; delle bacchette</li>
+            <li>lacetto con velcro o bottone.</li>
         </ul>
     </div>
     <div class="col-half order-first">
@@ -56,13 +55,58 @@ image:
     </div>
 </div>
 <h2 class="middle-title">ombrello all over</h2>
-<div class="row obj_contain">
+<div class="row obj_contain gallery">
     <div class="col-half order-first">
-        {% cloudinary halfscreen /assets/images/ombrelli/ombrello_all_over.png alt="Ombrelli personalizzati modello all over" class="orizontal-image" %}
+        <div class="container">
+            <div class="panel-main">
+                {% cloudinary halfscreen /assets/images/ombrelli/monet_covoni.jpg alt="Ombrelli personalizzati modello all over Mod. Covoni" id="selected" %}
+            </div>
+            <div class="thumbs">
+                {% cloudinary halfscreen /assets/images/ombrelli/monet_covoni.jpg alt="Ombrelli personalizzati modello all over Mod. Covoni" id="selected" %}
+                {% cloudinary halfscreen /assets/images/ombrelli/particolare_cucitura.jpg alt="Ombrelli personalizzati modello all over Particolare cucitura" %}
+                {% cloudinary halfscreen /assets/images/ombrelli/turner_roma.jpg alt="Ombrelli personalizzati modello all over Mod. Roma" %}
+                {% cloudinary halfscreen /assets/images/ombrelli/turner_venezia.jpg alt="Ombrelli personalizzati modello all over Mod. Venezia" %}
+                {% cloudinary halfscreen /assets/images/ombrelli/nero.jpg alt="Ombrelli personalizzati modello all over Mod. Yokohama nero" %}
+            </div>
+        </div>
+
+        
+        {% comment %}{% cloudinary halfscreen /assets/images/ombrelli/ombrello_all_over.png alt="Ombrelli personalizzati modello all over" class="orizontal-image" %}{% endcomment %}
+        
     </div>
     <div class="col-half order-second">
-      {% comment %}  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos minus libero, quasi omnis autem mollitia! Velit voluptas porro fugiat minus asperiores veniam praesentium necessitatibus ratione laudantium hic, culpa, quae! Esse.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tenetur repudiandae laudantium qui, id error ratione recusandae provident accusamus maxime ea unde deleniti. Ex, magnam aut eligendi facilis earum rerum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia praesentium dolor esse, adipisci natus et a illum laudantium numquam laboriosam deleniti eveniet dicta, facilis beatae dignissimos soluta. Nulla, esse doloribus.</p>{% endcomment %}
+      <p>L'ombrello "all over" vuol dire tutto stampato e per incontrare le stampe ben fatte nelle cuciture degli spicchi, sull'ombrello rotondo, ci vuole la nostra tecnologia che diventa artigianato di classe.</p>
+      <p>Eh si, con noi l'ombrello all over &egrave; aristrocratico e solo chi &egrave; capace di sacrificio pu&ograve; accedere a questo mondo.</p>
+      <p>Non &egrave; certamente per tutti.
+         Poliestere cinzato impermeabile, stampa a sublimazione ad alta definizione, taglio antisfilo e cucitura tagliacuci con ago sottile.
+      </p>
+      <p>Puntine in nichel, punto interno e alle alle puntine con filo rinforzato, placca e manico o dritto o curvo. Eh si la classe &egrave; classe!</p>
+      <p></p>
     </div>
 </div>
+<script>
+    const current = document.querySelector("#selected");
+const thumbs = document.querySelectorAll(".thumbs img");
+const opacity = 0.5;
+
+
+thumbs[0].style.opacity = opacity;
+
+thumbs.forEach(img => img.addEventListener("click", imgActivate));
+
+function imgActivate(e) {
+    thumbs.forEach(img => (img.style.opacity = 1));
+
+    current.src = e.target.src;
+
+    current.srcset = e.target.srcset;
+
+    current.alt = e.target.alt;
+
+    current.classList.add("fade-in");
+
+    setTimeout(() => current.classList.remove("fade-in"), 500);
+
+    e.target.style.opacity = opacity;
+}
+</script>

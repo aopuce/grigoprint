@@ -3,7 +3,7 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'it' }}">
-{%- include head.html -%}
+  {%- include head.html -%}
 
 <body id="add-class">
     <div id="scroll-sobstitute" class="scroll">
@@ -29,11 +29,10 @@ layout: compress
            assets:
            - form_it
            - menu
-           attributes:
-               async: async
        {% endminibundle %}
    {% else %}
        <script src="{{'/assets/javascript/menu.js'}}"></script>
+       <script src="{{'/assets/javascript/form_it.js'}}" async></script>
  {%- endif -%}
 </body>
 

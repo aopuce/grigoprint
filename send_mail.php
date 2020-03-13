@@ -86,7 +86,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
                      <p><strong>Telefono:</strong> {$telephone}</p>
                      <p><strong>Messaggio:</strong> {$message}</p>
                      <p></p>
-                     <p><strong>Indirizzo IP:</strong> {$ipaddress} in {$date} alle {$time}</p>
+                     <p><strong>Data:</strong> {$date} alle {$time}</p>
                      </body>
                      </html>";
 

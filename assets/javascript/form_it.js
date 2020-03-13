@@ -96,6 +96,7 @@ async function sendMailTrue() {
       await sleep(5000);
       btnSend.classList.remove("validate");
       btnSend.classList.add("standard");
+      gtag_report_conversion('http://www.grigoprint.it/contatti.html');
     } else if(resp['form_ok'] && !resp['inviata']) { // form corretta ma il server non riesce ad inviare l'email
       await sleep(500);
       // Do something after the sleep!

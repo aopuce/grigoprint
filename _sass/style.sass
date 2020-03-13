@@ -1,15 +1,12 @@
-@import "0-base/variabiles"
-// @import "compass"
-@import "bourbon"
-@import "susy"
-@import "plugins/svg-grid"
-@import "0-base/0-base_dir"
-@import "1-modules/1-modules_dir"
-@import "2-layouts/2-layouts_dir"
+$critical-css-only: false
+
+=critical($critical-only: true)
+	@if $critical-css-only and $critical-only or not $critical-css-only and not $critical-only
+		@content
+@import bourbon
+@import 0-base/0-base_dir
+@import 1-modules/1-modules_dir
+@import 2-layouts/2-layouts_dir
 
 
-@font-face
-	font-family: 'icomoon'
-	font-display: auto
-	src: url(/assets/fonts/icomoon.eot), url(/assets/fonts/icomoon.ttf), url(/assets/fonts/icomoon.woff), url(/assets/fonts/icomoon.svg)
-	unicode-range: U+E900-U+E915
+

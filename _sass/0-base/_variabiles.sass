@@ -7,7 +7,7 @@ $screen-sm: 768px
 $screen-md: 992px
 $screen-lg: 1200px
 $radius: 0.3rem
-
+$media-landscape: "screen and (max-height: #{$screen-xs}) and (orientation: landscape)"
 //Typography
 $text_font_family: 'Lato', -apple-system, BlinkMacSystemFont,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
 $h-font-family: 'Montserrat', sans-serif
@@ -69,7 +69,7 @@ $long-text-gradient: linear-gradient(40deg, $long-text, tint(#29353B, 10%))
 $brand-primary: #08415c
 $testo: #29353B
 $background: #ffffff
-
+$shadow_buttons: 0 18px 40px -12px
 // utils
 // mixin cross browser
 =crossBrowser($property, $css)
