@@ -1,0 +1,1712 @@
+// // body, html {
+// //     height: 100%;
+// //     width: 100%;
+// // }
+
+// // body {
+// //     overflow-y: scroll;
+// //     overflow-x: hidden;
+
+// //     .scroll {
+// //         top: 0;
+
+// //         // +transform(translate3d(0, 0, 0))
+   
+// //     }
+
+// //     // &.opened
+// //     //  .scroll
+// //     //      // position: fixed
+// // }
+
+// .page-content {
+//     position: relative;
+//     width: 100%;
+// }
+
+// .wrapper {
+//     position: relative;
+
+//     @include transform(translateX(0));
+//     @include transition;
+
+//     &.back-full {
+//         background: $back-full-text;
+//         border-top: 5px solid $primary-color;
+//     }
+// }
+
+
+// * {
+//     &::-moz-selection {
+//         color: $back-full-text;
+//         background: $second-color;
+//         text-shadow: 1px 1px 0 $long-text;
+//     }
+// }
+
+// * {
+//     &::selection {
+//         color: $back-full-text;
+//         background: $second-color;
+//         text-shadow: 1px 1px 0 $long-text;
+//     }
+// }
+
+// .loader {
+//     height: 100%;
+//     width: 100%;
+
+//     svg {
+//         display: block;
+//         margin: auto;
+//         width: 100px;
+//         height: 100%;
+//     }
+// }
+
+
+
+// .product-content {
+//     @include susy-use($susy-mobile) {
+//         width: span(4);
+//         padding: gutter();
+//     }
+
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             width: span(8);
+//             padding: gutter();
+//             padding-top: 0;
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-md) {
+//         display: grid;
+//         padding: 0;
+//         grid-template-columns: repeat(12, minmax(0, 1fr));
+//         width: 90vw;
+//         margin: 0 auto;
+
+//         // +susy-use($susy-laptop)
+//         //  grid-column-gap: gutter()
+//         .head-blog {
+//             grid-column-start: 1;
+//             grid-column-end: 11;
+//         }
+
+//         p, h3.middle-title, ul.scheda-tecnica {
+//             grid-column-start: 2;
+//             grid-column-end: 12;
+//         }
+
+//         ul.scheda-tecnica {
+//             display: flex;
+//             flex-wrap: wrap;
+//             align-content: space-between;
+
+//             li {
+//                 flex: 0 1 50%;
+//                 padding: 0 1rem;
+
+//                 &:last-child {
+//                     p {
+//                         margin-bottom: 0;
+//                     }
+//                 }
+//             }
+//         }
+
+//         img {
+//             grid-column-start: 1;
+//             grid-column-end: 13;
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         grid-template-columns: 10rem repeat(12, minmax(0, 1fr)) 10rem;
+//         padding-bottom: 2rem;
+//         max-width: 1440px;
+
+//         .head-blog {
+//             background: $default-gradient;
+//             grid-column-start: 1;
+//             grid-column-end: 12;
+//         }
+
+//         p {
+//             grid-column-start: 3;
+//             grid-column-end: 13;
+//         }
+
+//         img {
+//             grid-column-start: 3;
+//             grid-column-end: 15;
+//             width: 100%;
+//             height: auto;
+//         }
+
+//         h3.middle-title {
+//             grid-column-start: 2;
+//             grid-column-end: 15;
+//             width: 100%;
+//         }
+
+//         ul.scheda-tecnica {
+//             padding: 1rem 0;
+//             grid-column-start: 3;
+//             grid-column-end: 16;
+
+//             // justify-content: space-around
+//             // // align-self: flex-start
+       
+//         }
+//     }
+
+//     .contact-row {
+//         position: relative;
+
+//         @include susy-use($susy-mobile) {
+//             width: span(4);
+
+//             // padding: gutter()
+//         }
+
+
+//         @media screen and (min-width: $screen-md) {
+//             // +susy-use($susy-laptop)
+//             //  grid-column-gap: gutter()
+//             grid-column-start: 1;
+//             grid-column-end: 13;
+//             display: grid;
+//             grid-template-columns: repeat(12, minmax(0, 1fr));
+
+//             p {
+//                 grid-column-start: 1;
+//                 grid-column-end: 3;
+//                 align-self: start;
+//                 padding-right: 0.8rem;
+//                 margin-top: 1rem;
+
+//                 &:first-child {
+//                     border-right: 5px solid $primary-color;
+//                 }
+
+//                 font-size: 0.8rem;
+//                 line-height: 1.6;
+//                 text-align: right;
+//             }
+
+//             form {
+//                 grid-column-start: 4;
+//                 grid-column-end: 13;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             grid-template-columns: 10em repeat(12, minmax(0, 1fr)) 10rem;
+
+//             // grid-gap: 10px
+//             grid-column-start: 1;
+//             grid-column-end: 15;
+
+//             p {
+//                 grid-column-start: 1;
+//                 grid-column-end: 2;
+//             }
+
+//             form {
+//                 grid-column-start: 3;
+//                 grid-column-end: 14;
+//             }
+//         }
+//     }
+
+//     // .row
+//     //  @media screen and (min-width: 2000px)
+//     //      width: 80%
+//     //      margin: auto
+// }
+
+// .jumbotron {
+//     background: $long-text;
+
+//     .backcover {
+//         background-color: rgba(254, 254, 254, 0.8);
+
+//         @media screen and (min-width: $screen-lg) {
+//             background-color: rgba(255, 255, 255, 0);
+//             background-image: -webkit-linear-gradient(left, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 14%, rgba(255, 255, 255, 0.5) 23%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.2) 86%, rgba(226, 226, 226, 0) 100%);
+//             background-image: -o-linear-gradient(left, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 14%, rgba(255, 255, 255, 0.5) 23%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.2) 86%, rgba(226, 226, 226, 0) 100%);
+//             background-image: linear-gradient(to right, rgba(254, 254, 254, 0) 0%, rgba(255, 255, 255, 0.2) 14%, rgba(255, 255, 255, 0.5) 23%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.2) 86%, rgba(226, 226, 226, 0) 100%);
+//         }
+//     }
+// }
+
+// .jumbotron {
+//     position: relative;
+//     height: 100vh;
+
+//     h1.col-half {
+//         text-align: center;
+
+//         @media screen and (max-width: $screen-sm - 1px) {
+//             @include transform(translateY(50%));
+
+//             padding: 0;
+
+//             //font-size: 2rem
+//             line-height: 1.618;
+//         }
+
+//         @media screen and (min-width: $screen-sm) {
+//             text-align: right;
+//         }
+//     }
+
+//     @media #{$media-landscape} {
+//         height: 200vh;
+
+//         h1.col-half {
+//             text-align: center;
+//             padding: 0;
+//             margin-top: 50px;
+//             flex: 1 1 100%;
+//         }
+//     }
+
+//     .backcover {
+//         position: absolute;
+//         top: 0;
+//         bottom: 0;
+//         left: 0;
+//         right: 0;
+//         z-index: 2;
+//     }
+
+//     .row {
+//         align-items: center;
+//         position: absolute;
+//         height: 100%;
+//         top: 0;
+//         z-index: 1000;
+
+//         .col-half {
+//             @media screen and (min-width: $screen-sm) {
+//                 padding-bottom: 2%;
+//             }
+//         }
+//     }
+
+//     #my-slider {
+//         position: relative;
+//         margin: 0 auto;
+//         width: 100%;
+//         height: 100%;
+//         overflow: hidden;
+
+//         & > img {
+//             display: none;
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+
+//             &:first-child {
+//                 display: block;
+//             }
+//         }
+//     }
+// }
+
+// // .row
+// //  // align-items: center !important
+// //  // height: 100%
+// //  display: flex
+// //  flex-wrap: wrap
+// //  align-items: stretch
+// //  position: relative
+// //  .col-half
+// //      padding-top: 2% !important
+// //      position: relative
+// //      +susy-use($susy-mobile)
+// //          flex: 0 0 100%
+// //          padding: 0 gutter() gutter() gutter()
+// //          min-width: 0
+// //      &.order-first
+// //          padding-left: 0
+// //          padding-right: 0
+// //      @media screen and (min-width: $screen-sm)
+// //          +susy-use($susy-tablet)
+// //              padding: 0 gutter()
+// //              flex: 0 0 span(4)
+// //              @media screen and (max-width: $screen-md - 1px)
+// //                  &:first-child
+// //                      padding-right: gutter() / 2
+// //                  &:last-child
+// //                      padding-left: gutter() / 2
+// //          &.order-first
+// //              padding-left: 0
+// //              padding-right: 0
+// //      @media #{$media-landscape}
+// //          +susy-use($susy-mobile)
+// //              flex: 0 0 100%
+// //              padding-left: 0
+// //              padding-right: 0
+// //              padding: 0 gutter()
+// //      @media screen and (min-width: $screen-md)
+// //          +susy-use($susy-laptop)
+// //              flex: 0 0 span(6)
+// //              padding-right: gutter() / 2
+// //              padding-left: gutter() / 2
+// //          &.order-first
+// //              padding-left: 0
+// //              padding-right: 0
+// //      @media screen and (min-width: $screen-lg)
+// //          +susy-use($susy-large)
+// //              flex: 1  0 span(7)
+// //              padding: 0 gutter() / 2
+// //              &:nth-child(1)
+// //                  padding-left: span(1 wide)
+// //              &:nth-child(2)
+// //                  padding-right: span(1 wide)
+// //          &.order-first
+// //              padding-left: 0
+// //              padding-right: 0
+// //  &.gallery
+// //      @media screen and (min-width: $screen-sm)
+// //          +susy-use($susy-tablet)
+// //              .col-half
+// //                  flex: 1 1 span(8)
+// //          @media screen and (orientation: landscape)
+// //              +susy-use($susy-tablet)
+// //                  .col-half
+// //                      flex: 0 0 span(4)
+
+// .product-content {
+//     h3 {
+//         text-align: center;
+//     }
+
+//     &.contatti-page {
+//         border-top: 0;
+//         margin-top: 0;
+//         padding-top: 80px;
+//     }
+
+//     // .row .col-half
+//     //  @media screen and (min-width: $screen-sm)
+//     //      +susy-use($susy-tablet)
+//     //          flex: 0 0 span(4 narrow)
+//     //          padding-left: gutter()
+//     //          padding-right: 0
+//     //  @media screen and (min-width: $screen-md)
+//     //      +susy-use($susy-laptop)
+//     //          flex: 0 0 span(6)
+//     //          padding-left: gutter() / 2
+//     //          padding-right: gutter() / 2
+//     //  @media screen and (min-width: $screen-lg)
+//     //      +susy-use($susy-large)
+//     //          flex: 0 0 50%
+//     //          &:first-child
+//     //              padding-left: span(2) + gutter()
+//     //              padding-right: gutter() / 2
+//     //          &:last-child
+//     //              padding-right: span(2) + gutter()
+//     //              padding-left: gutter() / 2
+// }
+
+// .row {
+//     h2 {
+//         flex: 0 0 100%;
+//         padding: (gutter() / 2) (gutter() / 2) (gutter() / 2) gutter();
+//     }
+
+//     h2, h3, h4 {
+//         text-align: center;
+//     }
+
+//     &#contatti {
+//         background: $back-full-text;
+
+//         .telefono, .fax, .mail, .pec {
+//             padding-top: 0.5rem;
+//             margin-bottom: 0;
+//         }
+//     }
+
+//     &.row-intern {
+//         background: none;
+//     }
+
+//     &.row_stretch {
+//         align-items: stretch;
+//     }
+
+//     .col-half {
+//         @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+//             // max-height: 100vh
+//             // // margin: 0 auto
+//             // +susy-use($susy-tablet)
+//             //  flex: 0 0 span(8 wide of 8 wide)
+//             //  padding: 0 gutter() gutter() gutter()
+//             &.about-us {
+//                 @include susy-use($susy-tablet) {
+//                     // position: absolute
+//                     flex: 1 1 100%;
+//                     top: 0;
+//                     bottom: 0;
+
+//                     p {
+//                         width: span(6 narrow of 8 narrow);
+//                         text-align: justify;
+//                         margin-left: auto;
+//                         margin-right: auto;
+//                     }
+//                 }
+//             }
+//         }
+
+//         @media #{$media-landscape} {
+//             @include susy-use($susy-tablet) {
+//                 flex: 1 1 span(4);
+//                 padding: gutter() / 2;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 .center-helper {
+//                     display: inline-block;
+//                     height: 100%;
+//                     vertical-align: middle;
+//                 }
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 &.about-us {
+//                     padding: 0 span(1 wider of 18 narrow) gutter() span(1 wider of 18 narrow);
+//                 }
+//             }
+//         }
+
+//     }
+
+//     &.descrizione {
+//         h5 {
+//             text-align: center;
+//         }
+//     }
+
+//     .col-accessories {
+//         @extend %style_box;
+
+//         @include susy-use($susy-mobile) {
+//             flex: 0 0 (100% - gutter());
+//             padding: (gutter() / 2) gutter();
+//             margin: gutter() / 2;
+
+//             h4 {
+//                 padding-bottom: 0.8rem;
+//                 padding-top: 1.5rem;
+//             }
+
+//             &:nth-child(even) {
+//                 background: $primary-gradient;
+//                 color: $back-full-text;
+//             }
+
+//             &:nth-child(odd) {
+//                 background: $default-gradient;
+//             }
+//         }
+
+
+//         @media screen and (min-width: $screen-sm) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 (100% / 3 - gutter());
+//                 padding: (gutter() / 2) (gutter() / 2);
+//                 margin: gutter() / 2;
+//             }
+
+
+//             @media screen and (max-width: $screen-md - 1) {
+//                 h4 {
+//                     min-height: 4.5rem;
+//                 }
+
+//                 .description {
+//                     font-size: 0.8rem;
+//                 }
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 (span(4) - gutter());
+//                 padding: gutter() / 2;
+//                 margin: gutter() / 2;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 1 1 span(3);
+//                 margin: gutter() / 2;
+//             }
+//         }
+//     }
+
+//     .col {
+//         @include susy-use($susy-mobile) {
+//             flex: 0 0 100%;
+//             padding: gutter();
+//         }
+
+
+//         @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 span(4);
+//                 padding: gutter() (gutter() / 2);
+
+//                 &:nth-child(3) {
+//                     flex: 0 0 span(8);
+//                 }
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 span(4);
+//                 padding: gutter() / 2;
+//                 align-self: stretch;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 1 1 span(5);
+//                 padding: gutter();
+//             }
+//         }
+
+//         @media screen and (min-width: 1500px) {
+//             @include susy-use($susy-large) {
+//                 flex: 0 0 span(4 wide);
+//                 padding: gutter();
+//                 padding-right: 0;
+
+//                 &:first-child {
+//                     margin-left: span(2 narrow);
+//                 }
+//             }
+//         }
+//     }
+
+//     .col.index_service {
+//         padding: 0;
+//         background: $back-full-text;
+//         border: 1px solid shade(#fff, 10%);
+
+//         @include border-radius($radius);
+//         @include susy-use($susy-mobile) {
+//             flex: 0 0 (span(4) - gutter());
+//             margin: gutter() / 2;
+//         }
+
+
+//         @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 (span(4) - gutter());
+//                 margin: gutter() (gutter() / 2);
+
+//                 &:nth-child(3) {
+//                     flex: 0 0 (span(8) - gutter());
+//                 }
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 (span(4) - gutter());
+//                 margin: gutter() / 2;
+//                 align-self: stretch;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 1 1 span(5);
+//                 margin: gutter();
+//             }
+//         }
+
+//         @media screen and (min-width: 1500px) {
+//             @include susy-use($susy-large) {
+//                 flex: 0 0 span(4);
+//                 margin: gutter();
+//                 margin-right: 0;
+
+//                 &:first-child {
+//                     margin-left: span(2 narrow) + gutter();
+//                 }
+//             }
+//         }
+//     }
+
+//     .columns_4 {
+//         flex: 0 0 100%;
+//         padding-left: gutter() / 2;
+//         padding-right: gutter() / 2;
+//         padding-top: gutter();
+
+//         @media screen and (min-width: $screen-sm) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 span(4 wide);
+//                 padding-left: gutter();
+//                 padding-top: gutter();
+//                 padding-right: 0;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 span(3);
+//                 padding: gutter() (gutter() / 2);
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 0 0 25%;
+//                 padding: 0;
+
+//                 &:last-child {
+//                     padding-right: 0;
+//                 }
+//             }
+//         }
+//     }
+
+//     .mv_title, .mv_content {
+//         flex: 0 0 100%;
+//         display: flex;
+//         padding: 0.5rem 1.5rem 0;
+//         text-align: center;
+
+//         @media screen and (min-width: $screen-md) {
+//             flex: 0 0 51%;
+//             margin: auto;
+//         }
+
+//         & > div:first-child {
+//             font-weight: 700;
+//             font-style: italic;
+
+//             @media screen and (min-width: $screen-sm) {
+//                 text-align: left;
+//             }
+//         }
+
+//         .col_tile, .col_content {
+//             flex: 1 1 20%;
+
+//             em {
+//                 font-weight: 100;
+//             }
+//         }
+//     }
+
+//     .mv_title {
+//         border-bottom: 1px solid $second-color;
+//         font-weight: 700;
+//         font-style: italic;
+//     }
+
+//     .mv_content:nth-child(2n+1) {
+//         background: tint($long-text, 90%);
+//     }
+// }
+
+// // .product-content .row
+// //  .columns_4
+// //      background: $default-gradient
+// //      &:nth-child(1), &:nth-child(3)
+// //          background: $primary-gradient
+// //          color: $back-full-text
+// //      &:nth-child(2), &:nth-child(4)
+// //          background: $default-gradient
+// //          color: $long-text
+// //      @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px)
+// //          &:first-child, &:last-child
+// //              background: $primary-gradient
+// //              color: $back-full-text
+// //      @media #{$media-landscape}
+// //          &:nth-child(1), &:nth-child(4)
+// //              background: $primary-gradient
+// //              color: $back-full-text
+// //          &:nth-child(2), &:nth-child(3)
+// //              background: $default-gradient
+// //              color: $long-text
+// //      @media screen and (min-width: $screen-lg)
+// //          .service-content
+// //              +border-radius(0)
+// //              border: 0
+// //              background: none
+// //  &:last-child
+// //      .columns_4
+// //          @media screen and (min-width: $screen-lg)
+// //              &:nth-child(odd)
+// //                  background: $default-gradient
+// //                  color: $long-text
+// //              &:nth-child(even)
+// //                  background: $primary-gradient
+// //                  color: $back-full-text
+// // .row {
+// //     .service-content {
+// //         height: 100%;
+// //         padding: 15px;
+
+// //         .grigo-icons {
+// //             display: block;
+// //             font-size: 40px;
+// //         }
+// //     }
+// // }
+
+// .row {
+//     .col-half {
+//         .service-content {
+//             border: 1px solid tint($long-text, 75%);
+
+//             @include border-radius($radius);
+//         }
+//     }
+// }
+
+// .middle-title {
+//     border-bottom: 1px solid $second-color;
+
+//     // width: 90%
+//     margin-left: auto;
+//     margin-right: auto;
+//     text-align: center;
+
+//     // @media screen and (min-width: $screen-sm)
+//     //  width: 60%
+// }
+
+// .about-us:last-child {
+//     background: $primary-gradient;
+//     color: $back-full-text;
+// }
+
+// .head-back {
+//     border-bottom: 5px solid $primary-color;
+// }
+
+// .head-back {
+//     position: relative;
+//     min-height: calc(100vh - 50px);
+
+//     @media screen and (min-width: $screen-sm) {
+//         height: 100vh;
+//     }
+
+//     h1 {
+//         position: absolute;
+//         bottom: 15%;
+//         font-size: 2rem;
+//         line-height: 3rem;
+
+//         span {
+//             background: $back-full-text;
+//             padding: 0 0.5rem;
+//         }
+
+//         @include susy-use($susy-mobile) {
+//             width: 90%;
+//             margin-left: gutter();
+//         }
+
+
+//         @media screen and (min-width: $screen-sm) {
+//             @include susy-use($susy-tablet) {
+//                 width: span(4);
+//                 margin-left: gutter();
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 width: span(6);
+//                 margin-left: gutter() / 2;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             font-size: 3rem;
+//             line-height: 4.5rem;
+
+//             @include susy-use($susy-large) {
+//                 width: span(8);
+//                 margin-left: span(1 wide);
+//             }
+//         }
+//     }
+// }
+
+// // // start blog experiment
+// // .product-content-blog
+// //  background: $back-full-text
+// //  padding: 0 10% 1.5rem 10%
+// //  .row
+// //      display: grid
+// //      // background: susy-svg-grid($susy-mobile) no-repeat scroll
+// //      grid-template-columns: repeat(12, 1fr)
+// //      @media screen and (min-width: $screen-sm)
+// //          +susy-use($susy-tablet)
+// //              // background: susy-svg-grid() no-repeat scroll
+// //              grid-template-columns: repeat(8, 1fr)
+
+// //      @media screen and (min-width: $screen-md)
+// //          +susy-use($susy-laptop)
+// //              // background: susy-svg-grid($susy-laptop) no-repeat scroll
+// //              grid-template-columns: repeat(12, 1fr)
+
+// //      @media screen and (min-width: $screen-lg)
+// //          +susy-use($susy-large)
+// //              // background: susy-svg-grid($susy-large) no-repeat scroll
+// //              grid-template-columns: 15rem repeat(12, 1fr) 15rem
+// //              grid-row-gap: calc(1rem + .5vw)
+// //              figure
+// //                  grid-row-start: 1
+// //                  grid-row-end: 4
+// //                  object-fit: contain
+// //                  position: relative
+// //                  img
+// //                      height: 100%
+// //                      width: 100%
+// //                      object-fit: cover
+// //                  figcaption
+// //                      text-align: center
+// //                      width: 100%
+// //                      background: $primary-gradient
+// //                      color: $back-full-text
+// //                      position: absolute
+// //                      bottom: 0
+// // .product-content-blog
+// //  @media screen and (min-width: $screen-lg)
+// //      .row
+// //          &.image-right
+// //              h4, h5, p, ul
+// //                  grid-column-start: 1
+// //                  grid-column-end: 8
+// //              figure
+// //                  grid-column-start: 8
+// //                  grid-column-end: 15
+// //              p, ul
+// //                  padding: 0 10px
+// //                  margin-bottom: 0
+// //                  &.full-columns
+// //                      grid-column-end: 14
+// //          &.image-left
+// //              h4, h5, p, ul
+// //                  grid-column-start: 8
+// //                  grid-column-end: 15
+// //              p, ul
+// //                  padding: 0 10px
+// //                  margin-bottom: 0
+// //                  &.full-columns
+// //                      grid-column-start: 2
+// //              figure
+// //                  grid-column-start: 1
+// //                  grid-column-end: 8
+
+// // <-------------------.head-blog----------------------->
+// //
+// //  position: relative
+// //  min-height: calc(100vh - 50px)
+// //  border-bottom: 5px solid $primary-color
+// //  .title-container
+// //      position: absolute
+// //      bottom: 5%
+// //      h6
+// //          font-size: 1rem
+// //          line-height: 1.61rem
+// //          text-transform: none
+// //          //margin: 0 .5rem 1.5rem .5rem
+// //          font-weight: 400
+// //          span
+// //              background: $back-full-text
+// //              padding-left: 10px
+// //      +susy-use($susy-mobile)
+// //          width: 90%
+// //          margin-left: gutter()
+// //      @media screen and (min-width: $screen-sm)
+// //          +susy-use($susy-tablet)
+// //              width: span(4)
+// //              margin-left: gutter()
+// //      @media screen and (min-width: $screen-md)
+// //          +susy-use($susy-laptop)
+// //              width: span(5)
+// //              margin-left: gutter() / 2
+// //      @media screen and (min-width: $screen-lg)
+// //          // bottom: 15%
+// //          h6
+// //              width: 60%
+// //          h1
+// //              position: relative
+// //              font-size: 3rem
+// //              line-height: 4.5rem
+// //              // padding: 10px
+// //          +susy-use($susy-large)
+// //              width: span(8)
+// //              margin-left: span(1 wide)
+// //      @media #{$media-landscape}
+// //          width: 100%
+// //      h6
+// //          @media #{$media-landscape}
+// //              float: left
+// //              width: 45%
+// //  @media screen and (min-width: $screen-sm)
+// //      height: 100vh
+// //  h1
+// //      font-size: 2rem
+// //      line-height: 3rem
+// //      @media #{$media-landscape}
+// //          float: left
+// //          width: 45%
+// //      span
+// //          background: $back-full-text
+// //          padding: 0 .5rem
+// // end blog experiment
+// .head-blog {
+//     border-right: 5px solid $second-color;
+//     border-bottom: 5px solid $second-color;
+
+//     @include border-radius(0 $radius);
+
+//     margin-top: -60px;
+
+//     .ideale {
+//         margin-bottom: 0;
+
+//         li {
+//             display: inline-block;
+//             padding: 0 10px 2px 10px;
+
+//             @include border-radius(2rem);
+
+//             font-style: italic;
+//             font-size: 0.8rem;
+//             background: $second-color;
+//             color: $back-full-text;
+//         }
+//     }
+
+//     .social-share {
+//         margin-bottom: 0;
+
+//         p {
+//             margin-bottom: 0;
+//         }
+
+//         li {
+//             display: inline-block;
+
+//             a.grigo-icons {
+//                 cursor: pointer;
+//                 color: $second-color;
+//                 font-size: 1.3rem;
+//             }
+//         }
+//     }
+
+//     @include susy-use($susy-mobile) {
+//         max-width: span(4);
+//         padding: gutter() (gutter() / 2);
+
+//         // margin: -60px gutter() / 2 gutter() gutter() / 2
+//         background: $back-full-text;
+//     }
+
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             flex: 0 0 span(7);
+//             padding: gutter() (gutter() / 2);
+
+//             // margin: -60px gutter() / 2 gutter() gutter() / 2
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-laptop) {
+//             flex: 0 0 span(7);
+//             padding: gutter() (gutter() / 2);
+
+//             // margin: -60px gutter() / 2 gutter() gutter() / 2
+//         }
+//     }
+// }
+
+// .table-wrapper {
+//     position: relative;
+//     overflow-x: hidden;
+
+//     @media screen and (min-width: $screen-sm) {
+//         .table-scroll {
+//             overflow: auto;
+
+//             table {
+//                 display: block;
+//                 white-space: nowrap;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: $screen-sm - 1px) {
+//     .order-first {
+//         order: 1;
+//     }
+
+//     .order-second {
+//         order: 2;
+//     }
+// }
+
+// .col-indirizzi {
+//     @include susy-use($susy-mobile) {
+//         flex: 1 1 100%;
+//         padding: 0 gutter();
+//     }
+
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             flex: 0 0 span(3);
+//             padding-left: gutter();
+//             padding-right: gutter() / 2;
+//             border-right: 1px solid tint($long-text, 80%);
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-md) {
+//         @include susy-use($susy-laptop) {
+//             flex: 0 0 span(4);
+//             padding: gutter() / 2;
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         @include susy-use($susy-large) {
+//             flex: 0 0 span(5);
+//             padding-right: gutter();
+//             padding-left: span(1) + gutter();
+//         }
+//     }
+// }
+
+// .col-form {
+//     @include susy-use($susy-mobile) {
+//         flex: 1 1 100%;
+//         padding: gutter();
+//     }
+
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             flex: 0 0 span(5);
+//             padding-left: gutter() / 2;
+//             padding-right: gutter();
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-md) {
+//         @include susy-use($susy-laptop) {
+//             flex: 0 0 span(8);
+//             padding: gutter() / 2;
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         @include susy-use($susy-large) {
+//             flex: 0 0 span(11);
+//             padding-right: span(1) + gutter();
+//             padding-left: gutter();
+//         }
+//     }
+// }
+
+// .undertext {
+//     padding: gutter();
+//     text-align: center;
+//     background: $primary-gradient;
+//     color: $back-full-text;
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+
+//     p {
+//         @media screen and (min-width: $screen-sm) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 span(6);
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 span(8);
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 0 0 span(8);
+//             }
+//         }
+//     }
+// }
+
+// .law_link {
+//     height: auto;
+//     justify-content: center;
+
+//     ul {
+//         margin-bottom: auto;
+//     }
+
+//     background: $long-text;
+//     padding: 0;
+//     border-top: 1px dashed $second-color;
+
+//     a {
+//         color: $back-full-text;
+
+//         &:hover {
+//             text-decoration: underline;
+//             color: $back-full-text;
+//         }
+
+//         &:visited {
+//             color: $back-full-text;
+//         }
+//     }
+
+//     li {
+//         display: inline-block;
+//         padding: 0.5rem;
+//     }
+
+//     @media screen and (max-width: $screen-sm - 1px) {
+//         padding-bottom: 60px;
+//     }
+// }
+
+// .text_columns {
+//     @include susy-use($susy-mobile) {
+//         padding: 0 gutter();
+//     }
+
+
+//     h4 {
+//         column-span: all;
+//     }
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             width: span(8);
+//             padding: 0 gutter();
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-md) {
+//         @include susy-use($susy-laptop) {
+//             width: span(10);
+//             padding: 0;
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         @include susy-use($susy-large) {
+//             width: span(14);
+//         }
+//     }
+// }
+
+// .descrizione_lunga {
+//     h4 {
+//         padding-top: 1.5rem;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+
+//     .col_text {
+//         background: $default-gradient;
+
+//         @include border-radius(3px);
+//         @include box-shadow(0 0 3px $long-text);
+//         @include susy-use($susy-mobile) {
+//             flex: 0 0 (span(4) - gutter() * 2);
+//             padding: gutter() / 2;
+//             column-count: 1;
+//             margin-left: gutter();
+//             margin-right: gutter();
+//         }
+
+
+//         @media screen and (min-width: $screen-sm) {
+//             @include susy-use($susy-tablet) {
+//                 flex: 0 0 (span(8) - gutter());
+//                 padding: gutter();
+//                 column-count: 2;
+//                 column-gap: gutter() * 2;
+//                 column-rule: 1px solid $long-text;
+//                 margin-left: gutter();
+//                 margin-right: gutter();
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-md) {
+//             @include susy-use($susy-laptop) {
+//                 flex: 0 0 (span(12) - gutter());
+//                 padding: gutter();
+//                 column-count: 3;
+//                 column-gap: gutter() * 2;
+//                 margin-left: gutter() / 2;
+//                 margin-right: gutter() / 2;
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             @include susy-use($susy-large) {
+//                 flex: 0 0 span(14);
+//                 padding: gutter() (gutter() / 2);
+//                 column-count: 4;
+//                 column-gap: gutter() * 2;
+//                 margin-left: span(1) + gutter();
+//                 margin-right: span(1) + gutter();
+//             }
+//         }
+//     }
+
+//     &:last-child {
+//         .col_text {
+//             border-bottom: none;
+//         }
+//     }
+// }
+
+// .separatore {
+//     height: 5px;
+//     background: $primary-color;
+// }
+
+// .container-grids {
+//     display: grid;
+//     grid-template-columns: minmax(280px, 1fr);
+//     grid-auto-rows: 250px;
+//     grid-row-gap: 15px;
+//     grid-column-gap: gutter() / 2;
+
+//     @media screen and (min-width: $screen-sm) {
+//         @include susy-use($susy-tablet) {
+//             grid-column-gap: gutter();
+//             grid-template-columns: repeat(2, 1fr);
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-md) {
+//         @include susy-use($susy-tablet) {
+//             grid-template-columns: repeat(3, 1fr);
+//             grid-column-gap: gutter();
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         @include susy-use($susy-large) {
+//             grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+//             grid-column-gap: gutter() / 2;
+//             grid-auto-flow: dense;
+//         }
+//     }
+
+//     //  grid-template-columns: repeat(auto-fill, minmax(span(4) - gutter(), 1fr))
+//     //  grid-row-gap: 25px
+//     //  // width: span(4) - gutter() * 2
+//     //  // padding-left: gutter()
+//     //  margin-left: gutter()
+//     //  margin-right: gutter()
+//     // @media screen and (min-width: $screen-sm)
+//     //  +susy-use($susy-tablet)
+//     //      grid-column-gap: gutter()
+//     //      grid-row-gap: gutter()
+//     //      width: span(8)
+//     //      padding-left: gutter()
+//     //      margin-left: 0
+//     //      margin-right: 0
+//     // @media screen and (min-width: $screen-md)
+//     //  +susy-use($susy-laptop)
+//     //      grid-column-gap: gutter()
+//     //      grid-row-gap: gutter()
+//     //      width: span(12) - gutter() / 2
+//     //      padding-left: gutter() / 2
+//     // @media screen and (min-width: $screen-lg)
+//     //  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr))
+//     //  +susy-use($susy-large)
+//     //      grid-column-gap: gutter()
+//     //      grid-row-gap: gutter()
+//     //      width: span(16)
+//     //      padding-left: 0
+//     //      // padding-left: span(1) + gutter()
+//     .item {
+//         position: relative;
+//         overflow: hidden;
+//         background: $primary-gradient;
+
+//         a {
+//             position: absolute;
+//             height: 100%;
+
+//             @include transition;
+
+//             z-index: 10;
+//             background: rgba(8, 65, 92, 0.7);
+//             color: $back-full-text;
+//             transform: translateY(-2rem);
+//             width: 100%;
+//             bottom: -100%;
+//             padding: 0.5rem;
+
+//             @media screen and (min-width: $screen-md) {
+//                 transform: translateY(-3.5rem);
+//             }
+
+//             @media screen and (min-width: $screen-lg) {
+//                 // transform: translateY(180px)
+//             }
+
+//             h4 {
+//                 padding-top: 0;
+//             }
+
+//             p {
+//                 text-overflow: ellipsis;
+//                 overflow: hidden;
+//                 white-space: nowrap;
+
+//                 &:first-child {
+//                     padding-top: 2rem;
+//                 }
+
+//                 &:last-child {
+//                     position: relative;
+//                     border-top: 1px solid $back-full-text;
+//                     font-style: italic;
+
+//                     span {
+//                         position: absolute;
+//                         right: 0;
+
+//                         @include transform(rotate(-90deg));
+
+//                         top: 5px;
+//                     }
+//                 }
+//             }
+//         }
+
+//         @media screen and (min-width: $screen-lg) {
+//             &.orizontal-item {
+//                 grid-column-end: span 2;
+//                 grid-row-end: span 2;
+//             }
+
+//             &.vertical-item {
+//                 grid-row-end: span 2;
+//             }
+//         }
+
+//         &:hover {
+//             a {
+//                 transform: translateY(-100%);
+//             }
+//         }
+//     }
+// }
+
+// .prodotti_correlati {
+//     background: $back-full-text;
+//     width: span(4);
+//     margin: auto;
+//     overflow: hidden;
+
+//     .img-wrapper {
+//         height: 100px;
+//         width: 100%;
+
+//         img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: contain;
+//         }
+//     }
+
+//     h5 {
+//         // text-align: center
+//         font-style: normal;
+//         font-weight: 700;
+//         border-bottom: 2px solid $second-color;
+//     }
+
+//     .row {
+//         margin: auto;
+//         padding-bottom: 1.5rem;
+//         justify-content: center;
+
+//         .correlati_content {
+//             height: 340px;
+//             overflow-x: auto;
+//             overflow-y: hidden;
+//             white-space: nowrap;
+//             padding-bottom: 0.5rem;
+//             width: 100%;
+//             justify-content: center;
+
+//             &.morethanfour {
+//                 justify-content: left;
+//             }
+
+//             @media screen and (min-width: $screen-sm) {
+//                 height: 400px;
+//                 display: flex;
+
+//                 @include susy-use($susy-tablet) {
+//                     flex: 0 0 span(8);
+//                     padding: 0 (gutter() / 2);
+//                 }
+//             }
+
+//             @media screen and (min-width: $screen-md) {
+//                 height: 480px;
+//                 padding-bottom: 0.5rem;
+
+//                 @include susy-use($susy-laptop) {
+//                     flex: 0 0 span(12);
+//                 }
+//             }
+
+//             @media #{$media-landscape} {
+//                 @include susy-use($susy-tablet) {
+//                     justify-content: left;
+//                 }
+//             }
+
+//             @media screen and (min-width: $screen-lg) {
+//                 height: auto;
+//                 padding-bottom: 1rem;
+
+//                 @include susy-use($susy-large) {
+//                     flex: 0 0 span(16);
+//                     padding: 0 (gutter() / 2);
+//                 }
+//             }
+//         }
+
+//         .col-correlati {
+//             @extend %button_box;
+
+//             display: inline-block;
+//             white-space: initial;
+//             vertical-align: top;
+//             align-items: stretch;
+
+//             // height: 94%
+//             a {
+//                 color: $long-text;
+//             }
+
+//             p {
+//                 margin-bottom: 0;
+//             }
+
+//             @include susy-use($susy-mobile) {
+//                 flex: 0 0 span(4 narrow);
+//                 margin: gutter() / 2;
+//                 padding: gutter() / 2;
+//                 width: 75%;
+//             }
+
+
+//             @media screen and (min-width: $screen-sm) {
+//                 @include susy-use($susy-tablet) {
+//                     flex: 0 0 (span(4) - 3%);
+//                     margin-left: 0;
+//                     margin-right: gutter();
+//                     padding-left: gutter() / 2;
+//                     padding-right: gutter() / 2;
+
+//                     p {
+//                         font-size: 0.75rem;
+//                         line-height: 1.618;
+//                     }
+//                 }
+
+
+//                 &:last-child {
+//                     margin-right: 0;
+//                 }
+//             }
+
+//             @media screen and (min-width: $screen-md) {
+//                 @include susy-use($susy-laptop) {
+//                     flex: 0 0 span(4);
+//                     margin-left: 0;
+//                     padding-left: gutter();
+//                 }
+//             }
+
+//             @media screen and (min-width: $screen-lg) {
+//                 height: auto;
+
+//                 .img-wrapper {
+//                     height: 150px;
+//                 }
+
+//                 @include susy-use($susy-large) {
+//                     flex: 0 0 span(3 wide);
+//                     padding: gutter() / 2;
+//                     margin: gutter() / 2;
+
+//                     // &:nth-child(odd)
+//                     //  padding-right: gutter() / 2
+//                     // &:nth-child(even)
+//                     //  padding-left: gutter() / 2
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .alpha-bg {
+//     background: rgba($back-full-text, 0.9);
+// }
+
+// .icon-scroll {
+//     position: absolute;
+//     width: 40px;
+//     height: 65px;
+//     border-radius: 2rem;
+//     background: $back-full-text;
+//     bottom: 3%;
+//     left: 50%;
+//     margin-left: -20px;
+
+//     .simbol {
+//         margin: 7.5px auto;
+//         width: 30px;
+//         height: 50px;
+//         border-radius: 2rem;
+//         position: relative;
+
+//         span {
+//             width: 1px;
+//             position: absolute;
+//             left: 50%;
+//             margin-left: -2px;
+//             top: 5px;
+//         }
+
+//         .guida {
+//             height: 35px;
+//             border-color: rgba(24, 24, 24, 0.5);
+//         }
+
+//         .mov-guida {
+//             animation-name: dimension;
+//             animation-duration: 2s;
+//             animation-iteration-count: infinite;
+//         }
+//     }
+
+//     .simbol, span {
+//         border: 2px solid $long-text;
+//     }
+// }
+
+// .scroll-signal {
+//     // position: absolute
+//     bottom: 10px;
+
+//     // left: 50%
+//     width: 40px;
+//     height: 40px;
+
+//     @include border-radius(50%);
+
+//     // margin-left: 10px
+//     padding: 10px 16px;
+
+//     .arrow {
+//         width: 40px;
+//         height: 40px;
+//         position: relative;
+//         display: block;
+//         left: -2px;
+//         top: -2px;
+
+//         &::before, &::after {
+//             content: "";
+//             display: block;
+//             position: absolute;
+//             top: 5px;
+//             width: 3px;
+//             height: 18px;
+//             background: $long-text;
+
+//             @include border-radius(1px);
+//         }
+
+//         &::before {
+//             @include transform(rotate(40deg));
+
+//             margin-left: 10px;
+//         }
+
+//         &::after {
+//             @include transform(rotate(-40deg));
+//         }
+//     }
+
+//     @media screen and (min-width: $screen-lg) {
+//         width: 50px;
+//         height: 50px;
+
+//         .arrow {
+//             width: 50px;
+//             height: 50px;
+//             left: 0;
+//             right: 0;
+//             top: 0;
+
+//             &::before, &::after {
+//                 width: 3px;
+//                 height: 25px;
+
+//                 @include transform(rotate(40deg));
+//             }
+
+//             &::after {
+//                 @include transform(rotate(-40deg));
+//             }
+
+//             &::before {
+//                 margin-left: 15px;
+//             }
+//         }
+//     }
+// }

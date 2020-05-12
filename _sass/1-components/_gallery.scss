@@ -1,0 +1,23 @@
+ul.scroll-gallery {
+	@extend %h-scroll;
+	@extend %scroll-style;
+	width: 100%;
+	padding: 0;
+	li {
+		padding: 0;
+		flex: 0 0 90%;
+	}
+}
+
+.gallery-container {
+	width: 100%;
+	@include respond-to(screen-sm) {
+		grid-column: 1 / 9;
+	}
+	@include respond-to(screen-md) {
+		grid-column: 2 / 12;
+	}
+	@include respond-to(screen-md) {
+		grid-column: 2 / 16;
+	}
+}

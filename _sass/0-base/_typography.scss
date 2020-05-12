@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "icomoon";
+    font-display: swap;
+    src: url(/assets/fonts/icomoon.eot), url(/assets/fonts/icomoon.ttf), url(/assets/fonts/icomoon.woff), url(/assets/fonts/icomoon.svg);
+    unicode-range: U+E900 (-U + E915);
+    font-display: swap;
+}
+
+html {
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    @include interpolate("font-size", $screen-xs, $screen-lg, 16px, 20px);
+}
+
+body {
+    font-family: $text_font_family;
+    font-weight: 400;
+    color: $long-text;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $h-font-family;
+    text-transform: uppercase;
+}
+
+h1 {
+    @include interpolate("font-size", $screen-xs, $screen-lg, 28px, 60px);
+}
+
+p, ul {
+    margin-bottom: 1.5rem;
+}
+
+.title-container p {
+    font-style: italic;
+}
+
+h1, h2, h3, h4, h5 {
+    @include interpolate((padding-top, padding-bottom), 20rem, 70rem, .5rem, 1rem);
+    @include interpolate(margin-top, 20rem, 70rem, .5rem, 1rem );
+    @include interpolate(margin-top, 20rem, 70rem, 1rem, 2rem );
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.service-content h4 {
+    padding-top: $baseline;
+    font-size: 1rem;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+
+    // font-family: $h-font-family
+}
+
+button {
+    font-size: inherit;
+}
+
+.footer-col {
+    h3, h4, h5 {
+        margin-bottom: $baseline / 2;
+        padding-top: $baseline / 2;
+    }
+
+    .p-name h4 {
+        margin-bottom: 0;
+    }
+
+    p, ul {
+        margin-bottom: $baseline / 2;
+    }
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+.col-half {
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    &.text_index {
+        p {
+            @media screen and (max-width: $screen-sm - 1px) {
+                @include text-shadow(0 1px 0 $back-full-text);
+
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+ol {
+    list-style-type: decimal;
+
+    li {
+        padding-bottom: 1.5rem;
+    }
+}
+
+.row .col-half {
+    ul {
+        list-style: square inside;
+    }
+}
+
+ul.scheda-tecnica {
+    list-style-position: inside;
+    list-style-type: square;
+
+    li {
+        font-family: $h-font-family;
+
+        p {
+            font-family: $text_font_family;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+p.nota-bene {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+    // border: 0
+}
+
+a {
+    color: $primary-color;
+
+    &:hover {
+        color: $second-color;
+    }
+
+    &:visited {
+        color: $primary-color;
+    }
+}
+
+a, button {
+    cursor: pointer;
+}

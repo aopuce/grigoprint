@@ -1,0 +1,28 @@
+table {
+    tbody {
+        tr th {
+            color: gray;
+        }
+
+        tr th {
+            padding: 1rem;
+            text-align: center;
+
+            &:first-child {
+                text-align: right;
+                font-weight: bold;
+                color: $long-text;
+            }
+        }
+    }
+
+    thead tr th {
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+
+        &:first-child {
+            text-align: right;
+        }
+    }
+}

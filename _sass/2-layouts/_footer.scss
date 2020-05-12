@@ -1,0 +1,239 @@
+.site-footer {
+    background-image: $long-text-gradient;
+
+    a {
+        color: $back-full-text;
+        font-family: $text_font_family, sans-serif;
+        font-weight: 400;
+        font-style: italic;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.site-footer-2 {
+    overflow-x: hidden;
+    background: $long-text;
+    color: $back-full-text;
+
+    @media screen and (min-width: $screen-sm) {
+        padding-bottom: 60px;
+        padding-bottom: 0;
+    }
+
+    color: $back-full-text;
+    font-weight: bold;
+
+    .footer-col-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $screen-lg) {
+            justify-content: center;
+        }
+
+        .footer-col-1, .footer-col-2 {
+            @include susy-use($susy-mobile) {
+                flex: 0 0 span(4);
+                padding: gutter();
+            }
+
+
+            a, a:visited, a:hover {
+                color: $back-full-text;
+                font-style: italic;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .footer-col-1 {
+            @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+                @include susy-use($susy-tablet) {
+                    flex: 0 0 span(3);
+                    padding: gutter();
+                }
+            }
+
+            @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1px) {
+                @include susy-use($susy-laptop) {
+                    flex: 0 0 span(4);
+                    padding: gutter() / 2;
+                }
+            }
+
+            @media screen and (min-width: $screen-lg) {
+                @include susy-use($susy-large) {
+                    flex: 0 0 span(4);
+                    padding: gutter() / 2;
+                }
+            }
+        }
+
+        .footer-col-2 {
+            @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+                @include susy-use($susy-tablet) {
+                    flex: 0 0 span(5);
+                    padding: gutter();
+                }
+            }
+
+            @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1px) {
+                @include susy-use($susy-laptop) {
+                    flex: 0 0 span(8);
+                    padding: gutter() / 2;
+                }
+            }
+
+            @media screen and (min-width: $screen-lg) {
+                @include susy-use($susy-large) {
+                    flex: 0 0 span(8);
+                    padding: gutter() / 2;
+                }
+            }
+        }
+    }
+}
+
+// .site-footer
+// 	overflow-x: hidden
+// 	@media screen and (min-width: $screen-sm)
+// 		padding-bottom: 60px
+// 		padding-bottom: 0
+// 	color: $back-full-text
+// 	font-weight: bold
+// //gestione dimensione colonne footerd
+
+// 	.footer-col-wrapper
+// 		display: flex
+// 		flex-wrap: wrap
+// 		.footer-col
+// 			+susy-use($susy-mobile)
+// 				flex: 0 0 100%
+// 				padding: gutter()
+// 			@media screen and (min-width: $screen-sm)
+// 				+susy-use($susy-tablet)
+// 					flex: 0 0 span(4)
+// 					padding: gutter() gutter() / 2
+// 					&:last-child
+// 						padding-right: gutter() / 2
+// 					&:nth-child(2)
+// 						order: 3
+// 						flex: 0 0 span(8)
+// 						padding-right: gutter() / 2
+// 			@media screen and (min-width: $screen-md)
+// 				+susy-use($susy-laptop)
+// 					flex: 0 0 span(4)
+// 					padding: gutter() / 2
+// 					&:nth-child(2)
+// 						order: 2
+// 						flex: 0 0 span(4)
+// 						padding: gutter() / 2
+// 					&:nth-child(3)
+// 						order: 3
+// 						padding: gutter() / 2
+// 			@media screen and (min-width: $screen-lg)
+// 				+susy-use($susy-large)
+// 					flex: 0 0 span(4 wide)
+// 					padding: gutter()
+// 					padding-right: 0
+// 					&:first-child
+// 						margin-left: span(1 narrow)
+// 						flex: 0 0 span(3 wide)
+// 					&:nth-child(2)
+// 						flex: 0 0 span(6 wide)
+// 						padding: gutter()
+// 						padding-right: 0
+// 					&:last-child
+// 						flex: 0 0 span(5 wide)
+// 						padding: gutter()
+// 						padding-right: 0
+
+//stile grafico
+.footer-col-wrapper {
+    .footer-col {
+        li {
+            text-transform: capitalize;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .p-name p {
+            margin-top: $baseline / 2;
+        }
+
+        a.u-email {
+            text-transform: lowercase;
+        }
+
+        &.footer-col-2 .link_footer {
+            h5 {
+                background: $back-full-text;
+                color: $long-text;
+                width: 100%;
+                padding-left: 10px;
+            }
+
+            li {
+                display: inline-block;
+                padding: 5px;
+
+                a {
+                    border-right: 1px solid;
+                    padding-right: 5px;
+
+                    &.active {
+                        font-weight: bold;
+                        font-style: normal;
+                        background: $back-full-text;
+                        color: $long-text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.social-links {
+    a {
+        padding: 0.5rem;
+        display: inline-block;
+    }
+
+    // Animazione Label Form
+}
+
+.law_link {
+    width: 100%;
+    background: $long-text;
+    border-top: 1px dashed $back-full-text;
+    padding-bottom: 70px;
+    @include respond-to(screen-sm) {
+        padding-bottom: 0;
+    }
+    ul {
+        margin-bottom: 0;
+        margin: auto;
+        text-align: center;
+        @include respond-to(screen-sm) {
+            width: max-content;
+        }
+        li {
+            display:inline-block;
+            padding: .5rem;
+            a {
+                color: $back-full-text;
+                &:hover {
+                    color: $back-full-text;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

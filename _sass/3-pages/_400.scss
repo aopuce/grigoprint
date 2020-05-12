@@ -1,0 +1,15 @@
+.pag_404 {
+    flex: 0 0 100%;
+
+    h1, p {
+        width: 100%;
+        text-align: center;
+    }
+
+    a {
+        margin: auto;
+        display: block;
+        width: 300px;
+        text-align: center;
+    }
+}

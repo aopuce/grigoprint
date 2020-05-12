@@ -44,9 +44,9 @@
           </div>
       </div>
     {% endif %}
-    {% if page.title == "Contatti" %}
+    <{% if page.title == "Contatti" %}
         <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-primary btn-large btn-form standard" onclick="sendMail()"></button>
     {% else %}
-        <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-default btn-large btn-form standard" onclick="sendMail()"></button>
+        <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-p btn-large btn-form standard" onclick="sendMail()"></button>
     {% endif %}
 </form>

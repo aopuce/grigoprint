@@ -1,0 +1,77 @@
+.page-content {
+	background: $back-full-text;
+}
+
+.head-product {
+	h1 {
+		line-height: 1;
+		@include interpolate(margin-top, 20rem, 70rem, 0rem, 0rem);
+		@include interpolate(margin-bottom, 20rem, 70rem, .5rem, .8rem);
+	}
+	.ideale li {
+		padding: 5px 15px;
+		background: $primary-color;
+		border-radius: $radius / 2;
+		font-size: .8rem;
+		font-style: italic;
+		color: $back-full-text;
+	}
+	.social-share li a {
+		font-size: 1.1rem;
+		color: $back-full-text;
+		border-radius: $radius / 2;
+		padding: 2px 15px;
+		line-height: 1.5;
+		font-weight: bold;
+		display: inline-block;
+		@include transition;
+		span {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		&.facebook {
+			background: #4267b2;
+		}
+		&.twitter {
+			background: #1DA1F2;
+		}
+		&.pinterest {
+			background: #e60023;
+		}
+		.grigo-icons {
+			line-height: inherit;
+			font-size: inherit;
+		}
+		&:hover {
+			box-shadow: 0 4px 8px $long-text;
+			@include transform(translateY(-4px));
+		}
+	}
+}
+
+h3.middle-title {
+	@extend %middle-title;
+}
+
+ul.scheda-tecnica {
+	li {
+		color: $second-color;
+		p {
+			color: $back-full-text;
+		}
+	}
+}
+
+.product-content {
+	border-top: 3px solid $second-color;
+}
+
+.row-primary {
+	background: $primary-color;
+	color: $back-full-text;
+	.contact-row > p {
+		background: $second-color;
+		color: $primary-color;
+	}
+}
+

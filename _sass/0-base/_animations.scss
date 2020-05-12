@@ -1,0 +1,83 @@
+//animation dimensions
+@-webkit-keyframes dimension {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+
+@-moz-keyframes dimension {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+
+@-ms-keyframes dimension {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+
+@-o-keyframes dimension {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+
+@keyframes dimension {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 35px;
+    }
+}
+
+// fedaeIn opacity
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+// Rotating
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes redrot {
+    0% {
+        border-radius: 15px;
+    }
+
+    25% {
+        border-radius: 50%;
+    }
+
+    100% {
+        border: 3px solid tint($long-text, 90%);
+        border-left-color: $second-color;
+    }
+}

@@ -1,0 +1,32 @@
+.wrapper {
+    // background: susy-svg-grid($susy-mobile) no-repeat scroll
+    width: span(4, $susy-mobile);
+
+    @media screen and (max-height: $screen-xs) and (orientation: landscape) {
+        @include susy-use($susy-tablet) {
+            // background: susy-svg-grid() no-repeat scroll
+            width: span(8);
+        }
+    }
+
+    @media screen and (min-width: $screen-sm) {
+        @include susy-use($susy-tablet) {
+            // background: susy-svg-grid() no-repeat scroll
+            width: span(8);
+        }
+    }
+
+    @media screen and (min-width: $screen-md) {
+        @include susy-use($susy-laptop) {
+            // background: susy-svg-grid($susy-laptop) no-repeat scroll
+            width: span(12);
+        }
+    }
+
+    @media screen and (min-width: $screen-lg) {
+        @include susy-use($susy-large) {
+            // background: susy-svg-grid($susy-large) no-repeat scroll
+            width: span(16);
+        }
+    }
+}

@@ -1,45 +1,63 @@
 <header class="site-header" id="header" role="banner">
-
-  <div class="head-wrapper">
+    <!--<div class="head-wrapper">-->
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-
     {%- if page_paths -%}
-      <nav class="site-nav">
-        <div class="logo">
-          <a href="{{site.url}}" title="Home page Grigoprint"><img src="{{'assets/images/logo.svg' | relative_url}}" alt="Grigolini | Stampa digitale su tessuto"></a>
-        </div>
-        <div class="social-container" id="social-trigger-container">
-          <a href="https://twitter.com/grigoprint?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false"><span class="grigo-icons grigo-twitter"></span></a>
-              <a href="https://www.facebook.com/grigoprint-115494546515332/">
-                <span class="grigo-icons grigo-facebook"></span>
-              </a>
+    <nav class="site-nav">
+        <a href="{{site.url}}" title="Home page Grigoprint"><img src="{{'assets/images/logo.svg' | relative_url}}" alt="Grigolini | Stampa digitale su tessuto"></a>
+        <ul class="social-container" id="social-trigger-container">
+            <li>
+                <a href="https://twitter.com/grigoprint?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false"><span class="grigo-icons grigo-twitter"></span></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/grigoprint-115494546515332/">
+                    <span class="grigo-icons grigo-facebook"></span>
+                </a>
+            </li>
+            <li>
               <a href="https://www.instagram.com/grigoprint/">
                 <span class="grigo-icons grigo-instagram"></span>
               </a>
-        </div>
-        <div class="nav-container">
-          <div class="nav_bar social hidden-md" id="st-trigger-social">
-            <a href="javascript:void" title="Social links" aria-label="social">
-              <span class="grigo-icons grigo-social" id="icon-social"></span>
-              <span class="nav_bar_text">Social</span>
-            </a>
-          </div>
-          <div class="nav_bar contacts hidden-xs">
-            <a href="{{site.url}}{% link contatti.html %}" title="Pagina Contatti" aria-label="Contatti" onclick="gtag_report_conversion('pagina contatti')">
-              <span class="grigo-icons grigo-contacts"></span>
-              <span class="nav_bar_text">Contattaci</span>
-            </a>
-          </div>
-          <div class="nav_bar column" id="st-trigger-effects">
-            <a href='javascript:void(0)' id="call-menu">
-              <span id="icon-products" class="grigo-icons grigo-hamburger" aria-label="Menu Prodotti"></span>
-              <span class="nav_bar_text">Prodotti</span>
-            </a>
-          </div>
-
-        </div>
-      </nav>
+            </li>
+            <li>
+              <a href="www.pinterest.com/grigolinim">
+                <span class="grigo-icons grigo-pinterest"></span>
+              </a>
+            </li>
+        </ul>
+        <ul class="nav-container">
+            <li class="nav_bar account">
+                <a href="{{site.url}}{% link contatti.html %}" title="Account" aria-label="Account" >
+                    <span class="grigo-icons grigo-account"></span>
+                    <span class="nav_bar_text">Log In</span>
+                </a>
+            </li>
+            <li class="nav_bar cart">
+                <a href="{{site.url}}{% link contatti.html %}" title="Carrello" aria-label="Carrello">
+                    <span class="grigo-icons grigo-cart"></span>
+                    <span class="nav_bar_text">carrello</span>
+                </a>
+            </li>
+            <li class="nav_bar social hidden-md" id="st-trigger-social">
+                <a href="javascript:void" title="Social links" aria-label="social">
+                    <span class="grigo-icons grigo-social" id="icon-social"></span>
+                    <span class="nav_bar_text">Social</span>
+                </a>
+            </li>
+            <li class="nav_bar contacts hidden-xs">
+                <a href="{{site.url}}{% link contatti.html %}" title="Pagina Contatti" aria-label="Contatti" onclick="gtag_report_conversion('pagina contatti')">
+                    <span class="grigo-icons grigo-contacts"></span>
+                    <span class="nav_bar_text">Contatti</span>
+                </a>
+            </li>
+            <li class="nav_bar column" id="st-trigger-effects">
+                <a href='javascript:void(0)' id="call-menu" onClick="showMenu()">
+                    <span id="icon-products" class="grigo-icons grigo-hamburger" aria-label="Menu Prodotti"></span>
+                    <span class="nav_bar_text">Prodotti</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     {%- endif -%}
-  </div>
+    <!--</div>-->
 </header>

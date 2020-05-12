@@ -1,0 +1,20 @@
+.card {
+    padding: 1rem;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        padding: 0;
+        margin: 0 0 0.8rem 0;
+        // background: $back-full-text;
+    }
+
+    &.card__primary {
+        @extend %neumorph__primary;
+    }
+
+    &.card__light {
+        @extend %neumorph__light;
+    }
+}

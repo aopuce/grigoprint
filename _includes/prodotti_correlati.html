@@ -5,27 +5,25 @@
 	{% endif %}
 {% endfor %}
 <div class="prodotti_correlati">
-	<h4 class="middle-title">prodotti correlati</h4>
-		<div class="row">
-				{% if moreThanfour %}
-					<ul class="correlati_content morethanfour">
-				{% else %}
-					<ul class="correlati_content">
-				{% endif %}
-				{% for i in page.correlati %}
-					{% for node in site.prodotti %}
-				        {% if {{i}} == node.title %}
-				        <li class="col-correlati">
-				        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
-				        		<div class="img-wrapper">
-				        		{% cloudinary onequater {{node.image[0].path}} alt="{{ node.title }}" %}</div>
-				        		<h5>{{node.title}}</h5>
-				        		<p>{{node.description}}</p>
-				        	</a>
-				        </li>
-				        {% endif %}
-				    {% endfor %}
-				{% endfor %}
-			</ul>
-		</div>
+	<h3 class="middle-title">Ti protrebbe interessare...</h4>
+		{% if moreThanfour %}
+			<ul class="correlati_content morethanfour">
+		{% else %}
+			<ul class="correlati_content">
+		{% endif %}
+		{% for i in page.correlati %}
+			{% for node in site.prodotti %}
+		        {% if {{i}} == node.title %}
+		        <li class="col-correlati">
+		        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+		        		<div class="img-wrapper">
+		        		{% cloudinary onequater {{node.image[0].path}} alt="{{ node.title }}" %}</div>
+		        		<h5>{{node.title}}</h5>
+		        		<p>{{node.description}}</p>
+		        	</a>
+		        </li>
+		        {% endif %}
+		    {% endfor %}
+		{% endfor %}
+	</ul>
 </div>

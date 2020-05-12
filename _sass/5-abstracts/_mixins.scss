@@ -1,0 +1,132 @@
+// tipografia fluida
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            line-height: $min-font-size;
+
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+                line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+                line-height: $max-font-size;
+            }
+        }
+    }
+}
+
+//Nuova Tipografia Fluida
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
+    & {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+
+        @media screen and (min-width: $min-screen) {
+            @each $property in $properties {
+                #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value); 
+            }
+        }
+
+        @media screen and (min-width: $max-screen) {
+            @each $property in $properties {
+                #{$property}: $max-value;
+            }
+        }
+    }
+}
+
+//susy mixin
+@mixin susy-use($settings) {
+    $settings: susy-compile($settings);
+    $global: $susy;
+    $susy: map-merge($susy, $settings) !global;
+
+    @content;
+
+    $susy: $global !global;
+}
+
+//breakpoints manager
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+
+    @if $raw-query {
+        $query: if(type-of($raw-query) == "string", unquote($raw-query), inspect($raw-query));
+
+        @media #{$query} {
+            @content;
+        }
+    }
+    @else {
+        @error 'No Value found for "#{$breakpoint}". ' + 'Please make sure it is defined in "$breakpoints"';
+    }
+}
+
+// mixin cross browser
+@mixin crossBrowser($property, $css) {
+    -webkit-#{$property}: $css;
+    -moz-#{$property}: $css;
+    -o-#{$property}: $css;
+    #{$property}: $css;
+}
+
+// mixin transform
+@mixin transform($kind) {
+    @include crossBrowser(transform, $kind);
+}
+
+@mixin transform-origin($transform-origin) {
+    @include crossBrowser(transform-origin, $transform-origin);
+}
+
+// mixin transition
+@mixin transition {
+    @include crossBrowser(transition-delay, $default-transition-delay);
+    @include crossBrowser(transition-property, $default-transition-property);
+    @include crossBrowser(transition-duration, $default-transition-duration);
+    @include crossBrowser(transition-function, $default-transition-function);
+}
+
+@mixin transition-property($transition-property) {
+    @include crossBrowser(transition-property, $transition-property);
+}
+
+@mixin transition-duration($transition-duration) {
+    @include crossBrowser(transition-duration, $transition-duration);
+}
+
+// mixin text-shadow
+@mixin text-shadow($text-shadow-property) {
+    @include crossBrowser(text-shadow, $text-shadow-property);
+}
+
+// border-radius
+@mixin border-radius($border-property) {
+    @include crossBrowser(border-radius, $border-property);
+}
+
+@mixin box-shadow($box-shadow-property...) {
+    @include crossBrowser(box-shadow, $box-shadow-property);
+}
+
+// clearfix
+
+@mixin clearfix {
+    &::before, &::after {
+        content: "";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}

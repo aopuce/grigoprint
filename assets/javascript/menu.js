@@ -1,5 +1,4 @@
 // jshint esversion: 6
-
 var button = document.getElementById('call-menu'),
 	dest = document.getElementById('add-class').classList,
 //cambio icona
@@ -25,8 +24,11 @@ var button = document.getElementById('call-menu'),
     social_container = document.getElementById('social-trigger-container').classList,
     social_button = document.getElementById('st-trigger-social'),
     icon_social = document.getElementById('icon-social').classList;
+    // inputSelected = document.getElementsByClassName('prezzo_select');
 const scrollElems = document.querySelectorAll('.product-content');
-
+window.onload = (event) => {
+	document.documentElement.style.scrollBehavior = 'smooth';
+}
 //scrollbars
 // 	instances = OverlayScrollbars(document.getElementsByClassName('scroller'), {
 // 	scrollbars: {
@@ -47,44 +49,76 @@ var toggleClass = function(key, classes) {
 // 	window.scroll(0, pos);
 // 	console.log(pos);
 // }
+let scroll = 0;
+let scrollY = 0;
+const body = document.body;
+const showMenu = () => {
+	if (document.getElementById('nav-commander').classList.contains('opened')) {
+		body.style.position = '';
+		body.style.top = '';	
+		window.scrollTo(0, parseInt(scrollY)) ;
+		document.documentElement.style.scrollBehavior = 'smooth';
+		console.log(scrollY);
+		document.getElementById('nav-commander').classList.remove('opened');
+	} else {
+		document.getElementById('nav-commander').classList.add('opened');
+		body.style.position = 'fixed';
+		body.style.top = scroll * -1 + 'px';
+		document.documentElement.style.scrollBehavior = '';
+		console.log(scroll);
+		scrollY = scroll;
+	}
+}
+window.addEventListener('scroll', () => {
+	scroll = window.scrollY;
+} )
 
+const toForm = document.getElementById('clickform');
+const formDest = document.getElementById('form');
 
-var closeMenu = function(whereClick) {
-	whereClick.addEventListener('click', function(event) {
+// toForm.addEventListener('click', () => {
+// 	window.scrollTo({
+// 		left: 0,
+// 		top: parseInt(formDest.offsetTop),
+// 		behavior: 'smooth'
+// 	});
+// })
+// var closeMenu = function(whereClick) {
+// 	whereClick.addEventListener('click', function(event) {
 		
-		if((document.documentElement && document.documentElement.scrollTop) || 
-              document.body.scrollTop > 0){
-			docscroll = window.pageYOffset || document.documentElement || document.body.parentNode || document.body.scrollTop;
-		// 	scrollContainer.style.top = '-' + docscroll + 'px';
+// 		if((document.documentElement && document.documentElement.scrollTop) || 
+//               document.body.scrollTop > 0){
+// 			docscroll = window.pageYOffset || document.documentElement || document.body.parentNode || document.body.scrollTop;
+// 		// 	scrollContainer.style.top = '-' + docscroll + 'px';
 			
-		// } else {
-		// 	scrollContainer.removeAttribute("style");
-		}
-		if (!(dest.contains("opened"))) {
-			container_gray.addEventListener('wheel', function (e) {
-				e.preventDefault();
-			}, {passive: false});
-			container_gray.addEventListener('touchmove', function (e) {
-				e.preventDefault();
-			}, {passive: false});
-		} else {
-			container_gray.removeEventListener('wheel', function (e) {
-				e.preventDefault();
-			}, {passive: false});
-			container_gray.removeEventListener('touchmove', function (e) {
-				e.preventDefault();
-			}, {passive: false});
-		}
-		toggleClass(dest, "opened");
-		toggleClass(icon, "grigo-close");
-		toggleClass(icon, "grigo-hamburger");
+// 		// } else {
+// 		// 	scrollContainer.removeAttribute("style");
+// 		}
+// 		if (!(dest.contains("opened"))) {
+// 			container_gray.addEventListener('wheel', function (e) {
+// 				e.preventDefault();
+// 			}, {passive: false});
+// 			container_gray.addEventListener('touchmove', function (e) {
+// 				e.preventDefault();
+// 			}, {passive: false});
+// 		} else {
+// 			container_gray.removeEventListener('wheel', function (e) {
+// 				e.preventDefault();
+// 			}, {passive: false});
+// 			container_gray.removeEventListener('touchmove', function (e) {
+// 				e.preventDefault();
+// 			}, {passive: false});
+// 		}
+// 		toggleClass(dest, "opened");
+// 		toggleClass(icon, "grigo-close");
+// 		toggleClass(icon, "grigo-hamburger");
 
-		// //window.scroll(0, docscroll);	
-		// // window.scrollTo(0, docscroll);	
-		//window.setTimeout(function() {window.scrollTo(0, docscroll);}, 0);
-		event.preventDefault();
-	});
-};
+// 		// //window.scroll(0, docscroll);	
+// 		// // window.scrollTo(0, docscroll);	
+// 		//window.setTimeout(function() {window.scrollTo(0, docscroll);}, 0);
+// 		event.preventDefault();
+// 	});
+// };
 
 // document.addEventListener('touchmove', function(e){
 // 	e.preventDefault();
@@ -100,8 +134,8 @@ var social_open = function(whereClick1) {
         e.preventDefault();
     });
 };
-closeMenu(button);
-closeMenu(container);
+// closeMenu(button);
+// closeMenu(container);
 social_open(social_button);
 
 // instances[0].options("callbacks.onScroll", function (){
@@ -117,9 +151,9 @@ social_open(social_button);
 // var offsetHeader = document.getElementById('full-page-header').offsetHeight;
 // var article = document.getElementById('scroller');
 // var startPage = document.getElementById('page-content');
-window.onresize = function() {
-	offsetHeader = document.getElementById('full-page-header').offsetHeight;
-};
+// window.onresize = function() {
+// 	offsetHeader = document.getElementById('full-page-header').offsetHeight;
+// };
 // var executed = 0;
 // var scrollDown = function() {
 // 	console.log("sono in scrollDown");
@@ -138,29 +172,29 @@ window.onresize = function() {
 var fullH = document.getElementById('full-page-header');
 var fullHCont;
 
-function setHeight() {
-	if (fullH != null){
-		if (window.innerHeight < 825 && window.innerWidth <= 480) {
-			fullH.style.minHeight = window.innerHeight - 50+ "px";
-			fullH.style.height = window.innerHeight -50 + "px";
-		} else if (window.innerWidth < 825 && window.innerHeight <= 480) {
-			if (!fullH.classList.contains('jumbotron')) {
-				fullH.style.minHeight = window.innerHeight  + "px";
-				fullH.style.height = window.innerHeight + "px";
-			} else {
-				fullH.style.minHeight = window.innerHeight * 2 + "px";
-				fullH.style.height = window.innerHeight * 2 + "px";
-			}
-		} else {
-			fullH.style.minHeight = window.innerHeight  + "px";
-			fullH.style.height = window.innerHeight  + "px";
-		}
-	}
-}
+// function setHeight() {
+// 	if (fullH != null){
+// 		if (window.innerHeight < 825 && window.innerWidth <= 480) {
+// 			fullH.style.minHeight = window.innerHeight - 50+ "px";
+// 			fullH.style.height = window.innerHeight -50 + "px";
+// 		} else if (window.innerWidth < 825 && window.innerHeight <= 480) {
+// 			if (!fullH.classList.contains('jumbotron')) {
+// 				fullH.style.minHeight = window.innerHeight  + "px";
+// 				fullH.style.height = window.innerHeight + "px";
+// 			} else {
+// 				fullH.style.minHeight = window.innerHeight * 2 + "px";
+// 				fullH.style.height = window.innerHeight * 2 + "px";
+// 			}
+// 		} else {
+// 			fullH.style.minHeight = window.innerHeight  + "px";
+// 			fullH.style.height = window.innerHeight  + "px";
+// 		}
+// 	}
+// }
 
-window.onload = setHeight();
+// window.onload = setHeight();
 
-window.addEventListener("resize", setHeight);
+// window.addEventListener("resize", setHeight);
 
 window.onscroll = function() {
 	var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -182,24 +216,6 @@ window.onscroll = function() {
         }
     }
     prevScrollPos = currentScrollPos;
- 
-
-   //  var n = Date.now();
-   //  console.log(n, "  ", executed);
-   //  if (st > scrollPosDef && scrollPosDef<50){//&& executed + 2000 < n) {
-   //  	executed = n;
-   //  	console.log("scolldown");
-   //  	console.log(window.pageYOffset || document.documentElement.scrollTop," st: ",st);
-   //  	article.scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
-   //  	console.log(window.pageYOffset || document.documentElement.scrollTop," st: ",st);
-    	
-   //  } else if (st < scrollPosDef && executed + 2000 < n){
-  	// 	executed = n;
-  	// 	console.log("scollup");
-  	// 	scrollUp();
-  	// }
-  	
-  	// scrollPosDef = st <= 0 ? 0 : st;
 };
 
 function reset(e) {
@@ -222,130 +238,15 @@ header.addEventListener("mouseout", function(e){
 	e.preventDefault();
 });
 
-// selector.onclick = function () {
-// 	toggleClass(navContainer, "switching");
-// }; switcher!!!!!!!!!!!!!
 
-// (function (w, d) {
-//     "use strict";
+// function addEventListener(el, eventType, handler) {
+// 	if (el.addEventListener) {
+// 		el.addEventListener(eventType, handler, false);
+// 	} else if (elem.attachEvent) {
+// 		elm.attachEvent ('on' + eventType, handler);
+// 	}
+// }
 
-//     if (typeof String.prototype.startsWith !== "function") {
-//         String.prototype.startsWith = function (str) {
-//             return this.slice(0, str.length) === str;
-//         };
-//     }
+// addEventListener(document, 'DOMContentLoaded', function() {
 
-//     var VanillaSlider = function () {
-//         this.readySet;
-//         this.intervalElement;
-//     };
-
-//     VanillaSlider.prototype.timeInterval = 4000;
-//     VanillaSlider.prototype.containerId = "vs-container";
-//     VanillaSlider.prototype.startAt = 0;
-//     VanillaSlider.prototype.domReady = false;
-//     VanillaSlider.prototype.iterable = "img";
-
-//     VanillaSlider.prototype.set = function (customOptions) {
-//         var options = {},
-//             self = this,
-//             sliderContainer,
-//             sliderElements,
-//             currentImage,
-//             resetImage;
-
-//         if (typeof customOptions !== "object") {
-//             customOptions = {};
-//         }
-
-//         options.timeInterval = customOptions.timeInterval || self.timeInterval;
-//         options.containerId = customOptions.containerId || self.containerId;
-//         options.startAt = customOptions.startAt || self.startAt;
-//         options.before = customOptions.before || null;
-//         options.after = customOptions.after || null;
-//         options.iterable = customOptions.iterable || self.iterable;
-
-//         if (!self.domReady) {
-//             self.readySet = function () { self.set(options); };
-//             return;
-//         }
-
-//         if (self.intervalElement) {
-//             clearInterval(self.intervalElement);
-//             self.intervalElement = null;
-//         }
-
-//         sliderContainer = d.getElementById(options.containerId);
-//         if (options.iterable.startsWith(".")) {
-//             sliderElements = sliderContainer.getElementsByClassName(options.iterable.replace(".", ""));
-//         } else {
-//             sliderElements = sliderContainer.getElementsByTagName(options.iterable);
-//         }
-//         if (!!sliderElements.length) {
-//             currentImage = options.startAt;
-//             resetImage = function (setToImage) {
-//                 if ((sliderElements.length - 1) < setToImage || setToImage < 0) {
-//                     return;
-//                 }
-
-//                 if (!!options.before) {
-//                     options.before(sliderElements[currentImage]);
-//                 }
-
-//                 /*jshint -W081 */
-//                 for (var i = 0, max = sliderElements.length; i < max; i += 1) {
-//                     if (i === setToImage) {
-//                         continue;
-//                     }
-//                     sliderElements[i].style.display = "none";
-//                 }
-//                 /*jshint +W081 */
-
-//                 sliderElements[setToImage].style.display = "block";
-//                 currentImage = setToImage;
-
-//                 if (!!options.after) {
-//                     options.after(sliderElements[currentImage]);
-//                 }
-//             };
-//             resetImage(currentImage);
-//             self.intervalElement = setInterval(function () {
-//                 var nextImage = currentImage + 1 >= sliderElements.length ? 0 : currentImage + 1;
-//                 resetImage(nextImage);
-//             }, options.timeInterval);
-//         }
-//         else {
-//             console.error("Vanilla-slider: Warning: There are no images to slide.");
-//         }
-//     };
-
-//     VanillaSlider.prototype.domIsReady = function () {
-//         this.domReady = true;
-//         if (this.readySet) {
-//             this.readySet(); /* GO! */
-//         }
-//     };
-
-//     w.VanillaSlider = new VanillaSlider();
-//     w.vs = w.VanillaSlider;
-
-//     if (d.addEventListener) {
-//         d.addEventListener("DOMContentLoaded", function evnt() {
-//             d.removeEventListener("DOMContentLoaded", evnt, false);
-//             w.VanillaSlider.domIsReady();
-//         }, false);
-//     } else if (d.attachEvent) {
-//         d.attachEvent("onreadystatechange", function evnt() {
-//             if (d.readyState === "complete") {
-//                 d.detachEvent("onreadystatechange", evnt);
-//                 w.VanillaSlider.domIsReady();
-//             }
-//         });
-//     }
-// })(window, document);
-
-// vs.set({
-// 	containerId: 'my-slider',
-// 	iterable: '.image'
-// });
-
+// })

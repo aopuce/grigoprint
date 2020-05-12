@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   poster, striscioni in TNT e molto altro.
 logo: /assets/images/logo.svg
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.grigoprint.it" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.grigoprint.it/test" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: grigoprint
 # github_username:  jekyll
 google_analytics: UA-139665476-1
@@ -51,9 +51,9 @@ compress_html:
   ignore:
     envs: []
 # minifying js
-minibundle:
-  minifier_commands:
-    js: node_modules/.bin/uglifyjs
+# minibundle:
+#   minifier_commands:
+#     js: node_modules/.bin/uglifyjs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,6 +1,6 @@
----
+{% comment %}---
 layout: compress
----
+---{% endcomment %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
 
@@ -8,7 +8,7 @@ layout: compress
 
 <body id="add-class">
 
-    <div id="scroll-sobstitute" class="scroll">
+    <!--<div id="scroll-sobstitute" class="scroll">-->
         <div class="nav-list" id="nav-commander">
             {%- include menu.html -%}
         </div>
@@ -16,55 +16,98 @@ layout: compress
         <div id="container">
         </div>
         <main class="page-content" id="page-content" aria-label="Content">
-            <div class="image-title" id="{{page.title | replace: ' ', '-' | downcase}}">
-            	{% for item in page.image %}
-                	{% cloudinary {{item.config}} {{item.path}} alt="{{item.alt}}" class="lazyload {{item.class}}" %}
-                {% endfor %}
-            </div>
-            <div class="wrapper">
-                <header class="head-blog" id="full-page-header">
-                    <div class="title-container">
-                    	<h1><span>{{page.title | replace: ' ', ' </span><span>'}}</span></h1>
-                        <h6><span>{{page.description}}</span></h6>
-                        <a data-scroll href="#scroller" class="btn btn-default scroll-signal" id="pls-scroll">
-                           <span class="arrow"></span>
-                        </a>
-                    </div>  
-                </header>
+            <section class="head-product">
+                <div class="image-title" id="{{page.title | replace: ' ', '-' | downcase}}">
+                            {% for item in page.image %}
+                                {% cloudinary {{item.config}} {{item.path}} alt="{{item.alt}}" class="lazyload {{item.class}}" %}
+                            {% endfor %}
+                        </div>
+                            <section class="main-desc" id="full-page-header">
+                                <ul class="ideale ul-inline">
+                                    {% for i in page.ideale %}
+                                        <li>{{i}}</li>
+                                    {% endfor %}
+                                </ul>
+                                <header class="title-container">
+                                    <h1>{{page.title}}</h1>
+                                    <p>{{page.description}}</p>
+                                </header>
+                                <ul class="list-forza">
+                                    {% for i in page.forza %}
+                                        <li>{{i}}</li>
+                                    {% endfor %}
+                                </ul>
+                                <ul class="social-share ul-inline">
+                                    <li>
+                                        <!-- <div class="fb-share-button" data-href="{{page.url}}" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.grigoprint.it%2Fprodotti%2F{{page.title | replace: ' ', '_' | downcase}}.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                                        </div> -->
+                                        <a class="facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('{{site.url}}{{page.url}}'),'facebook-share-dialog'); return false;"><span class="grigo-icons grigo-facebook"></span><span>share</span></a>
+                                    </li>
+                                    <li>
+                                        <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="it" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                                        <a class="twitter" onclick="javascript:window.open('https://twitter.com/share?text={{page.description}}&amp;url={{site.url}}{{page.url}}','Twitter-dialog'); return false;"><span class="grigo-icons grigo-twitter"></span><span>tweet</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="pinterest" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&amp;media={{site.url}}{{page.image[0].path}}&amp;description={{page.description}}" target="new"><span class="grigo-icons grigo-pinterest"></span><span>pin it</span></a>
+                                    </li>
+                                    
+                                </ul>
+                                <section class="price">
+                                    <div class="col-price">
+                                        <span class="btn btn-large btn-outline btn-outline__second">a partire da 50€ mq</span>
+                                    </div>
+                                    <a href="#form" type="button" role="button" aria-label="richiedi preventivo" class="btn btn-primary btn-large" id="clickform">richiedi preventivo</a>
+                                </section>
+                            </section>
+                        </section>
+            
                 {% if page.title == "Bandiere Personalizzate" %}
                     <article class="product-content alpha-bg" id="scroller">
                 {% else %}
                     <article class="product-content " id="scroller">
                 {% endif %}
+
                     {{ content }}
                 </article>
-            </div>
-        {% if page.correlati%}
-              <div class="wrapper">
-              {%- include prodotti_correlati.html -%}
-              </div>
-              {% endif %}
+            
+            {% if page.correlati%}
+                {%- include prodotti_correlati.html -%}
+            {% endif %}
         </main>
         {%- include footer_2.html -%}
         {%- include static_link.html -%}
-    </div>
+    <!--</div>-->
 
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
-        {% minibundle js %}
+        {% comment %}{% minibundle js %}
             source_dir: assets/javascript
             destination_path: assets/javascript/app
-            baseurl: '{{ site.baseurl }}/'
+            baseurl: 'https://www.grigoprint.it/test'
             assets:
             - form_it
             - menu
-        {% endminibundle %}
+        {% endminibundle %}{% endcomment %}
+        <script src="{{site.url}}{{'/assets/javascript/menu.js'}}" async></script>
+        <script src="{{site.url}}{{'/assets/javascript/form_it.js'}}" async></script>
     {% else %}
         <script src="{{'/assets/javascript/menu.js'}}" async></script>
         <script src="{{'/assets/javascript/form_it.js'}}" async></script>
     {%- endif -%}
-    <script defer src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
+        new Splide('.splide', {
+          cover: false,
+          pagination: false,
+          autoplay: true,
+          rewind: true,
+          arrows: true,
+          focus: 'center',
+          trimSpace: false,
+          gap: '1rem',
+          padding: {
+            left: 0,
+            right: '6rem',
+          }
+        }).mount();
     </script>
 </body>
 
