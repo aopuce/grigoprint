@@ -26,7 +26,7 @@
             </li>
         </ul>
         <ul class="nav-container">
-            <li class="nav_bar account">
+            {% comment %}<li class="nav_bar account">
                 <a href="{{site.url}}{% link contatti.html %}" title="Account" aria-label="Account" >
                     <span class="grigo-icons grigo-account"></span>
                     <span class="nav_bar_text">Log In</span>
@@ -37,7 +37,7 @@
                     <span class="grigo-icons grigo-cart"></span>
                     <span class="nav_bar_text">carrello</span>
                 </a>
-            </li>
+            </li>{% endcomment %}
             <li class="nav_bar social hidden-md" id="st-trigger-social">
                 <a href="javascript:void" title="Social links" aria-label="social">
                     <span class="grigo-icons grigo-social" id="icon-social"></span>
@@ -45,15 +45,15 @@
                 </a>
             </li>
             <li class="nav_bar contacts hidden-xs">
-                <a href="{{site.url}}{% link contatti.html %}" title="Pagina Contatti" aria-label="Contatti" onclick="gtag_report_conversion('pagina contatti')">
+                <a href="{% link contatti.html %}" title="Pagina Contatti" aria-label="Contatti" onclick="gtag_report_conversion('pagina contatti')">
                     <span class="grigo-icons grigo-contacts"></span>
                     <span class="nav_bar_text">Contatti</span>
                 </a>
             </li>
             <li class="nav_bar column" id="st-trigger-effects">
-                <a href='javascript:void(0)' id="call-menu" onClick="showMenu()">
+                <a href='javascript:void(0)' id="call-menu">
                     <span id="icon-products" class="grigo-icons grigo-hamburger" aria-label="Menu Prodotti"></span>
-                    <span class="nav_bar_text">Prodotti</span>
+                    <span class="nav_bar_text" id="span-products">Prodotti</span>
                 </a>
             </li>
         </ul>

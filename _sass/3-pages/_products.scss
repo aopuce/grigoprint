@@ -49,19 +49,34 @@
 	}
 }
 
-h3.middle-title {
+.middle-title {
 	@extend %middle-title;
 }
 
 ul.scheda-tecnica {
-	li {
+	& > li {
 		color: $second-color;
-		p {
+		p, ul {
 			color: $back-full-text;
 		}
 	}
 }
+ul.list-grids, ul.list-square, ul.list-complete {
+	list-style: square;
+	list-style-position: inside;
+}
 
+ul.list-complete {
+	li {
+		padding: 10px 20px;
+		&:nth-child(odd) {
+			background: darken($back-full-text, 2%);
+		}
+		&:nth-child(even) {
+			background: lighten($back-full-text, 2%);
+		}
+	}
+}
 .product-content {
 	border-top: 3px solid $second-color;
 }
@@ -69,9 +84,31 @@ ul.scheda-tecnica {
 .row-primary {
 	background: $primary-color;
 	color: $back-full-text;
-	.contact-row > p {
+	.contact-row > .info-form {
 		background: $second-color;
 		color: $primary-color;
+		h5 {
+			margin: 0;
+		}
 	}
+	.contact-row .collapse {
+		@include transition;
+		@media screen and (max-width: $screen-sm - 1px) {
+			overflow: hidden;
+			max-height: 0;
+		}
+		
+	}
+	.btn.btn-large.btn-collapse {
+		@include respond-to(screen-sm) {
+			box-shadow: unset;
+			background: none;
+			cursor: text;
+			@include interpolate((padding-top, padding-bottom), 20rem, 70rem, .5rem, 1rem);
+   			@include interpolate(margin-top, 20rem, 70rem, .5rem, 1rem );
+    		@include interpolate(margin-bottom, 20rem, 70rem, 1rem, 2rem );
+		}
+	}
+
 }
 

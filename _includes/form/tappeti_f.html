@@ -11,6 +11,29 @@
    <span>errore: Seleziona un tessuto</span>
 </div>
 -->
+{% if page.title == "Tappeto Sottomoto" %}
+
+<label class="label__modello" for="modello">Seleziona una misura
+</label><div class="modelli form-col full-form-grid" id="modello">
+    <a href="#100" role="button" class="radio__selection" data-options="tapp1" data-selection="modello">
+        100cm X  200cm
+    </a>
+    <a href="#150" role="button" class="radio__selection" data-options="tapp2" data-selection="modello">
+        150cm X  250cm
+    </a>
+    <a href="#personalizzata" role="button" class="radio__selection" data-options="tapp" data-selection="modello">
+        Personalizzata
+    </a>
+    <span>Attenzione: seleziona un modello!</span>
+<!--nascosto selezione modello-->
+    <select name="modello" class="hide">
+        <option value=""></option>
+        <option value="tapp1">100 x 200</option>
+        <option value="tapp2">150 x 250</option>
+        <option value="tapp">personalizzata</option>
+    </select>
+</div>
+{% endif %}
 <div class="form-col animated-label" id="altezza">
     <input type="number" name="altezza" placeholder="100" aria-label="larghezza">
     <label for="altezza">Altezza in cm</label>

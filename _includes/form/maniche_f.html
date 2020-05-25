@@ -1,30 +1,40 @@
-<div class="selections form-col animated-label" id="select"  name="state">
+<div class="modelli form-col full-form-grid" id="modello">
+    <a href="#vela" role="button" class="radio__selection" data-options="non personalizzata" data-selection="modello">
+        <img src="/assets/images/maniche_a_vento/standard.svg" alt="Seleziona Vela">
+        Manica Standard
+    </a>
+    <a href="#goccia" role="button" class="radio__selection" data-options="personalizzata" data-selection="modello">
+        <img src="/assets/images/maniche_a_vento/personalizzata.svg" alt="Seleziona Gioccia">
+        Manica Personalizzata
+    </a>
+<!--nascosto selezione modello-->
+    <select name="modello" class="hide">
+        <option value=""></option>
+        <option value="non personalizzata">Manica Standard</option>
+        <option value="personalizzata">Manica Personalizzata</option>
+    </select>
+</div>
+<div class="selections form-col animated-label" id="tessuto"  name="state">
 	<label class="custom-select" for="tessuto">
-	   	<select name="tessuto" id="tessuto">
+	   	<select name="tessuto">
 	   		<option value="">Seleziona un tessuto</option>
-	   		<option value="sottomoto">Tappeto Sottomoto</option>
-	   		<option value="asciugapasso">Tappeto Asciugapasso</option>
+	   		<option value="poliestere">Tessuto di Poliestere</option>
+	   		<option value="acrilico">Tessuto Acrilico</option>
 	   	</select>
    </label>
    {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
    <span>errore: Seleziona un tessuto</span>
 </div>
-
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="soggetti" placeholder="100" aria-label="soggetti">
-    <label for="soggetti">Soggetti</label>
-    <span>errore: soggetti</span>
-</div>
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="altezza" placeholder="100" aria-label="Altezza">
-    <label for="altezza">Altezza in cm</label>
-    <span>errore: altezza</span>
-</div>
-
-<div class="form-col animated-label" id="larghezza">
-    <input type="number" name="larghezza" placeholder="100" aria-label="Larghezza">
-    <label for="larghezza">Larghezza in cm</label>
-    <span>errore: larghezza</span>
+<div class="selections form-col animated-label" id="finitura"  name="state">
+    <label class="custom-select" for="finitura">
+        <select name="finitura">
+            <option value="">Seleziona un finitura</option>
+            <option value="cerchio">Cerchio</option>
+            <option value="Velcro">Velcro</option>
+        </select>
+   </label>
+   {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
+   <span>errore: Seleziona finitura</span>
 </div>
 <div class="form-col animated-label" id="quantita">
     <input type="number" name="quantita" placeholder="100" aria-label="quantita">

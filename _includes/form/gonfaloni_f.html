@@ -1,31 +1,59 @@
-<div class="selections form-col animated-label" id="select"  name="state">
+<div class="selections form-col animated-label" id="tessuto"  name="state">
 	<label class="custom-select" for="tessuto">
-	   	<select name="tessuto" id="tessuto">
+	   	<select name="tessuto" >
 	   		<option value="">Seleziona un tessuto</option>
-	   		<option value="sottomoto">Tappeto Sottomoto</option>
-	   		<option value="asciugapasso">Tappeto Asciugapasso</option>
+	   		<option value="ducato">Tessuto Ducato</option>
+	   		<option value="rasetto">Tessuto Rasetto</option>
 	   	</select>
    </label>
    {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
    <span>errore: Seleziona un tessuto</span>
 </div>
+<div class="selections form-col animated-label" id="misura"  name="state">
+    <label class="custom-select" for="misura">
+        <select name="misura" >
+            <option value="">Seleziona misura</option>
+            <option value="50">50 cm x 70 cm</option>
+            <option value="70">70 cm x 100 cm</option>
+            <option value="80">80 cm x 120 cm</option>
+            <option value="90">90 cm x 150 cm</option>
+        </select>
+   </label>
+   {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
+   <span>errore: Seleziona un tessuto</span>
+</div>
+<div class="selections form-col animated-label" id="struttura"  name="state">
+    <label class="custom-select" for="struttura">
+        <select name="struttura" >
+            <option value="">Seleziona struttura</option>
+            <option value="senza">Senza Struttura</option>
+            <option value="ottone">Struttura in Ottone</option>
+            <option value="cromata">Struttura Cromata</option>
+        </select>
+   </label>
+   {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
+   <span>errore: Seleziona un tessuto</span>
+</div>
+<div class="selections form-col animated-label" id="base"  name="state">
+    <label class="custom-select" for="base">
+        <select name="base" >
+            <option value="">Seleziona base</option>
+            <option value="senza">Senza Base</option>
+            <option value="ottone">Base in Ottone</option>
+            <option value="cromata">Base Cromata</option>
+        </select>
+   </label>
+   {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
+   <span>errore: Seleziona un tessuto</span>
+</div>
 
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="soggetti" placeholder="100" aria-label="soggetti">
-    <label for="soggetti">Soggetti</label>
-    <span>errore: soggetti</span>
-</div>
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="altezza" placeholder="100" aria-label="Altezza">
-    <label for="altezza">Altezza in cm</label>
-    <span>errore: altezza</span>
-</div>
+<div class="form-col-textarea checkbox" id="borsa">
+        <label class="form-checkbox">
+                Borsa
+            <input type="checkbox" name="agree" value="borsa" aria-label="borsa"><span class="checkmark"></span> 
+        </label>
+    </div>
 
-<div class="form-col animated-label" id="larghezza">
-    <input type="number" name="larghezza" placeholder="100" aria-label="Larghezza">
-    <label for="larghezza">Larghezza in cm</label>
-    <span>errore: larghezza</span>
-</div>
 <div class="form-col animated-label" id="quantita">
     <input type="number" name="quantita" placeholder="100" aria-label="quantita">
     <label for="quantita">Quantit&agrave;</label>

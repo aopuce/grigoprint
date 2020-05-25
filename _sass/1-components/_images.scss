@@ -212,8 +212,20 @@ img {
 }
 
 .image-title {
+    img.hide__portrait {
+        @include respond-to(screen-md) {
+            display: none;
+        }
+        
+    }
+    img.hide__landscape {
+        @media screen and (max-width: $screen-md - 1px) {
+            display: none;
+        }
+        
+    }
     width: 100%;
-
+    position: relative;
     // position: fixed
     // z-index: -1;
 
@@ -222,31 +234,14 @@ img {
     top: 0;
     background: $primary-gradient;
     overflow: hidden;
-
-    @media screen and (orientation: portrait) {
-        bottom: 0;
-
-        .landscape {
-            display: none;
-        }
+    @include respond-to(screen-md) {
+        height: 100%;
+    }
+    @include respond-to(screen-lg){
+        height: calc(100vh - 3px);
     }
 
-    @media screen and (orientation: landscape) {
-        top: 0;
-        .portrait {
-            display: none;
-        }
-    }
-
-    @media screen and (min-width: $screen-sm) {
-        // height: 100vh
-        height: 50vh;
-        @media screen and (orientation: landscape) {
-            height: 100vh;
-        }
-        
-    }
-
+   
     img {
         // position: absolute
         width: 100%;
@@ -256,111 +251,39 @@ img {
 
     &#tovaglie-pubblicitarie {
         img {
-            width: auto;
-            height: 80%;
-            left: 0;
-            bottom: 50%;
-
-            @include transform(translateY(50%));
-        }
-
-        @media screen and (min-width: $screen-lg) {
-            img {
-                width: 80%;
-                right: 50%;
-                left: auto;
-                height: auto;
-
-                @include transform(translate(50%, 50%));
-            }
+            @extend %img_fit;
         }
     }
 
     &#bandiere-bifacciali {
         img {
             height: 90%;
-            right: 50%;
             width: auto;
-
-            @include transform(translateX(50%));
+            @extend %center_img;
         }
     }
 
     &#car-solutions {
         img {
-            height: 100%;
-            object-fit: cover;
-            object-position: right;
+            @extend %img_fit;
         }
     }
 
     &#foulard {
         img {
-            width: 90%;
-            bottom: 50%;
+            @extend %img_fit;
+            @extend %center_img;
+            width: 80%;
 
-            @include transform(translate(50%, 50%));
-
-            right: 50%;
-
-            @media screen and (min-width: $screen-sm) {
-                width: 40%;
-            }
-
-            @media screen and (min-width: $screen-lg) {
-                width: 30%;
-                right: 30%;
-            }
         }
     }
 
     &#gonfaloni {
         img {
-            &:first-child {
-                width: 75%;
-                top: 10%;
-                right: -6%;
-            }
-
-            &:last-child {
-                width: 75%;
-                top: 30%;
-                left: -12%;
-            }
-
-            @media screen and (min-width: $screen-md) {
-                &:first-child {
-                    width: 47%;
-                    top: 0;
-                    right: 6%;
-                }
-
-                &:last-child {
-                    width: 40%;
-                    top: 10%;
-                    left: 12%;
-                }
-            }
-
-            @media screen and (min-width: $screen-lg) {
-                max-height: 90vh;
-
-                &:first-child {
-                    width: auto;
-                    top: 50%;
-
-                    @include transform(translateY(-50%));
-
-                    right: 12%;
-                }
-
-                &:last-child {
-                    width: auto;
-                    top: 50%;
-
-                    @include transform(translateY(-50%));
-                }
-            }
+            @extend %img_fit;
+            @extend %center_img;
+            max-height: 80%;
+            position: absolute;
         }
     }
 
@@ -418,248 +341,95 @@ img {
 
     &#frame-in-tessuto {
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @extend %img_cover;
         }
     }
     &#bandiere-personalizzate {
-        position: relative;
         img {
             max-height: 90%;
             width: auto;
             position: absolute;
-            bottom: 0;
             &:first-child {
                 right: 5%;
+                top: 20%;
             }
             &:last-child {
                 left: 5%;
+                top: 35%;
             }
-            &:nth-child(2) {
-                left: 38%;
-            }
-        }
-    }
-    &#beach-flags, &#gagliardetti {
-        img {
-            width: auto;
-
             &:nth-child(2) {
                 right: 50%;
-                transform: translateX(50%);
-            }
-
-            @media screen and (orientation: landscape) {
-                &:first-child {
-                    right: 2%;
-                  
-                }
-
-                &:nth-child(2) {
-                    top: 10%;
-                    
-                }
-
-                &:last-child {
-                    left: 2%;
-                    top: 20%;
-                    
-                }
-            }
-
-            @media screen and (orientation: portrait) {
-                width: 60%;
-                height: auto;
-                min-height: auto;
-
-                &:first-child {
-                    right: 2%;
-                    top: 5%;
-                }
-
-                &:nth-child(2) {
-                    right: 15%;
-                    top: 25%;
-                }
-
-                &:last-child {
-                    left: 2%;
-                    top: 45%;
-                }
-            }
-        }
-    }
-
-    &#bandiere-personalizzate {
-        img {
-            @media screen and (min-width: $screen-md) {
-                width: 25%;
-            }
-        }
-    }
-
-    &#gagliardetti {
-        img {
-            height: 50vh;
-            top: 5%;
-            width: auto;
-
-            &:first-child {
-                right: 1%;
-            }
-
-            &:last-child {
-                left: 1%;
-                top: 50%;
-            }
-
-            &:nth-child(2) {
-                right: 50%;
-                top: 25%;
-
+                bottom: 0;
                 @include transform(translateX(50%));
-            }
 
-            @media screen and (orientation: landscape) {
-                &:first-child {
-                    right: 0;
-                }
-
-                &:last-child {
-                    left: 0;
-                }
-            }
-
-            @media screen and (min-width: $screen-lg) {
-                height: 80vh;
-                top: 50% !important;
-
-                @include transform(translateY(-50%));
-
-                &:first-child {
-                    right: 1%;
-                }
-
-                &:last-child {
-                    left: 1%;
-                }
-
-                &:nth-child(2) {
-                    right: 50%;
-
-                    @include transform(translate(50%, -50%));
-                }
             }
         }
     }
-
     &#beach-flags {
         img {
-            height: 95vh;
-            top: 8%;
-
-            @media screen and (orientation: landscape) {
-                &:first-child {
-                    right: 4%;
-                    top: 10%;
-                }
-
-                &:last-child {
-                    left: 4%;
-                    top: 10%;
-                }
-
-                &:nth-child(2) {
-                    right: 50%;
-                    top: 10%;
-                    transform: translateX(28%);
-                }
+           max-height: 80%;
+           width: auto;
+           position: absolute;
+           bottom: 2%;
+           &:first-child {
+                left: 5%;
+           }
+           &:last-child {
+                right: 5%;
+           }
+           &:nth-child(2) {
+                right: 50%;
+                @include transform(translateX(50%));
+           }
+        }
+    }
+    &#bandiere-da-tavolo img {
+        position: absolute;
+        bottom: 0;
+    }
+    
+    &#gagliardetti {
+        img {
+            width: 30%;
+            height: auto;
+            position: absolute;
+            @include transform(translateY(50%));
+            bottom: 50%;
+            &:first-child {
+                left: 5%;
             }
-
-            @media screen and (orientation: portrait) {
-                width: auto;
-
-                &:nth-child(2) {
-                    right: 50%;
-                    transform: translateX(28%);
-                }
+            &:nth-child(2) {
+                @extend %center_img;
+            }
+            &:last-child {
+                right: 5%;
             }
         }
     }
+
+    
 
     &#bandiere-istituzionali, &#ombrelloni {
         img {
-            @media screen and (orientation: landscape) {
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: auto;
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-            }
-
-            @media screen and (orientation: portrait) {
-                right: -60%;
-                top: 0;
-                bottom: auto;
-                object-fit: cover;
-                width: auto;
-                height: 100%;
-                left: auto;
-            }
+            @extend %img_cover;
         }
     }
 
     &#maniche-a-vento {
         img {
+            @extend %img_fit;
             position: absolute;
-            object-fit: contain;
-            margin: auto;
-            bottom: 50px;
-            max-height: 100%;
             bottom: 0;
-
-            @media screen and (orientation: portrait) {
-                &.landscape {
-                    display: none;
-                }
-
-                &.portrait {
-                    display: block;
-                }
-            }
-
-            @media screen and (orientation: landscape) {
-                bottom: 0;
-
-                &.portrait {
-                    display: none;
-                }
-
-                &.landscape {
-                    display: block;
-                }
-            }
-
-            @media screen and (min-width: $screen-sm) {
-                bottom: 0;
+            @include respond-to(screen-md) {
+                height: auto;
+                max-height: 100%
             }
         }
     }
 
     &#poster {
         img {
-            bottom: 50%;
-            left: 50%;
-
-            @include transform(translate(-50%, 50%));
-
-            @media screen and (min-width: $screen-sm) {
-                max-height: 80%;
-                width: auto;
-            }
+            @extend %img_fit;
         }
     }
 
@@ -671,38 +441,20 @@ img {
 
     &#bean-banner {
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @extend %img_cover;
             bottom: 0;
         }
     }
 
     &#filari-di-bandierine {
         img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            @extend %img_cover;
         }
     }
 
     &#ombrelli-personalizzati {
         img {
-            height: 90%;
-            width: auto;
-            object-fit: cover;
-            left: -150px;
-
-            @media screen and (min-width: $screen-md) {
-                object-fit: contain;
-            }
-
-            @media screen and (min-width: $screen-lg) {
-                position: relative;
-                margin: auto;
-                left: auto;
-                display: block;
-            }
+            @extend %img_fit;
         }
     }
 
@@ -782,9 +534,7 @@ img {
     .item {
         img {
             display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            @extend %img_fit;
         }
 
         &:nth-child(2) {

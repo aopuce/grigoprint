@@ -1,0 +1,74 @@
+.contatti {
+    display: grid;
+    padding: 50px 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $padding-base;
+
+    header, aside, main {
+        grid-column: 1 / -1;
+    }
+	
+    header p {
+        padding: $padding-base;
+        background: $primary-color;
+        color: $back-full-text;
+    }
+
+    aside {
+    	line-height: 1.6;
+    	padding-left: $padding-base * 2;
+    	a {
+    		color: $primary-color;
+    		&:hover {
+    			color: $second-color;
+    		}
+    	}
+        p {
+            margin-bottom: .5rem;
+        }
+
+        address {
+            strong {
+                font-family: $h-font-family;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    main .row-contatti {
+    	margin: 0;
+    }
+    @include respond-to(screen-sm) {
+		grid-template-columns: repeat(8, 1fr);
+		aside {
+			grid-column: 1 / 4;
+		}
+		main {
+			grid-column: 4 / 9;
+		}
+	}
+	@include respond-to(screen-md) {
+		grid-template-columns: repeat(12, 1fr);
+		h1.middle-title {
+			width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		header p {
+			padding: $padding-base 15%;
+		}
+		aside {
+			grid-column: 1 / 5;
+		}
+		main {
+			grid-column: 5 / 13;
+		}
+	}
+	@include respond-to(screen-lg) {
+		aside {
+			grid-column: 3 / 6;
+		}
+		main {
+			grid-column: 6 / -3;
+		}
+	}
+}

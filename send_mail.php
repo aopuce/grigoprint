@@ -4,6 +4,7 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
     //form validation vars
     $formok = true;
     $errors = array();
+    $priceInput = array("altezza", "larghezza", "quantita", "tessuto", "tessuto", "struttura", "base", "finiture", "prezzo");
 
     //submission data
     $ipaddress = $_SERVER['REMOTE_ADDR'];
@@ -11,8 +12,8 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
     $time = date('H:i:s');
 
     //form data
-    $name = $_POST['name'];
-    $company = $_POST['company'];
+    $name = ucfirst($_POST['name']);
+    $company = ucfirst($_POST['company']);
     $telephone = $_POST['telephone'];
     $email = $_POST['email'];
     $message = $_POST['message'];
@@ -20,6 +21,11 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
 	  $agree = $_POST['agree'];
 
     //Validation
+    // controllo campo nascosto per stanare i bot
+    if(!empty($_POST['bott'])){
+        $formok = false;
+        $errors[] = 'Compilazione automatica non ammessa';
+    }
     //nome
     if(empty($name)){
         $formok = false;
@@ -69,7 +75,30 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
 
     //send mail if ok
     $inviata = false;
-    if($formok){
+    if($formok) {
+    	$preventivo = "";
+      foreach ($priceInput as $value) {
+        if($_POST[$value] && $_POST[$value] != "")
+          if($value != "prezzo" || $preventivo != "")
+      		  $preventivo .= "<p><strong>{$value}:</strong> {$_POST[$value]}</p>";
+      }
+      /*
+    	if($_POST['altezza'])
+    		$preventivo .= "<p><strong>Altezza:</strong> {$_POST['altezza']}</p>"
+    	else if($_POST['altezza'])
+    		$preventivo .= "<p><strong>Altezza:</strong> {$_POST['altezza']}</p>"
+    	else if($_POST['larghezza'])
+    		$preventivo .= "<p><strong>Larghezza:</strong> {$_POST['larghezza']}</p>"
+    	else if($_POST['quantita'])
+    		$preventivo .= "<p><strong>Quantita:</strong> {$_POST['quantita']}</p>"
+    	else if($_POST['tessuto'])
+    		$preventivo .= "<p><strong>Tessuto:</strong> {$_POST['tessuto']}</p>"
+    	else if($_POST['prezzoPost'])
+    		$preventivo .= "<p><strong>Prezzo proposto:</strong> {$_POST['prezzoPost']}</p>"*/
+    	if($preventivo != "")
+    		$preventivo = "</br><p><strong>Preventivo online:</strong></p>".$preventivo."</br>";
+
+
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-Type:text/html;charset=utf-8" . "\r\n";
         $headers .= "From: $email" . "\r\n";
@@ -85,12 +114,50 @@ if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST) ){
                      <p><strong>Azienda:</strong> {$company}</p>
                      <p><strong>Telefono:</strong> {$telephone}</p>
                      <p><strong>Messaggio:</strong> {$message}</p>
-                     <p></p>
-                     <p><strong>Data:</strong> {$date} alle {$time}</p>
+                     </br>
+		     {$preventivo}
                      </body>
                      </html>";
 
         $inviata = mail($nostraEmail,"Contatto dal tuo sito",$emailbody,$headers);
+
+// email recap al cliente
+    	if($inviata) {
+    		$headers = "MIME-Version: 1.0" . "\r\n";
+            	$headers .= "Content-Type:text/html;charset=utf-8" . "\r\n";
+            	$headers .= "From: $nostraEmail" . "\r\n";
+
+            	$emailbody = "
+                         <html>
+                         <head>
+                         <title>Grazie di averci contattato</title>
+                         </head>
+                         <body>
+                         <p>Gentile {$name}, </br> la ricontatteremo al più presto!</p>
+                         <p>Ecco una copia del suo messaggio:</br> {$message}</p>
+                         </br>
+    		                   {$preventivo}
+                         </br>
+                         <p>Cordiali saluti</p>
+                         <p>Ombrellificio Grigolini di Grigolini Marcello</p>
+                          <img src=\"https://www.grigoprint.it/assets/images/logo.png\" alt=\"\" width=\"250\" height=\"60\" style=\"margin-left: 15px;\"><br>
+                          <p style=\"font-family: sans-serif; margin: 0; margin-left: 30px; font-size: 14px; padding-top: 3px;\"><b>Ombrellificio Grigolini</b><em style=\"font-size: 12px;\"> di Grigolini Marcello</em></p>
+                          <p style=\"font-family: sans-serif; margin: 0; margin-left: 30px; font-size: 14px; padding-top: 3px;\">Loc. Sant'Antonio, 2 <br>
+                          37031 Illasi (VR)
+                          </p>
+
+                          <p style=\"font-family: sans-serif; margin: 0; margin-top: 12px; margin-left: 30px; font-size: 14px;\"><strong style=\"font-size:  15px;\">Tel:</strong> +39 045 7834054</p>
+
+                          <p style=\"font-family: sans-serif; margin: 0; margin-top: 12px; margin-left: 30px; font-size: 14px;\"><strong style=\"font-size:  15px;\">e-mail:</strong><a href=\"mailto:info@bandieregrigolini.it\"> info@bandieregrigolini.it</a></p>
+                          <p style=\"font-family: sans-serif; margin: 0; margin-left: 30px; font-size: 14px; padding-top: 3px;\"><strong style=\"font-size:  15px;\">Web:</strong><a href=\"https://www.grigoprint.it\"> www.grigoprint.it</a></p>
+
+                          <p style=\"font-family: sans-serif; margin: 0; margin-top: 12px; margin-left: 30px; font-size: 14px;\"><strong style=\"font-size:  15px;\">Dati Azienda:</strong><a href=\"https://www.grigoprint.it/contatti.html\"> www.grigoprint.it/contatti</a></p>
+
+                         </body>
+                         </html>";
+
+            	mail($email,"Grazie di averci contattato",$emailbody,$headers);
+    	 }
     }
 
     //what we neet to return back to our form

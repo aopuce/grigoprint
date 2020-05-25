@@ -5,20 +5,16 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "it" }}">
   {%- include head.html -%}
   <body id="add-class" >
-    <div id="scroll-sobstitute" class="scroll">
     <div class="nav-list" id="nav-commander">
       {%- include menu.html -%}
     </div>
     {%- include header.html -%}
-    <div id="container">
-    </div>
       <main class="page-content" id="page-content" aria-label="Content">
-        <div class="wrapper" style="overflow: hidden;">
+        
           {{ content }}
-        </div>
       </main>
       {%- include static_link.html -%}
-       </div>
+
 
        {%- if jekyll.environment == 'production' and site.google_analytics -%}
        {% comment %}{% minibundle js %}

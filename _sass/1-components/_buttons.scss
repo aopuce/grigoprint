@@ -171,8 +171,14 @@ input, button, submit {
     }
 
     &.validate {
+        -webkit-transform: rotate(0);
+           -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+             -o-transform: rotate(0);
+                transform: rotate(0);
         font-family: $grigo-icons;
-        background: $success-gradient;
+        background: $success;
+        @include box-shadow($shadow_buttons rgba($success, .7));
 
         &:after {
             content: "";
@@ -180,7 +186,13 @@ input, button, submit {
     }
 
     &.error {
-        background: $allert-gradient;
+        -webkit-transform: rotate(0);
+           -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+             -o-transform: rotate(0);
+                transform: rotate(0);
+        background: $allert;
+        @include box-shadow($shadow_buttons rgba($allert, .7));
 
         &:after {
             content: "ERRORE";

@@ -109,3 +109,21 @@
 		grid-template-columns: 20rem repeat(14, 1fr) 20rem;
 	}
 }
+
+%img_fit {
+	width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+%img_cover {
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+%center_img {
+	position: absolute;
+	right: 50%;
+	bottom: 50%;
+	@include transform(translate(50%, 50%));
+}

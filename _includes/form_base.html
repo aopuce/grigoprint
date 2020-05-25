@@ -1,7 +1,15 @@
-<form class="form-product" >
+{% if page.preventivo == true %}
+    <form class="form-product">
+{% else %}
+    <form class="form-product no-preve">
+
+{% endif %}
         {% if  page.collection == "prodotti" %}
-        <div class="col-form">
-            <h5>Informazioni Personali</h5>
+        <!--<div class="info_select">-->
+            <h5 class="full-form-grid">Informazioni Personali</h5>
+        {% endif %}
+        {% if  page.title == "Contatti" %}
+        <div class="form-contatti">
         {% endif %}
         <div class="form-col animated-label" id="name">
             <input type="text" name="name" placeholder="Inserisci il tuo nome" aria-label="Nome">
@@ -14,7 +22,7 @@
         </div>
         <div class="form-col animated-label" id="telephone">
             <input type="tel" name="telephone" placeholder="0443123456" aria-label="Telefono">
-            <label for="telephone">Telefono *</label>
+            <label for="telephone">Telefono </label>
             <span>Numero non corretto</span>
         </div>
         <div class="form-col animated-label" id="email">
@@ -22,13 +30,17 @@
             <label for="email">e-Mail *</label>
             <span>errore email</span>
         </div>
-    {% if  page.collection == "prodotti" %}
-        </div>
-        <div class="col-form prezzo_select">
-            <h5>Informazioni Prodotto</h5>
+    {% if  page.collection == "prodotti"%}
+        <!--</div>
+        <div class="col-form prezzo_select">-->
+            {% if page.preventivo == true %}
+            
+            <h5 class="full-form-grid">Informazioni Prodotto</h5>
             {% assign p_title = page.title %}
             {% case p_title %}
                 {% when 'Tappeto Personalizzato' %}
+                {% include form/tappeti_f.html %}
+                {% when 'Tappeto Sottomoto' %}
                 {% include form/tappeti_f.html %}
                 {% when 'Bandiere Bifacciali' %}
                 {% include form/bifacciali_f.html %}
@@ -36,6 +48,8 @@
                 {% include form/istituzionali_f.html %}
                 {% when 'Bandiere Personalizzate' %}
                 {% include form/personalizzate_f.html %}
+                {% when 'Beach Flags' %}
+                {% include form/beach_f.html %}
                 {% when 'Bandiere da Tavolo' %}
                 {% include form/tavolo_f.html %}
                 {% when 'Bean Banner' %}
@@ -65,17 +79,18 @@
                 {% when 'Tovaglie' %}
                 {% include form/tovaglie_f.html %}
             {% endcase %}
-        </div>
+        <!--</div>-->
+            {% endif %}
     {% endif %}
-    <div class="form-col-textarea animated-label" id="message">
+    <div class="form-col-textarea animated-label full-form-grid" id="message">
         <textarea name="message" id="" cols="30" rows="5" placeholder="Messaggio..." aria-label="Messaggio"></textarea>
         <label for="message">Messaggio *</label>
         <span>Errore messaggio... almeno 20 caratteri</span>
     </div>
-    <p class="nota-bene">* Campi obbligatori</p>
+    <p class="nota-bene full-form-grid">* Campi obbligatori</p>
     <div id="captcha" class="error-captcha">
     </div>
-    <div class="form-col-textarea" id="agree">
+    <div class="form-col-textarea checkbox full-form-grid" id="agree">
         <label class="form-checkbox">
                 Confermi l'accettazione della nostra
             <input type="checkbox" name="agree" value="Termini e condizioni" aria-label="accettazione"><span class="checkmark"></span> 
@@ -84,7 +99,6 @@
           <a href="https://www.iubenda.com/privacy-policy/70578249"> Privacy Policy</a>
         </span>
     </div>
-    
     {% comment %}<div class="col-form">
         <div id='recaptcha' class="g-recaptcha"
             data-sitekey="6Lfw23EUAAAAAP_vsoHA3Yc69VNjTZT9essKsDwV"
@@ -94,9 +108,14 @@
    {% if  page.collection == "prodotti" %}
     <div class="col-form col-form__btn prezzo_select" id="prezzo">
         <span class="btn btn-large btn-outline">tot: 0</span>
+        <input type="text" name="prezzo" class="hide">
     </div>
     {% endif %}
     <div class="col-form col-form__btn">
         <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-secondary btn-large btn-form standard" onclick="sendMail()"></button>
     </div>
+    <input type="text" name="bott" class="hide">
+    {% if  page.title == "contatti" %}
+     </div>
+    {% endif %}
 </form>

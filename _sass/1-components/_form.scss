@@ -1,18 +1,93 @@
 form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    @include respond-to(screen-sm) {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hide {
+    display: none;
+    }
+    .label__modello {
+        font-size: .8rem;
+        grid-column: 1 / -1;
+        padding: 5px;
+    }
+    .form-col.modelli {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 20px;
+        position: relative;
+        margin-top: 10px;
+        .radio__selection {
+            display: block;
+            background: lighten($primary-color, 2%);
+            @include box-shadow(4px 4px 8px darken($primary-color, 8%), -4px -4px 8px lighten($primary-color, 15%));
+            color: $back-full-text;
+            font-size: .8rem;
+            @include border-radius($radius);
+            border: 1px solid lighten($primary-color, 2%);
+            border-color: lighten($primary-color, 2%) lighten($primary-color, 2%) $second-color lighten($primary-color, 2%); 
+            position: relative;
+            text-align: center;
+            padding: 5px;
 
+            img {
+                height: 100px;
+                width: auto;
+                display: block;
+                margin: auto;
+            }
+            &.selected {
+                @include box-shadow(inset 4px 4px 8px darken($primary-color, 8%), inset -4px -4px 8px lighten($primary-color, 15%));
+            }
+            &:hover {
+                
+            }
+        }
+        span {
+            display: block;
+            position: absolute;
+            background: $warning;
+            color: $long-text;
+            width: 100%;
+            bottom: -1rem;
+            height: 1rem;
+            @include transition;
+            @include transform(scale(0));
+            transform-origin: bottom left;
+            left: 0;
+            right: 0;
+            font-size: 0.6rem;
+            line-height: 1rem;
+            padding-left: 10px;
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+        }
+        &.warn {
+            span {
+                    @include transform(scale(1));
+            }
+            .radio__selection {
+                border-color: $warning;
+            }
+        }
+    }
+    h5 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .full-form-grid {
+        @include respond-to(screen-sm) {
+            grid-column: 1 / -1;
+        }
+    } 
     //dimensione
-    .col-form {
+    .form-contatti {
         width: 100%;
         padding: 0;
         position: relative;
 
-        h5 {
-            padding-top: 0;
-            text-align: center;
-        }
 
         // &:nth-child(2) {
         //     h5 {
@@ -52,7 +127,20 @@ form {
             }
         }
     }
-
+    .form-contatti {
+        flex: 1 1 100%;
+        @include respond-to(screen-sm) {
+            display: grid;
+            grid-gap: $padding-base;
+            grid-template-columns: repeat(2, 1fr);
+            .form-col-textarea {
+                grid-column: 1 / -1;
+            }
+            .col-form__btn {
+                grid-column: 2 / -1;
+            }
+        }
+    }
     .form-col-textarea {
         flex: 1 1 100%;
     }
@@ -110,29 +198,26 @@ form {
         }
     }
 
-    .col-form .animated-label.invalid {
-        input, textarea {
-            border: 3px solid $allert;
+    .animated-label.invalid, .form-col-textarea.animated-label.invalid,
+    .form-contatti .animated-label.invalid {
+         
+        border-color: $allert;
 
-            @include box-shadow(inset 0 0 1px $allert);
-        }
+        @include box-shadow(inset 0 0 1px $allert);
+        
 
         span {
             // font-size: .6rem
             // height: .8rem
             @include transform(scale(1));
         }
-
-        label {
-            color: $allert;
-        }
     }    
-    .col-form .animated-label.warn {
-        input, textarea {
-            border: 3px solid $warning;
+    .animated-label.warn , .form-col-textarea.animated-label.warn,
+    .form-contatti .animated-label.warn   {
+        border-color: $warning;
 
-            @include box-shadow(inset 0 0 1px $warning);
-        }
+        @include box-shadow(inset 0 0 1px $warning);
+        
 
         span {
             // font-size: .6rem
@@ -147,7 +232,7 @@ form {
     
 
 
-    .col-form #agree.invalid {
+    #agree.invalid,  .form-contatti #agree.invalid {
         label, a {
             color: tint($allert, 40%);
         }
@@ -156,7 +241,7 @@ form {
             border: 3px solid $allert;
         }
     }
-    .col-form #agree.warn {
+    #agree.warn, .form-contatti #agree.warn {
         label, a {
             color: tint($warning, 40%);
         }
@@ -167,18 +252,32 @@ form {
     }
 }
 
-form .col-form.prezzo_select.clicked > .animated-label,
-form .col-form.prezzo_select.clicked .btn {
+form .prezzo_select.clicked > .animated-label,
+form .prezzo_select.clicked .btn {
     @include box-shadow(0 0 5px $second-color);
 }
 
-form .col-form.prezzo_select.clicked .btn {
+form .prezzo_select.clicked .btn {
     color: $back-full-text;
     border-color: $back-full-text;
 }
 
 // checkbox
 form {
+    .form-col-textarea a {
+        color: $second-color;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .form-col-textarea.checkbox.invalid {
+        margin-left: -5px;
+        padding-left: 5px;
+        background: $allert;
+        a {
+            color: $primary-color;
+        }
+    }
     input[type="checkbox"] {
         position: absolute;
         opacity: 0;
@@ -250,22 +349,44 @@ form {
 
 // end checkbox
 form {
-    .col-form > .animated-label, & > .animated-label {
+    > .animated-label, & > .animated-label, .form-contatti > .animated-label {
         // background: $back-full-text
         position: relative;
         color: $back-full-text;
         border-bottom: 1px solid $second-color;
-
+        background: lighten($primary-color, 2%);
         // @include border-radius($radius / 2);
 
         height: 2rem;
 
+        &.invalid  span{
+            background: $allert;
+            color: $back-full-text;
+            width: 100%;
+        }
+        &.warn  span{
+            background: $warning;
+            color: darken($warning, 80%);
+            width: 100%;
+        }
+        &.blocca, &.blocca > label {
+            background: desaturate(lighten($primary-color, 50%), 100%);
+            border-bottom: 1px solid desaturate($second-color, 100%);
+            color: darken($back-full-text, 20%);
+            & > input, & > select {
+                cursor: not-allowed;
+                color: darken($back-full-text, 20%);
+            }
+            &:after {
+                display: none;
+            }
+        }
         span {
-            opacity: 1;
             display: block;
             position: absolute;
-            bottom: 0;
-            height: 0.9rem;
+            bottom: -1rem;
+            height: 1rem;
+
 
             @include transition;
             @include transform(scale(0));
@@ -273,14 +394,12 @@ form {
             transform-origin: bottom left;
             left: 0;
             right: 0;
-            background: $allert;
-            color: $back-full-text;
             font-size: 0.6rem;
-            line-height: 0.8rem;
+            line-height: 1rem;
             padding-left: 10px;
-            font-family: "Montserrat", sans-serif;
+            font-family: "Lato", sans-serif;
             font-weight: 400;
-            font-style: italic;
+            
         }
 
         & > label {
@@ -297,7 +416,8 @@ form {
         }
     }
 
-    & > .animated-label.form-col-textarea {
+    & > .animated-label.form-col-textarea, 
+    .form-contatti > .animated-label.form-col-textarea {
         height: 7rem;
     }
 }
@@ -330,7 +450,7 @@ input, textarea {
 }
 
 form {
-    .animated-label, .invalid, .col-form .animated-label {
+    .animated-label, .invalid, .form-contatti .animated-label {
         input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
             + label {
                 top: -1.5rem;
@@ -345,7 +465,7 @@ form {
             }
         }
     }
-    .animated-label, .warn, .col-form .animated-label {
+    .animated-label, .warn, .form-contatti .animated-label {
         input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
             + label {
                 top: -1.5rem;
@@ -374,54 +494,66 @@ form {
 }
 
 form {
-    .custom-select {
-        position: relative;
-
+    label.custom-select {
+        // position: relative;
+        background: transparent;
+        cursor: pointer;
         // display: block
         // width: 100%
         // margin: 0 auto
         // border: 1px solid $second-color
         // background-color: $back-full-text
         // z-index: 10
+        background: lighten($primary-color, 2%);
         // +border-radius($radius)
+        padding: 0;
         select {
+            position: relative;
+            cursor: pointer;
             border: none;
+            padding: .4rem;
             outline: none;
             background: transparent;
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            background: $primary-color;
             // border-radius: $radius
             margin: 0;
             display: block;
             width: 100%;
             font-size: 0.8rem;
-            padding-top: 0.1rem;
+            // padding-top: 0.1rem;
             color: $back-full-text;
+            z-index:2;
+            & > * {
+                color: $long-text;
+            }
         }
 
         &:after {
+            font-family: $grigo-icons;
             position: absolute;
             right: 0;
             top: 0;
             width: 50px;
             height: 100%;
             line-height: 2rem;
-            content: "∨";
+            content: "\e903";
             text-align: center;
             color: $long-text;
             font-size: 0.8rem;
             border-left: 1px solid $second-color;
-            z-index: -1;
+            color: $second-color;
+            z-index: 1
         }
     }
 
     .selections {
-        flex: 1 1 100%;
-
         span {
-            display: none;
+            width: 0;
+        }
+        &.warn > span {
+            width: 100%;
         }
     }
 }

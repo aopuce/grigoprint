@@ -39,7 +39,7 @@ p, ul {
 h1, h2, h3, h4, h5 {
     @include interpolate((padding-top, padding-bottom), 20rem, 70rem, .5rem, 1rem);
     @include interpolate(margin-top, 20rem, 70rem, .5rem, 1rem );
-    @include interpolate(margin-top, 20rem, 70rem, 1rem, 2rem );
+    @include interpolate(margin-bottom, 20rem, 70rem, 1rem, 2rem );
 }
 
 h3 {
@@ -121,10 +121,13 @@ ul.scheda-tecnica {
     li {
         font-family: $h-font-family;
 
-        p {
+        * {
             font-family: $text_font_family;
             font-style: italic;
             font-size: 0.8rem;
+        }
+        ul {
+            padding: 0 10px;
         }
     }
 }
@@ -154,3 +157,9 @@ a {
 a, button {
     cursor: pointer;
 }
+
+// p::moz-selection, p::selection {
+//     background: $second-color;
+//     color: $back-full-text;
+
+// }

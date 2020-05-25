@@ -11,8 +11,9 @@ image:
       alt: Bandiere Istituzionali
       config: jumbotron
 forza: [disponibili in vari tessuti, finiture s scelta, personalizzabili, passaggio colore elevato]
+preventivo: false
 ---
-<h3 class="middle-title">Scheda Tecnica</h3>
+<h2 class="middle-title">Scheda Tecnica</h2>
 
 <ul class="scheda-tecnica card card__primary">
     <li>
@@ -51,8 +52,7 @@ forza: [disponibili in vari tessuti, finiture s scelta, personalizzabili, passag
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
         <div class="contact-row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, voluptatibus voluptatem earum autem dolorum pariatur ipsam dicta consequatur fuga totam alias saepe sit dolores error iste, veniam provident exercitationem. Eum.</p>
-
+        {%- include form/form_info.html -%}
         {%- include form_base.html -%}
     </div>
 </div>
@@ -60,8 +60,8 @@ forza: [disponibili in vari tessuti, finiture s scelta, personalizzabili, passag
 <p><strong>Bandiere Istituzionali</strong> stampate con colori a sublimazione di lunga durata, con questa tecnologia di stampa a base acqua, riusciamo ad ottenere un passaggio colore pressoch&eacute; completo.</p>
 <p>Il <strong>tessuto</strong> &egrave; realizzato con il migliore filato di <strong>poliestere</strong>, le bandiere possono essere richieste sia <strong>tessuto nautico</strong> che in <strong>tessuto pongee</strong>.</p>
 
-<h5>misure disponibili</h5>
-<ul class="misure">
+<h4>misure disponibili</h4>
+<ul class="list-grids ">
     <li>100 x 70</li>
     <li>150 x 100</li>
     <li>225 x 150</li>

@@ -51,9 +51,9 @@ compress_html:
   ignore:
     envs: []
 # minifying js
-# minibundle:
-#   minifier_commands:
-#     js: node_modules/.bin/uglifyjs
+minibundle:
+  minifier_commands:
+    js: node_modules/.bin/uglifyjs
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

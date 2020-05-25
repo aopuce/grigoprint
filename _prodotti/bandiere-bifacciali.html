@@ -11,8 +11,9 @@ image:
       alt: bandiere bifacciali personalizzata
       config: onethird
 forza: [Tessuto di raso ad alta resa, Finiture di pregio, Struttura in metallo]
+preventivo: true
 ---
-<h3 class="middle-title">Scheda Tecnica</h3>
+<h2 class="middle-title">Scheda Tecnica</h2>
 
 <ul class="scheda-tecnica card card__primary">
     <li>
@@ -59,8 +60,7 @@ forza: [Tessuto di raso ad alta resa, Finiture di pregio, Struttura in metallo]
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
         <div class="contact-row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, voluptatibus voluptatem earum autem dolorum pariatur ipsam dicta consequatur fuga totam alias saepe sit dolores error iste, veniam provident exercitationem. Eum.</p>
-
+        {%- include form/form_info.html -%}
         {%- include form_base.html -%}
     </div>
 </div>

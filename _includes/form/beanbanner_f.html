@@ -1,30 +1,25 @@
-<div class="selections form-col animated-label" id="select"  name="state">
-	<label class="custom-select" for="tessuto">
-	   	<select name="tessuto" id="tessuto">
-	   		<option value="">Seleziona un tessuto</option>
-	   		<option value="sottomoto">Tappeto Sottomoto</option>
-	   		<option value="asciugapasso">Tappeto Asciugapasso</option>
-	   	</select>
+<div class="selections form-col animated-label" id="misura"  name="state">
+    <label class="custom-select" for="misura">
+        <select name="misura" >
+            <option value="">Seleziona misura</option>
+            <option value="50">50 cm x 100 cm</option>
+            <option value="75">75cm x 150c m</option>
+            <option value="100">100cm x 200 cm</option>
+        </select>
    </label>
    {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
    <span>errore: Seleziona un tessuto</span>
 </div>
-
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="soggetti" placeholder="100" aria-label="soggetti">
-    <label for="soggetti">Soggetti</label>
-    <span>errore: soggetti</span>
-</div>
-<div class="form-col animated-label" id="altezza">
-    <input type="number" name="altezza" placeholder="100" aria-label="Altezza">
-    <label for="altezza">Altezza in cm</label>
-    <span>errore: altezza</span>
-</div>
-
-<div class="form-col animated-label" id="larghezza">
-    <input type="number" name="larghezza" placeholder="100" aria-label="Larghezza">
-    <label for="larghezza">Larghezza in cm</label>
-    <span>errore: larghezza</span>
+<div class="selections form-col animated-label" id="finitura"  name="state">
+    <label class="custom-select" for="finitura">
+        <select name="finitura" >
+            <option value="">Seleziona una Finitura</option>
+            <option value="bianca">Fettuccia Bianca</option>
+            <option value="nera">Fettuccia Nera</option>
+        </select>
+   </label>
+   {% comment %}<label for="tessuto">Seleziona Supporto</label>{% endcomment %}
+   <span>errore: Seleziona un tessuto</span>
 </div>
 <div class="form-col animated-label" id="quantita">
     <input type="number" name="quantita" placeholder="100" aria-label="quantita">
