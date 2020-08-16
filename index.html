@@ -17,37 +17,38 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 
 </div>
 -->
-<div class="splide" id="splide__index">
+{% comment %}{% include modal_allert.html %}
+{% endcomment %}<div class="splide" id="splide__index">
     <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide">
                 <div class="splide__title">
-                {% cloudinary halfscreen /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg alt="Bandiere istituzionali" class="orizontal-image index_image lazyload" %}
+                {% cloudinary jumbotron /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg alt="Bandiere istituzionali" class="orizontal-image index_image lazyload" data-splide-lazy="/assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg" %}
 
                     <div class="splide__info">
                         <h2>Bandiere Istituzionali</h2>
                         <p>Produciamo bandiere istituzionali di qualsiasi stato, regione o comune</p>
-                        <a href="" class="btn btn-primary">Maggiori infomazioni</a>
+                        <a href="{{site.url}}/prodotti/bandiere-istituzionali.html" class="btn btn-primary" alt="Grigoprint produce e vende bandiere personalizzate e istituzionali, come bandiere regione, comuni e stati.">Maggiori infomazioni</a>
                     </div>
                 </div>                
             </li>
             <li class="splide__slide">
                 <div class="splide__title">
-                {% cloudinary halfscreen /assets/images/filari_bandierine/bandierine_back.jpg alt="bandiere bifacciali personalizzate partricolare stampa" class="orizontal-image index_image lazyload" %}
+                {% cloudinary jumbotron /assets/images/filari_bandierine/bandierine_back.jpg alt="Filari di bandierine personalizzate" class="orizontal-image index_image lazyload" data-splide-lazy="/assets/images/filari_bandierine/bandierine_back.jpg" %}
                     <div class="splide__info">
-                        <h2>Bandiere Istituzionali</h2>
-                        <p>Produciamo bandiere istituzionali di qualsiasi stato, regione o comune</p>
-                        <a href="" class="btn btn-primary">Maggiori infomazioni</a>
+                        <h2>Filari di Bandierine</h2>
+                        <p>Filari di bandierine personalizzati disponibili in varie forme, misure e materiali.</p>
+                        <a href="{{site.url}}/prodotti/filari-bandierine.html" class="btn btn-primary" alt="Grigoprint produce filari di bandierine in tessuto nautico e in tessuto di raso bifacciali. Inoltre riforniamo bandierine in carta e in plastica.">Maggiori infomazioni</a>
                     </div>
                 </div>
             </li>
             <li class="splide__slide">
                 <div class="splide__title">
-                {% cloudinary halfscreen /assets/images/ombrelli/background.png alt="Ombrelli Personalizzati" class="orizontal-image index_image lazyload" %}  
+                {% cloudinary jumbotron /assets/images/ombrelli/background.png alt="Ombrelli Personalizzati" class="orizontal-image index_image lazyload" data-splide-lazy="/assets/images/ombrelli/background.png" %}  
                     <div class="splide__info">
-                        <h2>Bandiere Istituzionali</h2>
-                        <p>Produciamo bandiere istituzionali di qualsiasi stato, regione o comune</p>
-                        <a href="" class="btn btn-primary">Maggiori infomazioni</a>
+                        <h2>Ombrelli Personalizzati</h2>
+                        <p>Ombrelli personalizzati, anche su intera calotta.</p>
+                        <a href="{{site.url}}/prodotti/ombrelli.html" class="btn btn-primary" alt="Ombrellificio Grigolini produce e stampa ombrelli personalizzati. Specializzati nella produzione di ombrelli con stampa all-over senza soluzione di continuit&agrave;">Maggiori infomazioni</a>
                     </div>
               </div>              
             </li>
@@ -63,14 +64,14 @@ title: Ombrellificio Grigolini di Grigolini Marcello
                     {% if page.url == node.url %}
                         <li>
                             <a href="{{ node.url }}" title="{{ node.description }}">
-                                {% cloudinary onequater {{node.image[0].path}} alt="{{node.title}}"  %}
+                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
                                 <h4>{{ node.title }}</h4>
                             </a>
                         </li>
                         {% else %}
                         <li>
                             <a href="{{ node.url }}" title="{{ node.description }}">
-                                {% cloudinary onequater {{node.image[0].path}} alt="{{node.title}}"  %}
+                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
                                 <h4>{{ node.title }}</h4>
                             </a>
                         </li>
@@ -94,7 +95,19 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 <h2 class="middle-title">servizi</h2>
         <div class="service-content card card__light">
             <h4>
-                <span class="grigo-icons grigo-quality"></span>
+                <span class="grigo-icons grigo-quality"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1476,0)">
+        <rect id="quality" x="1476" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="quality1" serif:id="quality">
+            <g transform="matrix(0.798581,0,0,0.8,300.586,3.30867)">
+                <path d="M1490.52,16.509C1490.64,16.639 1490.82,16.712 1491,16.713C1491.18,16.714 1491.36,16.642 1491.49,16.513C1492.37,15.633 1494.21,13.79 1495.06,12.943C1495.17,12.826 1495.33,12.76 1495.5,12.76C1495.67,12.76 1495.83,12.826 1495.94,12.943C1496.14,13.137 1496.37,13.365 1496.56,13.558C1496.8,13.802 1496.8,14.198 1496.56,14.442C1495.46,15.541 1492.61,18.393 1491.47,19.526C1491.35,19.652 1491.18,19.722 1491,19.722C1490.82,19.722 1490.65,19.652 1490.53,19.526L1487.42,16.424C1487.18,16.18 1487.18,15.785 1487.42,15.541C1487.62,15.343 1487.86,15.109 1488.05,14.911C1488.17,14.793 1488.33,14.727 1488.5,14.727C1488.67,14.728 1488.83,14.795 1488.94,14.914C1489.38,15.362 1490.06,16.048 1490.52,16.509Z"/>
+            </g>
+            <g transform="matrix(1.2,0,0,1.2,-298.4,-3.2)">
+                <path d="M1494.93,8.929L1499.07,8.929L1499.07,13.071L1502,16L1499.07,18.929L1499.07,23.071L1494.93,23.071L1492,26L1489.07,23.071L1484.93,23.071L1484.93,18.929L1482,16L1484.93,13.071L1484.93,8.929L1489.07,8.929L1492,6L1494.93,8.929ZM1492,11C1494.76,11 1497,13.24 1497,16C1497,18.76 1494.76,21 1492,21C1489.24,21 1487,18.76 1487,16C1487,13.24 1489.24,11 1492,11Z"/>
+            </g>
+        </g>
+    </g>
+</svg></span>
                 qualit&agrave;
             </h4>
             <p>Siamo alla continua ricerca di perfezionamento, ogni prodotto non viene consegnato se non rispetta i nostri standard qualitativi.</p>
@@ -102,7 +115,17 @@ title: Ombrellificio Grigolini di Grigolini Marcello
         </div>
         <div class="service-content card card__light">
             <h4>
-                <span class="grigo-icons grigo-fast"></span>
+                <span class="grigo-icons grigo-fast"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1558,0)">
+        <rect id="fast" x="1558" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="fast1" serif:id="fast">
+            <path d="M1584,6L1584,26L1564,26L1564,6L1584,6ZM1582,8L1566,8L1566,24L1582,24L1582,8Z"/>
+            <g transform="matrix(1,0,0,1,0,-1)">
+                <path d="M1573,12L1575,12L1575,16L1580,16L1580,18L1573,18L1573,12Z"/>
+            </g>
+        </g>
+    </g>
+</svg></span>
                 velocit&agrave;
             </h4>
             <p>Hai bisogno di una realizzazione in tempi rapidi. Non esitare a contattarci.</p>
@@ -110,7 +133,21 @@ title: Ombrellificio Grigolini di Grigolini Marcello
         </div>
         <div class="service-content card card__light">
             <h4>
-                <span class="grigo-icons grigo-account"></span>
+                <span class="grigo-icons grigo-account"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-82,0)">
+        <rect id="account" x="82" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="account1" serif:id="account">
+            <g transform="matrix(1.14286,0,0,1.14286,-16.8571,-0.857143)">
+                <circle cx="100.5" cy="9.5" r="3.5"/>
+            </g>
+            <g transform="matrix(1.14286,0,0,1.14286,-16.8571,-0.857143)">
+                <circle cx="100.5" cy="9.5" r="3.5"/>
+            </g>
+            <path d="M85.998,26C87.959,21.304 92.596,18 98,18C103.404,18 108.041,21.304 110.002,26L105.483,26C103.867,23.589 101.118,22 98,22C94.882,22 92.133,23.589 90.517,26L85.998,26Z"/>
+            <path d="M85.998,26C87.959,21.304 92.596,18 98,18C103.404,18 108.041,21.304 110.002,26L105.483,26C103.867,23.589 101.118,22 98,22C94.882,22 92.133,23.589 90.517,26L85.998,26Z"/>
+        </g>
+    </g>
+</svg></span>
                 personalizzazioni
             </h4>
             <p>In caso si necessitasse di lavorazioni particolari siamo in grado di studiare la soluzione adatta per ogni contesto di stampa digitale su tessuto, come bandiere personalizzate di grande dimensione o cornici particolari. Anche se non hai esperinza nella stampa su tessuto non esitare a contattarci, ti consiglieremo al meglio per aumentare la visibilità del tuo brand.</p>
@@ -124,13 +161,4 @@ title: Ombrellificio Grigolini di Grigolini Marcello
     </div>
 </section>{% endcomment %}
 </article>
-<script>
-    new Splide('.splide', {
-      cover: true,
-      fixedHeight: '60vh',
-      pagination: false,
-      autoplay: true,
-      rewind: true,
-      arrows: false,
-    }).mount();
-</script>
+

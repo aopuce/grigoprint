@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:serif="http://www.serif.com/"><metadata><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata>
+    <g transform="translate(-1804)">
+        <rect id="facebook" x="1804" width="32" height="32" fill="none"/>
+        <g transform="translate(-2.8114 -.00020038)" serif:id="facebook">
+            <g transform="matrix(.17398 0 0 .17398 1777 -65.312)">
+                <path d="m272.05 524.85v-52.438h17.601l2.636-20.437h-20.237v-13.047c0-5.918 1.641-9.949 10.127-9.949l10.822-4e-3v-18.28c-1.873-0.247-8.295-0.803-15.771-0.803-15.6 0-26.283 9.522-26.283 27.013v15.07h-17.646v20.437h17.646v52.438z" fill-rule="nonzero"/>
+            </g>
+        </g>
+    </g>
+</svg>

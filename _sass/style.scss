@@ -13,6 +13,24 @@
 
 @import "6-vendors/bourbon";
 @import "6-vendors/susy_base";
+@import "6-vendors/splide/core/foundation/animations";
+@import "6-vendors/splide/core/foundation/variables";
+@import "6-vendors/splide/core/object/objects/container";
+@import "6-vendors/splide/core/object/objects/list";
+@import "6-vendors/splide/core/object/objects/pagination";
+@import "6-vendors/splide/core/object/objects/root";
+@import "6-vendors/splide/core/object/objects/slide";
+@import "6-vendors/splide/core/object/objects/slider";
+@import "6-vendors/splide/core/object/objects/spinner";
+@import "6-vendors/splide/core/object/objects/track";
+@import "6-vendors/splide/core/object/modifiers/draggable";
+@import "6-vendors/splide/core/object/modifiers/fade";
+@import "6-vendors/splide/core/object/modifiers/rtl";
+@import "6-vendors/splide/core/object/modifiers/ttb";
+@import "6-vendors/splide/themes/default/foundation/variables";
+@import "6-vendors/splide/themes/default/object/objects/pagination";
+@import "6-vendors/splide/themes/default/object/objects/arrow";
+
 // @import "6-vendors/fluid_type/_list-sort";
 // @import "6-vendors/fluid_type/_map-sort";
 // @import "6-vendors/fluid_type/_list-remove";
@@ -25,11 +43,10 @@
 
 @import "2-layouts/header";
 @import "2-layouts/footer";
-@import "2-layouts/nav";
-@import "2-layouts/content";
 @import "2-layouts/grid_product";
 @import "2-layouts/grid_index";
 @import "2-layouts/contatti";
+@import "2-layouts/prodotti";
 
 @import "1-components/buttons";
 @import "1-components/card";
@@ -38,6 +55,7 @@
 @import "1-components/table";
 @import "1-components/form";
 @import "1-components/gallery";
+@import "1-components/modal";
 
 @import "3-pages/400";
 @import "3-pages/products";

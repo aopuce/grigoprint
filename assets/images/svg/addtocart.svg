@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-328,0)">
+        <rect id="addtocart" x="328" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="addtocart1" serif:id="addtocart">
+            <g transform="matrix(1.33333,0,0,1.33333,-7,-8.66667)">
+                <circle cx="268.5" cy="24.5" r="1.5"/>
+            </g>
+            <g transform="matrix(1.33333,0,0,1.33333,-17,-8.66667)">
+                <circle cx="268.5" cy="24.5" r="1.5"/>
+            </g>
+            <path d="M336,10L332,10L332,6L336,6L340,10L354.593,10C354.924,10 355.235,10.156 355.433,10.422C355.63,10.687 355.691,11.031 355.596,11.348C354.951,13.498 353.711,17.631 353.214,19.287C353.087,19.71 352.698,20 352.256,20C349.83,20 342.17,20 339.744,20C339.302,20 338.913,19.71 338.786,19.287C338.1,17.001 336,10 336,10ZM347,14L347,12L345,12L345,14L343,14L343,16L345,16L345,18L347,18L347,16L349,16L349,14L347,14Z"/>
+        </g>
+    </g>
+</svg>

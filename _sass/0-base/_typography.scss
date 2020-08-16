@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "icomoon";
-    font-display: swap;
-    src: url(/assets/fonts/icomoon.eot), url(/assets/fonts/icomoon.ttf), url(/assets/fonts/icomoon.woff), url(/assets/fonts/icomoon.svg);
-    unicode-range: U+E900 (-U + E915);
-    font-display: swap;
-}
-
 html {
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -39,7 +31,7 @@ p, ul {
 h1, h2, h3, h4, h5 {
     @include interpolate((padding-top, padding-bottom), 20rem, 70rem, .5rem, 1rem);
     @include interpolate(margin-top, 20rem, 70rem, .5rem, 1rem );
-    @include interpolate(margin-bottom, 20rem, 70rem, 1rem, 2rem );
+    @include interpolate(margin-bottom, 20rem, 70rem, .5rem, 1rem );
 }
 
 h3 {

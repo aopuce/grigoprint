@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head lang="{{ page.lang | default: site.lang | default: 'it' }}">
+		{%- include head.html -%}
+	</head>
+	<body id="add-class">
+		<div class="nav-list" id="nav-commander">
+			{%- include menu.html-%}
+		</div>
+		{%- include header.html -%}
+		<main class="page-content" id="page-content" aria-label="Content">
+			<header class="blog_header">
+				<ul>
+					{% for tag in page.tags  %}
+						<li>{{tag}}</li>
+					{% endfor %}
+				</ul>
+				<h1>{{ page.title }}</h1>
+				<div class="paginator_conainer">
+					<ul class="social-share ul-inline">
+						<li>
+							<a class="facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('{{site.url}}{{page.url}}'),'facebook-share-dialog'); return false;"><span class="grigo-icons grigo-facebook"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+								<g transform="translate(-1804)">
+									<rect id="facebook" x="1804" width="32" height="32" fill="none"/>
+									<g transform="translate(-2.8114 -.00020038)" serif:id="facebook">
+										<g transform="matrix(.17398 0 0 .17398 1777 -65.312)">
+											<path d="m272.05 524.85v-52.438h17.601l2.636-20.437h-20.237v-13.047c0-5.918 1.641-9.949 10.127-9.949l10.822-4e-3v-18.28c-1.873-0.247-8.295-0.803-15.771-0.803-15.6 0-26.283 9.522-26.283 27.013v15.07h-17.646v20.437h17.646v52.438z" fill-rule="nonzero"/>
+										</g>
+									</g>
+								</g>
+								</svg></span><span>share</span></a>
+							</li>
+							<li>
+								<a class="twitter" onclick="javascript:window.open('https://twitter.com/share?text={{page.description}}&amp;url={{site.url}}{{page.url}}','Twitter-dialog'); return false;"><span class="grigo-icons grigo-twitter"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+									<g transform="matrix(1,0,0,1,-1968,0)">
+										<rect id="twitter" x="1968" y="0" width="32" height="32" style="fill:none;"/>
+										<g id="twitter1" serif:id="twitter">
+											<g transform="matrix(0.209304,0,0,0.209304,1894.72,-42.2345)">
+												<path d="M467.328,250.468C465.254,251.041 463.622,250.951 463.622,250.951L463.689,250.558C465.618,249.013 470.486,244.273 471.128,242.056C471.408,241.098 471.078,240.767 471.076,240.735L464.859,243.375L459.657,245.723C456.066,241.922 450.63,239.499 444.553,239.499C433.739,239.499 424.97,247.16 424.97,256.613C424.97,258.341 425.228,261.496 425.771,263.069C425.771,263.564 425.791,262.572 425.771,263.069C418.807,262.878 409.881,260.021 401.932,255.994C386.252,248.05 385.271,242.551 385.271,242.551C382.808,245.166 381.538,253.825 384.034,260.613C385.632,264.959 391.125,268.86 391.125,268.86C391.125,268.86 388.669,268.906 386.096,268.036C383.522,267.166 382.55,266.304 382.55,266.304C381.02,270.036 384.09,276.699 389.396,281.479C392.488,284.267 398.136,286.015 398.136,286.015L389.312,286.263C388.816,294.841 407.299,299.936 407.299,299.936C401.881,304.101 395.596,306.639 388.859,306.639C385.367,306.639 381.993,306.117 378.79,305.161C387.691,312.495 399.131,317.558 411.571,316.904C444.573,315.171 463.203,286.802 464.089,258.941L464.131,258.999C464.131,258.999 465.678,258.228 468.984,254.921C472.289,251.615 474.345,247.746 474.345,247.746C474.345,247.746 469.403,249.896 467.328,250.468Z" style="fill-rule:nonzero;"/>
+											</g>
+										</g>
+									</g>
+									</svg></span><span>tweet</span></a>
+								</li>
+								<li>
+									<a class="pinterest" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&amp;media={{site.url}}{{page.image[0].path}}&amp;description={{page.description}}" target="new"><span class="grigo-icons grigo-pinterest"><svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+										<g transform="matrix(1,0,0,1,-1722,0)">
+											<rect id="pinterest" x="1722" y="0" width="32" height="32" style="fill:none;"/>
+											<g id="pinterest1" serif:id="pinterest">
+												<g transform="matrix(0.0728913,0,0,0.0728913,1728,5.95514)">
+													<path d="M137.195,0.612C61.428,0.612 0,62.036 0,137.805C0,193.982 33.78,242.242 82.12,263.461C81.733,253.881 82.05,242.381 84.507,231.958C87.145,220.82 102.161,157.202 102.161,157.202C102.161,157.202 97.777,148.443 97.777,135.495C97.777,115.165 109.562,99.981 124.236,99.981C136.715,99.981 142.744,109.354 142.744,120.577C142.744,133.122 134.743,151.886 130.628,169.265C127.191,183.818 137.925,195.688 152.282,195.688C178.275,195.688 195.782,162.303 195.782,122.747C195.782,92.679 175.53,70.173 138.696,70.173C97.08,70.173 71.153,101.208 71.153,135.874C71.153,147.826 74.678,156.256 80.198,162.782C82.736,165.78 83.088,166.987 82.169,170.429C81.512,172.953 80,179.03 79.375,181.439C78.461,184.913 75.646,186.155 72.505,184.872C53.337,177.047 44.41,156.056 44.41,132.459C44.41,93.488 77.278,46.757 142.461,46.757C194.84,46.757 229.314,84.661 229.314,125.347C229.314,179.165 199.394,219.372 155.29,219.372C140.478,219.372 126.545,211.365 121.773,202.272C121.773,202.272 113.808,233.881 112.121,239.985C109.213,250.563 103.519,261.134 98.313,269.374C110.652,273.017 123.686,275 137.195,275C212.955,275 274.381,213.576 274.381,137.805C274.381,62.036 212.955,0.612 137.195,0.612Z" style="fill-rule:nonzero;"/>
+												</g>
+											</g>
+										</g>
+										</svg></span><span>pin it</span></a>
+									</li>
+									
+								</ul>
+							</div>
+							{% cloudinary jumbotron {{page.path_image_header}} alt="{{ page.tags }}" class="lazyload" %}
+						</header>
+						<article class="blog">
+							{{ content }}
+						</article>
+						
+					</main>
+					{%- include footer_2.html -%}
+					{%- include static_link.html -%}
+					{%- include js_end.html -%}
+				</body>
+			</html>

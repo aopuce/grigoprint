@@ -2,7 +2,7 @@
 	background: $back-full-text;
 }
 
-.head-product {
+.head-product, .paginator_conainer {
 	h1 {
 		line-height: 1;
 		@include interpolate(margin-top, 20rem, 70rem, 0rem, 0rem);
@@ -25,6 +25,9 @@
 		font-weight: bold;
 		display: inline-block;
 		@include transition;
+		svg g {
+			fill: $back-full-text;
+		}
 		span {
 			display: inline-block;
 			vertical-align: bottom;
@@ -99,7 +102,7 @@ ul.list-complete {
 		}
 		
 	}
-	.btn.btn-large.btn-collapse {
+	.info-form .btn.btn-large.btn-collapse {
 		@include respond-to(screen-sm) {
 			box-shadow: unset;
 			background: none;
@@ -111,4 +114,28 @@ ul.list-complete {
 	}
 
 }
+.btn-collapse {
+	cursor: pointer;
+	// width: 80%;
+	margin: auto;
+	position: relative;
+	@media screen and (max-width: $screen-sm - 1px) {
+		width: 100%;
+	}
+	.grigo-icons {
+		position: absolute;
+		@include interpolate("width", $screen-xs, $screen-lg, 22px, 24px);
+		@include interpolate("top", $screen-xs, $screen-lg, 0px, 5px);
+		top: .1rem;
+	}
+	&.btn-large .grigo-icons {
+		top: .4rem;
+		@include respond-to(screen-sm) {
+			display: none;
+		}
+	}
+}
+h5.btn.btn-collapse {
+	@include interpolate("padding-right", $screen-xs, $screen-lg, 22px, 35px);
 
+}

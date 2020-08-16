@@ -13,6 +13,36 @@
     }
 }
 
+.contact-list {
+    .p-name {
+        h4 {
+            padding-bottom: 0;
+        }
+        & + li {
+            padding-left: 32px;
+        }
+    }
+    & > li {
+        position: relative;
+        & > .grigo-icons, & > a .grigo-icons {
+            position: absolute;
+            & + span {
+                padding-left: 32px;
+            }
+            &.grigo-pin {
+                left: 0;
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+        }
+    }
+    svg g {
+        fill: $back-full-text;
+    }
+}
+.social-links ul li {
+    display: inline-block;
+}
 .site-footer-2 {
     overflow-x: hidden;
     background: $long-text;

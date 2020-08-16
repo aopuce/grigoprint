@@ -7,118 +7,253 @@
 .grigo-icons {
     position: relative;
     display: inline-block;
-    font-size: 1.4rem;
-    font-family: $grigo-icons;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.5;
-    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    @include transition;
+    g {
+        fill: $long-text;
+    }
+    &.products-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        g {
+            fill: $back-full-text;
+        }
+    }
 }
+.social-container, .nav-container {
+    .grigo-icons g {
+        fill: $primary-color;
+    }
+}
+// .grigo-contacts::before {
+//     content: "\e906";
+// }
 
-.grigo-contacts::before {
-    content: "\e906";
+#icon-products, #icon-social {
+    position: relative;
+    div {
+        max-width: 32px;
+        position: absolute;
+        height: 4px;
+        background: $primary-color;
+        left: 4px;
+        @include transition;
+    }
 }
+#icon-products div {
+    &:first-child {
+        width: 16px;
+        top: 6px;
+    }
+    &:nth-child(2) {
+        opacity: 1;
+        width: 24px;
+        top: 14px;
+    }
+    &:last-child {
+        width: 20px;
+        bottom: 6px;
+    }  
+}
+#icon-social {
+    div {
+        width: 22px;
+        left: 3px;
+        -webkit-transform-origin: right;
+           -moz-transform-origin: right;
+            -ms-transform-origin: right;
+             -o-transform-origin: right;
+                transform-origin: right;
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:first-child {
+            top: 3px;
+            -webkit-transform: rotate(-30deg);
+               -moz-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                 -o-transform: rotate(-30deg);
+                    transform: rotate(-30deg);
+        }
+        &:last-child {
+            bottom:3px;
+            -webkit-transform: rotate(30deg);
+               -moz-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                 -o-transform: rotate(30deg);
+                    transform: rotate(30deg);
+        }
+        &:first-child, &:last-child {
+            &:after, &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                width: 8px;
+                height: 8px;
+                background: $primary-color;
+                top: -2px;
+                opacity: 1;
+                @include transition;
+            }
+            &:after {
+                left: -4px;
+            }
+            &:before {
+                right: -2px;
+            }
+        }
+    }  
+    &.grigo-close {
+        div {
+            left: 0;
+            width: 24px;
+            &:last-child, &:first-child {
+                &:after, &:before {
+                    opacity: 0
+                }
+            }
+            &:first-child {
+                top: 5px;
+                -webkit-transform: rotate(-45deg);
+                   -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                     -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+            }
+            &:last-child {
+                bottom: 5px;
+                -webkit-transform: rotate(45deg);
+                   -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                     -o-transform: rotate(45deg);
+                        transform: rotate(45deg);
+            }
+        }
+    } 
+}
+#icon-products.grigo-close {
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    div {
+        width: 24px;
+        top: 14px;
+        &:first-child {
+            -webkit-transform: rotate(90deg);
+               -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                 -o-transform: rotate(90deg);
+                    transform: rotate(90deg);
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+    }
+}
+#icon-social.grigo-close div {
+    &:first-child, &:last-child {
+        opacity: 1;
+    }
+}
+// .grigo-account::before {
+//     content: "\e900";
+// }
 
-.grigo-hamburger::before {
-    content: "\e90c";
-}
+// .grigo-add-account::before {
+//     content: "\e901";
+// }
 
-.grigo-account::before {
-    content: "\e900";
-}
+// .grigo-delete::before {
+//     content: "\e908";
+// }
 
-.grigo-add-account::before {
-    content: "\e901";
-}
+// .grigo-modify::before {
+//     content: "\e90e";
+// }
 
-.grigo-delete::before {
-    content: "\e908";
-}
+// .grigo-cart::before {
+//     content: "\e904";
+// }
 
-.grigo-modify::before {
-    content: "\e90e";
-}
+// .grigo-add-cart::before {
+//     content: "\e902";
+// }
 
-.grigo-cart::before {
-    content: "\e904";
-}
+// .grigo-new::before {
+//     content: "\e910";
+// }
 
-.grigo-add-cart::before {
-    content: "\e902";
-}
+// .grigo-duplicate::before {
+//     content: "\909";
+// }
 
-.grigo-new::before {
-    content: "\e910";
-}
+// .grigo-mail::before {
+//     content: "\e90d";
+// }
 
-.grigo-duplicate::before {
-    content: "\909";
-}
+// .grigo-phone::before {
+//     content: "\e911";
+// }
 
-.grigo-mail::before {
-    content: "\e90d";
-}
+// .grigo-pin::before {
+//     content: "\e912";
+// }
 
-.grigo-phone::before {
-    content: "\e911";
-}
 
-.grigo-pin::before {
-    content: "\e912";
-}
+// .grigo-creditcard::before {
+//     content: "\e907";
+// }
 
-.grigo-close::before {
-    content: "\e905";
-}
+// .grigo-money::before {
+//     content: "\e90f";
+// }
 
-.grigo-creditcard::before {
-    content: "\e907";
-}
+// .grigo-ship::before {
+//     content: "\e914";
+// }
 
-.grigo-money::before {
-    content: "\e90f";
-}
+// .grigo-arrow::before {
+//     content: "\e903";
+// }
 
-.grigo-ship::before {
-    content: "\e914";
-}
+// .grigo-quality::before {
+//     content: "\e913";
+// }
 
-.grigo-arrow::before {
-    content: "\e903";
-}
+// .grigo-fast::before {
+//     content: "\e90a";
+// }
 
-.grigo-quality::before {
-    content: "\e913";
-}
+// .grigo-fax::before {
+//     content: "\e90b";
+// }
 
-.grigo-fast::before {
-    content: "\e90a";
-}
+// .grigo-validate::before {
+//     content: "\e915";
+// }
 
-.grigo-fax::before {
-    content: "\e90b";
-}
+// .grigo-facebook::before {
+//     content: "\ea90";
+// }
 
-.grigo-validate::before {
-    content: "\e915";
-}
+// .grigo-instagram::before {
+//     content: "\ea92";
+// }
 
-.grigo-facebook::before {
-    content: "\ea90";
-}
+// .grigo-twitter::before {
+//     content: "\ea96";
+// }
 
-.grigo-instagram::before {
-    content: "\ea92";
-}
+// .grigo-pinterest::before {
+//     content: "\ead1";
+// }
 
-.grigo-twitter::before {
-    content: "\ea96";
-}
-
-.grigo-pinterest::before {
-    content: "\ead1";
-}
-
-.grigo-social::before {
-    content: "\ea82";
-}
+// .grigo-social::before {
+//     content: "\ea82";
+// }

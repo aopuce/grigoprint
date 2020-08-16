@@ -30,12 +30,33 @@
             <label for="email">e-Mail *</label>
             <span>errore email</span>
         </div>
+        <div class="form-col-textarea animated-label full-form-grid" id="message">
+            <textarea name="message" id="" cols="30" rows="5" placeholder="Messaggio..." aria-label="Messaggio"></textarea>
+            <label for="message">Messaggio *</label>
+            <span>Errore messaggio... almeno 20 caratteri</span>
+        </div>
+        <p class="nota-bene full-form-grid">* Campi obbligatori</p>
     {% if  page.collection == "prodotti"%}
         <!--</div>
         <div class="col-form prezzo_select">-->
             {% if page.preventivo == true %}
             
-            <h5 class="full-form-grid">Informazioni Prodotto</h5>
+            <h5 class="full-form-grid btn btn-default btn-collapse" data-toggle="collapse" data-target="prod">
+                Calcola Preventivo 
+                <span class="grigo-icons">
+                    <svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                        <g transform="matrix(1,0,0,1,-1394,0)">
+                            <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+                            <g id="arrow1" serif:id="arrow">
+                                <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+                                    <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </h5>
+            <div class="row-form" id="prod">
             {% assign p_title = page.title %}
             {% case p_title %}
                 {% when 'Tappeto Personalizzato' %}
@@ -60,7 +81,7 @@
                 {% include form/filari_f.html %}
                 {% when 'Foulard' %}
                 {% include form/foulard_f.html %}
-                {% when 'Frame in Tessuto' %}
+                {% when 'Frame in tessuto' %}
                 {% include form/frame_f.html %}
                 {% when 'Gagliardetti' %}
                 {% include form/gagliardetti_f.html %}
@@ -76,18 +97,15 @@
                 {% include form/poster_f.html %}
                 {% when 'Striscioni' %}
                 {% include form/striscioni_f.html %}
-                {% when 'Tovaglie' %}
+                {% when 'Tovaglie Pubblicitarie' %}
                 {% include form/tovaglie_f.html %}
+                {% when 'Ombrelloni da giardino' %}
+                {% include form/giardino_f.html %}
             {% endcase %}
         <!--</div>-->
+            </div>
             {% endif %}
     {% endif %}
-    <div class="form-col-textarea animated-label full-form-grid" id="message">
-        <textarea name="message" id="" cols="30" rows="5" placeholder="Messaggio..." aria-label="Messaggio"></textarea>
-        <label for="message">Messaggio *</label>
-        <span>Errore messaggio... almeno 20 caratteri</span>
-    </div>
-    <p class="nota-bene full-form-grid">* Campi obbligatori</p>
     <div id="captcha" class="error-captcha">
     </div>
     <div class="form-col-textarea checkbox full-form-grid" id="agree">
@@ -106,13 +124,24 @@
         </div>
     </div>{% endcomment %}
    {% if  page.collection == "prodotti" %}
-    <div class="col-form col-form__btn prezzo_select" id="prezzo">
-        <span class="btn btn-large btn-outline">tot: 0</span>
-        <input type="text" name="prezzo" class="hide">
-    </div>
+         {% if page.preventivo == true %}
+            <div class="col-form col-form__btn prezzo_select" id="prezzo">
+                <span class="btn btn-large btn-outline">tot: 0</span>
+                <input type="text" name="prezzo" class="hide">
+            </div>
+        {% endif %}
     {% endif %}
     <div class="col-form col-form__btn">
-        <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-secondary btn-large btn-form standard" onclick="sendMail()"></button>
+        <button type="button" id="btn-send" role="button" aria-label="Invia" class="btn btn-secondary btn-large btn-form standard" onclick="sendMail()"><svg width="100%" height="100%" viewBox="0 0 32 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-50)">
+        <g id="validate" transform="matrix(1,0,0,1,0,50.9573)">
+            <rect x="0" y="0" width="32" height="32" style="fill:none;"/>
+            <g transform="matrix(1,0,0,1,0,-50.9573)">
+                <path d="M16,68.3L24.086,60.215L26.914,63.043L16,73.957L13.172,71.129L13.172,71.129L8.463,66.42L11.291,63.592L16,68.3Z"/>
+            </g>
+        </g>
+    </g>
+</svg></button>
     </div>
     <input type="text" name="bott" class="hide">
     {% if  page.title == "contatti" %}

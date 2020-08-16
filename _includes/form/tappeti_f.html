@@ -35,18 +35,14 @@
 </div>
 {% endif %}
 <div class="form-col animated-label" id="altezza">
-    <input type="number" name="altezza" placeholder="100" aria-label="larghezza">
+    <input type="number" name="altezza" placeholder="100" min="10" max="800" step="5" aria-label="larghezza">
     <label for="altezza">Altezza in cm</label>
     <span>errore: altezza</span>
 </div>
 
 <div class="form-col animated-label" id="larghezza">
-    <input type="number" name="larghezza" placeholder="100" aria-label="larghezza">
+    <input type="number" name="larghezza" placeholder="100" min="10" max="2000" step="5" aria-label="larghezza">
     <label for="larghezza">Larghezza in cm</label>
     <span>errore: larghezza</span>
 </div>
-<div class="form-col animated-label" id="quantita">
-    <input type="number" name="quantita" placeholder="100" aria-label="quantita">
-    <label for="quantita">Quantit&agrave;</label>
-    <span>errore: quantit&agrave;</span>
-</div>
+{% include form/components/quantity.html %}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1148,0)">
+        <rect id="creditcard" x="1148" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="creditcard1" serif:id="creditcard">
+            <path d="M1176,15L1176,22C1176,22.53 1175.79,23.039 1175.41,23.414C1175.04,23.789 1174.53,24 1174,24C1169.48,24 1158.52,24 1154,24C1153.47,24 1152.96,23.789 1152.59,23.414C1152.21,23.039 1152,22.53 1152,22L1152,15L1176,15ZM1152,12L1152,10C1152,9.47 1152.21,8.961 1152.59,8.586C1152.96,8.211 1153.47,8 1154,8C1158.52,8 1169.48,8 1174,8C1174.53,8 1175.04,8.211 1175.41,8.586C1175.79,8.961 1176,9.47 1176,10L1176,12L1152,12Z"/>
+        </g>
+    </g>
+</svg>

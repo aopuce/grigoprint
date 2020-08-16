@@ -1,6 +1,6 @@
 ---
 layout: new_product_layout
-title: Ombrelloni
+title: Ombrelloni Personalizzati
 exclude: false
 description: Grigolini produce ombrelloni da spiaggia e da giardino personalizzati, pubblicitari. 
 ideale: [ristorazione, bar, externo]
@@ -9,38 +9,36 @@ image:
       class: ""
       alt: ombrelloni da giardino personalizzati
       config: jumbotron
-forza: [personalizzabili, diversi modelli e misure, robusto]
+forza: [Personalizzabili, Diversi Modelli e Misure, Robusto]
+preventivo: false
+thumb: /assets/images/thumb/ombrelloni_thumb
 preventivo: false
 ---
 <h2 class="middle-title">ombrelloni da spiaggia</h2>
-<div class="row obj_contain">
-    <div class="col-half order-second">
-		<p>Oltre ad essere presenti due grandi famiglie divise in ombrelloni da giardino e pubblicitari, i nostri prodotti si differenziano anche tra ombrelloni con fusto verniciato epossidico, di misura normale (raggio 90 cm, 100 cm, 120 cm) con tessuto in poliestere impermeabile e ombrelloni con il fusto in legno/alluminio di grandi dimensioni con copertura acrilica professionale.
-	</p>
-    </div>
-    <div class="col-half order-first">
-    	 {% cloudinary halfscreen /assets/images/ombrelloni/spiaggia.png alt="ombrelloni da spiaggia personalizzati" class="vertical-image" %}
-    </div>
-</div>
+ {% cloudinary halfscreen /assets/images/ombrelloni/spiaggia.png alt="ombrelloni da spiaggia personalizzati" class="single-image" %}
+<p>Oltre ad essere presenti due grandi famiglie divise in ombrelloni da giardino e pubblicitari, i nostri prodotti si differenziano anche tra ombrelloni con fusto verniciato epossidico, di misura normale (raggio 90 cm, 100 cm, 120 cm) con tessuto in poliestere impermeabile e ombrelloni con il fusto in legno/alluminio di grandi dimensioni con copertura acrilica professionale.</p>
+	
 <h2 class="middle-title">ombrelloni da giardino</h2>
-<div class="row obj_contain">
-    <div class="col-half order-first">
-    	{% cloudinary halfscreen /assets/images/ombrelloni/ombrellone_giardino_def.jpg alt="ombrelloni da giardino" class="vertical-image" %}
-    </div>
-    <div class="col-half order-second">
-		<p>Ombrelloni di qualita, disponibili sia in lengo che in alluminio, l'alluminio aggiuinge anche un modello per le grandissime dimensioni, 5mtx5mt.
-		Ricoperture di qualita in poliacrilico con ottima impermeabilizzazione e resa d'ombra.
-		</p>
-		<ul>
-			<p>Ombrelloni a palo centrale:</p>
-			<li>standard ad altezza fissa</li>
-			<li>ombrellone telescopico con chiusura rialzata</li>
-		</ul>
-		<ul>
-			<p>Ombrelloni a braccio:</p>
-			<li>Ombrellone a braccio singolo</li>
-			<li>Ombrellone a braccio doppio</li>
-			<li>Ombrellone a braccio poker</li>
-		</ul>
-    </div>
+
+{% cloudinary halfscreen /assets/images/ombrelloni/ombrellone_giardino_def.jpg alt="ombrelloni da giardino" class="single-image" %}
+
+<p>Ombrelloni di qualita, disponibili sia in lengo che in alluminio, l'alluminio aggiuinge anche un modello per le grandissime dimensioni, 5mtx5mt.
+Ricoperture di qualita in poliacrilico con ottima impermeabilizzazione e resa d'ombra.
+</p>
+<ul class="list-grids">
+	<p>Ombrelloni a palo centrale:</p>
+	<li>standard ad altezza fissa</li>
+	<li>ombrellone telescopico con chiusura rialzata</li>
+</ul>
+<ul class="list-grids">
+	<p>Ombrelloni a braccio:</p>
+	<li>Ombrellone a braccio singolo</li>
+	<li>Ombrellone a braccio doppio</li>
+	<li>Ombrellone a braccio poker</li>
+</ul>
+<h3 class="middle-title" id="form">richiedi preventivo</h3>
+<div class="row-primary">
+	<div class="contact-row">
+		{%- include  form_base.html -%}
+	</div>
 </div>

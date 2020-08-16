@@ -33,6 +33,15 @@
                 font-size: 1.2rem;
             }
         }
+        .grigo-icons {
+            position: absolute;
+            svg g {
+                fill: $primary-color;
+            }
+            & + span {
+                padding-left: 34px;
+            }
+        }
     }
     main .row-contatti {
     	margin: 0;
@@ -71,4 +80,9 @@
 			grid-column: 6 / -3;
 		}
 	}
+}
+.form-contatti {
+    @include respond-to(screen-sm) {
+        grid-column: 1 / -1;
+    }
 }

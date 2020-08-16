@@ -1,4 +1,10 @@
-form {
+.row-form {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+    @include transition;
+}
+form, .row-form {
     width: 100%;
     @include respond-to(screen-sm) {
         display: grid;
@@ -18,6 +24,7 @@ form {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         grid-gap: 20px;
         position: relative;
+        padding: 0 10px;
         margin-top: 10px;
         .radio__selection {
             display: block;
@@ -63,10 +70,12 @@ form {
             padding-left: 10px;
             font-family: "Lato", sans-serif;
             font-weight: 400;
+            z-index: 1;
         }
         &.warn {
             span {
                     @include transform(scale(1));
+
             }
             .radio__selection {
                 border-color: $warning;
@@ -85,7 +94,7 @@ form {
     //dimensione
     .form-contatti {
         width: 100%;
-        padding: 0;
+        padding: 1rem 0;
         position: relative;
 
 
@@ -101,7 +110,6 @@ form {
 
         @media screen and (min-width: $screen-sm) {
             @include susy-use($susy-tablet) {
-                flex: 0 0 (span(2 of 4) - gutter());
 
                 @media screen and (max-width: $screen-md - 1px) {
                     &:nth-child(odd) {
@@ -115,11 +123,6 @@ form {
             }
         }
 
-        @media screen and (min-width: $screen-lg) {
-            @include susy-use($susy-large) {
-                flex: 0 0 span(2 narrow of 4 narrow);
-            }
-        }
 
         &.col-form__btn {
             @include susy-use($susy-mobile) {
@@ -128,7 +131,6 @@ form {
         }
     }
     .form-contatti {
-        flex: 1 1 100%;
         @include respond-to(screen-sm) {
             display: grid;
             grid-gap: $padding-base;
@@ -199,7 +201,8 @@ form {
     }
 
     .animated-label.invalid, .form-col-textarea.animated-label.invalid,
-    .form-contatti .animated-label.invalid {
+    .form-contatti .animated-label.invalid, .row-form .animated-label.invalid, .row-form .form-col-textarea.animated-label.invalid,
+    .row-form .form-contatti .animated-label.invalid {
          
         border-color: $allert;
 
@@ -213,7 +216,8 @@ form {
         }
     }    
     .animated-label.warn , .form-col-textarea.animated-label.warn,
-    .form-contatti .animated-label.warn   {
+    .form-contatti .animated-label.warn, .row-form .animated-label.warn , .row-form .form-col-textarea.animated-label.warn,
+    .row-form .form-contatti .animated-label.warn{
         border-color: $warning;
 
         @include box-shadow(inset 0 0 1px $warning);
@@ -232,7 +236,7 @@ form {
     
 
 
-    #agree.invalid,  .form-contatti #agree.invalid {
+    #agree.invalid,  .form-contatti #agree.invalid, .row-form  #agree.invalid{
         label, a {
             color: tint($allert, 40%);
         }
@@ -241,7 +245,7 @@ form {
             border: 3px solid $allert;
         }
     }
-    #agree.warn, .form-contatti #agree.warn {
+    #agree.warn, .form-contatti #agree.warn, .row-form #agree.warn {
         label, a {
             color: tint($warning, 40%);
         }
@@ -348,7 +352,7 @@ form {
 }
 
 // end checkbox
-form {
+form, .row-form {
     > .animated-label, & > .animated-label, .form-contatti > .animated-label {
         // background: $back-full-text
         position: relative;
@@ -386,7 +390,7 @@ form {
             position: absolute;
             bottom: -1rem;
             height: 1rem;
-
+            z-index: 1;
 
             @include transition;
             @include transform(scale(0));
@@ -449,7 +453,7 @@ input, textarea {
     }
 }
 
-form {
+form, .row-form {
     .animated-label, .invalid, .form-contatti .animated-label {
         input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
             + label {
@@ -482,7 +486,7 @@ form {
     }
 }
 
-.site-contact form .animated-label {
+.site-contact form .animated-label, .site-contact form .row-form .animated-label {
     input:focus, textarea:focus, input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
         + label {
             color: tint($back-full-text, 90%);
@@ -493,7 +497,7 @@ form {
     // 	background: white
 }
 
-form {
+form, .row-form {
     label.custom-select {
         // position: relative;
         background: transparent;
@@ -530,21 +534,25 @@ form {
             }
         }
 
-        &:after {
-            font-family: $grigo-icons;
+        .grigo-icons {
             position: absolute;
             right: 0;
             top: 0;
             width: 50px;
             height: 100%;
             line-height: 2rem;
-            content: "\e903";
-            text-align: center;
-            color: $long-text;
             font-size: 0.8rem;
             border-left: 1px solid $second-color;
-            color: $second-color;
-            z-index: 1
+            // background: $second-color;
+            z-index: 1;
+            svg {
+                width: 22px;
+                height: 22px;
+                @extend %center_img;
+                g {
+                    fill: $second-color;
+                }
+            }
         }
     }
 

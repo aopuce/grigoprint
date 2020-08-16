@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1312,0)">
+        <rect id="ship" x="1312" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="ship1" serif:id="ship">
+            <g transform="matrix(1.25,0,0,1.25,-328.5,-6.5)">
+                <circle cx="1320" cy="24" r="2"/>
+            </g>
+            <g transform="matrix(1.25,0,0,1.25,-315.5,-6.5)">
+                <circle cx="1320" cy="24" r="2"/>
+            </g>
+            <g transform="matrix(1,0,0,1,0,1)">
+                <path d="M1329,18L1340,18L1340,20L1316,20L1316,7C1316,6.47 1316.21,5.961 1316.59,5.586C1316.96,5.211 1317.47,5 1318,5C1321.65,5 1329,5 1329,5L1329,18Z"/>
+            </g>
+            <g transform="matrix(1.125,0,0,1,-167.5,3)">
+                <path d="M1339.11,9.429C1339.11,9.163 1339.02,8.908 1338.85,8.72C1338.19,7.978 1336.45,6.032 1335.79,5.292C1335.62,5.105 1335.4,5 1335.16,5C1334.26,5 1332,5 1332,5L1332,14L1339.11,14L1339.11,9.429Z"/>
+            </g>
+        </g>
+    </g>
+</svg>

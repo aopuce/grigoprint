@@ -1,0 +1,913 @@
+---
+layout: default
+title: Tessuti
+description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal nautico per bandiere al pearl per le cornici retro illuminate.
+---
+<div class="tablewrap">
+<h2 class="middle-title">I nostri tessuti</h2>
+	<table>
+		<tr>
+			<th class="column-1"></th>
+			<th class="column-2">Immagine</th>
+			<th class="column-3">Tessuto</th>
+			<th class="column-4">Descrizione</th>
+			<th class="column-5">Grammatura</th>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="canvas-leggero" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/canvas_leggero.png alt="Tessuto di poliestere " %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Canvas Leggero
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="canvas-leggero">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/canvas_leggero.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Frame in tessuto, Tessuto 3D, Tovaglie Pubblicitarie" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="canvas-pesante" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Canvas Pesante
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="canvas-pesante">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Frame in tessuto, Tessuto 3D, Tovaglie Pubblicitarie" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="cire" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Cir&egrave;
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="cire">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Ombrelli" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="nautico" class="btn-collapse">
+			<td class="column-1" data-label="arrow">
+				<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+				    <g transform="matrix(1,0,0,1,-1394,0)">
+				        <rect id="arrow" x="1394" y="0" width="32" height="32" style="fill:none;"/>
+				        <g id="arrow1" serif:id="arrow">
+				            <g transform="matrix(-0.833333,-1.02054e-16,1.22465e-16,-1,2585,28)">
+				                <path d="M1408.98,5.357C1409.2,5.064 1409.59,4.887 1410,4.887C1410.41,4.887 1410.8,5.064 1411.02,5.357C1413.24,8.32 1418.52,15.355 1420.85,18.47C1421.08,18.778 1421.1,19.167 1420.88,19.485C1420.67,19.803 1420.27,20 1419.84,20C1415.27,20 1404.73,20 1400.16,20C1399.73,20 1399.33,19.803 1399.12,19.485C1398.9,19.167 1398.92,18.778 1399.15,18.47C1401.48,15.355 1406.76,8.32 1408.98,5.357Z"/>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</td>
+			<td class="column-2" data-label="immagine">
+				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+			</td>
+			<td class="column-3" data-label="nome">
+				Nautico 3p
+			</td>
+			<td class="column-4" data-label="descrizione">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ab sunt voluptatem recusandae nam magnam quis iure nisi pariatur voluptas repellat accusamus ratione, asperiores nesciunt voluptates, fuga officiis soluta. Quam.</p>
+			</td>
+			<td class="column-5" data-label="grammatura">
+				110g/mq
+			</td>
+		</tr>
+		<tr >
+			<td colspan="5" >
+				<div class="collapsable" id="nautico">
+					<h3>tessuto</h3>
+					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
+					<ul class="ideal">
+						<li>uno</li>
+						<li>due</li>
+						<li>tre</li>
+					</ul>
+					<ul class="prod_correlati">
+						{% assign nautico_cor = "Bean Banner, Bandiere Personalizzate, Bandiere Istituzionali" | split: ", " %}
+						{% for i in nautico_cor %}
+							{% for node in site.prodotti %}
+						        {% if {{i}} == node.title %}
+						        <li class="col-correlati">
+						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+						        		<div class="img-wrapper">
+						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		<p>{{node.title}}</p>
+						        	</a>
+						        </li>
+						        {% endif %}
+						    {% endfor %}
+						{% endfor %}
+					</ul>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

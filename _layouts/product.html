@@ -27,19 +27,7 @@ layout: compress
         {%- include static_link.html -%}
     </div>
 
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-        {% minibundle js %}
-            source_dir: assets/javascript
-            destination_path: assets/javascript/app
-            baseurl: '{{ site.baseurl }}/'
-            assets:
-            - form_it
-            - menu
-        {% endminibundle %}
-    {% else %}
-        <script src="{{'/assets/javascript/menu.js'}}"></script>
-        <script src="{{'/assets/javascript/form_it.js'}}" async></script>
-    {%- endif -%}
+    {%- include js_end.html -%}
 </body>
 
 </html>

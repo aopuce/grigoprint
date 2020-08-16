@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1640,0)">
+        <rect id="fax" x="1640" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="fax1" serif:id="fax">
+            <g transform="matrix(1,0,0,1,0,1)">
+                <g transform="matrix(1,0,0,0.947368,0,0.315789)">
+                    <path d="M1666,9L1663,6L1653,6L1653,25L1666,25L1666,9ZM1655,8.111L1655,22.889L1664,22.889L1664,9.908L1662.2,8.111L1655,8.111Z"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0,1)">
+                    <rect x="1656" y="9" width="6" height="1"/>
+                </g>
+                <g transform="matrix(1.16667,0,0,1,-276,3)">
+                    <rect x="1656" y="9" width="6" height="1"/>
+                </g>
+                <g transform="matrix(0.833333,0,0,1,276,5)">
+                    <rect x="1656" y="9" width="6" height="1"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-6.30678e-11,7)">
+                    <rect x="1656" y="9" width="6" height="1"/>
+                </g>
+                <g transform="matrix(0.5,0,0,1,832,11)">
+                    <rect x="1656" y="9" width="6" height="1"/>
+                </g>
+            </g>
+            <g transform="matrix(0.800019,0,0,1.03423,985.184,-0.48585)">
+                <path d="M832.475,10.486C832.411,10.783 832.078,11 831.689,11C831.557,11 831.417,11 831.276,11C830.632,11 830.071,11.34 829.92,11.823C828.988,14.86 829.056,17.633 829.909,20.202C830.072,20.671 830.623,20.997 831.252,20.997C831.427,21 831.603,21 831.762,21C832.118,21 832.431,21.182 832.529,21.446C832.754,22.058 833.165,23.168 833.453,23.95C833.634,24.439 833.274,24.949 832.644,25.098C832.101,25.226 831.435,25.384 830.812,25.531C829.661,25.803 828.431,25.345 827.993,24.48C826.72,21.839 826,18.878 826,15.75C826,12.782 826.648,9.964 827.81,7.43C828.203,6.608 829.316,6.131 830.428,6.308C831.009,6.394 831.627,6.493 832.14,6.575C832.776,6.676 833.195,7.148 833.088,7.642C832.902,8.503 832.627,9.781 832.475,10.486Z"/>
+            </g>
+        </g>
+    </g>
+</svg>

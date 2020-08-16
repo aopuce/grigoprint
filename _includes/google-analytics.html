@@ -1,8 +1,22 @@
-<script rel="preconnect" defer src="https://www.googletagmanager.com/gtag/js?id=UA-139665476-1"></script>
+<script rel="preconnect" defer src="https://www.googletagmanager.com/gtag/js?id=UA-139665476-1" async></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-139665476-1');
+</script>
+<script>
+	function gtag_report_conversion(url) {
+		var callback = function () {
+			if(typeof(url) != 'undefined') {
+				window.location = url;
+			}
+		};
+		gtag('event', 'conversion', {
+			'send_to': 'AW-739702460/1cVfCO7hhaYBELzt2-AC',
+			'event_callback': callback
+		});
+		return false;
+	}
 </script>

@@ -133,19 +133,19 @@ header.addEventListener("mouseout", function(e){
 
 //accordition
 let btnCollapse = document.getElementsByClassName('btn-collapse');
-
-for (i = 0; i < btnCollapse.length; i++ ) {
-	btnCollapse[i].addEventListener('click', function() {
-		this.classList.toggle('active');
-		let content = this.nextElementSibling;
-		if (content.style.maxHeight) {
-			content.style.maxHeight = null;
-		} else {
-			content.style.maxHeight = content.scrollHeight + 'px';
-		}
-	});
+if (btnCollapse[0] != undefined){
+	for (i = 0; i < btnCollapse.length; i++ ) {
+		btnCollapse[i].addEventListener('click', function() {
+			this.classList.toggle('active');
+			let content = document.getElementById(this.dataset.target);
+			if (content.style.maxHeight) {
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + 'px';
+			}
+		});
+	}
 }
-
 //Nascondo menu su schermo
 window.mobileCheck = function() {
   let check = false;

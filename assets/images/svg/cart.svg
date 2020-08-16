@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-246,0)">
+        <rect id="cart" x="246" y="0" width="32" height="32" style="fill:none;"/>
+        <g id="cart1" serif:id="cart">
+            <g transform="matrix(1.33333,0,0,1.33333,-89,-8.66667)">
+                <circle cx="268.5" cy="24.5" r="1.5"/>
+            </g>
+            <g transform="matrix(1.33333,0,0,1.33333,-99,-8.66667)">
+                <circle cx="268.5" cy="24.5" r="1.5"/>
+            </g>
+            <path d="M254,10L250,10L250,6L254,6L258,10L272.593,10C272.924,10 273.235,10.156 273.433,10.422C273.63,10.687 273.691,11.031 273.596,11.348C272.951,13.498 271.711,17.631 271.214,19.287C271.087,19.71 270.698,20 270.256,20C267.83,20 260.17,20 257.744,20C257.302,20 256.913,19.71 256.786,19.287C256.1,17.001 254,10 254,10Z"/>
+        </g>
+    </g>
+</svg>

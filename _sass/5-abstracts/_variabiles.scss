@@ -70,7 +70,7 @@ $alpha: 0.3;
 //gradient background
 $default-gradient: linear-gradient(330deg, $back-full-text, lighten($back-full-text, 4%));
 $primary-gradient: linear-gradient(330deg, $primary-color, $second-color);
-$secondary-gradient: linear-gradient(40deg, $second-color, tint(#207ca8, 25%));
+$secondary-gradient: linear-gradient(40deg, $second-color, lighten($second-color, 5%));
 $success-gradient: linear-gradient(40deg, $success, tint(#00c800, 25%));
 $allert-gradient: linear-gradient(40deg, $allert, tint(#912306, 25%));
 $warning-gradient: linear-gradient(40deg, $warning, tint(#feeb93, 25%));

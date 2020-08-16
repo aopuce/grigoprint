@@ -7,11 +7,12 @@
 .nav-list {
     position: fixed;
     z-index: 4;
-    height: calc(100vh - 200px);
-    bottom: 80px;
+    height: calc(100vh - 210px);
+    bottom: 90px;
     @extend %nav_dimension;
     // overflow-y: scroll;
     right: -110%;
+    overflow: hidden;
     @include transition;
     @include respond-to(screen-sm){
         width: 350px;
@@ -131,8 +132,11 @@
         @include box-shadow(0 0 5px $primary-color);
         @include border-radius($radius);
     }
-    .site-nav > a {
+    .site-nav > h1, .site-nav > h3 {
         padding: 5px;
+        margin: 0;
+        font-size: 100%;
+        line-height: 1;
         img {
             width: auto;
             height: 100%;
@@ -141,6 +145,18 @@
                 width: auto;
             }
         }
+        @media screen and (max-width: $screen-sm - 1px) {
+            height: 100%;
+            a {
+                display: block;
+                height: 100%;
+                img {
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+
         @include respond-to(screen-sm) {
             grid-column: 1/4;
         }
@@ -164,26 +180,29 @@
         @extend %nav_dimension;
         display: block;
         margin: 10px;
-        height: 40px;
+        // height: 40px;
         position: fixed;
         bottom: 10px;
         width: 75%;
         right: 0;
+        line-height: 0;
         @include transition;
         li {
             display: inline-block;
-            vertical-align: top;
             zoom: 1; /* Fix for IE7 */
             *display: inline; /* Fix for IE7 */;
-            width: 23.5%;
-            text-align: center;
-            .grigo-icons {
-                line-height: 40px;
+            width: 25%;
+            a {
+                display: block;
+                .grigo-icons {
+                    margin: auto;
+                    display: block;
+                }
             }
         }
         &.social-open {
             @include respond-to(screen-bet) {
-                bottom: 70px;
+                bottom: 80px;
             }
         }
         @include respond-to(screen-sm) {

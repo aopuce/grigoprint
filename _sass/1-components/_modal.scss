@@ -1,0 +1,40 @@
+.container__modal {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba($long-text, .7);
+	z-index: 999;
+	top: 0;
+	opacity: 1;
+	.container__box {
+		width: 300px;
+		@extend %center_img;
+		@include respond-to(screen-sm) {
+			width: 600px;
+		}
+	}
+	.content__warp {
+		position: relative;
+		.close__modal {
+			position: absolute;
+			top: -13px;	
+			right: -5px;
+			width: 28px;
+			height: 28px;
+			background: darken($back-full-text, 15%);
+			border-radius: 50%;
+			box-shadow: 0 3px 6px lighten($long-text, 15%);
+			outline: none;
+			g {
+				fill: $long-text;
+			}
+			&:active {
+				box-shadow: inset 0 1px 6px lighten($long-text, 15%);
+			}
+		}
+	}
+	&.close {
+		animation: remove 1s ease 2.5s forwards;
+		display: none;
+	}
+}
