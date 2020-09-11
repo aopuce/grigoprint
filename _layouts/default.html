@@ -13,15 +13,17 @@ layout: compress
         {%- include header.html -%}
         <div id="container">
         </div>
-        <main class="page-content" id="page-content" aria-label="Content">
+        {% if page.title == "Blog" %}
+          <main class="page-content blog blog__index" id="page-content" aria-label="Content" >
+        {% else %}
+          <main class="page-content" id="page-content" aria-label="Content" >          
+        {% endif %}
           {{ content }}
         </main>
         {%- include footer_2.html -%}
         {%- include static_link.html -%}
     </div>
-     {%- include js_end.html -%}
-
- 
+  {%- include js_end.html -%}
 </body>
 
 </html>

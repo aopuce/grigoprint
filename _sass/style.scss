@@ -3,8 +3,8 @@
 // =critical($critical-only: true)
 // 	@if $critical-css-only and $critical-only or not $critical-css-only and not $critical-only
 // 		@content
-@import "susy";
-@import "plugins/svg-grid";
+@import "../node_modules/susy/sass/susy";
+@import "../node_modules/susy/sass/plugins/svg-grid";
 
 @import "5-abstracts/variabiles";
 @import "5-abstracts/functions";
@@ -47,6 +47,7 @@
 @import "2-layouts/grid_index";
 @import "2-layouts/contatti";
 @import "2-layouts/prodotti";
+@import "2-layouts/blog";
 
 @import "1-components/buttons";
 @import "1-components/card";

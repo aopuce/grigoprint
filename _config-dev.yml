@@ -33,6 +33,7 @@ plugins:
   - jekyll-responsive-image
   - jekyll-sitemap
   - jekyll/minibundle
+  - jekyll-paginate
  # - jekyll-compass
 sass:
   style: compressed
@@ -220,3 +221,7 @@ cloudinary:
       sizes: "(min-width: 50rem) 17rem, 30vw"
       attributes:
         class: "lazyload"
+
+#Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"

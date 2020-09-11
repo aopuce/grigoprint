@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem 'jekyll-cloudinary'
   gem 'jekyll-sitemap'
   gem 'jekyll-minibundle'
+  gem 'jekyll-paginate'
 end
 
 

@@ -41,7 +41,13 @@
             & + span {
                 padding-left: 34px;
             }
-        }
+		}
+		p.social-links a {
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			padding: 0;
+		}
     }
     main .row-contatti {
     	margin: 0;

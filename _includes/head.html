@@ -114,9 +114,10 @@
 {% comment %}    <script src="{{site.url}}{{'/assets/javascript/lazysizes.min.js'}}" defer async></script>
 {% endcomment %}
  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    <link rel="stylesheet" href="{{site.url}}/assets/css/styles.css?v=1.7">
+    <link rel="stylesheet" href="{{site.url}}/assets/css/styles.css?v=1.8">
     {% else %}
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="http://localhost:35729/livereload.js"></script>
     {%- endif -%}
     
      

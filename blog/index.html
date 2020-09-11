@@ -1,0 +1,56 @@
+---
+layout: default
+title: Blog
+---
+<!-- This loops through the paginated posts -->
+<section class="blog_section_index">
+{% for post in paginator.posts %}
+  <article>
+    {% cloudinary thumbnail {{ post.path_image_header }} alt="{{ post.title }}"  %}
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p class="author">
+      <span class="categories">{% for cat in post.categories %}
+        {{ cat | append: " " | capitalize}}
+      {% endfor %}</span>
+      <span class="date">
+        {% assign m = post.date | date: "%-m" %}
+        {{ post.date | date: "%-d" }}
+        {% case m %}
+          {% when '1' %} Gennaio
+          {% when '2' %} Febbraio
+          {% when '3' %} Marzo
+          {% when '4' %} Aprile
+          {% when '5' %} Maggio
+          {% when '6' %} Giugno
+          {% when '7' %} Luglio
+          {% when '8' %} Agosto
+          {% when '9' %} Settembre
+          {% when '10' %} Ottobre
+          {% when '11' %} Novembre
+          {% when '12' %} Dicembre              
+        {% endcase %}
+        {{ post.date | date: "%Y" }}
+      </span>
+    </p>
+  </article>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">
+      Previous
+    </a>
+  {% else %}
+    <span class="previous"></span>
+  {% endif %}
+  <span class="page_number ">
+    Pagina: {{ paginator.page }} di {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next "></span>
+  {% endif %}
+</div>
+</section>
