@@ -25,8 +25,8 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-minibundle'
   gem 'jekyll-paginate'
+  gem 'jekyll-archives'
 end
-
 
 gem "compass"
 gem "bourbon"

@@ -2,15 +2,12 @@ body {
 	overflow-y: scroll;
 	width: 100%;
 }
-.page-content {
-	// width: 100vw;
-}
 
 .head-product {
 	@media screen and (max-width:$screen-sm) {
 		padding-bottom: 1rem;
 	}
-	
+
 
 	.main-desc {
 		padding: $padding-base $padding-base * 2;
@@ -50,7 +47,7 @@ body {
 			padding-top: 65px;
 		}
 	}
-	@include respond-to(screen-xl){	
+	@include respond-to(screen-xl){
 		// margin-bottom: -3px;
 		@media screen and (orientation: landscape) {
 			max-height: 100vh;
@@ -261,9 +258,9 @@ body {
 					color: $long-text;
 				}
 			}
-			
+
 		}
-		
+
 	}
 
 	@include respond-to(screen-md) {

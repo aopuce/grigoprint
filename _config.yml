@@ -16,7 +16,7 @@
 title: Grigoprint
 email: info@bandieregrigolini.it
 description: >- # this means to ignore newlines until "baseurl:"
-  Grigolini di Illasi, Verona, si occupa della 
+  Grigolini di Illasi, Verona, si occupa della
   stampa digitale su tessuto in poliestere, quali bandiere personalizzate, ombrelloni,
   poster, striscioni in TNT e molto altro.
 logo: /assets/images/logo.svg
@@ -34,11 +34,12 @@ plugins:
   - jekyll-sitemap
   - jekyll/minibundle
   - jekyll-paginate
+  - jekyll-archives
   #- jekyll-compass
 sass:
   style: compressed
   sass_dir: _sass
-  load_paths: 
+  load_paths:
     - "/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass"
   #  - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
 lang: it
@@ -67,7 +68,7 @@ minibundle:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-exclude: [node_modules/*.*, _kits/*.html, landing/*.html, _prodotti/canotte-personalizzate.html, _prodotti/coperture-gazebo.html, _prodotti/gazebo.html, _prodotti/roll-up.html, _prodotti/spille.html, email/*.*]
+exclude: [node_modules/*.*, _kits/*.html, landing/*.html, _prodotti/canotte-personalizzate.html, _prodotti/coperture-gazebo.html, _prodotti/gazebo.html, _prodotti/roll-up.html, _prodotti/spille.html, email/*.*, blog/*.*, 40*.html, tessuti.html, ]
 defaults:
   -
     scope:
@@ -78,13 +79,13 @@ defaults:
     scope:
       path:  "landing/*.html"
     values:
-      sitemap: false  
+      sitemap: false
   -
     scope:
       path:  "node_modules/*.*"
     values:
-      sitemap: false  
-      
+      sitemap: false
+
 collections:
   prodotti:
     output: true

@@ -445,7 +445,7 @@ function calcolaPrezzoManicheAVento() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (modello == "") {
         campiPreventivoInvalidi.push("modello");
     }
@@ -519,7 +519,7 @@ function calcolaPrezzoBeanBanner() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (misura == "") {
         campiPreventivoInvalidi.push("misura");
     }
@@ -553,7 +553,7 @@ function calcolaPrezzoBandiereBifacciali() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (misura == "") {
         campiPreventivoInvalidi.push("misura");
     }
@@ -599,7 +599,7 @@ function calcolaPrezzoGonfaloni() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (tessuto == "") {
         campiPreventivoInvalidi.push("tessuto");
     }
@@ -671,7 +671,7 @@ function calcolaPrezzoBeachFlags() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (modello == "") {
         campiPreventivoInvalidi.push("modello");
     }
@@ -785,7 +785,7 @@ function calcolaPrezzoFoulard() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (misura == "") {
         campiPreventivoInvalidi.push("misura");
     }
@@ -822,7 +822,7 @@ function calcolaPrezzoCarSolutions() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (modello == "") {
         campiPreventivoInvalidi.push("modello");
     }
@@ -917,7 +917,7 @@ function calcolaPrezzoOmbrelloniGiardino() {
     var quantita = parseInt(getInputValue("quantita"));
 
     // controllo validità input
-    var valido = true;
+    // var valido = true;
     if (modello == "") {
         campiPreventivoInvalidi.push("modello");
     }

@@ -2,7 +2,6 @@
 {% comment %} <script src="{{site.url}}{{'/assets/javascript/menu.js'}}" ></script>
   <script src="{{site.url}}{{'/assets/javascript/form_it.js'}}" ></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Montserrat:900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">{% endcomment %}
   {% minibundle js %}
       source_dir: assets/javascript
@@ -14,14 +13,12 @@
         - menu
         - lazysizes.min
   {% endminibundle %}
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Montserrat:900&display=swap" rel="stylesheet">
 {% comment %}  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 {% endcomment %}{% else %}
   <script src="{{'/assets/javascript/splide.js'}}"></script>
   <script src="{{'/assets/javascript/menu.js'}}" ></script>
   <script src="{{'/assets/javascript/form_it.js'}}" ></script>
   <script src="{{'/assets/javascript/lazysizes.min.js'}}"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Montserrat:900&display=swap" rel="stylesheet">
 {% comment %}  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 {% endcomment %}{%- endif -%}
 {% if page.layout == 'default' %}

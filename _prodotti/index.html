@@ -18,7 +18,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
                             <li class="col">
                         {% endif %}
                             {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
-                            <a href="{{ node.url }}" title="{{ node.description }}">
+                            <a href="{{site.url}}{{ node.url }}" title="{{ node.description }}">
                                 <h3>{{ node.title }}</h3>
                                 <p>{{ node.description }}</p>
                                 <p><strong>continua</strong><span class="grigo-icons products-icon">
@@ -44,7 +44,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
                             <li class="col">
                         {% endif %}
                             {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
-                            <a href="{{ node.url }}" title="{{ node.description }}">
+                            <a href="{{site.url}}{{ node.url }}" title="{{ node.description }}">
                                 <h3>{{ node.title }}</h3>
                                 <p>{{ node.description }}</p>
                                 <p><strong>continua</strong><span class="grigo-icons products-icon">
@@ -68,7 +68,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     {% comment %}<ul class="prodotti_grids">
          <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/bandiere_bifacciali/bandiera_bifacciale_completa.png alt="Bandiere Bifacciali" title="Bandiere Bifacciali" %}
-            <a href="{{ 'prodotti/bandiere-bifacciali.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/bandiere-bifacciali.html' }}">
 			<h3>Bandiere Bifacciali</h3>
                 <p>Bandiera istituzionale di ottima qualitá stampata in digitale, stampata da entrambo i lati</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -76,7 +76,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg alt="Bandiere Istituzionali" title="Bandiere Istituzionali" %}
-        	<a href="{{ 'prodotti/bandiere-istituzionali.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/bandiere-istituzionali.html' }}">
         		<h3>Bandiere Istituzionali</h3>
         		<p>Bandiera istituzionale di ottima qualitá stampata in digitale, con ottimo passaggio colore</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -84,7 +84,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
    		</li>
         <li class="col vertical-col">
         	{% cloudinary onethird /assets/images/bandiere_personalizzate/bandiera_verticale.png alt="stampa bandiere personalizzate modello verticale" %}
-        	<a href="{{ 'prodotti/bandiere-personalizzate.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/bandiere-personalizzate.html' }}">
         		<h3>Bandiere Personalizzate</h3>
         		<p>Bandiere personalizzate, ideali per aumentare la vesibilit&agrave; del proprio esercizio commerciale, robuste e ben refinite.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -92,7 +92,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/bandiere_da_tavolo/bandiere_da_tavolo_landscape.png alt="stampa bandiere da tavolo personalizzate" %}
-        	<a href="{{ 'prodotti/bandiere-tavolo.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/bandiere-tavolo.html' }}">
         		<h3>Bandiere da Tavolo</h3>
         		<p>Bandiere da tavolo realizzare in tessuto poliestere nautico, stampa passante nel retro, ideali per eventi, fiere e presentazioni o marcare punti di interesse.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -100,7 +100,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col vertical-col">
             {% cloudinary onethird /assets/images/beachflags/flying.png alt="stampa bandiere e beachflags personalizzate" %}
-            <a href="{{ 'prodotti/beachflags.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/beachflags.html' }}">
                 <h3>Beach Flags</h3>
                 <p>Beach flags con stampa digitale full color, di qualit&agrave;, robuste e durature, ideali per dare visibilit&agrave; al proprio esercizio commerciale o ad eventi.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -108,7 +108,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col">
             {% cloudinary onethird /assets/images/bean_banner/bean_banner.png alt="stampa bandiere e beachflags personalizzate" %}
-            <a href="{{ 'prodotti/bean-banner.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/bean-banner.html' }}">
                 <h3>Bean Banner</h3>
                 <p>Prodotto di qualit&agrave;, costruito in tessuto nautico, disponibile in varie misure, di facile trasporto, adatto ad eventi.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -116,7 +116,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/car_solution/poggiatesta.png alt="copri poggiatesta pubblicitario" %}
-            <a href="{{ 'prodotti/car-solutions.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/car-solutions.html' }}">
                 <h3>Car Solutions</h3>
                 <p>Copri specchietto e copri poggiatesta pubblicitari, in lycra elasticizzata, ideali per comunicare direttamente col cliente, sponsorizzare un evento</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -124,7 +124,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col">
         	{% cloudinary onethird /assets/images/foulard_pochette/foulard.png alt="foulard e pochette personalizzate" %}
-        	<a href="{{ 'prodotti/foulard-pochette.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/foulard-pochette.html' }}">
         		<h3>Foulard e Pochette</h3>
         		<p>Foulard e pochette personalizzate, stampa digitale di alta qualit&agrave;, ideali per eventi e manifestazioni.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -132,7 +132,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col">
         	{% cloudinary onethird /assets/images/gagliardetti/pentagonale.png alt="Gagliardetto modello Pentagonale" %}
-        	<a href="{{ 'prodotti/gagliardetti.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/gagliardetti.html' }}">
         		<h3>Gagliardetti</h3>
         		<p>Gagliardetti stampati in digitale disponibili in varie dimensioni e forme.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -140,7 +140,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col vertical-col">
         	{% cloudinary onethird /assets/images/gonfaloni/gonfalone.png alt="Gonfalone o labaro personalizzato" %}
-        	<a href="{{ 'prodotti/gonfaloni.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/gonfaloni.html' }}">
         		<h3>Gonfaloni</h3>
         		<p>Gonfaloni o labari sono il prodotto ideale per istituzioni o societ&agrave; sportive che vogliono dare un valore aggiunto alla propria identit&agrave; visiva.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -148,7 +148,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/maniche_a_vento/maniche_a_vento_landscape.png alt: "Manica a vento" title: "Manica a vento" class="landscape" %}
-        	<a href="{{ 'prodotti/manica-a-vento.html' |  absolute_url }}" alt="Maniche a vento personalizzate">
+        	<a href="{{site.url}}{{ 'prodotti/manica-a-vento.html' }}" alt="Maniche a vento personalizzate">
         		<h3>Maniche a Vento</h3>
         		<p>La manica a vento &eacute; un prodotto per la misurazione del vento, tessuto di qualit&agrave;, disponibile nella classica colorazione bianca e rossa o personalizzata in digitale. Varie misure disponibili.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -156,7 +156,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/ombrelli/background.png alt="Ombrelli personalizzati" %}
-        	<a href="{{ 'prodotti/ombrelli.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/ombrelli.html' }}">
         		<h3>Ombrelli</h3>
         		<p>Ombrelli personalizzati, stampati sia su singolo spicchio che all over (stampa completa su tutto l'ombrello). Disponibili in varie misure e materiali, oltre che di forma. Abbiamo infatti la possibilit&agrave; di produrre ombrelli modello poster di forma quadra.</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -164,7 +164,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/ombrelloni/back_ombrelloni.png alt="Ombrelloni personalizzati" %}
-            <a href="{{ 'prodotti/ombrelloni.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/ombrelloni.html' }}">
                 <h3>Ombrelloni</h3>
                 <p>Oltre ad essere presenti due grandi famiglie divise in ombrelloni da giardino e pubblicitari, i nostri prodotti si differenziano anche tra ombrelloni con fusto verniciato epossidico, di misura normale (raggio 90 cm, 100 cm, 120 cm) con tessuto in poliestere impermeabile e ombrelloni con il fusto in legno/alluminio di grandi dimensioni con copertura acrilica professionale.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -172,7 +172,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col vertical-col">
             {% cloudinary onethird /assets/images/poster/poster.png alt="Poster Personalizzati" %}
-            <a href="{{ 'prodotti/poster.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/poster.html' }}">
                 <h3>Poster</h3>
                 <p>l poster personalizzato ha il suo apice specie nelle vetrinistica, dove amplifica e sorregge il reale prodotto.
                 E’ il componente per visualizzazioni da parete o da soffitto per eccellenza.</p>
@@ -181,7 +181,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/striscioni/striscioni_background.png alt="Poster Personalizzati" %}
-            <a href="{{ 'prodotti/striscioni.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/striscioni.html' }}">
                 <h3>Striscioni</h3>
                 <p>Visualizzare un evento, una possibilità, una qualità, un logo si può, soprattutto con gli striscioni.Visibili, attaccabili con occhielli, sono gli indicatori per antonomasia.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -189,7 +189,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/tappeti/tappeto_asciugapasso.png alt="Tappeto Personalizzato" %}
-            <a href="{{ 'prodotti/tappeto-personalizzato.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/tappeto-personalizzato.html' }}">
                 <h3>Tappeto Personalizzato</h3>
                 <p>Tappeti personalizzati sopra in feltro di poliestere di lunga durata anti usura (non fa pallini), sotto in gomma anti scivolo perfettamente aderente al pavimento, anti ricciolo e anti inciampo. Colori molto vivi.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -197,7 +197,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
             {% cloudinary onethird /assets/images/tappeti/tappeto_sottomoto.png alt="Tappeto Sottomoto" %}
-            <a href="{{ 'prodotti/tappeto-sottomoto.html' |  absolute_url }}">
+            <a href="{{site.url}}{{ 'prodotti/tappeto-sottomoto.html' }}">
                 <h3>Tappeto Sottomoto</h3>
                 <p>Tappeti personalizzati sottomoto, realizzato in poliestere e gomma antiscivolo, stampa digitale in quadricromia di qualit&agrave;. Protegge il pavimento da perdite di olio.</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -205,7 +205,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
         </li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/3d/background_landscape.png alt="stampa bandiere in tessuto 3d" %}
-        	<a href="{{ 'prodotti/tessuto-3d.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/tessuto-3d.html' }}">
         		<h3>Tessuto 3D</h3>
         		<p>Prodotto in tessuto di poliestere che aggiunge la tridimensionalit&agrave;. Ideale per aumentare la visibilit&agrave;, prodotto originale che si pu&ograve; produrre in varie forme e su diverse strutture</p>
                 <p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>
@@ -213,7 +213,7 @@ description: Prodotti stampati su tessuto di poliestere e pvc, come bandiere, st
     	</li>
         <li class="col orizontal-col">
         	{% cloudinary onethird /assets/images/tovaglie/tovaglia.png alt="Tovaglie pubblicitarie personalizzate" %}
-        	<a href="{{ 'prodotti/tovaglie.html' |  absolute_url }}">
+        	<a href="{{site.url}}{{ 'prodotti/tovaglie.html' }}">
         		<h3>Tovaglie</h3>
         		<p>Tovaglie pubblicitarie, stapate digitale, idelai per eventi e fiere, mantengono alto il valore del brand e a alzare la visibilit&agrave;</p>
         		<p><strong>continua</strong><span class="grigo-icons grigo-arrow"></span></p>

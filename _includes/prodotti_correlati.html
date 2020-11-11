@@ -15,7 +15,7 @@
 			{% for node in site.prodotti %}
 		        {% if {{i}} == node.title %}
 		        <li class="col-correlati">
-		        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
+		        	<a href="{{site.url}}{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 		        		<div class="img-wrapper">
 		        		{% cloudinary onequater {{node.image[0].path}} alt="{{ node.title }}" %}</div>
 		        		<h5>{{node.title}}</h5>

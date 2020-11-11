@@ -44,7 +44,7 @@ input, button, submit {
         color: $long-text;
 
         // +box-shadow($shadow_buttons shade($back-full-text, 25%))
-   
+
     }
 
     &.btn-primary {
@@ -167,7 +167,7 @@ input, button, submit {
         }
     }
 
-    &.onclick { 
+    &.onclick {
         padding: .65rem .6rem;
         &:after {
             content: "";
@@ -237,7 +237,7 @@ input, button, submit {
             opacity: 0;
             width: 2rem;
             height: 2rem;
-            @include transition
+            @include transition;
             g {
                 fill: $back-full-text;
             }
@@ -250,7 +250,6 @@ input, button, submit {
             }
         }
     }
-    
 }
 
 footer .btn.btn-form {

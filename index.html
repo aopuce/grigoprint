@@ -63,15 +63,15 @@ title: Ombrellificio Grigolini di Grigolini Marcello
                 {% unless node.exclude %}
                     {% if page.url == node.url %}
                         <li>
-                            <a href="{{ node.url }}" title="{{ node.description }}">
-                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
+                            <a href="{{site.url}}{{ node.url }}" title="{{ node.description }}">
+                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}" loading="lazy" %}
                                 <h4>{{ node.title }}</h4>
                             </a>
                         </li>
                         {% else %}
                         <li>
-                            <a href="{{ node.url }}" title="{{ node.description }}">
-                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}"  %}
+                            <a href="{{site.url}}{{ node.url }}" title="{{ node.description }}">
+                                {% cloudinary thumbnail {{node.thumb | append: "@2x.jpg"}} alt="{{node.title}}" loading="lazy" %}
                                 <h4>{{ node.title }}</h4>
                             </a>
                         </li>
@@ -81,7 +81,7 @@ title: Ombrellificio Grigolini di Grigolini Marcello
         </ul>
     </section>
 <section class="section section__mission">
-    {% cloudinary halfscreen /assets/images/bandiere_bifacciali/particolare_stampa.png alt="bandiere bifacciali personalizzate partricolare stampa" class="orizontal-image index_image lazyload" %}
+    {% cloudinary halfscreen /assets/images/bandiere_bifacciali/particolare_stampa.png alt="bandiere bifacciali personalizzate partricolare stampa" class="orizontal-image index_image lazyload" loading="lazy" %}
    <article> 
         <h2>Chi siamo</h2>
         <p>Ombrellificio Grigolini nasce più di trent'anni fa per creare ombrelli robusti e d'impatto atti ad aumentare la visibilità e l'attrattività dei propri clienti.</p>

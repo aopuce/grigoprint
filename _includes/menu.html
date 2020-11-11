@@ -1,7 +1,7 @@
 <nav>
   {% comment %} tasto tutti i prodotti {% endcomment %}
   <div class="container-selector">
-    <a href="/prodotti" class="label-swich" title="Tutti i Prodotti">tutti i prodotti <span class="grigo-icons grigo-arrow"></span></a>
+    <a href="{{site.url}}/prodotti" class="label-swich" title="Tutti i Prodotti">tutti i prodotti <span class="grigo-icons grigo-arrow"></span></a>
   </div>
   {% comment %}
    <div class="container-selector" id="select">
@@ -37,7 +37,7 @@
           <li><a class="page-link active" title="{{ node.description | truncate 50 }}" href="{% if jekyll.environment == 'production' %}
             {{site.url}}{{ node.url }}
             {% else %}
-            {{ node.url }}
+            {{site.url}}{{ node.url }}
           {% endif %} ">
           {{ node.title }}
           </a>
@@ -46,7 +46,7 @@
          <li><a href="{% if jekyll.environment == 'production' %}
             {{site.url}}{{ node.url }}
             {% else %}
-            {{ node.url }}
+            {{site.url}}{{ node.url }}
           {% endif %} " title="{{ node.description | truncate 50 }}">{{node.title}}</a></li>
         {% endif %}
       {% endunless %}
