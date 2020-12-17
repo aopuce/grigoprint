@@ -4,68 +4,123 @@ title: Frame in tessuto
 exclude: false
 description: Cornici personalizzate in tessuto, frame in alluminio e keder per facilitare l'installazione. Stampate ad altissima qualit&agrave;, ideali per allestimenti, quadri o vetrine, facili da installare. Disponibili in varie misure e profondit&agrave;
 ideale: [esterno, interno, negozi, fiere]
-correlati: [Bandiere Bifacciali, Bandiere Personalizzate, Poster, Tovaglie Pubblicitarie, Tappeto Personalizzato]
+correlati:
+  [
+    Bandiere Bifacciali,
+    Bandiere Personalizzate,
+    Poster,
+    Tovaglie Pubblicitarie,
+    Tappeto Personalizzato
+  ]
 image:
-    - path: /assets/images/frame_tessuto/frame_tessuto.png
-      class: ""
-      alt: cornici in alluminio con stampa personalizzata
-      config: jumbotron
-forza: [Misure Personalizzabili, Disponibile Retroilluminato, Stampa Inodore, Stampa Digitale ad Alta Risoluzione, Disponibile Servizio di Cucitura]
+  - path: /assets/images/frame_tessuto/frame_tessuto.png
+    class: ''
+    alt: cornici in alluminio con stampa personalizzata
+    config: jumbotron
+forza:
+  [
+    Misure Personalizzabili,
+    Disponibile Retroilluminato,
+    Stampa Inodore,
+    Stampa Digitale ad Alta Risoluzione,
+    Disponibile Servizio di Cucitura
+  ]
 preventivo: true
 thumb: /assets/images/thumb/frame_thumb
 numberp: 20
 ---
+
 <h2 class="middle-title">Scheda Tecnica {{ page.title }}</h2>
 
 <ul class="scheda-tecnica card card__primary">
-    <li>
-        Misure Personalizzabili
-        <p>La stampa digitale su grande formato da 3m di luce riesce a soddisfare anche le dimensioni pi&ugrave; esigenti. Grazie alla nostra formula per il calcolo delle misure del tessuto rispetto al cassonetto del cliente, riusciamo a realizzare frame tessili personalizzati su misura ed essere sicuri che quando il cliente li monta risultano tesi e senza pieghe.</p>
-    </li>
-    <li>
-        Disponibile Retroilluminato
-        <p>Tessuto e stampa sono ricercati per ottimizzare la resa sia per i cassonetti non retroilluminati che quelli retroilluminati. Una doppia passata di colore sulla tipologia frame-backlight garantisce un ottima coprenza dei neri e un risalto dei colori chiari.</p>
-    </li>
-    <li>
-        Stampa Inodore
-        <p>Per stampare i frame in tessuto utilizziamo la tecnologia UV-fredda, grazie alla quale la stampa risulta pressoch&eacute; inodore e adatta ad ambienti interni
-</p>
-    </li>
-    <li>
-        Stampa Digitale ad Alta Risoluzione
-        <p>Plotter digitali di ultima generazione garantiscono una stesura perfetta del colore e una definizione eccellente. Da lontano o da vicino le cornici in tessuto risulteranno e risalteranno bene all’occhio di chi guarda.</p>
-    </li>
-    <li>
-        Disponibile Servizio Cucitura
-        <p>Disponibile anche il servizio di sola cucitura del gommino in silicone sul perimetro. Su teli forniti da voi gia tagliati a misura.</p>
-    </li>
+  <li>
+    Misure Personalizzabili
+    <p>
+      La stampa digitale su grande formato da 3m di luce riesce a soddisfare
+      anche le dimensioni pi&ugrave; esigenti. Grazie alla nostra formula per il
+      calcolo delle misure del tessuto rispetto al cassonetto del cliente,
+      riusciamo a realizzare frame tessili personalizzati su misura ed essere
+      sicuri che quando il cliente li monta risultano tesi e senza pieghe.
+    </p>
+  </li>
+  <li>
+    Disponibile Retroilluminato
+    <p>
+      Tessuto e stampa sono ricercati per ottimizzare la resa sia per i
+      cassonetti non retroilluminati che quelli retroilluminati. Una doppia
+      passata di colore sulla tipologia frame-backlight garantisce un ottima
+      coprenza dei neri e un risalto dei colori chiari.
+    </p>
+  </li>
+  <li>
+    Stampa Inodore
+    <p>
+      Per stampare i frame in tessuto utilizziamo la tecnologia UV-fredda,
+      grazie alla quale la stampa risulta pressoch&eacute; inodore e adatta ad
+      ambienti interni
+    </p>
+  </li>
+  <li>
+    Stampa Digitale ad Alta Risoluzione
+    <p>
+      Plotter digitali di ultima generazione garantiscono una stesura perfetta
+      del colore e una definizione eccellente. Da lontano o da vicino le cornici
+      in tessuto risulteranno e risalteranno bene all’occhio di chi guarda.
+    </p>
+  </li>
+  <li>
+    Disponibile Servizio Cucitura
+    <p>
+      Disponibile anche il servizio di sola cucitura del gommino in silicone sul
+      perimetro. Su teli forniti da voi gia tagliati a misura.
+    </p>
+  </li>
 </ul>
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/frame_tessuto/esploso.png alt="espolso cornici in alluminio" class="obj_contain" %}
-            </li>
-            <li class="splide__slide">
-				{% cloudinary halfscreen /assets/images/frame_tessuto/particolare_linguetta.png alt="particolare linguetta del frame in tessuto" %}
-            </li>
-            <li class="splide__slide">
-            	{% cloudinary halfscreen /assets/images/frame_tessuto/frame.png alt="particolare linguetta del frame in tessuto" %}
-            </li>
-
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/frame_tessuto/esploso.png
+      alt="espolso cornici in alluminio" class="obj_contain" %}
     </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen
+      /assets/images/frame_tessuto/particolare_linguetta.png alt="particolare
+      linguetta del frame in tessuto" %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/frame_tessuto/frame.png
+      alt="particolare linguetta del frame in tessuto" %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 
 <h3 class="middle-title">descrizione</h3>
-<p>La cornice tessile ha come caratteristica il tessuto che &egrave; tirato come un tamburo. La fettuccia siliconica perimetrale cucita attorno al tessuto, infilata nella cornice di alluminio, ne tende ogni piega e il risultato &egrave; di assoluta perfezione.</p>
-<p>La cornice in alluminio viene fissata al muro con fisher, collanti o biadesivi dove non si voglia bucare. Il tessuto &egrave; facilissimo cambiarlo. Il frame in alluminio &egrave; sempre montato ad accogliere i nuovi tessuti stampati. Veramente il valore achitettonico e visivo del frame tessile &egrave; completo.</p>
-<p>Chiude la quadratura del cerchio. Ogni architetto la consiglia. La cornice in alluminio &egrave; appena visibile, poi &egrave; tutto tessuto. Un'apoteosi tessile. Facile da spedire, vista la smontabilit&agrave; della cornice che viene rimontata per mezzo di angoli a squadrette che permettono con una brugola il rimontaggio facile della cornice.</p>
+<p>
+  La cornice tessile ha come caratteristica il tessuto che &egrave; tirato come
+  un tamburo. La fettuccia siliconica perimetrale cucita attorno al tessuto,
+  infilata nella cornice di alluminio, ne tende ogni piega e il risultato
+  &egrave; di assoluta perfezione.
+</p>
+<p>
+  La cornice in alluminio viene fissata al muro con fisher, collanti o biadesivi
+  dove non si voglia bucare. Il tessuto &egrave; facilissimo cambiarlo. Il frame
+  in alluminio &egrave; sempre montato ad accogliere i nuovi tessuti stampati.
+  Veramente il valore achitettonico e visivo del frame tessile &egrave;
+  completo.
+</p>
+<p>
+  Chiude la quadratura del cerchio. Ogni architetto la consiglia. La cornice in
+  alluminio &egrave; appena visibile, poi &egrave; tutto tessuto. Un'apoteosi
+  tessile. Facile da spedire, vista la smontabilit&agrave; della cornice che
+  viene rimontata per mezzo di angoli a squadrette che permettono con una
+  brugola il rimontaggio facile della cornice.
+</p>

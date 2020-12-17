@@ -4,53 +4,69 @@ title: Striscioni
 exclude: false
 description: Striscioni stampati in digitale full color, realizzati in tessuto TNT, nautico o ducato, tutti in poliestere, oppure in PVC, disponibili in varie altezze, la lunghezza la decidi tu. Finiture a richiesta in base alle vostre esigenze.
 ideale: [eventi sportivi, fiere, innaugurazioni]
-correlati: [Bandiere Personalizzate, Bandiere Istituzionali, Beach Flags, Maniche a Vento, Tovaglie Pubblicitarie]
-image: 
-    - path: /assets/images/striscioni/striscioni_background.png 
-      class: ""
-      alt: striscioni personalizzati in tessuto di poliestere o pvc
-      config: jumbotron
-forza: [Disponibile in Vari Tessuti, Finiture ad Esigenza, Stampa di Alta Qualt&agrave;]
+correlati:
+  [
+    Bandiere Personalizzate,
+    Bandiere Istituzionali,
+    Beach Flags,
+    Maniche a Vento,
+    Tovaglie Pubblicitarie
+  ]
+image:
+  - path: /assets/images/striscioni/striscioni_background.png
+    class: ''
+    alt: striscioni personalizzati in tessuto di poliestere o pvc
+    config: jumbotron
+forza:
+  [
+    Disponibile in Vari Tessuti,
+    Finiture ad Esigenza,
+    Stampa di Alta Qualt&agrave;
+  ]
 preventivo: false
 thumb: /assets/images/thumb/striscioni_thumb
----    
+---
+
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                 {% cloudinary halfscreen /assets/images/striscioni/particolare_striscione.png alt="striscione personalizzato in pvc particolare finitura anello e saldatura" id="part_striscione"%}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% cloudinary halfscreen
+      /assets/images/striscioni/particolare_striscione.png alt="striscione
+      personalizzato in pvc particolare finitura anello e saldatura"
+      id="part_striscione"%}
     </div>
+  </div>
 </div>
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h2 class="middle-title">descrizione {{ page.title }}</h2>
 <p>
-Visualizzare un evento, una possibilità, una qualità, un logo si può, soprattutto con gli striscioni.Visibili, attaccabili con occhielli, sono gli indicatori per antonomasia.</p>
+  Visualizzare un evento, una possibilità, una qualità, un logo si può,
+  soprattutto con gli striscioni.Visibili, attaccabili con occhielli, sono gli
+  indicatori per antonomasia.
+</p>
 <p>Nella nostra tipologia di produzione, abbiamo due famiglie di striscioni:</p>
 <ol class="list-grids">
-    <li>Striscioni in poliestere, moderni e leggeri, di cui fanno parte:
-        <ul class="list-square">
-            <li>Striscioni in nautico poliestere 110 g.</li>
-            <li>Striscioni in ducato poliestere 200 g.</li>
-            <li>Striscioni in canvas super robusto 250 g.</li>
-        </ul>
-    </li>
-    <li>Striscioni in PVC:
-        <ul class="list-square">
-            <li>PCV 600 g</li>
-            <li>Block out bifacciale</li>
-            <li>PVC Micorforato.</li>
-        </ul>
-    </li>
+  <li>
+    Striscioni in poliestere, moderni e leggeri, di cui fanno parte:
+    <ul class="list-square">
+      <li>Striscioni in nautico poliestere 110 g.</li>
+      <li>Striscioni in ducato poliestere 200 g.</li>
+      <li>Striscioni in canvas super robusto 250 g.</li>
+    </ul>
+  </li>
+  <li>
+    Striscioni in PVC:
+    <ul class="list-square">
+      <li>PCV 600 g</li>
+      <li>Block out bifacciale</li>
+      <li>PVC Micorforato.</li>
+    </ul>
+  </li>
 </ol>
 
-
- 

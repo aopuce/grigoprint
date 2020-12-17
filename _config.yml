@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   stampa digitale su tessuto in poliestere, quali bandiere personalizzate, ombrelloni,
   poster, striscioni in TNT e molto altro.
 logo: /assets/images/logo.svg
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.grigoprint.it" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://www.grigoprint.it/test' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: grigoprint
 # github_username:  jekyll
 google_analytics: UA-139665476-1
@@ -40,14 +40,33 @@ sass:
   style: compressed
   sass_dir: _sass
   load_paths:
-    - "/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass"
+    - '/home/puce/Documents/grigoweb/grigoprint/node_modules/susy/sass'
   #  - "/home/puce/.rvm/gems/ruby-2.5.1/gems/compass-core-1.0.3/stylesheets/"
 lang: it
 compress_html:
   clippings: all
-  comments: ["<!--", "-->"]
+  comments: ['<!--', '-->']
   startings: [html, body]
-  endings: [html, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  endings:
+    [
+      html,
+      body,
+      li,
+      dt,
+      dd,
+      rt,
+      rp,
+      optgroup,
+      option,
+      colgroup,
+      caption,
+      thead,
+      tbody,
+      tfoot,
+      tr,
+      td,
+      th
+    ]
   profile: false
   blanklines: false
   ignore:
@@ -68,21 +87,32 @@ minibundle:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-exclude: [node_modules/*.*, _kits/*.html, landing/*.html, _prodotti/canotte-personalizzate.html, _prodotti/coperture-gazebo.html, _prodotti/gazebo.html, _prodotti/roll-up.html, _prodotti/spille.html, email/*.*, blog/*.*, 40*.html, tessuti.html, ]
+exclude:
+  [
+    node_modules/*.*,
+    _kits/*.html,
+    landing/*.html,
+    _prodotti/canotte-personalizzate.html,
+    _prodotti/coperture-gazebo.html,
+    _prodotti/gazebo.html,
+    _prodotti/roll-up.html,
+    _prodotti/spille.html,
+    email/*.*,
+    blog/*.*,
+    40*.html,
+    tessuti.html
+  ]
 defaults:
-  -
-    scope:
-      path:  "_kits/*.html"
+  - scope:
+      path: '_kits/*.html'
     values:
       sitemap: false
-  -
-    scope:
-      path:  "landing/*.html"
+  - scope:
+      path: 'landing/*.html'
     values:
       sitemap: false
-  -
-    scope:
-      path:  "node_modules/*.*"
+  - scope:
+      path: 'node_modules/*.*'
     values:
       sitemap: false
 
@@ -105,7 +135,7 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
-    - width: 480  # [Required] How wide the resized image will be.
+    - width: 480 # [Required] How wide the resized image will be.
       quality: 80 # [Optional] Overrides default_quality for this size.
     - width: 800
     - width: 1400
@@ -169,49 +199,50 @@ cloudinary:
       max_width: 1600
       fallback_max_width: 800
       steps: 5
-      sizes: "(min-width: 50rem) 50rem, 90vw"
+      sizes: '(min-width: 50rem) 50rem, 90vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
     jumbotron:
       min_width: 320
       max_width: 2500
       fallback_max_width: 1200
       steps: 5
-      sizes: "(min-width: 320px) 100vw"
+      sizes: '(min-width: 320px) 100vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
     halfscreen:
       min_width: 320
       max_width: 1200
       fallback_max_width: 1000
       steps: 5
-      sizes: "(min-width: 320px) 100vw, (min-width: 992px) 50vw"
+      sizes: '(min-width: 320px) 100vw, (min-width: 992px) 50vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
     onethird:
       min_width: 250
       max_width: 535
       fallback_max_width: 300
       steps: 5
-      sizes: "(min-width: 50rem) 17rem, 30vw"
+      sizes: '(min-width: 50rem) 17rem, 30vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
     onequater:
       min_width: 250
       max_width: 600
       fallback_max_width: 300
       steps: 5
-      sizes: "(min-width: 50rem) 50rem, 50vw"
+      sizes: '(min-width: 50rem) 50rem, 50vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
     thumbnail:
       min_width: 135
       max_width: 400
       fallback_max_width: 300
       steps: 3
-      sizes: "(min-width: 320px) 40vw, (min-width: 768px) 25vw"
+      sizes: '(min-width: 320px) 40vw, (min-width: 768px) 25vw'
       attributes:
-        class: "lazyload"
+        class: 'lazyload'
 #Pagination
 paginate: 5
-paginate_path: "/blog/page:num/"
+paginate_path: '/blog/page:num/'
+

@@ -5,82 +5,136 @@ exclude: false
 description: Ombrelli personalizzati, stampati sia su singolo spicchio che all over (stampa completa su tutto l'ombrello). Disponibili in varie misure e materiali, oltre che di forma. Abbiamo infatti la possibilit&agrave; di produrre ombrelli modello poster di forma quadra.
 ideale: [segnalazione, pubblicit&agrave;, gadget]
 correlati: [Frame in Tessuto, Poster, Striscioni]
-image: 
-    - path: /assets/images/ombrelli/background.png 
-      class: ""
-      alt: Ombrelli personalizzati
-      config: jumbotron
-forza: [Disponibili in Varie Misure, Personalizzazione ad Esigenza, Stampa in Quadricromia, Stampa su Tutta la Calotta]
+image:
+  - path: /assets/images/ombrelli/background.png
+    class: ''
+    alt: Ombrelli personalizzati
+    config: jumbotron
+forza:
+  [
+    Disponibili in Varie Misure,
+    Personalizzazione ad Esigenza,
+    Stampa in Quadricromia,
+    Stampa su Tutta la Calotta
+  ]
 preventivo: false
 thumb: /assets/images/thumb/ombrelli_thumb
 ---
+
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container" id="splide">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_fronte.png alt="Ombrelli personalizzati modello UK fronte" class="orizontal-image" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_interno.png alt="Ombrelli personalizzati modello UK interno" class="orizontal-image" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/ombrelli/ombrello_personalizzato.png alt="Ombrelli personalizzati modello UK" class="orizontal-image" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/ombrelli/ombrello_poster_fronte_1.png alt="Ombrelli personalizzati modello poster" class="orizontal-image" %} %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/ombrelli/ombrello_poster_interno_1.png alt="Ombrelli personalizzati modello poster" class="orizontal-image" %} %}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_fronte.png
+      alt="Ombrelli personalizzati modello UK fronte" class="orizontal-image" %}
     </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_interno.png
+      alt="Ombrelli personalizzati modello UK interno" class="orizontal-image"
+      %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen
+      /assets/images/ombrelli/ombrello_personalizzato.png alt="Ombrelli
+      personalizzati modello UK" class="orizontal-image" %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen
+      /assets/images/ombrelli/ombrello_poster_fronte_1.png alt="Ombrelli
+      personalizzati modello poster" class="orizontal-image" %} %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen
+      /assets/images/ombrelli/ombrello_poster_interno_1.png alt="Ombrelli
+      personalizzati modello poster" class="orizontal-image" %} %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 
 <h2 class="middle-title">descrizione {{ page.title }}</h2>
-<p>Realizziamo ombrelli personalizzati di varie misure e qualit&agrave;, siamo specializzati in ombrelli sia stampati allover, cioè con stampa che ricopre l'intera calotta dell'ombrello, sia in ombrelli con stampa personalizata su spicchio</p>
-<p>Grazie alla variet&agrave; di prodotti riusciamo a servire ogni necessit&agrave; pubblicitaria. Realizziamo ombrelli di vari tipi e misure</p>
-<p>L'ombrello poster è un ombrello pubblicitario a formato unico. Misura 108x108. Un bel quadrato di
-    tessuto termoformato. Non avendo cuciture, la sua stampabilità è immensa e, di conseguenza, la sua visibilità.</p>
-<p>Viene utilizzato nelle corse ed in tutti quei contesti in cui ci si distingue, si spunta, ci si fa ammirare.
-    Sposato con foto o complicate grafiche non divorzia, è fedele e la sua durata è testimoniata dalla scheda
-    tecnica che ha il suo bel pedigree:</p>
+<p>
+  Realizziamo ombrelli personalizzati di varie misure e qualit&agrave;, siamo
+  specializzati in ombrelli sia stampati allover, cioè con stampa che ricopre
+  l'intera calotta dell'ombrello, sia in ombrelli con stampa personalizata su
+  spicchio
+</p>
+<p>
+  Grazie alla variet&agrave; di prodotti riusciamo a servire ogni
+  necessit&agrave; pubblicitaria. Realizziamo ombrelli di vari tipi e misure
+</p>
+<p>
+  L'ombrello poster è un ombrello pubblicitario a formato unico. Misura 108x108.
+  Un bel quadrato di tessuto termoformato. Non avendo cuciture, la sua
+  stampabilità è immensa e, di conseguenza, la sua visibilità.
+</p>
+<p>
+  Viene utilizzato nelle corse ed in tutti quei contesti in cui ci si distingue,
+  si spunta, ci si fa ammirare. Sposato con foto o complicate grafiche non
+  divorzia, è fedele e la sua durata è testimoniata dalla scheda tecnica che ha
+  il suo bel pedigree:
+</p>
 <ul class="list-grids">
-    <li>108x108 cm.</li>
-    <li>Fusto in acciaio cromato.</li>
-    <li>diametro palo centrale 14 mm.</li>
-    <li>Bacchette in acciaio al carbonio verniciato nero.</li>
-    <li>Manico dritto o curvo in legno.</li>
-    <li>Puntine nichelate alla estremit&agrave; delle bacchette</li>
-    <li>lacetto con velcro o bottone.</li>
-</ul>      
- <h3 class="middle-title">ombrello all over</h3>
-<div class="splide gallery-container" id="splide1">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">{% cloudinary halfscreen /assets/images/ombrelli/monet_covoni.png alt="Ombrelli personalizzati modello all over Mod. Covoni" id="selected" %}</li>
-            <li class="splide__slide">{% cloudinary halfscreen /assets/images/ombrelli/particolare_cucitura.jpg alt="Ombrelli personalizzati modello all over Particolare cucitura" %}</li>
-            <li class="splide__slide">{% cloudinary halfscreen /assets/images/ombrelli/turner_roma.png alt="Ombrelli personalizzati modello all over Mod. Roma" %}</li>
-            <li class="splide__slide">{% cloudinary halfscreen /assets/images/ombrelli/turner_venezia.png alt="Ombrelli personalizzati modello all over Mod. Venezia" %}</li>
-        </ul>
+  <li>108x108 cm.</li>
+  <li>Fusto in acciaio cromato.</li>
+  <li>diametro palo centrale 14 mm.</li>
+  <li>Bacchette in acciaio al carbonio verniciato nero.</li>
+  <li>Manico dritto o curvo in legno.</li>
+  <li>Puntine nichelate alla estremit&agrave; delle bacchette</li>
+  <li>lacetto con velcro o bottone.</li>
+</ul>
+<h3 class="middle-title">ombrello all over</h3>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/monet_covoni.png
+      alt="Ombrelli personalizzati modello all over Mod. Covoni" id="selected"
+      %}
     </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/particolare_cucitura.jpg
+      alt="Ombrelli personalizzati modello all over Particolare cucitura" %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/turner_roma.png
+      alt="Ombrelli personalizzati modello all over Mod. Roma" %}
+    </div>
+    <div class="swiper-slide">
+      {% cloudinary halfscreen /assets/images/ombrelli/turner_venezia.png
+      alt="Ombrelli personalizzati modello all over Mod. Venezia" %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 
-        
-        {% comment %}{% cloudinary halfscreen /assets/images/ombrelli/ombrello_all_over.png alt="Ombrelli personalizzati modello all over" class="orizontal-image" %}{% endcomment %}
-        
+{% comment %}{% cloudinary halfscreen
+/assets/images/ombrelli/ombrello_all_over.png alt="Ombrelli personalizzati
+modello all over" class="orizontal-image" %}{% endcomment %}
 
-<p>L'ombrello "all over" vuol dire tutto stampato e per incontrare le stampe ben fatte nelle cuciture degli spicchi, sull'ombrello rotondo, ci vuole la nostra tecnologia che diventa artigianato di classe.</p>
-<p>Eh si, con noi l'ombrello all over &egrave; aristrocratico e solo chi &egrave; capace di sacrificio pu&ograve; accedere a questo mondo.</p>
-<p>Non &egrave; certamente per tutti.
- Poliestere cinzato impermeabile, stampa a sublimazione ad alta definizione, taglio antisfilo e cucitura tagliacuci con ago sottile.
+<p>
+  L'ombrello "all over" vuol dire tutto stampato e per incontrare le stampe ben
+  fatte nelle cuciture degli spicchi, sull'ombrello rotondo, ci vuole la nostra
+  tecnologia che diventa artigianato di classe.
 </p>
-<p>Puntine in nichel, punto interno e alle alle puntine con filo rinforzato, placca e manico o dritto o curvo. Eh si la classe &egrave; classe!
+<p>
+  Eh si, con noi l'ombrello all over &egrave; aristrocratico e solo chi &egrave;
+  capace di sacrificio pu&ograve; accedere a questo mondo.
 </p>
+<p>
+  Non &egrave; certamente per tutti. Poliestere cinzato impermeabile, stampa a
+  sublimazione ad alta definizione, taglio antisfilo e cucitura tagliacuci con
+  ago sottile.
+</p>
+<p>
+  Puntine in nichel, punto interno e alle alle puntine con filo rinforzato,
+  placca e manico o dritto o curvo. Eh si la classe &egrave; classe!
+</p>
+

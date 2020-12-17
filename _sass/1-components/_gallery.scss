@@ -9,11 +9,9 @@ ul.scroll-gallery {
 	}
 }
 
-.gallery-container {
-	width: 100%;
-	.splide__slide {
-		max-height: 60vh;
-	}
+.gallery-container.swiper-container {
+	max-height: 60vh;
+  width: 100%;
 	img {
 		width: 100%;
 		height: 100%;
@@ -25,4 +23,8 @@ ul.scroll-gallery {
 	@include respond-to(screen-md) {
 		grid-column: 2 / -2;
 	}
+  .swiper-button-next, .swiper-button-prev {
+    color: $second-color;
+  }
 }
+

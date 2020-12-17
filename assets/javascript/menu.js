@@ -13,7 +13,8 @@ const navContainer = document.getElementById('nav-commander')
 const header = document.getElementById('header')
 // const docscroll = 0
 // const container_gray = document.getElementById('container')
-const socialContainer = document.getElementById('social-trigger-container').classList
+const socialContainer = document.getElementById('social-trigger-container')
+  .classList
 const socialButton = document.getElementById('st-trigger-social')
 const iconSocial = document.getElementById('icon-social').classList
 // inputSelected = document.getElementsByClassName('prezzo_select');
@@ -91,7 +92,7 @@ window.onscroll = function () {
   } else if (header.classList.contains('header_hover')) {
     header.classList.remove('header_hover')
   }
-  if (!(dest.contains('opened'))) {
+  if (!dest.contains('opened')) {
     if (prevScrollPos > currentScrollPos) {
       if (header.classList.contains('header_scroll')) {
         header.classList.remove('header_scroll')
@@ -107,19 +108,27 @@ const reset = () => {
   header.classList.remove('header_hover')
 }
 
-if (window.pageYOffset < 50 && header.classList.contains('header_hover') && !(dest.contains('opened'))) {
+if (
+  window.pageYOffset < 50 &&
+  header.classList.contains('header_hover') &&
+  !dest.contains('opened')
+) {
   reset()
 }
 
 header.addEventListener('mouseover', function (e) {
-  if (!(header.classList.contains('header_hover')) || !(dest.contains('opened'))) {
+  if (!header.classList.contains('header_hover') || !dest.contains('opened')) {
     this.classList.add('header_hover')
   }
   e.preventDefault()
 })
 
 header.addEventListener('mouseout', function (e) {
-  if ((header.classList.contains('header_hover') && document.documentElement.scrollTop <= 50) || dest.contains('opened')) {
+  if (
+    (header.classList.contains('header_hover') &&
+      document.documentElement.scrollTop <= 50) ||
+    dest.contains('opened')
+  ) {
     this.classList.remove('header_hover')
   }
   e.preventDefault()

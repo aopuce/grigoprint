@@ -6,58 +6,87 @@ description: Tovaglie pubblicitarie, stampate in digitale, ideali per eventi e f
 ideale: [fiere, eventi, pubblicit&agrave;]
 correlati: [Bandiere Bifacciali, Bandiere da Tavolo, Gonfaloni, Gagliardetti]
 image:
-    - path: /assets/images/tovaglie/tovaglia.png
-      class: ""
-      alt: Tovaglia promozionale Personalizzata
-      config: jumbotron
+  - path: /assets/images/tovaglie/tovaglia.png
+    class: ''
+    alt: Tovaglia promozionale Personalizzata
+    config: jumbotron
 forza: [Tessuto Resistente, Stampa Sublimatica, Su Misura]
 preventivo: true
 price: 20,70 € mq.
 thumb: /assets/images/thumb/tovaglie_thumb
 numberp: 21
 ---
+
 <h2 class="middle-title">Scheda Tecnica {{ page.title }}</h2>
 
 <ul class="scheda-tecnica card card__primary">
-    <li>
-        Tessuto Resistente
-        <p>Il tessuto ducato 200g in puro poliestere, utilizzato nella produzione delle tovaglie stampate, è molto resistente. Morbido al tatto e inodore. Si può lavare in lavatrice e stirare.</p>
-    </li>
-    <li>
-        Stampa Sublimatica
-        <p>La <strong>stampa digitale</strong> sulle tovaglie personalizzate viene effettuata con tecnologia <strong>sublimatica</strong>, è completamente impalpabile, entra nel tessuto e lascia intatte le sue caratteristiche di morbidezza e peso. I colori vengono fissati al tessuto a 200° e acquistano la loro <strong>brillantezza</strong> e <strong>resistenza</strong>, anche ai lavaggi. Attenzione alla stiratura in quanto se fatta ad alta temperatura la danneggia.</p>
-    </li>
-    <li>
-        Su Misura
-        <p>La tovaglia personalizzata viene realizzata su misura in base alle vostre richieste.
-        La dimensione finale della tovaglia dipende dalla dimensione del tavolo e dalla lunghezza della parte pendente.
-        La parte pendente dal tavolo può avere varie configurazioni e in base a quella scelta cambia la disposizione della grafica e il consumo di tessuto.
-        </p>
-    </li>
+  <li>
+    Tessuto Resistente
+    <p>
+      Il tessuto ducato 200g in puro poliestere, utilizzato nella produzione
+      delle tovaglie stampate, è molto resistente. Morbido al tatto e inodore.
+      Si può lavare in lavatrice e stirare.
+    </p>
+  </li>
+  <li>
+    Stampa Sublimatica
+    <p>
+      La <strong>stampa digitale</strong> sulle tovaglie personalizzate viene
+      effettuata con tecnologia <strong>sublimatica</strong>, è completamente
+      impalpabile, entra nel tessuto e lascia intatte le sue caratteristiche di
+      morbidezza e peso. I colori vengono fissati al tessuto a 200° e acquistano
+      la loro <strong>brillantezza</strong> e <strong>resistenza</strong>, anche
+      ai lavaggi. Attenzione alla stiratura in quanto se fatta ad alta
+      temperatura la danneggia.
+    </p>
+  </li>
+  <li>
+    Su Misura
+    <p>
+      La tovaglia personalizzata viene realizzata su misura in base alle vostre
+      richieste. La dimensione finale della tovaglia dipende dalla dimensione
+      del tavolo e dalla lunghezza della parte pendente. La parte pendente dal
+      tavolo può avere varie configurazioni e in base a quella scelta cambia la
+      disposizione della grafica e il consumo di tessuto.
+    </p>
+  </li>
 </ul>
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary jumbotron /assets/images/tovaglie/particolare_cucitura.png alt="Tovaglia promozionale Personalizzata particolare cucitura" title="Tovaglia promozionale Personalizzata particolare cucitura" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary jumbotron /assets/images/tovaglie/tovaglia.png alt="Tovaglia promozionale Personalizzata particolare cucitura" title="Tovaglia promozionale Personalizzata particolare cucitura" %}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% cloudinary jumbotron /assets/images/tovaglie/particolare_cucitura.png
+      alt="Tovaglia promozionale Personalizzata particolare cucitura"
+      title="Tovaglia promozionale Personalizzata particolare cucitura" %}
     </div>
+    <div class="swiper-slide">
+      {% cloudinary jumbotron /assets/images/tovaglie/tovaglia.png alt="Tovaglia
+      promozionale Personalizzata particolare cucitura" title="Tovaglia
+      promozionale Personalizzata particolare cucitura" %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h3 class="middle-title">descrizione</h3>
-<p>La tavola si riempiva, sopra la preziosa tovaglia, di ogni ben di Dio.
-    Apparecchia apparecchia... cos&igrave;, la favola, che molti non sanno, &egrave; che, forse, venivano proprio da qui le favolose tovaglie.</p>
-<p>Decorabili in ogni modo, in qualsiasi dimensione, rende la merce esposta desiderabile. Lo stile ne trasuda.
-    Robuste, lavabili in lavatrice, colori solidi.</p>
-<p>Eseguita in tessuto Ducato, in poliestere 100%, stampata e trasferita, orlata bene affinchè tutti i tovagliofili si sentono compresi nella loro esigenza estetica.</p>
+<p>
+  La tavola si riempiva, sopra la preziosa tovaglia, di ogni ben di Dio.
+  Apparecchia apparecchia... cos&igrave;, la favola, che molti non sanno,
+  &egrave; che, forse, venivano proprio da qui le favolose tovaglie.
+</p>
+<p>
+  Decorabili in ogni modo, in qualsiasi dimensione, rende la merce esposta
+  desiderabile. Lo stile ne trasuda. Robuste, lavabili in lavatrice, colori
+  solidi.
+</p>
+<p>
+  Eseguita in tessuto Ducato, in poliestere 100%, stampata e trasferita, orlata
+  bene affinchè tutti i tovagliofili si sentono compresi nella loro esigenza
+  estetica.
+</p>

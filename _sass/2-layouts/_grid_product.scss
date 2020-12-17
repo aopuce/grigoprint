@@ -26,6 +26,10 @@ body {
 			font-weight: bold;
 			li {
 				@include interpolate(padding-bottom, 20rem, 70rem, .5rem, 1.2rem);
+        
+       @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+          padding-bottom: 0;
+        }
 			}
 		}
 	}
