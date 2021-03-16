@@ -7,7 +7,7 @@ ideale: [bar, ristoranti, esterno, giardino]
 correlati:
   [Tappeto Personalizzato, Ombrelloni Personalizzati, Ombrelli Personalizzati]
 image:
-  - path: /assets/images/ombrelloni/ombrellone_a_braccio_aperto.png
+  - path:  /ombrelloni_giardino/ombrelloni_header.png
     class: ''
     alt: Ombrelloni da giardino, disponibili in diverse misure e modelli.
     config: jumbotron
@@ -21,7 +21,8 @@ forza:
   ]
 preventivo: true
 price: 300 € cad.
-thumb: /assets/images/thumb/ombrelloni_da_giardino_thumb
+thumb:  /thumb/ombrellone_thumb.png
+interesse:  /interesse/ombrellone_interesse.png
 numberp: 40
 ---
 
@@ -50,14 +51,14 @@ numberp: 40
     <p>
       Tutti i nostri ombrelloni da giardino sono provvisti di “camino
       antivento”, un’apertura nella tela che permette il passaggio d'aria senza
-      compremettere la stabilit&agrave; dell'ombrellone.
+      compromettere la stabilit&agrave; dell'ombrellone.
     </p>
   </li>
   <li>
     Riparazione Ombrelloni
     <p>
       In caso di rottura di una parte della struttura dell'ombrellone da
-      giardino, è possibile organizzare un ritiro tramite trasportatore o, se in
+      giardino, &egrave; possibile organizzare un ritiro tramite trasportatore o, se in
       zona, i nostri addetti procederanno al ritiro dell'ombrellone e
       seguiteremo con la riparazione dello stesso,
       <strong>non ripariamo gli ombrelloni da spiaggia</strong>.
@@ -66,7 +67,7 @@ numberp: 40
   <li>
     Rifacimento Copertura
     <p>
-      Se la copertura del vostro ombrellone, anche non acquistato da noi, si è
+      Se la copertura del vostro ombrellone, anche non acquistato da noi, si &egrave;
       rotta o non rimane più in sede, possiamo realizzane una nuova in
       sostituzione. Potrete ridare nuova vita al vostro ombrellone da giardino.
     </p>
@@ -76,46 +77,46 @@ numberp: 40
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_a_braccio_aperto.png alt="Ombrellone
-      a braccio laterale da giardino, aperto" title="Ombrellone a braccio
+      {% picture slide
+       /ombrelloni_giardino/ombrelloni_l.png --alt Ombrellone
+      a braccio laterale da giardino, aperto --img title="Ombrellone a braccio
       laterale da giardino, aperto" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_a_braccio_chiuso.png alt="Ombrellone
-      a braccio laterale da giardino, chiuso" title="Ombrellone a braccio
+      {% picture slide
+       /ombrelloni_giardino/ombrellone_l_chiuso.png --alt Ombrellone
+      a braccio laterale da giardino, chiuso --img title="Ombrellone a braccio
       laterale da giardino, chiuso" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_a_braccio_interno.jpg alt="Ombrellone
-      a braccio laterale da giardino, particolare interno" title="Ombrellone a
+      {% picture slide
+       /ombrelloni_giardino/ombrellone_l_interno.jpg --alt Ombrellone
+      a braccio laterale da giardino, particolare interno --img title="Ombrellone a
       braccio laterale da giardino, particolare interno" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_palo_centrale_aperto.png
-      alt="Ombrellone a palo centrale centrale da giardino, aperto"
-      title="Ombrellone a palo centrale da giardino, aperto" %}
+      {% picture slide
+       /ombrelloni_giardino/ombrellone_c.png
+      --alt Ombrellone a palo centrale centrale da giardino, aperto
+      --img title="Ombrellone a palo centrale da giardino, aperto" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_palo_centrale_chiuso.png
-      alt="Ombrellone a palo centrale centrale da giardino, chiuso"
-      title="Ombrellone a palo centrale da giardino, chiuso" %}
+      {% picture slide
+       /ombrelloni_giardino/ombrellone_c_chiuso.png
+      --alt Ombrellone a palo centrale centrale da giardino, chiuso
+      --img title="Ombrellone a palo centrale da giardino, chiuso" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelloni/ombrellone_palo_centrale_interno.jpg
-      alt="Ombrellone a palo centrale centrale da giardino, particolare interno"
-      title="Ombrellone a palo centrale da giardino, particolare interno" %}
+      {% picture slide
+       /ombrelloni_giardino/ombrellone_c_interno.jpg
+      --alt Ombrellone a palo centrale centrale da giardino, particolare interno
+     --img title="Ombrellone a palo centrale da giardino, particolare interno" %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi preventivo</h3>
+<h3 class="middle-title" id="form">richiedi preventivo per i tuoi ombrelloni</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

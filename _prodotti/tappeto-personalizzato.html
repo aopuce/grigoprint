@@ -7,9 +7,9 @@ ideale: [asciugapasso, sotto moto, arredo]
 correlati:
   [Tappeto Sottomoto, Beach Flags, Tovaglie Pubblicitarie, Filari di Bandierine]
 image:
-  - path: /assets/images/tappeti/tappeto_small.png
-    class: 'full-img'
-    alt: tappeto sotto moto personalizzato
+  - path:  /tappeto_personalizzato/tappeti_p_header.png
+    class: obj-cover
+    alt: tappeto personalizzato con stampa digitale. Materiale antiscivolo sul retro, senza memoria di forma.
     config: jumbotron
 forza:
   [
@@ -19,7 +19,8 @@ forza:
     Consigli di Utilizzo
   ]
 preventivo: true
-thumb: /assets/images/thumb/tappeto_personalizzato_thumb
+thumb:  /thumb/tappeti_p_thumb.png
+interesse:  /interesse/tappeti_p_interesse.png
 numberp: 22
 ---
 
@@ -73,20 +74,20 @@ numberp: 22
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/tappeti/particolare_tappeto_asciugapasso.png
-      alt="particolare tappeto asciugapasso" class="orizontal-image" %}
+      {% picture slide
+       /tappeto_personalizzato/tappeti_p_retro.png
+      --alt particolare tappeto asciugapasso, retro gommato antiscivolo %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/tappeti/tappeto_asciugapasso.png
-      alt="tappeto asciugapasso" class="orizontal-image" %}
+      {% picture slide  /tappeto_personalizzato/tappeti_p.png
+      --alt tappeto asciugapasso  %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
 
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per il tuo tappeto personalizzato</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

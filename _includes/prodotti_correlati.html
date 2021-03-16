@@ -5,7 +5,7 @@
 	{% endif %}
 {% endfor %}
 <div class="prodotti_correlati">
-	<h3 class="middle-title">Ti protrebbe interessare...</h4>
+	<h4 class="middle-title">Ti protrebbe interessare...</h4>
 		{% if moreThanfour %}
 			<ul class="correlati_content morethanfour">
 		{% else %}
@@ -17,7 +17,7 @@
 		        <li class="col-correlati">
 		        	<a href="{{site.url}}{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 		        		<div class="img-wrapper">
-		        		{% cloudinary onequater {{node.image[0].path}} alt="{{ node.title }}" %}</div>
+							{% picture interesse {{node.interesse}} --alt {{node.title}} %}</div>
 		        		<h5>{{node.title}}</h5>
 		        		<p>{{node.description}}</p>
 		        	</a>

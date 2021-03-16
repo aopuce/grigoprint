@@ -7,9 +7,9 @@ ideale: [sotto moto, arredo, garage]
 correlati:
   [Tappeto Sottomoto, Beach Flags, Tovaglie Pubblicitarie, Filari di Bandierine]
 image:
-  - path: /assets/images/tappeti/tappeto_sottomoto.png
-    class: 'full-img'
-    alt: tappeto sotto moto personalizzato
+  - path:  /tappeto_sottomoto/tappeti_s_header.jpg
+    class: obj-cover
+    alt: tappeto sotto moto personalizzato. Stamapato in digitale, assorbe eventuali perdite d'olio.
     config: jumbotron
 forza:
   [
@@ -19,7 +19,8 @@ forza:
     Compatibilit&agrave; FIM Art.44
   ]
 preventivo: true
-thumb: /assets/images/thumb/tappeto_sottomoto_thumb
+thumb:  /thumb/tappeti_s_thumb.jpg
+interesse:  /interesse/tappeti_s_interesse.jpg
 numberp: 22
 ---
 
@@ -71,18 +72,18 @@ numberp: 22
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/tappeti/particolare_tappeto.png
-      alt="particolare tappeto asciugapasso" class="orizontal-image" %}
+      {% picture slide  /tappeto_sottomoto/tappeti_s_retro.png
+      --alt particolare tappeto sottomoto, retro antiscivolo  %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/tappeti/tappeto_sottomoto.png
-      alt="tappeto asciugapasso" class="orizontal-image" %}
+      {% picture slide  /tappeto_sottomoto/tappeti_s.jpg
+      --alt tappeto asciugapasso %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per il tuo tappeto sottomoto</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

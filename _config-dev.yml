@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   poster, striscioni in TNT e molto altro.
 baseurl: "" # the subpath of your site, e.g. /blog
 logo: /assets/images/logo.svg
-url: "https://www.grigoprint.it" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://lfed460" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 google_analytics: UA-139665476-1
@@ -226,3 +226,9 @@ cloudinary:
 #Pagination
 paginate: 5
 paginate_path: "/blog/page:num/"
+
+picture:
+    source: "assets/images/fullsize"
+    output: "assets/images/generated"
+    relative_url: false
+    suppress_warnings: true

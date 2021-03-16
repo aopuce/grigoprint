@@ -2,25 +2,18 @@
 layout: new_product_layout
 title: Beach Flags
 exclude: false
-description: Beach flags con stampa digitale full color, di qualit&agrave;, robuste e durature, ideali per dare visibilit&agrave; al proprio esercizio commerciale o ad eventi.
+description: Beach flags o espositore a bandiera, con stampa digitale full color, di qualit&agrave;, robuste e durature, ideali per dare visibilit&agrave; al proprio esercizio commerciale o ad eventi.
 ideale: [pubblicit&agrave;, eventi, spiagge, negozi]
 correlati: [Bandiere Personalizzate, Bean Banner, Filari di Bandierine, Striscioni, Tessuto 3D]
 forza: [Varie Forme e Misure, Tessuto, Portabilit&agrave;]
 image:
-    - path: /assets/images/beachflags/flying.png
+    - path:  /beachflag/beachflag_header.png
       class: ""
-      alt: Beach Flag modello Flying
-      config: onethird
-    - path: /assets/images/beachflags/vela.png
-      class: ""
-      alt: Beach Flag modello Vela
-      config: onethird
-    - path: /assets/images/beachflags/girevolissimo.png
-      class: ""
-      alt: Beach Flag modello Girevolissimo
+      alt: Bandiere tipo beachflag, disponibili in varie forme e misure, come la classica bandiera a goccia (drop), o quella a vela. In oltre realizziamo la classica bandiera verticale con girevole portatile, ideale per eventi o in caso non si abbia la possibilit&agrave; di cementare il palo. 
       config: onethird
 preventivo: true
-thumb: /assets/images/thumb/beachflags_thumb
+thumb:  /thumb/beachflag_thumb.png
+interesse:  /interesse/beachflag_interesse.png
 numberp: 12
 ---
 <h2 class="middle-title">Scheda Tecnica {{ page.title }}</h2>
@@ -28,43 +21,43 @@ numberp: 12
 <ul class="scheda-tecnica card card__primary">
 	<li>
 		Varie Forme
-		<p>Le bandiere personalizzate con struttura movibile proposte da noi hanno varie forme:
+		<p>Gli espositori a bandiera con struttura movibile proposte da noi hanno varie forme:
 
 			<ul class="list-square">
-				<li><strong>Flying</strong>, la nota bandiere a forma di goccia</li>
-				<li><strong>Vela</strong>, arrotondata in alto e rettangolare sotto, ha un ottima superficie di stampa</li>
-				<li><strong>Girevolissimo</strong>, completamente made in italy con palo telescopico piu robusto e registrabile. Fa risparmiare al cambio della bandiera in quanto è una classica bandiera da pennone.</li>
+				<li><strong>Flying</strong>, la nota bandiere a forma di goccia (drop).</li>
+				<li><strong>Vela</strong>, arrotondata in alto e rettangolare sotto, ha un ottima superficie di stampa.</li>
+				<li><strong>Girevolissimo</strong>, completamente made in italy con palo telescopico piu robusto e registrabile. Fa risparmiare al cambio della bandiera in quanto &egrave; una classica bandiera da pennone.</li>
 			</ul>
 		</p>
 	</li>
 
 	<li>
 		Tessuto
-		<p>Le bandiere BeachFlag le realizziamo in tessuto nautico di poliestere da 110g a metro quadro, ad alta resistenza. Studiato per far passare il colore completamente nel retro del tessuto ottenendo cos&igrave; la stampa passante nel retro, in cui ovviamente si vedr&agrave; la grafica allo specchio. Per far si che,  sulle bandiere beachFlag,  si veda dritto da entrambe le parti bisogna passare ad un tessuto bifacciale, composto da 3 strati di tessuto</p>
+		<p>Le bandiere Beach Flags o espositori a bandiera vengono realizzate in tessuto nautico di poliestere da 110g a metro quadro, ad alta resistenza. Studiato per far passare il colore completamente nel retro del tessuto ottenendo cos&igrave; la stampa passante, in cui ovviamente si vedr&agrave; la grafica allo specchio. Per far si che, sugli espositori a bandiera, si veda dritto da entrambe le parti bisogna passare ad un tessuto bifacciale, composto da 3 strati di tessuto</p>
 	</li>
 
 	<li>
 		Portabilit&agrave;
-		<p>Tutti i modelli di beachflag sono portatili, hanno la struttura montabile ad incastro o telescopica, hanno la propria borsa di trasporto e sono facile e veloci da montare. Questo le rende perfette per eventi o posizioni di esposizione temporanee.</p>
+		<p>Tutti i modelli di beach flags sono portatili, hanno la struttura montabile ad incastro o telescopica, hanno la propria borsa di trasporto e sono facili e veloci da montare. Questo le rende perfette per eventi o posizioni di esposizione temporanee.</p>
 	</li>
 </ul>
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
             <div class="swiper-slide">
-                {% cloudinary halfscreen /assets/images/beachflags/flying.png alt="Bandiera modello Flying Goccia disponibile in varie misure" title="Bandiere Flying Goccia" %}
+                {% picture slide  /beachflag/mod_goccia.png --alt Bandiera modello Flying Goccia disponibile in varie misure --img title="Bandiere Flying Goccia" %}
             </div>
             <div class="swiper-slide">
-                {% cloudinary halfscreen /assets/images/beachflags/vela.png alt="Bandiera modello Vela  disponibile in varie misure" title="Bandiere Modello Vela" %}
+                {% picture slide  /beachflag/mod_vela.png --alt Bandiera modello Vela  disponibile in varie misure --img title="Bandiere Modello Vela" %}
             </div>
             <div class="swiper-slide">
-                {% cloudinary halfscreen /assets/images/beachflags/girevolissimo.png alt="Girevolissimo, bandiera personalizzata" title="Bandiera Girevolissimo" %}
+                {% picture slide  /beachflag/mod_girevole.png --alt Girevolissimo, bandiera personalizzata --img title="Bandiera Girevolissimo" %}
             </div>
             <div class="swiper-slide">
-            	<img src="/assets/images/beachflags/beachflags_misure.svg" alt="Misure Beachflags" title="Misure Beachflags">
+				<img src=" {{site.url}}/assets/images/svg/beachflags_misure-min.svg" alt="Misure Beachflags" title="Misure Beachflags">
             </div>
             <div class="swiper-slide">
-                <img src="/assets/images/beachflags/girevolissimo_misure.svg" alt="Misure Girevolissimo" title="Misure Girevolissimo">
+				<img src=" {{site.url}}/assets/images/svg/girevolissimo_misure-min.svg" alt="Misure Girevolissimo" title="Misure Girevolissimo">
             </div>
     </div>
   <div class="swiper-button-prev"></div>
@@ -78,8 +71,8 @@ numberp: 12
     </div>
 </div>
 <h3 class="middle-title">beach flags mod. Flying</h3>
-<p>&Egrave; una tipologia di bandiera moderna. Chi possiede queste forme si sente al passo coi tempi. D&agrave; la sicurezza "of the eternal progressive time", ovvero all'eterno progresso nel tempo.</p>
-<p>La <strong>bandiera a goccia</strong> rimarca e visualizza la vostra presenza, dalle mini dimensioni, alle medie che sopravvanzano gi&agrave; l'altezza d'uomo, alle grandi che sono veramente visibili.</p>
+<p>&Egrave; un espositore a bandiera moderno. Chi possiede queste forme si sente al passo coi tempi. D&agrave; la sicurezza "of the eternal progressive time", ovvero all'eterno progresso nel tempo.</p>
+<p>La <strong>bandiera a goccia o drop</strong> rimarca e visualizza la vostra presenza, dalle mini dimensioni, alle medie che sopravvanzano gi&agrave; l'altezza d'uomo, alle grandi che sono veramente visibili.</p>
 <p>Eseguite in tessuto nautico stampato in digitale, doppie cuciture con rinforzo, manica in tessuto elasticizzato e triplo risvolto finale, cordino in basso</p>
 <h4>misure disponibili</h4>
 <table class="products">
@@ -117,9 +110,9 @@ numberp: 12
 	</tbody>
 </table>
 <h3 class="middle-title">beach flags mod. vela</h3>
-<p>Le vele sono belle e danno un maggior spazio visibile rispetto alle bandiere a goccia.</p>
-<p>Sono anche esse dentro la modernità, il messaggio che danno &egrave; molto più mobile rispetto alle bandiere a goccia in quanto sotto, sono libere di sventolare e sono di sicuro rimarco visivo.</p>
-<p>Si dividono in due grandi famiglie: vele con asta flessibile (alluminio più vetroresina) e vele con asta rigida (solo alluminio), queste ultime di più durabilità ma meno adatte ad essere continuamente trasportate e cambiate di posto poichè la curva &egrave; fissa ed &egrave; un po' ingombrante per il trasporto.</p>
+<p>Gli espositori a bandiera di tipo <strong>Vele</strong> sono belle e danno un maggior spazio visibile rispetto alle bandiere a goccia.</p>
+<p>Questo modello di beach flags sono anch'esse dentro la modernit&agrave;, il messaggio che danno &egrave; molto pi&ugrave; mobile rispetto alle bandiere a goccia in quanto sotto, sono libere di sventolare e sono di sicuro rimarco visivo.</p>
+<p>Si dividono in due grandi famiglie: espositori a bandiera modello vele con asta flessibile (alluminio più vetroresina) e beach flags modello vele con asta rigida (solo alluminio), queste ultime di pi&ugrave; durabilit&agrave; ma meno adatte ad essere continuamente trasportate e cambiate di posto poich&eacute; la curva &egrave; fissa ed &egrave; un po' ingombrante per il trasporto.</p>
 <h4>misure disponibili</h4>
 <table class="products">
 	<tbody>
@@ -158,9 +151,9 @@ numberp: 12
 <h3 class="middle-title">Girevolissimo</h3>
 
 		<p>Nel sistema espositivo il girevolissimo sta alle bandiere come il partenone greco sta a tutto il costruito dalla notte dei tempi.</p>
-		<p>&Egrave; la classicità fatta bandiera, di lunghissima durata (robusta) perch&eacute; gira con un alito di vento e assicura sempre la visibilità del contenuto stampato.</p>
-		<p>Supporta vari formati di bandiere, facilissimo da trasportare e da montare per la telescopicità dei suoi elementi.</p>
-		<p>&Egrave; il più pratico dei sistemi espostivi e il costo della bandiera tra i più bassi perchè essa &egrave; di facile esecuzione (tessuto nautico, doppie cuciture, fettuccia di rinforzo con fettuccina portagiranti e sacchetto con peso).</p>
+		<p>&Egrave; la classicit&agrave; fatta bandiera, di lunghissima durata (robusta) perch&eacute; gira con un alito di vento e assicura sempre la visibilit&agrave; del contenuto stampato.</p>
+		<p>Supporta vari formati di bandiere, facilissimo da trasportare e da montare per la telescopicit&agrave; dei suoi elementi.</p>
+		<p>&Egrave; il pi&ugrave; pratico dei sistemi espostivi e il costo della bandiera tra i pi&ugrave; bassi perch&eacute; essa &egrave; di facile esecuzione (tessuto nautico, doppie cuciture, fettuccia di rinforzo con fettuccina portagiranti e sacchetto con peso).</p>
 
 <h4>misure disponibili</h4>
 <table class="products">
@@ -196,7 +189,7 @@ numberp: 12
 <section class="basi grids__minmax">
 		<div class="col card">
 			<h4>discoresina</h4>
-			{% cloudinary onequater /assets/images/basi/discoresina300.png alt="Base Discoresina per bandiere" title="Base Discoresina per bandiere" %}
+			{% picture desc4g  /basi/discoresina300.png --alt Base Discoresina per bandiere" --img title="Base Discoresina per bandiere" %}
 			<div class="description">
 				Base in cemento ricoperto di resina, ideale per interni ed esterni poco ventosi.
 				Disponibile in due misure, diametro 32cm con un peso di 8 Kg o diametro 27 cm con un peso di 6 Kg.
@@ -205,49 +198,49 @@ numberp: 12
 	</div>
 		<div class="col card">
 			<h4>riempibile 19 litri</h4>
-			{% cloudinary onequater /assets/images/basi/base19l300.png alt="Base Riempibile 19 Litri per bandiere" title="Base Riempibile 19 Litri per bandiere" %}
+			{% picture desc4g  /basi/base19l300.png --alt Base Riempibile 19 Litri per bandiere --img title="Base Riempibile 19 Litri per bandiere" %}
 			<div class="description">Base in resina riempibile da 19 litri, robusta con inserto e tubo solidi e rigidi che non fanno oscillare l'asta porta bandiera.</div>
 		</div>
 	</div>
 	<div class="col card">
 		<h4>riempibile 40 litri</h4>
-		{% cloudinary onequater /assets/images/basi/Base60LG300.png alt="Base Riempibile da 60 Litri per bandiere" title="Base Riempibile da 60 Litri per bandiere" %}
+		{% picture desc4g  /basi/Base60LG300.png --alt Base Riempibile da 60 Litri per bandiere --img title="Base Riempibile da 60 Litri per bandiere" %}
 		<div class="description">Base in resina riempibile da 40 litri, ideale per esterni ventosi o bandiere di misura grande, grazie alla maniglia e alla ruota &egrave; facile da spostare anche a pieno carico.</div>
 	</div>
 	<div class="col card">
 		<h4>vitone zincato</h4>
-		{% cloudinary onequater /assets/images/basi/vitone300.png alt="Vitone Zincato per bandiere" title="Vitone Zincato per bandiere" %}
+		{% picture desc4g  /basi/vitone300.png --alt Vitone Zincato per bandiere --img title="Vitone Zincato per bandiere" %}
 		<div class="description">Vitone in ferro zincato ideale per applicazioni a lungo termine. Grazie alla sua forma a vite &egrave; facile da utilizzare e il disco saldato, premendo sul terreno, lo stabilizza in mono incredibile.
 		</div>
 	</div>
 	<div class="col card">
 		<h4>base in acciaio</h4>
-		{% cloudinary onequater /assets/images/basi/base_metallica.png alt="Base quadrata in acciaio per bandiere" title="Base quadrata in acciaio per bandiere" %}
+		{% picture desc4g  /basi/base_metallica.png --alt Base quadrata in acciaio per bandiere --img title="Base quadrata in acciaio per bandiere" %}
 		<div class="description">Base quadrata in accaio con lato di 40 cm, ideale sia per interni che per esterni, borsa in dotazione e picchetti a L per migliorare l'ancoraggio al terreno. Peso 13 Kg, in dotazione comoda borsa per trasporto</div>
 	</div>
 	<div class="col card">
 		<h4>base a croce</h4>
-		{% cloudinary onequater /assets/images/basi/croce.png alt="Base a Croce con Zavorra riempibile per bandiere" title="Base a Croce con Zavorra riempibile per bandiere" %}
+		{% picture desc4g  /basi/croce.png --alt Base a Croce con Zavorra riempibile per bandiere --img title="Base a Croce con Zavorra riempibile per bandiere" %}
 		<div class="description">Base metallica a croce, ideale per interni o per esterni poco ventosi. Fornita con zavorra riempibile e pratica sacca da trasporto.</div>
 	</div>
 		<div class="col card">
 		<h4>sotto ruota</h4>
-		{% cloudinary onequater /assets/images/basi/sottoruota300.png alt="Base Sottoruota per bandiere" title="Base Sottoruota per bandiere" %}
+		{% picture desc4g  /basi/sottoruota300.png --alt Base Sottoruota per bandiere --img title="Base Sottoruota per bandiere" %}
 		<div class="description">Base sotto ruota in metallo, ideale per auto saloni ed eventi automobilistici. Grazie all'attacco girevole permette alla bandiera di seguire la direzione del vento.</div>
 	</div>
 	<div class="col card">
 		<h4>vite in plastica</h4>
-		{% cloudinary onequater /assets/images/basi/vite_plastica.png alt="Vite in plastica per bandiere" title="Vite in plastica per bandiere" %}
+		{% picture desc4g  /basi/vite_plastica.png --alt Vite in plastica per bandiere --img title="Vite in plastica per bandiere" %}
 		<div class="description">Ideale per terreni sabbiosi e neve. Molto leggera e facile da trasportare.</div>
 	</div>
 	<div class="col card">
 		<h4>picchetto</h4>
-		{% cloudinary onequater /assets/images/basi/picchetto.png alt="Picchetto cromato per bandiere" title="Picchetto cromato per bandiere" %}
+		{% picture desc4g  /basi/picchetto.png --alt Picchetto cromato per bandiere --img title="Picchetto cromato per bandiere" %}
 		<div class="description">Idelae per prati e terreni. Struttura in acciaio a doppia punta. Molto resistente ed elegante. Completa di borsa per facilitarne il trasporto.</div>
 	</div>
 	<div class="col card">
 		<h4>cemento</h4>
-		{% cloudinary onequater /assets/images/basi/base_cemento.png alt="Base in cemento  per bandiere" title="Base in cemento  per bandiere" %}
+		{% picture desc4g  /basi/base_cemento.png --alt Base in cemento  per bandiere --img title="Base in cemento  per bandiere" %}
 		<div class="description">Base per esterni ventosi, fornita con protezione in gomma per pavimenti. Base da 40KG</div>
 	</div>
 </section>

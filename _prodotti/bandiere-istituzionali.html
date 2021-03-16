@@ -13,8 +13,8 @@ correlati:
     Gagliardetti
   ]
 image:
-  - path: /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg
-    class: ''
+  - path:  /bandiere_istituzionali/bandiere_istituzionali_header.jpg
+    class: 'obj-cover'
     alt: Bandiere Istituzionali
     config: jumbotron
 forza:
@@ -27,25 +27,32 @@ forza:
   ]
 preventivo: false
 price: 5,20 € cad.
-thumb: /assets/images/thumb/bandiere_istituzionali_thumb
+thumb:  /thumb/bandiere_istituzionali_thumb.jpg
+interesse:  /interesse/bandiere_istituzionali_interesse.jpg
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_istituzionali/europe-bandiera.jpg alt="Bandiere
-      Istituzionali" title="Bandiere Istituzionali" %}
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali_europa.jpg 
+	  --alt Bandiere Istituzionali disponibili in tessuto nautico o in tessuto economico pongee 
+	  --title Bandiere Istituzionali %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_istituzionali/bandiera-italia.jpg alt="Bandiera
-      Italiana" class="orizontal-image" %}
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali_italia.jpg 
+	  --alt Bandiera Italiana %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali.jpg 
+	  --alt Bandiere istituzionali con stampa sia digitale che serigrafica %}
     </div>
     <div class="swiper-slide">
       <img
-        src="/assets/images/bandiere_istituzionali/svg-bandiere.svg"
+		  src="{{site.url}}/assets/images/svg/svg-bandiere-min.svg"
         alt="Bandiere istituzionali di vari stati, stampiamo qualsiasi bandiera istituzionale."
       />
     </div>
@@ -53,7 +60,7 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le vostre bandiere istituzionali</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}
@@ -83,8 +90,10 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
 <h3 class="middle-title">tessuti</h3>
 <section class="tessuti grids__col2">
   <article class="col card card__primary">
-    {% cloudinary halfscreen /assets/images/tessuti/nautico_3p.png alt="tessuto
-    per bandiere tipo nautico" class="img-intern-50"%}
+    {% picture desc2g 
+	 /tessuti/nautico_3p.png 
+	--alt tessuto per bandiere tipo nautico 
+	--picture class="img-intern-50" %}
     <h5>tessuto nautico</h5>
     <p><em>Tessuto 120g 100% poliestere</em></p>
     <p>
@@ -96,8 +105,10 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
   </article>
 
   <article class="col card card__light">
-    {% cloudinary halfscreen /assets/images/tessuti/pongee.png alt="tessuto per
-    bandiere tipo pongee" class="img-intern-50"%}
+    {% picture desc2g 
+	 /tessuti/pongee.png 
+	--alt tessuto per bandiere tipo pongee 
+	--picture class="img-intern-50" %}
     <h5>tessuto pongee</h5>
     <p><em>Tessuto 85g 100% poliestere</em></p>
     <p>
@@ -113,7 +124,7 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
 <section class="grids__col4">
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/cappio_cordino.svg"
+      src=" {{site.url}}/assets/images/svg/cappio_cordino-min.svg"
       alt="cappio e cordino"
       class="img-intern-50"
     />
@@ -125,7 +136,7 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/laccetti.svg"
+      src=" {{site.url}}/assets/images/svg/laccetti-min.svg"
       alt="laccetti"
       class="img-intern-50"
     />
@@ -137,7 +148,7 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/manica_chiusa.svg"
+      src=" {{site.url}}/assets/images/svg/manica_chiusa-min.svg"
       alt="manica per asta"
       class="img-intern-50"
     />
@@ -150,7 +161,7 @@ thumb: /assets/images/thumb/bandiere_istituzionali_thumb
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/moschettoni.svg"
+		src="{{site.url}}/assets/images/svg/moschettoni-min.svg"
       alt="moschettoni"
       class="img-intern-50"
     />

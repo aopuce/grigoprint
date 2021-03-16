@@ -229,13 +229,15 @@
   ></script>
   {% endcomment %} {%- if jekyll.environment == 'production' and
   site.google_analytics -%}
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css?v=1.9" />
+  <link rel="stylesheet" href="{{ site.url
+  }}/assets/css/styles.css?v=2.2" />
   {% else %}
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <!-- <script src="http://localhost:35729/livereload.js"></script> -->
   {%- endif -%}
   <link
     rel="stylesheet"
+	type="text/css"
     href="https://unpkg.com/swiper/swiper-bundle.min.css"
   />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

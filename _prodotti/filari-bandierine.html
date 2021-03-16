@@ -7,39 +7,40 @@ ideale: [pubblicit&agrave;, eventi, feste, sagre]
 correlati: [Beach Flags, Bean Banner, Tovaglie Pubblicitarie, Ombrelloni]
 forza: [Disponibili in Varie Misure, Economiche, Disponibili Anche Bifacciali]
 image:
-  - path: /assets/images/filari_bandierine/bandierine_back.jpg
-    class: ''
-    alt: bandierine o festoni
+  - path:  /filari_di_bandierine/filari_bandierine_header.jpg
+    class: 'obj-cover'
+    alt: bandierine o festoni, realizzate in vari materiali, sia in tessuto che materiali plastici. Possibilit&agrave; di realizzate con stampa personalizzate su tutta la bandierina.
     config: jumbotron
 preventivo: false
 price: 2,40 € mt/l
-thumb: /assets/images/thumb/filari_bandierine_thumb
+thumb:  /thumb/filari_bandierine_thumb.jpg
+interesse:  /interesse/filari_bandierine_interesse.jpg
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/filari_bandierine/bandierine_tessuto.png alt="filari o
-      festoni di bandierine in tessuto" %}
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_nautico.jpg --alt filari o
+      festoni di bandierine in tessuto %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/filari_bandierine/bandierine_carta.png alt="filari o
-      festoni di bandierine in carta personalizzate" %}
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_plastica.jpg --alt filari o
+      festoni di bandierine in plastica personalizzate %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/filari_bandierine/bandierine_plastica.png alt="filari o
-      festoni di bandierine in plastica" %}
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_poli.jpg --alt filari o
+      festoni di bandierine in polipropilene %}
     </div>
   </div>
 
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi filari di bandierine</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

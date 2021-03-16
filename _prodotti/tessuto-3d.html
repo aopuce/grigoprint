@@ -7,30 +7,31 @@ ideale: [esterno, pubblicit&agrave;, eventi]
 correlati:
   [Bandiere Bifacciali, Bandiere Personalizzate, Beach Flags, Maniche a Vento]
 image:
-  - path: /assets/images/3d/background_landscape.png
+  - path:  /tessuto_3d/3d_header.png
     class: ''
-    alt: stampa bandiere in tessuto 3d
+    alt: realizziamo prodotti con forme personalizzate anche in 3 dimensioni, come bandiere pubblicitarie a froma di paccheto di caramelle, o allestimenti fieristici a grandezza uomo, come un sacchetto di patatine.
     config: jumbotron
 forza: [Forme Personalizzate, Anche in Grande Formato, Materiali Diversi]
 preventivo: false
-thumb: /assets/images/thumb/3d_thumb
+thumb:  /thumb/3d_thumb.png
+interesse:  /interesse/3d_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/3d/sacchetto_patatine_misure.png
-      alt="sacchetto di patatite altezza uomo da allestimento vetrina"
-      class="vertical-image"%}
+      {% picture slide  /tessuto_3d/3d_misure.png
+      --alt sacchetto di patatine altezza uomo da allestimento vetrina
+      %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/3d/3dFlags.png alt="sacchetto
-      caramelle in tessuto 3d" class="vertical-image"%}
+      {% picture slide  /tessuto_3d/3d_bandiera.png --alt sacchetto
+      caramelle in tessuto 3d%}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/3d/background_landscape.png
-      alt="sacchetto patatine in tessuto 3d" class="vertical-image"%}
+      {% picture slide  /tessuto_3d/3d_completo.png
+      --alt sacchetto patatine in tessuto 3d %}
     </div>
   </div>
 
@@ -77,32 +78,4 @@ thumb: /assets/images/thumb/3d_thumb
   stampati, eseguiamo progetti 3D e rendering anche ordinazione solo grafica.
 </p>
 
-{% comment %}
-<h2 class="middle-title">beachflags modello 3d</h2>
-<div class="row obj_contain">
-  <div class="col-half order-first">
-    {% cloudinary halfscreen /assets/images/3d/3dFlags.png alt="stampa bandiere
-    in tessuto 3d" class="orizontal-image"%}
-  </div>
-  <div class="col-half order-second">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia labore,
-      esse sunt voluptates praesentium fugit consequatur, odit laborum ad nam
-      ratione eum natus mollitia, corporis! Nulla aliquam neque ex veniam!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus cumque
-      soluta dolorum. Accusantium vitae mollitia quas ducimus quasi vel eaque
-      dolorem molestias doloribus voluptates maiores dolorum, voluptatem ut
-      magni corrupti.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae,
-      eligendi doloremque ullam laborum laboriosam esse, reprehenderit soluta in
-      repellat cum ea earum, consectetur. Repudiandae, praesentium minus
-      reprehenderit veritatis dolores soluta.
-    </p>
-  </div>
-</div>
-{% endcomment %}
 

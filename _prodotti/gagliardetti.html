@@ -12,17 +12,9 @@ correlati:
   ]
 ideale: [eventi sportivi, sagre di paese, gadget]
 image:
-  - path: /assets/images/gagliardetti/pentagonale.png
-    class: ''
-    alt: Gagliardetto modello Pentagonale
-    config: onethird
-  - path: /assets/images/gagliardetti/triangolare.png
-    class: ''
-    alt: Gagliardetto modello Triangolare
-    config: onethird
-  - path: /assets/images/gagliardetti/sagomato.png
-    class: ''
-    alt: Gagliardetto modello Sagomato
+  - path:  /gagliardetti/gagliardetti_header.png
+    class: cover-from-md
+    alt: Gagliardetti di alta qualit&agrave;, stampati su tessuto tipo raso rigido. Disponibili nelle forma classiche (gagliardetto triangolare o gagliardetto pentagonale) oppure un gagliardetto di forma personalizzato.
     config: onethird
 forza:
   [
@@ -32,29 +24,30 @@ forza:
     Disponibile con Sagome Personalizzate
   ]
 preventivo: false
-thumb: /assets/images/thumb/gagliardetti_thumb
+thumb:  /thumb/gagliardetti_thumb.png
+interesse:  /interesse/gagliardetti_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/gagliardetti/sagomato.png
-      alt="Gagliardetto modello Sagomato" class="vertical-image" %}
+      {% picture slide  /gagliardetti/forma_personalizzata.png
+      --alt Gagliardetto modello Sagomato %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/gagliardetti/triangolare.png
-      alt="Gagliardetto modello Triangolare" class="vertical-image" %}
+      {% picture slide  /gagliardetti/triangolare.png
+      --alt Gagliardetto modello Triangolare %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/gagliardetti/pentagonale.png
-      alt="Gagliardetto modello Pentagonale" class="vertical-image" %}
+      {% picture slide  /gagliardetti/pentagonale.png
+      --alt Gagliardetto modello Pentagonale %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi gagliardetti</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

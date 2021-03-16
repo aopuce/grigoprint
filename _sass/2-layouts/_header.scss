@@ -8,98 +8,56 @@
 .nav-list {
   @extend %nav_dimension;
   @include transition;
-  position: fixed;
-  z-index: 4;
   bottom: 90px;
-  height: calc(100vh - 210px);
-  right: -110%;
+  height: calc(100vh - 71px - 60px - 25px - 80px);
   overflow: hidden;
+  position: fixed;
+  right: -110%;
+  z-index: 4;
   // overflow-y: scroll;
   @include respond-to(screen-sm) {
-    width: 350px;
-    top: 100px;
     bottom: auto;
+    height: calc(100vh - 94px - 20px);
+    top: 100px;
+    width: 350px;
   }
 
 
   .container-selector {
-    height: 60px;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-family: $h-font-family;
-    text-align: center;
     border-bottom: 2px solid $primary-color;
     color: $primary-color;
-
-    .label-swich {
-      line-height: 60px;
-      display: block;
-      height: 100%;
-    }
-
-    .grigo-icons {
-      height: 42px;
-
-      @include transform(rotate(-90deg));
-    }
+    font-family: $h-font-family;
+    font-weight: 900;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
 
     @include respond-to(screen-md) {
       height: 80px;
+    }
 
-      .label-swich {
+    .label-swich {
+      display: block;
+      height: 100%;
+      line-height: 60px;
+      @include respond-to(screen-md) {
         line-height: 80px;
-      }
-
-      .grigo-icons {
-        height: 55px;
       }
     }
   }
 
   .menu-prodotti ul li a {
-    display: block;
-    height: 45px;
-    border-bottom: 1px solid tint($primary-color, 80%);
-    padding-left: 15px;
-    line-height: 45px;
-    font-size: .8rem;
-    font-weight: bold;
-    position: relative;
-    color: $primary-color;
 
     @include transition;
-
-    &.active {
-      background: $primary-gradient;
-      color: $back-full-text;
-      text-shadow: 1px 1px 2px $long-text;
-
-      &:hover {
-        &:after {
-          width: 0;
-        }
-      }
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 0;
-
-      @include transition;
-
-      background: $primary-color;
-    }
-
-    &:hover {
-      &:after {
-        width: 10px;
-      }
-    }
+    border-bottom: 1px solid tint($primary-color, 80%);
+    color: $primary-color;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 15px;
+    position: relative;
 
     @include respond-to(screen-sm) {
       height: 60px;
@@ -107,35 +65,78 @@
 
       //font-size: 1rem;
     }
+
+    &.active {
+      background: $primary-gradient;
+      color: $back-full-text;
+      text-shadow: 1px 1px 2px $long-text;
+
+      &:hover {
+        &::after {
+          width: 0;
+        }
+      }
+    }
+
+    &::after {
+
+      @include transition;
+
+      background: $primary-color;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+
+    &:hover {
+      &::after {
+        width: 10px;
+      }
+    }
   }
 
   .menu-prodotti ul {
-    overflow-y: scroll;
-    height: calc(100vh - 265px);
 
     @extend %scroll-style;
+    height: calc(100vh - 71px - 60px - 25px - 60px - 80px);
+    overflow-y: scroll;
 
+    @include respond-to(screen-sm) {
+      height: calc(100vh - 94px - 20px - 58px);
+    }
     @include respond-to(screen-md) {
-      height: calc(100vh - 285px);
+      height: calc(100vh - 94px - 20px - 80px);
     }
   }
 }
 
 // header
 .site-header {
-  position: fixed;
-  z-index: 4;
-  height: 60px;
-  width: 100%;
-  background: $default-gradient;
-  border-bottom: 1px solid $primary-color;
-  top: 0;
 
   @include transition;
+  background: $default-gradient;
+  border-bottom: 1px solid $primary-color;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  @include respond-to(screen-sm) {
+    @include box-shadow(0 0 5px $primary-color);
+    @include border-radius($radius);
+    height: auto;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
 
   &.focus {
     @media screen and (max-width: $screen-sm - 1px) {
-      .nav-container, .social-container {
+      .nav-container,
+      .social-container {
         bottom: -80px;
       }
     }
@@ -145,30 +146,35 @@
     top: -100px;
   }
 
-  .site-nav, .site-nav > a, .site-nav > a img {
+  .site-nav,
+  .site-nav > a,
+  .site-nav > a img {
     display: block;
     @include respond-to(screen-bet) {
       height: 100%;
     }
   }
-  @include respond-to(screen-sm) {
-    @include box-shadow(0 0 5px $primary-color);
-    @include border-radius($radius);
-    margin: 10px;
-    width: calc(100% - 20px);
-    height: auto;
-  }
 
 
-  .site-nav > h1, .site-nav > h3 {
-    padding: 5px;
-    margin: 0;
+  .site-nav > h1,
+  .site-nav > h3 {
     font-size: 100%;
     line-height: 1;
+    margin: 0;
+    padding: 5px;
+
+    @include respond-to(screen-sm) {
+      grid-column: 1/4;
+    }
+
+
+    @include respond-to(screen-md) {
+      grid-column: 1/5;
+    }
 
     img {
-      width: auto;
       height: 100%;
+      width: auto;
 
       @include respond-to(screen-bet) {
         margin: auto;
@@ -188,15 +194,6 @@
           margin: auto;
         }
       }
-    }
-
-    @include respond-to(screen-sm) {
-      grid-column: 1/4;
-    }
-
-
-    @include respond-to(screen-md) {
-      grid-column: 1/5;
     }
   }
 
@@ -220,34 +217,51 @@
   .social-container {
     @extend %nav_dimension;
 
+    @include transition;
+    bottom: 10px;
+
     display: block;
+    line-height: 0;
     margin: 10px;
 
     // height: 40px;
     position: fixed;
-    bottom: 10px;
-    width: 75%;
     right: 0;
-    line-height: 0;
+    width: 75%;
 
-    @include transition;
+    @include respond-to(screen-sm) {
+      bottom: 50%;
+      height: auto;
+      left: -60px;
+      width: 40px;
+
+
+      &.social-open {
+        left: 0;
+      }
+    }
 
     li {
       display: inline-block;
-      zoom: 1;
 
       /* Fix for IE7 */
       *display: inline;
 
       /* Fix for IE7 */
       width: 25%;
+      zoom: 1;
+      @include respond-to(screen-sm) {
+        display: block;
+        width: 40px;
+      
+      }
 
       a {
         display: block;
 
         .grigo-icons {
-          margin: auto;
           display: block;
+          margin: auto;
         }
       }
     }
@@ -257,61 +271,48 @@
         bottom: 80px;
       }
     }
-
-    @include respond-to(screen-sm) {
-      height: auto;
-      bottom: 50%;
-      left: -60px;
-      width: 40px;
-
-      li {
-        display: block;
-        width: 40px;
-      }
-
-      &.social-open {
-        left: 0;
-      }
-    }
   }
 
   .nav-container {
     @extend %nav_dimension;
 
-    @include respond-to(screen-bet) {
-      margin: 0 10px 10px 10px;
-    }
-
-
-    position: fixed;
+    @include transition;
     bottom: 0;
     display: grid;
 
     // per login
     // grid-template-columns: repeat(5, 1fr);
     // per sito no login
+    
+    // configurazione per blog
+    // grid-template-columns: repeat(4, 1fr);
     grid-template-columns: repeat(3, 1fr);
+
+
+    position: fixed;
     text-align: center;
 
-    @include transition;
+    @include respond-to(screen-bet) {
+      margin: 0 10px 10px;
+    }
     @include respond-to(screen-sm) {
       @include box-shadow(none);
 
       background: none;
-      position: relative;
-      grid-column: 6/9;
+      grid-column: 5/9;
       margin-bottom: 0;
+      position: relative;
       width: 100%;
     }
 
 
     @include respond-to(screen-md) {
-      grid-column: 9/13;
+      grid-column: 8/13;
     }
 
 
     @include respond-to(screen-lg) {
-      grid-column: 13/17;
+      grid-column: 12/17;
     }
 
 
@@ -320,10 +321,14 @@
       border-left: 0;
       margin: 10px 0;
 
-      a {
+      a,
+      button {
+        background-color: inherit;
+        border-left: 1px solid $primary-color;
         color: $primary-color;
         display: block;
-        border-left: 1px solid $primary-color;
+        outline: none;
+        width: 100%;
 
         .grigo-icons {
           display: block;
@@ -338,10 +343,10 @@
   }
 
   .nav_bar_text {
-    font-size: .8rem;
     display: block;
-    padding-top: 5px;
+    font-size: 0.8rem;
     line-height: 1;
+    padding-top: 5px;
   }
 }
 

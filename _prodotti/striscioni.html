@@ -13,9 +13,9 @@ correlati:
     Tovaglie Pubblicitarie
   ]
 image:
-  - path: /assets/images/striscioni/striscioni_background.png
+  - path:  /striscioni/striscioni_header.png
     class: ''
-    alt: striscioni personalizzati in tessuto di poliestere o pvc
+    alt: striscioni personalizzati in tessuto di poliestere o pvc, lo striscione pu&ograve; refinito in base le necessit&agrave;
     config: jumbotron
 forza:
   [
@@ -24,21 +24,28 @@ forza:
     Stampa di Alta Qualt&agrave;
   ]
 preventivo: false
-thumb: /assets/images/thumb/striscioni_thumb
+thumb:  /thumb/striscioni_thumb.png
+interesse:  /interesse/striscioni_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/striscioni/particolare_striscione.png alt="striscione
-      personalizzato in pvc particolare finitura anello e saldatura"
-      id="part_striscione"%}
+      {% picture slide
+       /striscioni/striscioni_finitura.png 
+	  --alt striscione personalizzato in pvc particolare finitura anello e saldatura %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /striscioni/striscioni.png 
+	  --alt striscione personalizzato in pvc  %}
     </div>
   </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi striscioni</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

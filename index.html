@@ -4,14 +4,13 @@ exclude: true
 title: Ombrellificio Grigolini di Grigolini Marcello
 ---
 
-{% comment %}{% include modal_allert.html %} {% endcomment %}
 <div class="swiper-container" id="swiper__index">
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
-			{% cloudinary jumbotron
-            /assets/images/index_images/bandiere_istituzionale_index.jpg
-            alt="Bandiere istituzionali" class="orizontal-image index_image
-            lazyload" %}
+				{% picture jumbotron  /jumbotron/bandiere_istituzionali-1440x600.jpg
+				tablet:  /jumbotron/bandiere_istituzionali-1024x600.jpg
+				mobile:  /jumbotron/bandiere_istituzionali-400x400.jpg
+				--alt bandiere istituzionali in poliestere nautico o pongee %}
 			<div class="swiper__info">
 				<h2>Bandiere Istituzionali</h2>
 				<p>
@@ -24,10 +23,10 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 			</div>
 		</div>
 		<div class="swiper-slide">
-			{% cloudinary jumbotron
-            /assets/images/index_images/filari_di_bandierine_index.jpg alt="Filari di
-            bandierine personalizzate" class="orizontal-image index_image
-            lazyload" %}
+				{% picture jumbotron  /jumbotron/filari_bandierine-1440x600.jpg
+				tablet:  /jumbotron/filari_bandierine-1024x600.jpg
+				mobile:  /jumbotron/filari_bandierine-400x400.jpg
+				--alt filari di bandierine, disponibili in vari tessuti e fome %}
 			<div class="swiper__info">
 				<h2>Filari di Bandierine</h2>
 				<p>
@@ -40,9 +39,10 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 			</div>
 		</div>
 		<div class="swiper-slide">
-			{% cloudinary jumbotron /assets/images/index_images/ombrelli_personalizzati_index.jpg
-			alt="Ombrelli personalizzati" class="orizontal-image
-			index_image lazyload" %}
+				{% picture jumbotron  /jumbotron/ombrelli_personalizzati-1440x600.jpg
+				tablet:  /jumbotron/ombrelli_personalizzati-1024x600.jpg
+				mobile:  /jumbotron/ombrelli_personalizzati-400x400.jpg
+				--alt Ombrelli personalizzati, stampati sia in digitale che in serigrafia %}
 			<div class="swiper__info">
 				<h2>Ombrelli Personalizzati</h2>
 				<p>Ombrelli personalizzati, anche su intera calotta.</p>
@@ -50,15 +50,6 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 					alt="Ombrellificio Grigolini produce e stampa ombrelli personalizzati. Specializzati nella produzione di ombrelli con stampa all-over senza soluzione di continuit&agrave;">Maggiori
 					infomazioni</a>
 			</div>
-		</div>
-		<div class="swiper-slide">
-			<picture>
-				<source srcset="https://placehold.it/1400x1400" media="(min-width: 1400px)" />
-				<source srcset="https://placehold.it/1200x1200" media="(min-width: 1200px)" />
-				<source srcset="https://placehold.it/800x800" media="(min-width: 800px)" />
-				<source srcset="https://placehold.it/600x600" media="(min-width: 600px)" />
-				<img src="https://placehold.it/400x400" alt="example" />
-			</picture>
 		</div>
 	</div>
 	<div class="swiper-button-next"></div>
@@ -74,18 +65,14 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 			{% if page.url == node.url %}
 			<li>
 				<a href="{{ site.url }}{{ node.url }}" title="{{ node.description }}">
-					{% cloudinary thumbnail
-                    {{ node.thumb | append: "@2x.jpg" }} alt="{{ node.title }}"
-                    loading="lazy" %}
+					{% picture thumb {{ node.thumb }} --alt {{node.title}} %}
 					<h4>{{ node.title }}</h4>
 				</a>
 			</li>
 			{% else %}
 			<li>
 				<a href="{{ site.url }}{{ node.url }}" title="{{ node.description }}">
-					{% cloudinary thumbnail
-                    {{ node.thumb | append: "@2x.jpg" }} alt="{{ node.title }}"
-                    loading="lazy" %}
+					{% picture thumb {{ node.thumb }} --alt {{node.title}} %}
 					<h4>{{ node.title }}</h4>
 				</a>
 			</li>
@@ -95,10 +82,9 @@ title: Ombrellificio Grigolini di Grigolini Marcello
 		</ul>
 	</section>
 	<section class="section section__mission">
-		{% cloudinary halfscreen
-        /assets/images/bandiere_bifacciali/particolare_stampa.png alt="bandiere
-        bifacciali personalizzate partricolare stampa" class="orizontal-image
-        index_image lazyload" loading="lazy" %}
+		{% picture slide
+         /bandiere_bifacciali/bandiere_bifacciali_stampa.jpg
+		--alt bandiere bifacciali personalizzate partricolare stampa %}
 		<article>
 			<h2>Chi siamo</h2>
 			<p>

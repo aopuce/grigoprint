@@ -1,518 +1,308 @@
 //immagine di contenuto su mezza colonna
 img {
-    width: 100%;
-    height: auto;
+  height: auto;
+  width: 100%;
 }
 
-
 .row {
+  .col-half {
+    overflow-y: hidden;
+    position: relative;
+    
+    img {
+      display: block;
+      height: auto;
+      max-height: 100vh;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    img#part_striscione {
+      @media screen and (min-width: $screen-lg) {
+        @include transform(translate(50%, 50%) scaleX(-1));
+      }
+    }
+    
+
+    // 	@media screen and (min-width: $screen-sm)
+    // 		height: 100%
+    // 	// object-fit: contain
+    // 	&.vertical-image
+    // 		max-height: 80vh
+    // 		width: auto
+    // 		margin: 0 auto
+    // 	&.obj-cover
+    // 		object-fit: cover
+    // 	&.obj-contain
+    // 		object-fit: contain
+    // @media screen and (min-width: $screen-md)
+    // 	img
+    // 		margin: 0 auto
+    // 		vertical-align: middle
+    figcaption {
+      background: $primary-gradient;
+      bottom: 0;
+      color: $back-full-text;
+      height: 1.5rem;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      img {
+
+        @include transform(translate(50%, 50%));
+        bottom: 50%;
+        height: 100%;
+        position: absolute;
+        right: 50%;
+        width: 100%;
+
+        @media screen and (max-width: $screen-md - 1px) {
+          &.index_image {
+
+            @include transform(translate(0, 0));
+            position: static;
+          }
+        }
+      }
+    }
+  }
+
+  &.obj-cover {
     .col-half {
-        overflow-y: hidden;
-        position: relative;
-
+      @media screen and (min-width: $screen-lg) {
         img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            object-fit: cover;
-            max-height: 100vh;
-
-            &#part_striscione {
-                @media screen and (min-width: $screen-lg) {
-                    @include transform(translate(50%, 50%) scaleX(-1));
-                }
-            }
+          object-fit: cover;
         }
-
-        // 	@media screen and (min-width: $screen-sm)
-        // 		height: 100%
-        // 	// object-fit: contain
-        // 	&.vertical-image
-        // 		max-height: 80vh
-        // 		width: auto
-        // 		margin: 0 auto
-        // 	&.obj_cover
-        // 		object-fit: cover
-        // 	&.obj_contain
-        // 		object-fit: contain
-        // @media screen and (min-width: $screen-md)
-        // 	img
-        // 		margin: 0 auto
-        // 		vertical-align: middle
-        figcaption {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            background: $primary-gradient;
-            left: 0;
-            bottom: 0;
-            height: 1.5rem;
-            color: $back-full-text;
-        }
-
-        @media screen and (min-width: $screen-sm) {
-            img {
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                bottom: 50%;
-                right: 50%;
-
-                @include transform(translate(50%, 50%));
-
-                @media screen and (max-width: $screen-md - 1px) {
-                    &.index_image {
-                        position: static;
-
-                        @include transform(translate(0, 0));
-                    }
-                }
-            }
-        }
+      }
     }
 
-    &.obj_cover {
-        .col-half {
-            @media screen and (min-width: $screen-lg) {
-                img {
-                    object-fit: cover;
-                }
-            }
-        }
-
-        &.temp_height {
-            min-height: 350px;
-        }
+    &.temp-height {
+      min-height: 350px;
     }
+  }
 
-    &.obj_contain {
-        @media screen and (min-width: $screen-lg) {
-            align-items: center;
+  &.obj-contain {
+    @media screen and (min-width: $screen-lg) {
+      align-items: center;
 
-            .col-half {
-                img {
-                    object-fit: contain;
-                    position: initial;
-
-                    @include transform(translate(0, 0));
-
-                    bottom: 0;
-                    right: 0;
-                }
-            }
-        }
-
-        .col-half {
-            img.vertical-image {
-                max-height: 80vh;
-                width: auto;
-                margin: auto;
-            }
-
-            img.orizontal-image {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-
-        &.temp_height {
-            min-height: 350px;
-        }
-    }
-
-    .col-accessories {
+      .col-half {
         img {
-            width: 100%;
-            height: 100%;
-            max-height: 156px;
-            object-fit: contain;
-            margin: auto;
-            display: block;
+
+          @include transform(translate(0, 0));
+
+          bottom: 0;
+          object-fit: contain;
+          position: initial;
+          right: 0;
         }
+      }
     }
 
-    // 		display: block
-    // 		margin: auto
-    // 		padding-bottom: .8rem
-    // 		@media screen and (min-width: $screen-sm)
-    // 			max-width: span(2 of 4)
-    // 			max-height: 95px
-    // 		@media screen and (min-width: $screen-md)
-    // 			max-height: 150px
-    // 			width: auto
-    // 			padding-right: gutter(of 4)
-    // 			float: none
-    // .columns_4
-    // img
-    // 	width: 100%
+    .col-half {
+      img.vertical-image {
+        margin: auto;
+        max-height: 80vh;
+        width: auto;
+      }
+
+      img.orizontal-image {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+    &.temp_height {
+      min-height: 350px;
+    }
+  }
+
+  .col-accessories {
+    img {
+      display: block;
+      height: 100%;
+      margin: auto;
+      max-height: 156px;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  // 		display: block
+  // 		margin: auto
+  // 		padding-bottom: .8rem
+  // 		@media screen and (min-width: $screen-sm)
+  // 			max-width: span(2 of 4)
+  // 			max-height: 95px
+  // 		@media screen and (min-width: $screen-md)
+  // 			max-height: 150px
+  // 			width: auto
+  // 			padding-right: gutter(of 4)
+  // 			float: none
+  // .columns_4
+  // img
+  // 	width: 100%
 }
 
 .row.row_pictures {
-    .col-half {
-        img {
-            position: initial;
-            bottom: 0;
-            right: 0;
+  .col-half {
+    img {
 
-            @include transform(translate(0, 0));
-        }
-
-        figure {
-            position: relative;
-        }
+      @include transform(translate(0, 0));
+      bottom: 0;
+      position: initial;
+      right: 0;
     }
+
+    figure {
+      position: relative;
+    }
+  }
 }
 
 // immagine di background titolo
 
 .row.gallery {
-    .col-half {
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
+  .col-half {
+    .container {
+      background-color: white;
+      margin: auto;
+      max-width: 800px;
 
-            .panel-main {
-                height: 100%;
-                padding-bottom: 10px;
+      .panel-main {
+        height: 100%;
+        padding-bottom: 10px;
 
-                // @media screen and (min-width: $screen-sm)
-                // 	height: 600px
-           
-            }
+        // @media screen and (min-width: $screen-sm)
+        // 	height: 600px
+      }
 
-            .panel-main img, .thumbs img {
-                width: 100%;
-                height: auto;
-                padding: 5px;
+      .panel-main img,
+      .thumbs img {
+        height: auto;
+        padding: 5px;
+        width: 100%;
 
-                @media screen and (min-width: $screen-sm) {
-                    position: relative;
+        @media screen and (min-width: $screen-sm) {
 
-                    @include transform(none);
+          @include transform(none);
 
-                    bottom: auto;
-                    right: auto;
-                }
-            }
-
-            .thumbs {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-gap: 5px;
-                height: auto;
-            }
+          bottom: auto;
+          position: relative;
+          right: auto;
         }
-    }
+      }
 
-    .fade-in {
-        opacity: 0;
-        animation: fadeIn 0.5s ease-in 1 forwards;
+      .thumbs {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        height: auto;
+      }
     }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in 1 forwards;
+    opacity: 0;
+  }
 }
 
 .image-title {
-    img.hide__portrait {
-        @include respond-to(screen-md) {
-            display: none;
-        }
-        
-    }
-    img.hide__landscape {
-        @media screen and (max-width: $screen-md - 1px) {
-            display: none;
-        }
-        
-    }
+  background: $primary-gradient;
+  bottom: 0;
+  // height: calc(100vh - 50px)
+  height: 50vh;
+  overflow: hidden;
+  // position: fixed
+  // z-index: -1;
+
+  position: relative;
+
+  width: 100%;
+  @include respond-to(screen-md) {
+    height: 100%;
+  }
+
+  @include respond-to(screen-xl) {
+    height: calc(100vh - 3px);
+  }
+  
+  img {
+    bottom: 0;
+    display: block;
+    height: auto;
+    margin: auto;
+    position: absolute;
     width: 100%;
-    position: relative;
-    // position: fixed
-    // z-index: -1;
 
-    // height: calc(100vh - 50px)
-    height: 50vh;
-    top: 0;
-    background: $primary-gradient;
-    overflow: hidden;
+    @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) {
+      height: 100%;
+      position: relative;
+      width: auto;
+    }
+  }
+
+  img.obj-cover {
+    @extend %img_cover;
+  }
+
+  img.cover-from-md {
     @include respond-to(screen-md) {
-        height: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    @include respond-to(screen-xl){
-        height: calc(100vh - 3px);
-    }
-
-   
-    img {
-        // position: absolute
-        width: 100%;
-        height: auto;
-        bottom: 0;
-    }
-
-    &#tovaglie-pubblicitarie {
-        img {
-            @extend %img_fit;
-        }
-    }
-
-    &#bandiere-bifacciali {
-        img {
-            height: 90%;
-            width: auto;
-            @extend %center_img;
-        }
-    }
-
-    &#car-solutions {
-        img {
-            @extend %img_fit;
-        }
-    }
-
-    &#foulard {
-        img {
-            @extend %img_fit;
-            @extend %center_img;
-            max-height: 80%;
-
-        }
-    }
-
-    &#gonfaloni {
-        img {
-            @extend %img_fit;
-            @extend %center_img;
-            max-height: 80%;
-            position: absolute;
-        }
-    }
-
-    &#tessuto-3d {
-        img {
-            @extend %img_fit;
-        }
-    }
-
-    &#frame-in-tessuto {
-        img {
-            @extend %img_cover;
-        }
-    }
-    &#bandiere-personalizzate {
-        img {
-            max-height: 90%;
-            width: auto;
-            position: absolute;
-            &:first-child {
-                right: 5%;
-                top: 20%;
-            }
-            &:last-child {
-                left: 5%;
-                top: 35%;
-            }
-            &:nth-child(2) {
-                right: 50%;
-                bottom: 0;
-                @include transform(translateX(50%));
-
-            }
-        }
-    }
-    &#beach-flags {
-        img {
-           max-height: 70%;
-           width: auto;
-           position: absolute;
-           bottom: 2%;
-           &:first-child {
-                left: 5%;
-           }
-           &:last-child {
-                right: 5%;
-                max-height: 100%;
-                top: 90px;
-           }
-           &:nth-child(2) {
-                right: 50%;
-                @include transform(translateX(50%));
-           }
-        }
-    }
-    &#bandiere-da-tavolo img {
-        position: absolute;
-        bottom: 0;
-    }
-    
-    &#gagliardetti {
-        img {
-            width: 30%;
-            height: auto;
-            position: absolute;
-            @include transform(translateY(50%));
-            bottom: 50%;
-            &:first-child {
-                left: 5%;
-            }
-            &:nth-child(2) {
-                @extend %center_img;
-            }
-            &:last-child {
-                right: 5%;
-            }
-        }
-    }
-
-    
-
-    &#bandiere-istituzionali, &#ombrelloni-personalizzati {
-        img {
-            @extend %img_cover;
-        }
-    }
-
-    &#maniche-a-vento {
-        img {
-            @extend %img_fit;
-            position: absolute;
-            bottom: 0;
-            @include respond-to(screen-md) {
-                height: auto;
-                max-height: 100%
-            }
-        }
-    }
-
-    &#poster {
-        img {
-            @extend %img_fit;
-        }
-    }
-
-    &#striscioni {
-        img {
-            height: 100%;
-        }
-    }
-
-    &#bean-banner {
-        img {
-            @extend %img_cover;
-            bottom: 0;
-        }
-    }
-
-    &#filari-di-bandierine {
-        img {
-            @extend %img_cover;
-        }
-    }
-
-    &#ombrelli-personalizzati {
-        img {
-            @extend %img_fit;
-        }
-    }
-
-    &#tappeto-personalizzato {
-        img {
-            height: calc(100% + 50px);
-            object-fit: cover;
-            bottom: 0;
-
-            &.small-img {
-                display: none;
-
-                @media screen and (max-width: $screen-sm - 1px) and (orientation: portrait) {
-                    display: initial;
-                }
-            }
-
-            &.md-img {
-                display: none;
-
-                @media screen and (min-width: $screen-sm) and (orientation: portrait) {
-                    display: initial;
-
-                    /* style */
-                }
-            }
-
-            &.xl-img {
-                display: none;
-
-                @media screen and (orientation: landscape) {
-                    display: initial;
-                }
-            }
-        }
-    }
-    &#ombrelloni-da-giardino img {
-        @extend %center_img;
-        max-height: 80%;
-        width: auto;
-        max-width: 90%;
-    }
-    
-    &#tappeto-prova img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-    }
-    &#tappeto-sottomoto {
-        img {
-            height: 100%;
-            width: auto;
-
-            @media screen and (min-width: $screen-md) {
-                object-fit: cover;
-                bottom: -60px;
-                width: 100%;
-            }
-        }
-    }
+  }
 }
 
-.row .col-half img.img-intern-50, .row .columns_4 img.img-intern-50 {
-    display: block;
-    width: 100%;
-    margin: auto;
-    height: auto;
+.row .col-half img.img-intern-50,
+.row .columns_4 img.img-intern-50 {
+  display: block;
+  height: auto;
+  margin: auto;
+  width: 100%;
 
-    @media screen and (min-width: $screen-sm) {
-        @include susy-use($susy-tablet) {
-            width: 60%;
-            margin: auto;
-            position: relative;
-            bottom: auto;
-            right: auto;
+  @media screen and (min-width: $screen-sm) {
+    @include susy-use($susy-tablet) {
 
-            @include transform(translate(0, 0));
-        }
+      @include transform(translate(0, 0));
+      bottom: auto;
+      margin: auto;
+      position: relative;
+      right: auto;
+      width: 60%;
     }
+  }
 }
 
 .container-grids {
-    .item {
-        img {
-            display: block;
-            @extend %img_fit;
-        }
+  .item {
+    img {
 
-        &:nth-child(2) {
-            img {
-                object-fit: cover;
-            }
-        }
+      @extend %img_fit;
+      display: block;
     }
+
+    &:nth-child(2) {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
 }
-img.single-image {
-    grid-column: 1 / -1;
-    @include respond-to(screen-sm) {
-        grid-column: 2 / -2;
-    }
-    @include respond-to(screen-md) {
-        grid-column: 3 / -3;
-    }
+
+.single-image {
+  grid-column: 1 / -1;
+
+  @include respond-to(screen-sm) {
+    grid-column: 2 / -2;
+  }
+
+  @include respond-to(screen-md) {
+    grid-column: 3 / -3;
+  }
 }
+

@@ -6,9 +6,9 @@ description: Ombrelli personalizzati, stampati sia su singolo spicchio che all o
 ideale: [segnalazione, pubblicit&agrave;, gadget]
 correlati: [Frame in Tessuto, Poster, Striscioni]
 image:
-  - path: /assets/images/ombrelli/background.png
-    class: ''
-    alt: Ombrelli personalizzati
+  - path:  /ombrelli_personalizzati/ombrelli_header.png
+    class: obj-cover
+    alt: Ombrelli personalizzati realizzati con varie tecniche di stampa per accontentare le vostre esigienze. Andiamo da un ombrello economico, con stampa serigrafica su parte dello spicchio fino ad un ombrello di qualit&agrave; con stampa digitale ad alta definizione su tutta la calotta.
     config: jumbotron
 forza:
   [
@@ -18,41 +18,38 @@ forza:
     Stampa su Tutta la Calotta
   ]
 preventivo: false
-thumb: /assets/images/thumb/ombrelli_thumb
+thumb:  /thumb/ombrelli_thumb.png
+interesse:  /interesse/ombrelli_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_fronte.png
-      alt="Ombrelli personalizzati modello UK fronte" class="orizontal-image" %}
-    </div>
-    <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/ombrello_UK_interno.png
-      alt="Ombrelli personalizzati modello UK interno" class="orizontal-image"
+      {% picture slide  /ombrelli_personalizzati/ombrello_interno.png
+      --alt Ombrelli personalizzati modello UK interno
       %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelli/ombrello_personalizzato.png alt="Ombrelli
-      personalizzati modello UK" class="orizontal-image" %}
+      {% picture slide
+       /ombrelli_personalizzati/ombrello_chiuso.png --alt Ombrelli
+      personalizzati modello economico %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelli/ombrello_poster_fronte_1.png alt="Ombrelli
-      personalizzati modello poster" class="orizontal-image" %} %}
+      {% picture slide
+       /ombrelli_personalizzati/ombrello_poster.png --alt Ombrelli
+      personalizzati modello poster %} %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/ombrelli/ombrello_poster_interno_1.png alt="Ombrelli
-      personalizzati modello poster" class="orizontal-image" %} %}
+      {% picture slide
+       /ombrelli_personalizzati/ombrello_poster_interno.png --alt Ombrelli
+      personalizzati modello poster %} %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi ombrelli presonalizzati</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}
@@ -71,14 +68,14 @@ thumb: /assets/images/thumb/ombrelli_thumb
   necessit&agrave; pubblicitaria. Realizziamo ombrelli di vari tipi e misure
 </p>
 <p>
-  L'ombrello poster è un ombrello pubblicitario a formato unico. Misura 108x108.
+  L'ombrello poster &egrave; un ombrello pubblicitario a formato unico. Misura 108x108.
   Un bel quadrato di tessuto termoformato. Non avendo cuciture, la sua
-  stampabilità è immensa e, di conseguenza, la sua visibilità.
+  stampabilità &egrave; immensa e, di conseguenza, la sua visibilità.
 </p>
 <p>
   Viene utilizzato nelle corse ed in tutti quei contesti in cui ci si distingue,
   si spunta, ci si fa ammirare. Sposato con foto o complicate grafiche non
-  divorzia, è fedele e la sua durata è testimoniata dalla scheda tecnica che ha
+  divorzia, &egrave; fedele e la sua durata &egrave; testimoniata dalla scheda tecnica che ha
   il suo bel pedigree:
 </p>
 <ul class="list-grids">
@@ -88,36 +85,32 @@ thumb: /assets/images/thumb/ombrelli_thumb
   <li>Bacchette in acciaio al carbonio verniciato nero.</li>
   <li>Manico dritto o curvo in legno.</li>
   <li>Puntine nichelate alla estremit&agrave; delle bacchette</li>
-  <li>lacetto con velcro o bottone.</li>
+  <li>laccetto con velcro o bottone.</li>
 </ul>
 <h3 class="middle-title">ombrello all over</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/monet_covoni.png
-      alt="Ombrelli personalizzati modello all over Mod. Covoni" id="selected"
+      {% picture slide  /ombrelli_personalizzati/ombrello_monet.png
+      --alt Ombrelli personalizzati modello all over Mod. Covoni" id="selected"
       %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/particolare_cucitura.jpg
-      alt="Ombrelli personalizzati modello all over Particolare cucitura" %}
+      {% picture slide  /ombrelli_personalizzati/ombrello_particolare_cucitura.jpg
+      --alt Ombrelli personalizzati modello all over Particolare cucitura" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/turner_roma.png
-      alt="Ombrelli personalizzati modello all over Mod. Roma" %}
+      {% picture slide  /ombrelli_personalizzati/ombrello_turner_roma.png
+      --alt Ombrelli personalizzati modello all over Mod. Roma" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/ombrelli/turner_venezia.png
-      alt="Ombrelli personalizzati modello all over Mod. Venezia" %}
+      {% picture slide  /ombrelli_personalizzati/ombrello_turner_venezia.png
+      --alt Ombrelli personalizzati modello all over Mod. Venezia" %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-
-{% comment %}{% cloudinary halfscreen
-/assets/images/ombrelli/ombrello_all_over.png alt="Ombrelli personalizzati
-modello all over" class="orizontal-image" %}{% endcomment %}
 
 <p>
   L'ombrello "all over" vuol dire tutto stampato e per incontrare le stampe ben

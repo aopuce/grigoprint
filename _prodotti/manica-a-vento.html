@@ -7,9 +7,9 @@ ideale: [esterno, segnalazione, pubblicit&agrave;]
 correlati:
   [Bandiere Bifacciali, Bandiere Istituzionali, Bandiere Personalizzate]
 image:
-  - path: /assets/images/maniche_a_vento/maniche_a_vento_portrait.png
-    class: 'portrait'
-    alt: Manica a vento
+  - path:  /manica_a_vento/manica_a_vento_header.png
+    class: cover-from-md
+    alt: Manica a vento, realizzate in tessuto di poliestere o acrilico. Possibilit&agrave; di produrre la vostra manica a vento personalizzata.
     config: halfscreen
 forza:
   [
@@ -21,7 +21,8 @@ forza:
   ]
 preventivo: true
 price: 68,00 € cad.
-thumb: /assets/images/thumb/maniche_a_vento_thumb
+thumb:  /thumb/manica_a_vento_thumb.png
+interesse:  /interesse/manica_a_vento_interesse.png
 numberp: 18
 ---
 
@@ -82,28 +83,28 @@ numberp: 18
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/maniche_a_vento/manica_a_vento_standard.png
-      class="vertical-image" alt="Maniche a vento i.c.a.o" title="Maniche a
+      {% picture slide
+       /manica_a_vento/manica_a_vento_s.png
+      class="vertical-image" --alt Maniche a vento i.c.a.o --img title="Maniche a
       vento i.c.a.o" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/maniche_a_vento/manica_a_vento_personalizata.png
-      class="vertical-image" alt="Maniche a vento personalizzata" title="Maniche
+      {% picture slide
+       /manica_a_vento/manica_a_vento_p.png
+      class="vertical-image" --alt Maniche a vento personalizzata --img title="Maniche
       a vento personalizzata" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/maniche_a_vento/maniche_a_vento_landscape.png
-      class="vertical-image" alt="Maniche a vento personalizzata" title="Maniche
+      {% picture slide
+       /manica_a_vento/manica_a_vento.png
+      class="vertical-image" --alt Maniche a vento personalizzata --img title="Maniche
       a vento personalizzata" %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le tue maniche a vento</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

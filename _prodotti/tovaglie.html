@@ -6,14 +6,15 @@ description: Tovaglie pubblicitarie, stampate in digitale, ideali per eventi e f
 ideale: [fiere, eventi, pubblicit&agrave;]
 correlati: [Bandiere Bifacciali, Bandiere da Tavolo, Gonfaloni, Gagliardetti]
 image:
-  - path: /assets/images/tovaglie/tovaglia.png
+  - path:  /tovaglie_pubblicitarie/tovaglie_header.png
     class: ''
-    alt: Tovaglia promozionale Personalizzata
+    alt: Tovaglia promozionale personalizzata, con stampa su tutto il tessuto ad alta definizione.
     config: jumbotron
 forza: [Tessuto Resistente, Stampa Sublimatica, Su Misura]
 preventivo: true
 price: 20,70 € mq.
-thumb: /assets/images/thumb/tovaglie_thumb
+thumb:  /thumb/tovaglie_thumb.png
+interesse:  /interesse/tovaglie_interesse.png
 numberp: 21
 ---
 
@@ -55,20 +56,20 @@ numberp: 21
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary jumbotron /assets/images/tovaglie/particolare_cucitura.png
-      alt="Tovaglia promozionale Personalizzata particolare cucitura"
-      title="Tovaglia promozionale Personalizzata particolare cucitura" %}
+      {% picture slide  /tovaglie_pubblicitarie/tovaglie_cucitura.jpg
+      --alt Tovaglia promozionale Personalizzata particolare cucitura 
+      --img title="Tovaglia promozionale Personalizzata particolare cucitura" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary jumbotron /assets/images/tovaglie/tovaglia.png alt="Tovaglia
-      promozionale Personalizzata particolare cucitura" title="Tovaglia
+      {% picture slide  /tovaglie_pubblicitarie/tovaglie_personalizzate.png --alt Tovaglia
+      promozionale Personalizzata particolare cucitura --img title="Tovaglia
       promozionale Personalizzata particolare cucitura" %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per la tua tovaglia pubblicitaria</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

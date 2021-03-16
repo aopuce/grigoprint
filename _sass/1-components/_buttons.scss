@@ -42,6 +42,22 @@ input, button, submit {
     &.btn-default {
         background: $default-gradient;
         color: $long-text;
+		&.btn-close {
+			margin: 0;
+			border-radius: 50%;
+			padding: 5px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			svg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				stroke-dashoffset: 85;
+				stroke-dasharray: 85;
+				transform: rotate(-90deg);
+			}
+		}
 
         // +box-shadow($shadow_buttons shade($back-full-text, 25%))
 
@@ -103,6 +119,7 @@ input, button, submit {
         color: $back-full-text;
 
         // +box-shadow($shadow_buttons shade($success, 25%))
+
 
         &:active {
             @include box-shadow(inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.5));
@@ -197,6 +214,13 @@ input, button, submit {
         }
     }
 
+	&.validate {
+		&:focus, &:hover {
+			background: $success;
+            @include box-shadow(0 25px 30px -15px rgba($success, .8));
+		}
+	}
+
     &.error, &.onclick.error {
         -webkit-transform: rotate(0);
            -moz-transform: rotate(0);
@@ -214,6 +238,12 @@ input, button, submit {
             border: none;
         }
     }
+	&.error {
+		&:focus, &:hover {
+			background: $allert;
+            @include box-shadow(0 25px 30px -15px rgba($allert, .8));
+		}
+	}
 
     &.btn-outline {
         background: none;

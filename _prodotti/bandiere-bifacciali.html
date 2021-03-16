@@ -6,10 +6,10 @@ description: Bandiere personalizzate bifacciali in tessuto raso di poliestere, s
 ideale: [comuni, istituzioni, arredo]
 correlati: [Gonfaloni, Bandiere Personalizzate, Gagliardetti]
 image:
-  - path: /assets/images/bandiere_bifacciali/bandiere_bifacciali.png
-    class: ''
-    alt: bandiere bifacciali personalizzata
-    config: halfscreen
+  - path:  /bandiere_bifacciali/bandiere_bifacciali_header.png
+    class: 'cover-from-md'
+    alt: bandiere bifacciali personalizzata, stampate in digitale ad alta definizione, finiture di qualit&agrave;, realizzate in tessuto raso brillante accoppiato con oascurante. Queste bandiere sono ideali sia per interno che per esterno.
+    config: slide
 forza:
   [
     Tessuto di Poliestere,
@@ -19,7 +19,8 @@ forza:
   ]
 preventivo: true
 price: 50,00 € cad.
-thumb: /assets/images/thumb/bandiere_bifacciali_thumb
+thumb:  /thumb/bandiere_bifacciali_thumb.jpg
+interesse:  /interesse/bandiere_bifacciali_interesse.jpg
 numberp: 4
 ---
 
@@ -75,19 +76,26 @@ numberp: 4
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_bifacciali/bandiera_bifacciale_completa.png
-      alt="bandiere bifacciali personalizzate modello Veneto completa"
-      class="orizontal-image" %}
+      {% picture slide
+       /bandiere_bifacciali/bandiere_bifacciali_veneto.png
+      --alt bandiere bifacciali personalizzate modello Veneto completa, questa bandiera &egrave; stata realizzata su tessuto raso di alta qualit&agrave;, finiture: passamaneria oro e frangia oro.
+       %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_bifacciali/particolare_lavorazione.png
-      alt="bandiere bifacciali personalizzate partricolare lavorazione" %}
+      {% picture slide
+       /bandiere_bifacciali/bandiere_bifacciali_lavorazione.jpg
+      --alt particolare di finitura di bandiera bifacciale %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/bandiere_bifacciali/struttura.png
-      alt="bandiere bifacciali personalizzate struttura" class=" vertical-image"
+      {% picture slide 
+	   /bandiere_bifacciali/bandiere_bifacciali_stampa.jpg
+      --alt particoare di bandiera bifacciale su tessuto raso, stampa digitale ad alta definizione.
+      %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide 
+	   /bandiere_bifacciali/bandiere_bifacciali_struttura.png
+      --alt struttura per bandiere bifacciali in ottone con puntale, sono disponibili anche per mono bandiera o per due bandiere.
       %}
     </div>
   </div>
@@ -95,7 +103,7 @@ numberp: 4
   <div class="swiper-button-next"></div>
 </div>
 
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le vostre bandiere</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

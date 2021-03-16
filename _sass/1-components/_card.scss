@@ -17,4 +17,36 @@
     &.card__light {
         @extend %neumorph__light;
     }
+	&.card__errore, &.card__successo {
+		@extend
+		%neumorph__light;
+		position: fixed;
+		@extend %center_img;
+		z-index: 5;
+		width: 90%;
+		@include respond-to(screen-sm) {
+			width: 60%;
+		}
+		p {
+			margin: 0;
+		}	
+		color: $back-full-text;
+		opacity: 1;
+		@include
+		transition;
+		&.hidden {
+			opacity: 0;
+			display: none;
+		}
+	}
+	&.card__successo {
+		background:
+		rgba($success, .7);
+		// display: none;
+	}
+	&.card__errore {
+		background:
+		rgba($allert, .7);
+		// display: none;
+	}
 }

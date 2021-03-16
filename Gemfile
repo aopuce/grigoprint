@@ -26,6 +26,7 @@ group :jekyll_plugins do
   gem 'jekyll-minibundle'
   gem 'jekyll-paginate'
   gem 'jekyll-archives'
+  gem 'jekyll_picture_tag'
 end
 
 gem "compass"

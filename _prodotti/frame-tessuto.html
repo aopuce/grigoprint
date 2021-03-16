@@ -13,9 +13,9 @@ correlati:
     Tappeto Personalizzato
   ]
 image:
-  - path: /assets/images/frame_tessuto/frame_tessuto.png
-    class: ''
-    alt: cornici in alluminio con stampa personalizzata
+  - path:  /frame_tessuto/frame_tessuto_header.png
+    class: obj-cover
+    alt: cornici e frame in alluminio con tessuto stampato in digitale. Disponibile anche la sola stampa con cucitura gommmino (kader).
     config: jumbotron
 forza:
   [
@@ -26,7 +26,8 @@ forza:
     Disponibile Servizio di Cucitura
   ]
 preventivo: true
-thumb: /assets/images/thumb/frame_thumb
+thumb:  /thumb/frame_tessuto_thumb.png
+interesse:  /interesse/frame_tessuto_interesse.png
 numberp: 20
 ---
 
@@ -80,23 +81,23 @@ numberp: 20
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/frame_tessuto/esploso.png
-      alt="espolso cornici in alluminio" class="obj_contain" %}
+      {% picture slide  /frame_tessuto/esploso_frame.jpg
+      --alt espolso cornici in alluminio %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/frame_tessuto/particolare_linguetta.png alt="particolare
-      linguetta del frame in tessuto" %}
+      {% picture slide
+       /frame_tessuto/estrazione_semplificata_frame.jpg --alt particolare
+      linguetta del frame in tessuto %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/frame_tessuto/frame.png
-      alt="particolare linguetta del frame in tessuto" %}
+      {% picture slide  /frame_tessuto/cornice_alluminio.png
+      --alt particolare linguetta del frame in tessuto %}
     </div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per frame in tessuto</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}

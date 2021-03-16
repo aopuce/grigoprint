@@ -25,20 +25,13 @@ forza:
     Stampa su Grande Formato
   ]
 image:
-  - path: /assets/images/bandiere_personalizzate/bandiera_banner_bar.png
-    class: ''
-    alt: stampa bandiere personalizzate modello banner bar
-    config: onethird
-  - path: /assets/images/bandiere_personalizzate/bandiera_verticale.png
-    class: ''
-    alt: stampa bandiere personalizzate modello verticale
-    config: onethird
-  - path: /assets/images/bandiere_personalizzate/bandiera_orizzontale.png
-    class: ''
-    alt: stampa bandiere personalizzate modello orizzontale
+  - path:  /bandiere_personalizzate/bandiere_personalizzate_header.png
+    class: cover-from-md
+    alt: bandiere personalizzate, stampate in digitale ad alta definizione. Disponibili in varie misure e anche in grande formato. Sia orizzontali che verticali.
     config: onethird
 price: 6,60 € cad.
-thumb: /assets/images/thumb/bandiere_personalizzate_thumb
+thumb:  /thumb/bandiere_personalizzate_thumb.png
+interesse:  /interesse/bandiere_personalizzate_interesse.png
 preventivo: false
 ---
 
@@ -100,28 +93,47 @@ preventivo: false
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_personalizzate/bandiera_partiti_2.png
-      alt="Bandiera in pongee ideale per partiti ed eventi" title="Bandiere
-      Personalizzate" %}
+      {% picture slide
+       /bandiere_personalizzate/bandiera_economica.png
+      --alt Bandiera in pongee ideale per partiti ed eventi 
+	  --title Bandiere Personalizzate in tessuto pongee idale per eventi e budget ridotti %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_personalizzate/bandiera_pubblicitaria.png
-      alt="Bandiera personalizzata in nautio ideale per aumentare la propria
-      visibilit&agrave;" title="Bandiere Personalizzate in nautico" %}
+      {% picture slide
+       /bandiere_personalizzate/bandiera_verticale.png
+      --alt Bandiera personalizzata in nautio ideale per aumentare la propria visibilit&agrave; 
+	  --title Bandiere Personalizzate in nautico %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_personalizzate/finitura_moschettone.png
-      alt="Finitura bandiera personalizzata con moschettone" title="Finitura
-      Bandiere Personalizzate" %}
+      {% picture slide
+       /bandiere_personalizzate/bandiera_finitura_moschettone.png
+      --alt Finitura bandiera personalizzata con moschettone 
+	  --title Finitura Bandiere Personalizzate %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_personalizzate/bandiera_finitura_manica.png
+      --alt Finitura bandiera personalizzata con manica, indeale per aste o girevoli
+	  --title Finitura Bandiere Personalizzate di tipo manica %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_personalizzate/bandiera_cucitura.jpg
+      --alt Particolare cucitura di una bandiera in tessuto nautico.
+	  --title Particolare cucitura di una bandiera in tessuto nautico%}
+    </div>
+	<div class="swiper-slide">
+		{% picture slide
+		 /bandiere_personalizzate/bandiera_orizzontale.png
+		--alt bandiera personalizzata modello orizzontale per palo 
+		--title Bandiera Personalizzate Orizzontale in Tessuto Nautico
+		%}
+	</div>
   </div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le tue bandiere personalizzate</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}
@@ -131,8 +143,10 @@ preventivo: false
 <h3 class="middle-title">tessuti</h3>
 <section class="tessuti grids__col4">
   <div class="col card">
-    {% cloudinary halfscreen /assets/images/tessuti/nautico_3p.png alt="tessuto
-    per bandiere tipo nautico" class="img-intern-50"%}
+    {% picture desc4g 
+	 /tessuti/nautico_3p.png 
+	--alt tessuto per bandiere tipo nautico 
+	--picture class="img-intern-50" %}
     <h5>tessuto nautico</h5>
     <p><em>Tessuto 110g 100% poliestere</em></p>
     <p>
@@ -143,8 +157,10 @@ preventivo: false
     <p>Disponibile nelle varianti ignifugo e due pettini, adatto per interni</p>
   </div>
   <div class="col card">
-    {% cloudinary halfscreen /assets/images/tessuti/nautico_3p.png alt="tessuto
-    per bandiere tipo nautico" class="img-intern-50"%}
+    {% picture desc4g 
+	 /tessuti/nautico_3p.png 
+	--alt tessuto per bandiere tipo nautico 
+	--picture class="img-intern-50" %}
     <h5>nautico ignifugo</h5>
     <p>
       Tessuto per bandiere con le stesse caratteristiche del tessuto nautico
@@ -158,8 +174,10 @@ preventivo: false
     </p>
   </div>
   <div class="col card">
-    {% cloudinary halfscreen /assets/images/tessuti/pongee.png alt="tessuto per
-    bandiere tipo pongee" class="img-intern-50"%}
+    {% picture desc4g 
+	 /tessuti/pongee.png 
+	--alt tessuto per bandiere tipo pongee 
+	--picture class="img-intern-50" %}
     <h5>tessuto pongee</h5>
     <p><em>Tessuto 85g 100% poliestere</em></p>
     <p>
@@ -170,8 +188,10 @@ preventivo: false
     </p>
   </div>
   <div class="col card">
-    {% cloudinary halfscreen /assets/images/tessuti/passavento.png alt="tessuto
-    per bandiere tipo passavento" class="img-intern-50"%}
+    {% picture desc4g 
+	 /tessuti/passavento.png 
+	--alt tessuto per bandiere tipo passavento 
+	--picture class="img-intern-50" %}
     <h5>tessuto passavento</h5>
     <p><em>Tessuto 115g 100% poliestere</em></p>
     <p>
@@ -186,7 +206,7 @@ preventivo: false
 <section class="grids__adattable">
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/cappio_cordino.svg"
+		src="{{site.url}}/assets/images/svg/cappio_cordino-min.svg"
       alt="cappio e cordino"
       class="img-intern-50"
     />
@@ -198,7 +218,7 @@ preventivo: false
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/laccetti.svg"
+		src="{{site.url}}/assets/images/svg/laccetti-min.svg"
       alt="laccetti"
       class="img-intern-50"
     />
@@ -210,7 +230,7 @@ preventivo: false
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/occhielli.svg"
+		src="{{site.url}}/assets/images/svg/occhielli-min.svg"
       alt="occhielli"
       class="img-intern-50"
     />
@@ -222,7 +242,7 @@ preventivo: false
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/moschettoni.svg"
+      src="{{site.url}}/assets/images/svg/moschettoni-min.svg"
       alt="moschettoni"
       class="img-intern-50"
     />
@@ -234,7 +254,7 @@ preventivo: false
   </article>
   <article class="col card card__light">
     <img
-      src="/assets/images/finiture/manica_chiusa.svg"
+      src="{{site.url}}/assets/images/svg/manica_chiusa-min.svg"
       alt="manica per asta"
       class="img-intern-50"
     />

@@ -7,9 +7,9 @@ ideale: [pubblicit&agrave;, eventi, fiere]
 correlati:
   [Bandiere Bifacciali, Frame in Tessuto, Tappeto Personalizzato, Tessuto 3D]
 image:
-  - path: /assets/images/poster/poster.png
+  - path:  /poster/poster_header.png
     class: ''
-    alt: poster in tessuto raso
+    alt: poster in tessuto raso, di alta qualit&a;, disponibili anche come poster bifacciali.
     config: jumbotron
 forza:
   [
@@ -18,19 +18,26 @@ forza:
     Non ha Memoria di Forma
   ]
 preventivo: false
-thumb: /assets/images/thumb/poster_thumb
+thumb:  /thumb/poster_thumb.png
+interesse:  /interesse/poster_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/poster/poster_laterale.png
-      alt="poster in tessuto raso personalizzato" %}
+      {% picture slide  /poster/poster_fronte.png
+      --alt poster in tessuto raso personalizzato fronte %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide  /poster/poster_lato.png
+      --alt poster in tessuto raso personalizzato laterale %}
     </div>
   </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi poster</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}
@@ -39,7 +46,7 @@ thumb: /assets/images/thumb/poster_thumb
 <h2 class="middle-title">Descrizione {{ page.title }}</h2>
 <p>
   Il poster personalizzato ha il suo apice specie nelle vetrinistica, dove
-  amplifica e sorregge il reale prodotto. E’ il componente per visualizzazioni
+  amplifica e sorregge il reale prodotto. &Egrave; il componente per visualizzazioni
   da parete o da soffitto per eccellenza. Eseguito in diversi supporti:
 </p>
 <ul class="list-grids">

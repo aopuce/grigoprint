@@ -14,47 +14,48 @@ correlati:
   ]
 forza: [Completamente Personalizzabile, Disponibile in Varie Forme e Misure]
 image:
-  - path: /assets/images/bandiere_da_tavolo/bandiere_da_tavolo_portrait.png
-    alt: stampa bandiere da tavolo personalizzate
+  - path:  /bandiere_da_tavolo/bandiere_da_tavolo_header.png
+    alt: stampa bandiere da tavolo in digitale su tessuto nautico, bandiere sia di forma rettangolare che a goccia. Comprensive di struttura. Ideali come segna posto, per conferenze o eventi.
     config: halfscreen
-    class: hide__landscape
-  - path: /assets/images/bandiere_da_tavolo/bandiere_da_tavolo_landscape.png
-    alt: stampa bandiere da tavolo personalizzate
-    config: halfscreen
-    class: hide__portrait
+    class: obj-cover
 preventivo: false
-thumb: /assets/images/thumb/bandiere_da_tavolo_thumb
+thumb:  /thumb/bandiere_da_tavolo_thumb.png
+interesse:  /interesse/bandiere_da_tavolo_interesse.png
 ---
 
 <h3 class="middle-title">Galleria immagini</h3>
 <div class="swiper-container gallery-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_da_tavolo/struttura_flying.png alt="Struttura
-      Bandiera Flying da tavolo" title="Bandiera Flying da tavolo" %}
+      {% picture slide
+       /bandiere_da_tavolo/bandiere_da_tavolo_struttura.png 
+	  --alt Struttura Bandiera Flying da tavolo 
+	  --img title="Bandiera Flying da tavolo" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_da_tavolo/flying_grande.png alt="bandiera Flying
-      da tavolo ideale per convegni e pubblicit&agrave;" title="Bandiera Flying
-      da tavolo" %}
+      {% picture slide
+       /bandiere_da_tavolo/flying_da_tavolo.png 
+	  --alt bandiera Flying da tavolo ideale per convegni e pubblicit&agrave; 
+	  --img title="Bandiera Flying da tavolo" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen
-      /assets/images/bandiere_da_tavolo/girevole_da_tavolo.png alt="Bandiera
-      Girevole da tavolo " title="Bandiera girevole da tavolo" %}
+      {% picture slide
+       /bandiere_da_tavolo/girevole_da_tavolo.png 
+	  --alt Bandiera Girevole da tavolo 
+	  --img title="Bandiera girevole da tavolo" %}
     </div>
     <div class="swiper-slide">
-      {% cloudinary halfscreen /assets/images/bandiere_da_tavolo/bandierina.png
-      alt="Bandierina classica da tavolo" title="Bandiera classica da tavolo" %}
+      {% picture slide 
+	   /bandiere_da_tavolo/bandierina_da_tavolo.png
+      --alt Bandierina classica da tavolo 
+	  --img title="Bandiera classica da tavolo" %}
     </div>
   </div>
 
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le tue bandiere da tavolo</h3>
 <div class="row-primary">
   <div class="contact-row">
     {%- include form/form_info.html -%} {%- include form_base.html -%}
