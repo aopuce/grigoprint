@@ -18,7 +18,7 @@ layout: compress
         <main class="page-content" id="page-content" aria-label="Content">
             <div class="image-title" id="{{page.title | replace: ' ', '-' | downcase}}">
             	{% for item in page.image %}
-                	{% cloudinary {{item.config}} {{item.path}} alt="{{item.alt}}" class="lazyload {{item.class}}" %}
+                	{%  picture slide {{item.path}} alt="{{item.alt}}" class="lazyload {{item.class}}" %}
                 {% endfor %}
             </div>
             <div class="wrapper">

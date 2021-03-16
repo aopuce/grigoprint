@@ -1,172 +1,243 @@
-.base-grid {
-
-}
-
 .section {
-	width: 100%;
-	padding: $padding-base $padding-base * 2;
-	max-width: 1400px;
-	margin: auto;
-	img{
-		width: 100vw;
-		margin: 0 0-$padding-base * 2;
-	}
-	.service-content {
-		margin-bottom: $padding-base * 2;
-	}
-	h2.middle-title {
-		@extend %middle-title;
-	}
-	h4 {
-		text-align: center;
-		padding-top: 0;
-		margin-top: 0;
-		.grigo-icons{
-			display: block;
-		}
-	}
-	&.section__service {
-		@include respond-to(screen-sm) {
-			display: grid;
-			grid-gap: 10px;
-			grid-template-columns: repeat(8, 1fr);
-			h2 {
-				grid-column: 2 / -2
-			}
-			:nth-child(2) {
-				grid-column: 1 / 5;
-			}
-			:nth-child(3) {
-				grid-column: 5 / 9;
-			}
-			:nth-child(4) {
-				grid-column: 1 / 9;
-			}
-		}
-		@include respond-to(screen-md) {
-			display: grid;
-			grid-gap: 20px;
-			grid-template-columns: repeat(12, 1fr);
-			h2 {
-				grid-column: 3 / -3
-			}
-			:nth-child(2) {
-				grid-column: 1 / 5;
-			}
-			:nth-child(3) {
-				grid-column: 5 / 9;
-			}
-			:nth-child(4) {
-				grid-column: 9 / 13;
-			}
-		}
-	}
+  margin: auto;
+  max-width: 1400px;
+  padding: $padding-base $padding-base * 2;
+  width: 100%;
+
+  img {
+    margin: 0 0-$padding-base * 2;
+    width: 100vw;
+  }
+
+  .service-content {
+    margin-bottom: $padding-base * 2;
+  }
+
+  h2.middle-title {
+    @extend %middle-title;
+  }
+
+  h4 {
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+
+    .grigo-icons {
+      display: block;
+    }
+  }
+
+  &.section__service {
+    @include respond-to(screen-sm) {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(8, 1fr);
+
+      h2 {
+        grid-column: 2 / -2;
+      }
+
+      :nth-child(2) {
+        grid-column: 1 / 5;
+      }
+
+      :nth-child(3) {
+        grid-column: 5 / 9;
+      }
+
+      :nth-child(4) {
+        grid-column: 1 / 9;
+      }
+    }
+
+    @include respond-to(screen-md) {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(12, 1fr);
+
+      h2 {
+        grid-column: 3 / -3;
+      }
+
+      :nth-child(2) {
+        grid-column: 1 / 5;
+      }
+
+      :nth-child(3) {
+        grid-column: 5 / 9;
+      }
+
+      :nth-child(4) {
+        grid-column: 9 / 13;
+      }
+    }
+  }
 }
-.splide#splide__index {
-	margin-top: 60px;
-	border-bottom: 3px solid $second-color;
-	@include respond-to(screen-sm) {
-		margin-top: 0;
-	}
-}
-.splide__slide .splide__title{
-	width: 100%;
-	height: 100%;
-	background: $back-full-text;
-	position: relative;
-	// display: flex;
-	// flex-direction: column;
-	.splide__info {
-		position: absolute;
-		bottom: 10px;
-		right: 10px;
-		background: $back-full-text;
-		padding: 20px;
-		h2, p {
-			padding: 0;
-			margin: 0;
-		}
-	}
+
+.swiper-container#swiper__index {
+  border-bottom: 3px solid $second-color;
+  height: 400px;
+  padding-top: 60px;
+  width: auto;
+  // max-height: 500px;
+  @include respond-to(screen-sm) {
+    height: 560px;
+  }
+  @include respond-to(screen-md) {
+    height: 780px;
+    padding-top: 0;
+  }
+  @include respond-to(screen-xl) {
+    height: 700px;
+  }
+  @include respond-to(screen-2k) {
+    height: 690px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $second-color;
+  }
+
+  .swiper-slide {
+    background: $back-full-text;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @media screen and (max-width: $screen-sm - 1px) and (orientation: landscape) {
+      max-height: calc(100vh - 60px);
+    }
+
+    img {
+      @extend %img_cover;
+    }
+    // display: flex;
+    // flex-direction: column;
+    // img {
+    //     @extend %img_cover;
+    //     max-height: 250px;
+    //     @include respond-to(screen-sm) {
+    //         max-height: 500px;
+    //     }
+    //     @include respond-to(screen-xl) {
+    //         max-height: 600px;
+    //     }
+    // }
+    .swiper__info {
+      background: rgba($back-full-text, 0.8);
+      bottom: 0;
+      max-height: 200px;
+      padding: 20px;
+      position: absolute;
+      @media screen and (max-width: $screen-sm - 1px) and (orientation: landscape) {
+        bottom: auto;
+        right: 0;
+        top: 0;
+      }
+      @include respond-to(screen-sm) {
+        background: $back-full-text;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
 }
 
 .section.section__products {
-	ul {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 10px;
-		@include respond-to(screen-sm) {
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 20px;
-		}
-		li a {
-			display: block;
-			width: 100%;
-			height: 100%;
-			position: relative;
-			border: 1px solid darken($back-full-text, 20%);
-			border-radius: $radius;
-			background: $primary-color;
-			@include transition;
-			// height: 150px;
-			img {
-				display: block;
-				width: 100%;
-				height: 100%;
-				object-fit: contain;
-				margin: 0;
-				height: auto;
-				border-radius: $radius;
-			}
-			h4 {
-				// position: absolute;
-				bottom: 0;
-				width: 100%;
-				margin: 0;
-				padding: 10px 5px;
-				// background: $primary-color;
-				color: $long-text;
-				font-size: .6rem;
-				font-weight: 800;
-				font-family: $text_font_family;
-				color: $back-full-text;
-			}
-			&:hover {
-				@extend %neumorph__light;
-				background: $second-color;
-			}
-		}
-	}
+  ul {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    @include respond-to(screen-sm) {
+      grid-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    li a {
+      @include transition;
+      background: $primary-color;
+      border: 1px solid darken($back-full-text, 20%);
+      border-radius: $radius;
+      display: block;
+      height: 100%;
+      position: relative;
+      width: 100%;
+      // height: 150px;
+      img {
+        background-color: $back-full-text;
+        border-radius: $radius;
+        display: block;
+        height: 100%;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      h4 {
+        // position: absolute;
+        bottom: 0;
+        // background: $primary-color;
+        color: $long-text;
+        color: $back-full-text;
+        font-family: $text_font_family;
+        font-size: 0.6rem;
+        font-weight: 800;
+        margin: 0;
+        padding: 10px 5px;
+        width: 100%;
+      }
+
+      &:hover {
+        @extend %neumorph__light;
+        background: $second-color;
+      }
+    }
+  }
 }
 
 .section.section__mission {
-	max-width: 100%;
-	padding: 0;
-	margin: 0;
-	article {
-		background: $primary-color;
-		color: $back-full-text;
-		padding: $padding-base $padding-base * 2;
-	}
-	img {
-		padding: 0;
-		margin: 0;
-	}
-	@include respond-to(screen-sm) {
-		display: grid;
-		grid-template-columns: repeat(8, 1fr);
-		position: relative;
-		img {
-			grid-column: 1 / 4;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			position: absolute;
-		}
-		article {
-			grid-column: 4 / 9;
-			> p, > h2 {
-				max-width: 900px
-			} 
-		}
-	}
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  @include respond-to(screen-sm) {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    position: relative;
+
+    img {
+      grid-column: 1 / 4;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+    }
+
+    article {
+      grid-column: 4 / 9;
+
+      > p,
+      > h2 {
+        max-width: 900px;
+      }
+    }
+  }
+
+  article {
+    background: $primary-color;
+    color: $back-full-text;
+    padding: $padding-base $padding-base * 2;
+  }
+
+  img {
+    margin: 0;
+    padding: 0;
+  }
 }

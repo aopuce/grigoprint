@@ -5,22 +5,23 @@ exclude: false
 description: Grigolini produce ombrelloni da spiaggia e da giardino personalizzati, pubblicitari. 
 ideale: [ristorazione, bar, externo]
 image: 
-    - path: /assets/images/ombrelloni/back_ombrelloni.png 
-      class: ""
-      alt: ombrelloni da giardino personalizzati
+    - path:  /ombrelloni_personalizzati/ombrelloni_p_header.png 
+      class: obj-cover
+      alt: ombrelloni da giardino personalizzati e ombrelloni da spiaggia personalizzati
       config: jumbotron
 forza: [Personalizzabili, Diversi Modelli e Misure, Robusto]
 preventivo: false
-thumb: /assets/images/thumb/ombrelloni_thumb
+thumb:  /thumb/ombrelloni_p_thumb.png
+interesse:  /interesse/ombrelloni_p_interesse.png
 preventivo: false
 ---
 <h2 class="middle-title">ombrelloni da spiaggia</h2>
- {% cloudinary halfscreen /assets/images/ombrelloni/spiaggia.png alt="ombrelloni da spiaggia personalizzati" class="single-image" %}
+ {% picture slide  /ombrelloni_personalizzati/ombrelloni_p_spiaggia.png --alt ombrelloni da spiaggia personalizzati --picture class="single-image"%}
 <p>Oltre ad essere presenti due grandi famiglie divise in ombrelloni da giardino e pubblicitari, i nostri prodotti si differenziano anche tra ombrelloni con fusto verniciato epossidico, di misura normale (raggio 90 cm, 100 cm, 120 cm) con tessuto in poliestere impermeabile e ombrelloni con il fusto in legno/alluminio di grandi dimensioni con copertura acrilica professionale.</p>
 	
 <h2 class="middle-title">ombrelloni da giardino</h2>
 
-{% cloudinary halfscreen /assets/images/ombrelloni/ombrellone_giardino_def.jpg alt="ombrelloni da giardino" class="single-image" %}
+{% picture slide  /ombrelloni_personalizzati/ombrelloni_p.jpg --alt ombrelloni da giardino --picture class="single-image" %}
 
 <p>Ombrelloni di qualita, disponibili sia in lengo che in alluminio, l'alluminio aggiuinge anche un modello per le grandissime dimensioni, 5mtx5mt.
 Ricoperture di qualita in poliacrilico con ottima impermeabilizzazione e resa d'ombra.
@@ -36,7 +37,7 @@ Ricoperture di qualita in poliacrilico con ottima impermeabilizzazione e resa d'
 	<li>Ombrellone a braccio doppio</li>
 	<li>Ombrellone a braccio poker</li>
 </ul>
-<h3 class="middle-title" id="form">richiedi preventivo</h3>
+<h3 class="middle-title" id="form">richiedi preventivo per i tuoi ombrelloni</h3>
 <div class="row-primary">
 	<div class="contact-row">
 		{%- include  form_base.html -%}

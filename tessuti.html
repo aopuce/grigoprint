@@ -27,7 +27,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -43,7 +43,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -58,7 +58,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -83,7 +83,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/canvas_leggero.png alt="Tessuto di poliestere " %}
+				{%  picture thumb  /tessuti/canvas_leggero.png alt="Tessuto di poliestere " %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Canvas Leggero
@@ -99,7 +99,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="canvas-leggero">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/canvas_leggero.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/canvas_leggero.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -114,7 +114,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -139,7 +139,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Canvas Pesante
@@ -155,7 +155,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="canvas-pesante">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/canvas_pesante.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -170,7 +170,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -195,7 +195,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Cir&egrave;
@@ -211,7 +211,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="cire">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/cire.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -226,7 +226,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -251,7 +251,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -267,7 +267,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -282,7 +282,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -307,7 +307,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -323,7 +323,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -338,7 +338,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -363,7 +363,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -379,7 +379,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -394,7 +394,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -419,7 +419,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -435,7 +435,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -450,7 +450,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -475,7 +475,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -491,7 +491,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -506,7 +506,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -531,7 +531,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -547,7 +547,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -562,7 +562,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -587,7 +587,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -603,7 +603,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -618,7 +618,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -643,7 +643,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -659,7 +659,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -674,7 +674,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -699,7 +699,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -715,7 +715,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -730,7 +730,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -755,7 +755,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -771,7 +771,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -786,7 +786,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -811,7 +811,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -827,7 +827,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -842,7 +842,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>
@@ -867,7 +867,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 				</svg>
 			</td>
 			<td class="column-2" data-label="immagine">
-				{% cloudinary thumbnail /assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+				{%  picture thumb  /tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 			</td>
 			<td class="column-3" data-label="nome">
 				Nautico 3p
@@ -883,7 +883,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 			<td colspan="5" >
 				<div class="collapsable" id="nautico">
 					<h3>tessuto</h3>
-					{% cloudinary halfscreen assets/images/tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
+					{%  picture slide tessuti/nautico_3p.png alt="Tessuto nautico tre pettini ideale per striscioni e bandiere da esterno" %}
 					<p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum totam, ullam vel quaerat similique incidunt deserunt quo enim ratione animi aut quos, fuga earum saepe architecto dolore rerum, nesciunt.</p>
 					<ul class="ideal">
 						<li>uno</li>
@@ -898,7 +898,7 @@ description: I nostri tessuti! Listato dei nostri tessuti che utilizziamo, dal n
 						        <li class="col-correlati">
 						        	<a href="{{node.url}}" tile="{{ node.description | truncate: 50 }}">
 						        		<div class="img-wrapper">
-						        		{% cloudinary onequater {{node.thumb | append: ".jpg"}} alt="{{ node.title }}" %}</div>
+						        		{%  picture desc2g {{node.thumb }} alt="{{ node.title }}" %}</div>
 						        		<p>{{node.title}}</p>
 						        	</a>
 						        </li>

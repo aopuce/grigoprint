@@ -81,3 +81,9 @@
     border-left-color: $second-color;
   }
 }
+
+@keyframes offsetfull {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

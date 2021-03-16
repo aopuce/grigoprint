@@ -135,7 +135,8 @@
         }
     } 
 }
-#icon-products.grigo-close {
+#icon-products.grigo-close,
+.btn-close .grigo-close {
     -webkit-transform: rotate(45deg);
        -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -143,7 +144,10 @@
             transform: rotate(45deg);
     div {
         width: 24px;
+		height: 4px;
         top: 14px;
+		background:
+		$primary-color;
         &:first-child {
             -webkit-transform: rotate(90deg);
                -moz-transform: rotate(90deg);
@@ -155,6 +159,27 @@
             opacity: 0;
         }
     }
+}
+.btn-close .info-close {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	margin: 0;
+	div {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		width: 20px;
+		height: 4px;
+		background:
+		$primary-color;
+	}
+	div:nth-child(2) {
+		opacity: 1;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
 }
 #icon-social.grigo-close div {
     &:first-child, &:last-child {

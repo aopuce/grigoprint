@@ -6,7 +6,7 @@ title: Blog
 <section class="blog_section_index">
 {% for post in paginator.posts %}
   <article>
-    {% cloudinary thumbnail {{ post.path_image_header }} alt="{{ post.title }}"  %}
+    {% picture thumb {{ post.path_image_header }} alt="{{ post.title }}"  %}
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="author">
       <span class="categories">{% for cat in post.categories %}

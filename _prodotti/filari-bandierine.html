@@ -6,64 +6,87 @@ description: I filari di bandierine rallegrano , punteggiano il discorso visivo,
 ideale: [pubblicit&agrave;, eventi, feste, sagre]
 correlati: [Beach Flags, Bean Banner, Tovaglie Pubblicitarie, Ombrelloni]
 forza: [Disponibili in Varie Misure, Economiche, Disponibili Anche Bifacciali]
-image: 
-    - path: /assets/images/filari_bandierine/bandierine_back.jpg 
-      class: ""
-      alt: bandierine o festoni
-      config: jumbotron
+image:
+  - path:  /filari_di_bandierine/filari_bandierine_header.jpg
+    class: 'obj-cover'
+    alt: bandierine o festoni, realizzate in vari materiali, sia in tessuto che materiali plastici. Possibilit&agrave; di realizzate con stampa personalizzate su tutta la bandierina.
+    config: jumbotron
 preventivo: false
 price: 2,40 € mt/l
-thumb: /assets/images/thumb/filari_bandierine_thumb
+thumb:  /thumb/filari_bandierine_thumb.jpg
+interesse:  /interesse/filari_bandierine_interesse.jpg
 ---
+
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/filari_bandierine/bandierine_tessuto.png alt="filari o festoni di bandierine in tessuto" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/filari_bandierine/bandierine_carta.png alt="filari o festoni di bandierine in carta personalizzate" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/filari_bandierine/bandierine_plastica.png alt="filari o festoni di bandierine in plastica" %}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_nautico.jpg --alt filari o
+      festoni di bandierine in tessuto %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_plastica.jpg --alt filari o
+      festoni di bandierine in plastica personalizzate %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /filari_di_bandierine/filari_bandierine_poli.jpg --alt filari o
+      festoni di bandierine in polipropilene %}
+    </div>
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per i tuoi filari di bandierine</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h2 class="middle-title">filari in nautico {{ page.title }}</h2>
-<p>Colori misti a scelta tra le tinte unite di cartella disponibili. Triangolati 20x30 cm e vanno ordinati specificando i colori o le alternanze di colori richiesti.
-    In tessuto nautico, il filare di bandierine, mostra la sua nascita tessile che è molto più nobile e antica delle plebee plastiche recenti.
+<p>
+  Colori misti a scelta tra le tinte unite di cartella disponibili. Triangolati
+  20x30 cm e vanno ordinati specificando i colori o le alternanze di colori
+  richiesti. In tessuto nautico, il filare di bandierine, mostra la sua nascita
+  tessile che è molto più nobile e antica delle plebee plastiche recenti.
 </p>
 <p>
-    Il cordino a cui sono ancorate è di poliestere, diametro 3,5 cm, molto robusto e adatto anche per le lunghe distanze.
+  Il cordino a cui sono ancorate è di poliestere, diametro 3,5 cm, molto robusto
+  e adatto anche per le lunghe distanze.
 </p>
- 
+
 <h3 class="middle-title">filari personalizzati</h3>
 
-<p>In tessuto poliestere nautico con stampa passante viva oppure in polipropilene stampato fronte e retro.</p>
-<p>Vengono eseguiti sia rettangolari che triangolari e, naturalmente, anche quadrati.</p>
-<p>Si possono anche alternare più loghi per filare facendo una successione.
+<p>
+  In tessuto poliestere nautico con stampa passante viva oppure in polipropilene
+  stampato fronte e retro.
 </p>
-<p>Misure delle bandierine e lunghezza del filare sono libere ma si consiglia:</p>
+<p>
+  Vengono eseguiti sia rettangolari che triangolari e, naturalmente, anche
+  quadrati.
+</p>
+<p>Si possono anche alternare più loghi per filare facendo una successione.</p>
+<p>
+  Misure delle bandierine e lunghezza del filare sono libere ma si consiglia:
+</p>
 <ul class="list-grids">
-    <li>nelle triangolari: 20x14, 20x30, 35x23, 50x25.</li>
-    <li>nelle rettangolari:20x15, 20x30, 30x43.</li>
-    <li>nelle quadrate: 15x15, 20x20, 25x25, 30x30.</li>
+  <li>nelle triangolari: 20x14, 20x30, 35x23, 50x25.</li>
+  <li>nelle rettangolari:20x15, 20x30, 30x43.</li>
+  <li>nelle quadrate: 15x15, 20x20, 25x25, 30x30.</li>
 </ul>
- 
+
 <h3 class="middle-title">filari in plastica</h3>
-<p> Disponibile triangolari 20x30, tinte miste alternate.
-</p>
+<p>Disponibile triangolari 20x30, tinte miste alternate.</p>
 <p>ITALIA</p>
 <p>EU</p>
-<p>Miste nazioni. Filari con moltitudine di nazioni.
+<p>Miste nazioni. Filari con moltitudine di nazioni.</p>
+<p>
+  <strong
+    >Per le pubblicitarie in plastica si stampano anche in quadricromia,
+    benissimo, ma ci vogliono almeno 500 filari da 10 metri o
+    pi&ugrave;.</strong
+  >
 </p>
-<p><strong>Per le pubblicitarie in plastica si stampano anche in quadricromia, benissimo, ma ci vogliono almeno 500 filari da 10 metri o pi&ugrave;.</strong></p>

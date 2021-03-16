@@ -1,28 +1,34 @@
 ul.scroll-gallery {
-	@extend %h-scroll;
-	@extend %scroll-style;
-	width: 100%;
-	padding: 0;
-	li {
-		padding: 0;
-		flex: 0 0 90%;
-	}
+  @extend %h-scroll;
+  @extend %scroll-style;
+  padding: 0;
+  width: 100%;
+
+  li {
+    flex: 0 0 90%;
+    padding: 0;
+  }
 }
 
-.gallery-container {
-	width: 100%;
-	.splide__slide {
-		max-height: 60vh;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-	@include respond-to(screen-sm) {
-		grid-column: 1 / 9;
-	}
-	@include respond-to(screen-md) {
-		grid-column: 2 / -2;
-	}
+.gallery-container.swiper-container {
+  height: 60vh;
+  width: 100%;
+  @include respond-to(screen-sm) {
+    grid-column: 1 / 9;
+  }
+  @include respond-to(screen-md) {
+    grid-column: 2 / -2;
+  }
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $second-color;
+  }
 }
+

@@ -1,0 +1,96 @@
+# _data/picture.yml
+
+media_queries:
+    mobile: "max-width: 600px"
+    tablet: "min-width: 601px"
+    desktop: "min-width: 900px"
+    large: "min-width: 1440px"
+
+presets:
+    default:
+        markup: auto
+        formats: [webp, original]
+        widths: [200, 400, 800, 1600 ]
+        dimension_attributes : true
+        attributes:
+            img:'class="lazyload"'
+    thumb:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [160, 180, 320, 360, 640]
+        base_width: 320
+        pixel_ratios: [1, 2]
+        fallback_width: 320
+        fallback_format: original
+        media_widths:
+            mobile: [160, 320]
+            tablet: [180, 360, 640]
+        attributes:
+            img: 'class="lazyload"'
+    header:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [320, 640, 800, 1300, 1600, 2600]
+        base_width: 1600
+        pixel_ratio: [1, 2]
+        fallback_width: 1300
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'
+    slide:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [280, 560, 800, 1000, 1200, 2000]
+        base_width: 1200
+        pixel_ratio: [1, 2]
+        fallback_width: 1200
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'
+    interesse: 
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [160, 180, 320, 360, 640]
+        base_width: 320
+        pixel_ratio: [1, 2]
+        fallback_width: 320
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'
+    desc2g:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [250, 350, 470, 500, 700, 940]
+        base_width: 500
+        pixel_ratio: [1, 2]
+        fallback_width: 500
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'
+    desc4g:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [250, 350, 400, 500, 700, 800]
+        base_width: 500
+        pixel_ratio: [1, 2]
+        fallback_width: 500
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'
+    jumbotron:
+        markup: picture
+        dimension_attributes: true
+        formats: [webp, original]
+        widths: [600, 900, 1200, 1440, 1800, 2880]
+        base_width: 1600
+        pixel_ratio: [1, 2]
+        fallback_width: 1600
+        fallback_format: original
+        attributes:
+            img: 'class="lazyload"'

@@ -4,57 +4,78 @@ title: Tessuto 3D
 exclude: false
 description: Prodotto in tessuto di poliestere che aggiunge la tridimensionalit&agrave;. Ideale per aumentare la visibilit&agrave;, prodotto originale che si pu&ograve; produrre in varie forme e su diverse strutture
 ideale: [esterno, pubblicit&agrave;, eventi]
-correlati: [Bandiere Bifacciali, Bandiere Personalizzate, Beach Flags, Maniche a Vento]
-image: 
-    - path: /assets/images/3d/background_landscape.png 
-      class: ""
-      alt: stampa bandiere in tessuto 3d
-      config: jumbotron
+correlati:
+  [Bandiere Bifacciali, Bandiere Personalizzate, Beach Flags, Maniche a Vento]
+image:
+  - path:  /tessuto_3d/3d_header.png
+    class: ''
+    alt: realizziamo prodotti con forme personalizzate anche in 3 dimensioni, come bandiere pubblicitarie a froma di paccheto di caramelle, o allestimenti fieristici a grandezza uomo, come un sacchetto di patatine.
+    config: jumbotron
 forza: [Forme Personalizzate, Anche in Grande Formato, Materiali Diversi]
 preventivo: false
-thumb: /assets/images/thumb/3d_thumb
+thumb:  /thumb/3d_thumb.png
+interesse:  /interesse/3d_interesse.png
 ---
+
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/3d/sacchetto_patatine_misure.png alt="sacchetto di patatite altezza uomo da allestimento vetrina" class="vertical-image"%}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/3d/3dFlags.png alt="sacchetto caramelle in tessuto 3d" class="vertical-image"%}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/3d/background_landscape.png alt="sacchetto patatine in tessuto 3d" class="vertical-image"%}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% picture slide  /tessuto_3d/3d_misure.png
+      --alt sacchetto di patatine altezza uomo da allestimento vetrina
+      %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide  /tessuto_3d/3d_bandiera.png --alt sacchetto
+      caramelle in tessuto 3d%}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide  /tessuto_3d/3d_completo.png
+      --alt sacchetto patatine in tessuto 3d %}
+    </div>
+  </div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 <h3 class="middle-title" id="form">richiedi un preventivo</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h2 class="middle-title">Descrizione {{ page.title }}</h2>
-<p>Nel classico (1500 DC), in cui Leonardo poteva dire “l’uomo del mio tempo pu&ograve; tutto ci&ograve; che vuole e vuole solo quel che pu&ograve;”, dare concretezza alla forma in formato naturale, era la quint’essenza della felicit&agrave; e, qui nel 2019, siamo nel nuovo ‘500 di Leonardo in cui si pu&ograve; facilmente tutto a misura d'uomo e abbiamo la possibilit&agrave; di fare, ingradimenti 3D, onesti con riparti e riempimenti in varia natura, secondo specifiche della clientela per eseguire pubblicit&agrave; a 3 dimensioni, cio&eacute; rifare l'oggetto al naturale con materiali tessili.</p>
-<p>A volte facciamo 3D anche alla maniera grande, come dal classico ‘500, si passa a un ‘600 gigantesco che anche noi lo sappiamo fare, ma &egrave; pi&ugrave; difficile e come Raffaello che dipinse alla maniera grande, diventiamo malinconici per lo sforzo gigantesco.</p>
-<p>Il nostro atteggiamento dice “accetto e realizzo l’erculeo, il grande e il forte, ma ho perduto la realt&agrave; classica e un lamento raffaellesco ci scappa piano piano sotto il ciglio della sorpresa e dell’ammirazione. Questo &egrave; il periodo delle sforzo e, forse, i più grandi sono e saranno gli spagnoli.”</p>
-<p>Sangue caliente di vera castiglia ci viene fornito dalla locale ULSS, così attenta ad ogni esigenza artigiana di alto livello, verso l’eccellenza. Così competiamo alla grande nel 3D, anche gigantesco.</p>
-<p>Oltre a oggetti tessili e plastici 3D, partendo dal 2D tessile e plastico stampati, eseguiamo progetti 3D e rendering anche ordinazione solo grafica.</p>
+<p>
+  Nel classico (1500 DC), in cui Leonardo poteva dire “l’uomo del mio tempo
+  pu&ograve; tutto ci&ograve; che vuole e vuole solo quel che pu&ograve;”, dare
+  concretezza alla forma in formato naturale, era la quint’essenza della
+  felicit&agrave; e, qui nel 2019, siamo nel nuovo ‘500 di Leonardo in cui si
+  pu&ograve; facilmente tutto a misura d'uomo e abbiamo la possibilit&agrave; di
+  fare, ingradimenti 3D, onesti con riparti e riempimenti in varia natura,
+  secondo specifiche della clientela per eseguire pubblicit&agrave; a 3
+  dimensioni, cio&eacute; rifare l'oggetto al naturale con materiali tessili.
+</p>
+<p>
+  A volte facciamo 3D anche alla maniera grande, come dal classico ‘500, si
+  passa a un ‘600 gigantesco che anche noi lo sappiamo fare, ma &egrave;
+  pi&ugrave; difficile e come Raffaello che dipinse alla maniera grande,
+  diventiamo malinconici per lo sforzo gigantesco.
+</p>
+<p>
+  Il nostro atteggiamento dice “accetto e realizzo l’erculeo, il grande e il
+  forte, ma ho perduto la realt&agrave; classica e un lamento raffaellesco ci
+  scappa piano piano sotto il ciglio della sorpresa e dell’ammirazione. Questo
+  &egrave; il periodo delle sforzo e, forse, i più grandi sono e saranno gli
+  spagnoli.”
+</p>
+<p>
+  Sangue caliente di vera castiglia ci viene fornito dalla locale ULSS, così
+  attenta ad ogni esigenza artigiana di alto livello, verso l’eccellenza. Così
+  competiamo alla grande nel 3D, anche gigantesco.
+</p>
+<p>
+  Oltre a oggetti tessili e plastici 3D, partendo dal 2D tessile e plastico
+  stampati, eseguiamo progetti 3D e rendering anche ordinazione solo grafica.
+</p>
 
-        
 
-{% comment %}<h2 class="middle-title">beachflags modello 3d</h2>
-<div class="row obj_contain">
-    <div class="col-half order-first">
-        {% cloudinary halfscreen /assets/images/3d/3dFlags.png alt="stampa bandiere in tessuto 3d" class="orizontal-image"%}
-    </div>
-    <div class="col-half order-second">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia labore, esse sunt voluptates praesentium fugit consequatur, odit laborum ad nam ratione eum natus mollitia, corporis! Nulla aliquam neque ex veniam!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus cumque soluta dolorum. Accusantium vitae mollitia quas ducimus quasi vel eaque dolorem molestias doloribus voluptates maiores dolorum, voluptatem ut magni corrupti.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, eligendi doloremque ullam laborum laboriosam esse, reprehenderit soluta in repellat cum ea earum, consectetur. Repudiandae, praesentium minus reprehenderit veritatis dolores soluta.</p>
-    </div>
-</div>
-{% endcomment %}

@@ -4,73 +4,122 @@ title: Tappeto Sottomoto
 exclude: false
 description: Tappeti personalizzati sottomoto, realizzato in poliestere e gomma antiscivolo, stampa digitale in quadricromia di qualit&agrave;. Protegge il pavimento da perdite di olio.
 ideale: [sotto moto, arredo, garage]
-correlati: [Tappeto Sottomoto, Beach Flags, Tovaglie Pubblicitarie, Filari di Bandierine]
+correlati:
+  [Tappeto Sottomoto, Beach Flags, Tovaglie Pubblicitarie, Filari di Bandierine]
 image:
-    - path: /assets/images/tappeti/tappeto_sottomoto.png
-      class: "full-img"
-      alt: tappeto sotto moto personalizzato
-      config: jumbotron
-forza: [Feltro, Gomma Impermeabile Antiscivolo, Stampa Digitale, Compatibilit&agrave; FIM Art.44]
+  - path:  /tappeto_sottomoto/tappeti_s_header.jpg
+    class: obj-cover
+    alt: tappeto sotto moto personalizzato. Stamapato in digitale, assorbe eventuali perdite d'olio.
+    config: jumbotron
+forza:
+  [
+    Feltro,
+    Gomma Impermeabile Antiscivolo,
+    Stampa Digitale,
+    Compatibilit&agrave; FIM Art.44
+  ]
 preventivo: true
-thumb: /assets/images/thumb/tappeto_sottomoto_thumb
+thumb:  /thumb/tappeti_s_thumb.jpg
+interesse:  /interesse/tappeti_s_interesse.jpg
 numberp: 22
 ---
+
 <h2 class="middle-title">Scheda Tecnica {{ page.title }}</h2>
 
 <ul class="scheda-tecnica card card__primary">
-	<li>
-		Feltro
-		<p>La parte visibile del tappeto paddock personalizzato &egrave; realizzata con un buon feltro di poliestere. Molto compatto e resistente. Non forma pelucchi con l'usura e resiste ai lavaggi, anche con idropulitrice da media distanza. Il feltro &egrave; colato nella gomma ed &egrave; indivisibile. Il feltro &egrave; molto fitto e assorbe e trattiene agevolmente eventuali perdite d'olio accidentali.</p>
-	</li>
-	<li>
-		Gomma Impermeabile Antiscivolo
-		<p>La gomma antiscivolo del tappeto ha un altissimo grado di grip che permette al tappeto personalizzato di non scivolare e rimanere fermo dove posizionato. Ha uno spessore molto fino cosi da non dare d'intralcio alla camminata. Il tappeto in totale &egrave; spesso 2-3 mm. Grazie alla gomma morbida senza memoria di forma, rimane ben disteso al suolo anche appena srotolato.</p>
-	</li>
-	<li>
-		Stampa Digitale
-		<p>Grazie alla tecnologia Sublimatica, si riescono ad avere dei colori molto brillanti, la stampa non fa spessore e lascia inalterate tutte le caratteristiche del tessuto (assorbenza, morbidezza). Penetrando nel profondo delle fibre del tappeto, &egrave; molto resistente e duratura.</p>
-	</li>
-	<li>
-		Compatibilit&agrave; FIM Art.44
-		<p>I materiali usati per il tappeto sottomoto sono ignifughi con classe B1 (la parte in gomma classe s1). La parte superiore con il feltro assorbe e trattiene eventuali perdite. La parte inferiore di gomma &egrave; impermeabile e protegge il terreno.</p>
-	</li>
+  <li>
+    Feltro
+    <p>
+      La parte visibile del tappeto paddock personalizzato &egrave; realizzata
+      con un buon feltro di poliestere. Molto compatto e resistente. Non forma
+      pelucchi con l'usura e resiste ai lavaggi, anche con idropulitrice da
+      media distanza. Il feltro &egrave; colato nella gomma ed &egrave;
+      indivisibile. Il feltro &egrave; molto fitto e assorbe e trattiene
+      agevolmente eventuali perdite d'olio accidentali.
+    </p>
+  </li>
+  <li>
+    Gomma Impermeabile Antiscivolo
+    <p>
+      La gomma antiscivolo del tappeto ha un altissimo grado di grip che
+      permette al tappeto personalizzato di non scivolare e rimanere fermo dove
+      posizionato. Ha uno spessore molto fino cosi da non dare d'intralcio alla
+      camminata. Il tappeto in totale &egrave; spesso 2-3 mm. Grazie alla gomma
+      morbida senza memoria di forma, rimane ben disteso al suolo anche appena
+      srotolato.
+    </p>
+  </li>
+  <li>
+    Stampa Digitale
+    <p>
+      Grazie alla tecnologia Sublimatica, si riescono ad avere dei colori molto
+      brillanti, la stampa non fa spessore e lascia inalterate tutte le
+      caratteristiche del tessuto (assorbenza, morbidezza). Penetrando nel
+      profondo delle fibre del tappeto, &egrave; molto resistente e duratura.
+    </p>
+  </li>
+  <li>
+    Compatibilit&agrave; FIM Art.44
+    <p>
+      I materiali usati per il tappeto sottomoto sono ignifughi con classe B1
+      (la parte in gomma classe s1). La parte superiore con il feltro assorbe e
+      trattiene eventuali perdite. La parte inferiore di gomma &egrave;
+      impermeabile e protegge il terreno.
+    </p>
+  </li>
 </ul>
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-	<div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">
-				{%
-					cloudinary halfscreen /assets/images/tappeti/particolare_tappeto.png alt="particolare tappeto asciugapasso" class="orizontal-image"
-				%}</li>
-			<li class="splide__slide">{%
-					cloudinary halfscreen /assets/images/tappeti/tappeto_sottomoto.png alt="tappeto asciugapasso" class="orizontal-image"
-				%}</li>
-		</ul>
-	</div>
-</div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
-<div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% picture slide  /tappeto_sottomoto/tappeti_s_retro.png
+      --alt particolare tappeto sottomoto, retro antiscivolo  %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide  /tappeto_sottomoto/tappeti_s.jpg
+      --alt tappeto asciugapasso %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+<h3 class="middle-title" id="form">richiedi un preventivo per il tuo tappeto sottomoto</h3>
+<div class="row-primary">
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h3 class="middle-title">Descrizione</h3>
 
 <p>
-	Il nostro tappeto personalizzato, nella sua scheda tecnica, &egrave; composto di una parte sotto, a contatto con il terreno, costituito da gomma espansa al punto giusto in modo che non abbia memoria, che non si arricci e il tappeto sottomoto personalizzato, quindi, cade sempre sul pavimento e vi sta sempre piatto. Coi nostro tappeti asciugapasso non si possono formare riccioli o pieghe che potrebbero far inciampare, poich&eacute; rimangono, per gravit&agrave;, completamente planari.
+  Il nostro tappeto personalizzato, nella sua scheda tecnica, &egrave; composto
+  di una parte sotto, a contatto con il terreno, costituito da gomma espansa al
+  punto giusto in modo che non abbia memoria, che non si arricci e il tappeto
+  sottomoto personalizzato, quindi, cade sempre sul pavimento e vi sta sempre
+  piatto. Coi nostro tappeti asciugapasso non si possono formare riccioli o
+  pieghe che potrebbero far inciampare, poich&eacute; rimangono, per
+  gravit&agrave;, completamente planari.
 </p>
 <p>
-	Oltre a questo aspetto tecnico della parte sotto abbiamo la parte sopra del tappeto pubblicitario stampata in quadricromia ad alta definizione con un feltro tessuto ad alta resistenza che non fa il pallino quando si strofinano le scarpe e quindi pur asciugando e raccogliendo la polvere dura nel tempo , consentendo alle sue immagini di sponsor, scuderia, pilota, la pi&ugrave; lunga durata.
-Il feltro sopra &egrave; di puro poliestere tessuto indemagliabile, resistente anche al lavaggio con idropulitrice da media distanza.
-
+  Oltre a questo aspetto tecnico della parte sotto abbiamo la parte sopra del
+  tappeto pubblicitario stampata in quadricromia ad alta definizione con un
+  feltro tessuto ad alta resistenza che non fa il pallino quando si strofinano
+  le scarpe e quindi pur asciugando e raccogliendo la polvere dura nel tempo ,
+  consentendo alle sue immagini di sponsor, scuderia, pilota, la pi&ugrave;
+  lunga durata. Il feltro sopra &egrave; di puro poliestere tessuto
+  indemagliabile, resistente anche al lavaggio con idropulitrice da media
+  distanza.
 </p>
 <p>
-	La stampa &egrave; a colori dispersi.
-I tappeti per moto sono tappeti anti olio e antinquinamento e riescono a contenere un kg  di olio e quindi soddisfano pienamente la normativa per gare motociclistiche.
-
+  La stampa &egrave; a colori dispersi. I tappeti per moto sono tappeti anti
+  olio e antinquinamento e riescono a contenere un kg di olio e quindi
+  soddisfano pienamente la normativa per gare motociclistiche.
 </p>
 <p>
-	Regolamento FIM art.44: "L’uso di un tappetino ambientale &egrave; obbligatorio e va posto all’interno del proprio Box del Parco Piloti e sotto ogni motociclo a protezione del terreno. Il tappetino ambientale deve essere composto da una parte superiore assorbente e una parte inferiore impermeabile. Le minime dimensioni del tappeto saranno uguali alla lunghezza occupata dal motociclo per la larghezza del manubrio."
+  Regolamento FIM art.44: "L’uso di un tappetino ambientale &egrave;
+  obbligatorio e va posto all’interno del proprio Box del Parco Piloti e sotto
+  ogni motociclo a protezione del terreno. Il tappetino ambientale deve essere
+  composto da una parte superiore assorbente e una parte inferiore impermeabile.
+  Le minime dimensioni del tappeto saranno uguali alla lunghezza occupata dal
+  motociclo per la larghezza del manubrio."
 </p>

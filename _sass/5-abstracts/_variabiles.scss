@@ -1,33 +1,75 @@
 //susy Variabiles
-$susy: (columns: susy-repeat(4), gutters: 30px, spread: "wider", container-spread: "wider");
-$susy-mobile: (columns: susy-repeat(4), gutters: 0.3, spread: "wider", container-spread: "wider");
-$susy-tablet: (columns: susy-repeat(8), gutters: 0.25, spread: "wide", container-spread: "wide");
-$susy-laptop: (columns: susy-repeat(12), gutters: 0.3, spread: "wide", container-spread: "wide");
-$susy-large: (columns: susy-repeat(16), gutters: 0.25, spread: "narrow", container-spread: "narrow");
+$susy: (
+  columns: susy-repeat(4),
+  gutters: 30px,
+  spread: 'wider',
+  container-spread: 'wider'
+);
+$susy-mobile: (
+  columns: susy-repeat(4),
+  gutters: 0.3,
+  spread: 'wider',
+  container-spread: 'wider'
+);
+$susy-tablet: (
+  columns: susy-repeat(8),
+  gutters: 0.25,
+  spread: 'wide',
+  container-spread: 'wide'
+);
+$susy-laptop: (
+  columns: susy-repeat(12),
+  gutters: 0.3,
+  spread: 'wide',
+  container-spread: 'wide'
+);
+$susy-large: (
+  columns: susy-repeat(16),
+  gutters: 0.25,
+  spread: 'narrow',
+  container-spread: 'narrow'
+);
 
 //grids
 $grid-columns: 12;
 $grid-gutter-width: 10px;
 $grid-float-breakpoint: 768px;
 $breakpoints: (
-	"screen-xs": (min-width: 480px),
-	"screen-bet": (max-width: 767px), 
-	"screen-sm": (min-width: 768px), 
-	"screen-md": (min-width: 992px), 
-	"screen-lg": (min-width: 1200px),
-	"screen-xl": (min-width: 1440px),
+  'screen-xs': (
+    min-width: 480px
+  ),
+  'screen-bet': (
+    max-width: 767px
+  ),
+  'screen-sm': (
+    min-width: 768px
+  ),
+  'screen-md': (
+    min-width: 992px
+  ),
+  'screen-lg': (
+    min-width: 1200px
+  ),
+  'screen-xl': (
+    min-width: 1440px
+  ),
+  'screen-2k': (
+    min-width: 1921px
+  )
 );
 $screen-xs: 480px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
+$screen-xl: 1440px;
 $radius: 50px;
-$media-landscape: "screen and (max-height: #{$screen-xs}) and (orientation: landscape)";
+$media-landscape: 'screen and (max-height: #{$screen-xs}) and (orientation: landscape)';
 
 //Typography
-$text_font_family: "Lato", -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$h-font-family: "Montserrat", sans-serif;
-$grigo-icons: "icomoon";
+$text_font_family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$h-font-family: 'Montserrat', sans-serif;
+$grigo-icons: 'icomoon';
 
 $baseline: 1.5rem;
 
@@ -41,7 +83,12 @@ $h2: 1.5rem;
 $h3: 1.25rem;
 $h4: 1rem;
 $h5: 0.875rem;
-$text: (480px: 16px, 768px: 18px, 992px: 22px, 1200px: 26px);
+$text: (
+  480px: 16px,
+  768px: 18px,
+  992px: 22px,
+  1200px: 26px
+);
 $radius: 8px;
 
 //transition variabiles
@@ -54,9 +101,9 @@ $default-transition-delay: false;
 // $primary-color: rgba(8, 65, 92, 1);
 $primary-color: rgba(8, 45, 91, 1);
 
-$allert: rgba(208, 0, 0, 1);
-$positive: #062A3B;
-$second-color: #FE7F2D;
+$allert: rgb(208, 0, 0);
+$positive: #062a3b;
+$second-color: #fe7f2d;
 // $second-color: rgba(181, 210, 221, 1);
 // $long-text: #29353B;
 $long-text: rgba(52, 60, 63, 1);
@@ -68,16 +115,24 @@ $success: #00c800;
 $alpha: 0.3;
 
 //gradient background
-$default-gradient: linear-gradient(330deg, $back-full-text, lighten($back-full-text, 4%));
+$default-gradient: linear-gradient(
+  330deg,
+  $back-full-text,
+  lighten($back-full-text, 4%)
+);
 $primary-gradient: linear-gradient(330deg, $primary-color, $second-color);
-$secondary-gradient: linear-gradient(40deg, $second-color, lighten($second-color, 5%));
+$secondary-gradient: linear-gradient(
+  40deg,
+  $second-color,
+  lighten($second-color, 5%)
+);
 $success-gradient: linear-gradient(40deg, $success, tint(#00c800, 25%));
 $allert-gradient: linear-gradient(40deg, $allert, tint(#912306, 25%));
 $warning-gradient: linear-gradient(40deg, $warning, tint(#feeb93, 25%));
-$long-text-gradient: linear-gradient(40deg, $long-text, tint(#29353B, 10%));
+$long-text-gradient: linear-gradient(40deg, $long-text, tint(#29353b, 10%));
 
 $brand-primary: #08415c;
-$testo: #29353B;
+$testo: #29353b;
 $background: #ffffff;
 $shadow_buttons: 0 9px 20px -10px;
 

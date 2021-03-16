@@ -46,23 +46,25 @@
     }
     &.blog__article {
         @extend %base_grids;
-        .blog_header, #main_article {
-            grid-column: 2 / -2;
+        #main_article {
+            grid-column: 1 / -1;
         }
         @include respond-to(screen-sm) {
             grid-template-columns: 2rem auto 2rem;
         }
         @include respond-to(screen-lg) {
-            grid-template-columns: 10rem auto 10rem;
+            grid-template-columns: 8rem auto 8rem;
         }
         #main_article {
             display: grid;
             @include respond-to(screen-sm) {
                 grid-template-columns: (15% auto 15%);
+                grid-column: 2 / -2;
             }
         }
     }
     .blog_header {
+        grid-column: 1 / -1;
         ul {
             li {
                 display: inline-block;

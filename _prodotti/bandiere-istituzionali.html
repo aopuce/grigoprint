@@ -4,89 +4,171 @@ title: Bandiere Istituzionali
 exclude: false
 description: Bandiere istituzionali di ottima qualit&agrave; stampate, con ottimo passaggio colore
 ideale: [esterno, interno, istituzioni, comuni, regioni]
-correlati: [Bandiere Bifacciali, Bandiere Personalizzate, Striscioni, Gonfaloni, Gagliardetti]
+correlati:
+  [
+    Bandiere Bifacciali,
+    Bandiere Personalizzate,
+    Striscioni,
+    Gonfaloni,
+    Gagliardetti
+  ]
 image:
-    - path: /assets/images/bandiere_istituzionali/bandiere_istituzionale.jpg
-      class: ""
-      alt: Bandiere Istituzionali
-      config: jumbotron
-forza: [Disponibili in Vari Tessuti, Finiture a Scelta, Personalizzabili, Passaggio Colore Elevato, Italia e Europa in Pronta Consegna]
+  - path:  /bandiere_istituzionali/bandiere_istituzionali_header.jpg
+    class: 'obj-cover'
+    alt: Bandiere Istituzionali
+    config: jumbotron
+forza:
+  [
+    Disponibili in Vari Tessuti,
+    Finiture a Scelta,
+    Personalizzabili,
+    Passaggio Colore Elevato,
+    Italia e Europa in Pronta Consegna
+  ]
 preventivo: false
 price: 5,20 € cad.
-thumb: /assets/images/thumb/bandiere_istituzionali_thumb 
+thumb:  /thumb/bandiere_istituzionali_thumb.jpg
+interesse:  /interesse/bandiere_istituzionali_interesse.jpg
 ---
+
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/bandiere_istituzionali/europe-bandiera.jpg alt="Bandiere Istituzionali" title="Bandiere Istituzionali" %}</li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/bandiere_istituzionali/bandiera-italia.jpg alt="Bandiera Italiana" class="orizontal-image" %}
-            </li>
-            <li class="splide__slide">
-                <img src="/assets/images/bandiere_istituzionali/svg-bandiere.svg" alt="Bandiere istituzionali di vari stati, stampiamo qualsiasi bandiera istituzionale.">
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali_europa.jpg 
+	  --alt Bandiere Istituzionali disponibili in tessuto nautico o in tessuto economico pongee 
+	  --title Bandiere Istituzionali %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali_italia.jpg 
+	  --alt Bandiera Italiana %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_istituzionali/bandiere_istituzionali.jpg 
+	  --alt Bandiere istituzionali con stampa sia digitale che serigrafica %}
+    </div>
+    <div class="swiper-slide">
+      <img
+		  src="{{site.url}}/assets/images/svg/svg-bandiere-min.svg"
+        alt="Bandiere istituzionali di vari stati, stampiamo qualsiasi bandiera istituzionale."
+      />
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le vostre bandiere istituzionali</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 <h2 class="middle-title">descrizione {{ page.title }}</h2>
-<p><strong>Bandiere Istituzionali</strong> stampate con colori a sublimazione di lunga durata, con questa tecnologia di stampa a base acqua, riusciamo ad ottenere un passaggio colore pressoch&eacute; completo.</p>
-<p>Il <strong>tessuto</strong> &egrave; realizzato con il migliore filato di <strong>poliestere</strong>, le bandiere possono essere richieste sia <strong>tessuto nautico</strong> che in <strong>tessuto pongee</strong>.</p>
+<p>
+  <strong>Bandiere Istituzionali</strong> stampate con colori a sublimazione di
+  lunga durata, con questa tecnologia di stampa a base acqua, riusciamo ad
+  ottenere un passaggio colore pressoch&eacute; completo.
+</p>
+<p>
+  Il <strong>tessuto</strong> &egrave; realizzato con il migliore filato di
+  <strong>poliestere</strong>, le bandiere possono essere richieste sia
+  <strong>tessuto nautico</strong> che in <strong>tessuto pongee</strong>.
+</p>
 
 <h4>misure disponibili</h4>
-<ul class="list-grids ">
-    <li>100 x 70</li>
-    <li>150 x 100</li>
-    <li>225 x 150</li>
-    <li>300 x 200</li>
+<ul class="list-grids">
+  <li>100 x 70</li>
+  <li>150 x 100</li>
+  <li>225 x 150</li>
+  <li>300 x 200</li>
 </ul>
 <p><em>Misure espresse in centimetri</em></p>
 <p><strong>&Egrave; possibile richiedere misure personalizzate.</strong></p>
 <h3 class="middle-title">tessuti</h3>
 <section class="tessuti grids__col2">
-    <article class="col card card__primary">
-        {% cloudinary halfscreen /assets/images/tessuti/nautico_3p.png alt="tessuto per bandiere tipo nautico" class="img-intern-50"%}
-        <h5>tessuto nautico</h5>
-        <p><em>Tessuto 120g 100% poliestere</em></p>
-        <p>Tessuto nautico tre pettini <b>indemagliabile</b> (non sfila) 100% in poliestere, &eacute; il pi&ugrave; robusto della famiglia dei nautici, ottimo per bandiere.</p>
-        <p>Disponibile nelle varianti ignifugo e due pettini, adatto per interni</p>
-    </article>
+  <article class="col card card__primary">
+    {% picture desc2g 
+	 /tessuti/nautico_3p.png 
+	--alt tessuto per bandiere tipo nautico 
+	--picture class="img-intern-50" %}
+    <h5>tessuto nautico</h5>
+    <p><em>Tessuto 120g 100% poliestere</em></p>
+    <p>
+      Tessuto nautico tre pettini <b>indemagliabile</b> (non sfila) 100% in
+      poliestere, &eacute; il pi&ugrave; robusto della famiglia dei nautici,
+      ottimo per bandiere.
+    </p>
+    <p>Disponibile nelle varianti ignifugo e due pettini, adatto per interni</p>
+  </article>
 
-    <article class="col card card__light">
-       {% cloudinary halfscreen /assets/images/tessuti/pongee.png alt="tessuto per bandiere tipo pongee" class="img-intern-50"%}
-        <h5>tessuto pongee</h5>
-        <p><em>Tessuto 85g 100% poliestere</em></p>
-        <p>Tessuto in pongee; in tela si usa quando una bandiera deve sventolare bene, battuto di puro poliestere , un tessuto che vola. Viene di solito confezionato con manica nelle bandiere ma anche altre finiture gli si accordano. Viene utilizzato anche nei foulard e nelle pochette oltre che nelle bandiere.</p>
-    </article>
+  <article class="col card card__light">
+    {% picture desc2g 
+	 /tessuti/pongee.png 
+	--alt tessuto per bandiere tipo pongee 
+	--picture class="img-intern-50" %}
+    <h5>tessuto pongee</h5>
+    <p><em>Tessuto 85g 100% poliestere</em></p>
+    <p>
+      Tessuto in pongee; in tela si usa quando una bandiera deve sventolare
+      bene, battuto di puro poliestere , un tessuto che vola. Viene di solito
+      confezionato con manica nelle bandiere ma anche altre finiture gli si
+      accordano. Viene utilizzato anche nei foulard e nelle pochette oltre che
+      nelle bandiere.
+    </p>
+  </article>
 </section>
 <h3 class="middle-title">finiture</h3>
 <section class="grids__col4">
-    <article class="col card card__light">
-        <img src="/assets/images/finiture/cappio_cordino.svg" alt="cappio e cordino" class="img-intern-50" />
-        <h5>cappio e cordino</h5>
-        <p>Rifinitura standard per pennoni, soprattutto per le pubbliche amministrazioni. Cappio, cordino e fettuccia in poliestere di rinforzo.</p>
-    </article>
-    <article class="col card card__light">
-        <img src="/assets/images/finiture/laccetti.svg" alt="laccetti" class="img-intern-50" />
-        <h5>laccetti</h5>
-        <p>In caso &egrave; possibile richiedere dei laccetti per fissare la bandiera all'asta. Inoltre possiamo realizzare i laccetti del colore della bandiera</p>
-    </article>
-    <article class="col card card__light">
-        <img src="/assets/images/finiture/manica_chiusa.svg" alt="manica per asta" class="img-intern-50" />
-        <h5>manica per asta</h5>
-        <p>In caso di asta portatile, palo o pennone con barra orizzontale &egrave; possibile richiedere la classica manica sia standard che rinforzata con doppio tessuto.</p>
-    </article>
-    <article class="col card card__light">
-        <img src="/assets/images/finiture/moschettoni.svg" alt="moschettoni" class="img-intern-50" />
-        <h5>moschettoni</h5>
-        <p>Le bandiere possno essere rifinite con moschettoni e fettuccia rinforzata lato asta.</p>
-    </article>
+  <article class="col card card__light">
+    <img
+      src=" {{site.url}}/assets/images/svg/cappio_cordino-min.svg"
+      alt="cappio e cordino"
+      class="img-intern-50"
+    />
+    <h5>cappio e cordino</h5>
+    <p>
+      Rifinitura standard per pennoni, soprattutto per le pubbliche
+      amministrazioni. Cappio, cordino e fettuccia in poliestere di rinforzo.
+    </p>
+  </article>
+  <article class="col card card__light">
+    <img
+      src=" {{site.url}}/assets/images/svg/laccetti-min.svg"
+      alt="laccetti"
+      class="img-intern-50"
+    />
+    <h5>laccetti</h5>
+    <p>
+      In caso &egrave; possibile richiedere dei laccetti per fissare la bandiera
+      all'asta. Inoltre possiamo realizzare i laccetti del colore della bandiera
+    </p>
+  </article>
+  <article class="col card card__light">
+    <img
+      src=" {{site.url}}/assets/images/svg/manica_chiusa-min.svg"
+      alt="manica per asta"
+      class="img-intern-50"
+    />
+    <h5>manica per asta</h5>
+    <p>
+      In caso di asta portatile, palo o pennone con barra orizzontale &egrave;
+      possibile richiedere la classica manica sia standard che rinforzata con
+      doppio tessuto.
+    </p>
+  </article>
+  <article class="col card card__light">
+    <img
+		src="{{site.url}}/assets/images/svg/moschettoni-min.svg"
+      alt="moschettoni"
+      class="img-intern-50"
+    />
+    <h5>moschettoni</h5>
+    <p>
+      Le bandiere possno essere rifinite con moschettoni e fettuccia rinforzata
+      lato asta.
+    </p>
+  </article>
 </section>

@@ -6,75 +6,151 @@ description: Bandiere personalizzate bifacciali in tessuto raso di poliestere, s
 ideale: [comuni, istituzioni, arredo]
 correlati: [Gonfaloni, Bandiere Personalizzate, Gagliardetti]
 image:
-    - path: /assets/images/bandiere_bifacciali/bandiere_bifacciali.png
-      class: ""
-      alt: bandiere bifacciali personalizzata
-      config: halfscreen
-forza: [Tessuto di Poliestere, Stampa Sublimatica, 100% Made in Italy, Tre Strati con Oscurante]
+  - path:  /bandiere_bifacciali/bandiere_bifacciali_header.png
+    class: 'cover-from-md'
+    alt: bandiere bifacciali personalizzata, stampate in digitale ad alta definizione, finiture di qualit&agrave;, realizzate in tessuto raso brillante accoppiato con oascurante. Queste bandiere sono ideali sia per interno che per esterno.
+    config: slide
+forza:
+  [
+    Tessuto di Poliestere,
+    Stampa Sublimatica,
+    100% Made in Italy,
+    Tre Strati con Oscurante
+  ]
 preventivo: true
 price: 50,00 € cad.
-thumb: /assets/images/thumb/bandiere_bifacciali_thumb
+thumb:  /thumb/bandiere_bifacciali_thumb.jpg
+interesse:  /interesse/bandiere_bifacciali_interesse.jpg
 numberp: 4
 ---
+
 <h2 class="middle-title">Scheda Tecnica {{ page.title }}</h2>
 
 <ul class="scheda-tecnica card card__primary">
-    <li>
-        Tessuto di Poliestere
-        <p>I tessuti disponibili per realizzare le bandiere bifacciali istituzionali sono 2: Ducato e Raso. Il <strong>Ducato</strong> è un tessuto più <strong>opaco</strong> del raso e più resistente ai graffi e l’usura. Consigliamo quindi il tessuto Ducato per utilizzi fuori sede, come parate di Alpini. Il tessuto <strong>Raso</strong> risulta perfetto per interni e Locazioni Istituzionali, fa <strong>brillare i colori</strong> in maniera impareggiabile.</p>
-    </li>
-    <li>
-        Stampa Sublimatica
-        <p>La <strong>stampa digitale</strong> con tecnologia <strong>sublimatica</strong> è completamente impalpabile, entra nel tessuto e lascia intatte le sue caratteristiche di morbidezza e peso. I colori vengono fissati al tessuto a 200° e acquistano la loro <strong>brillantezza</strong> e <strong>resistenza</strong>, anche ai lavaggi.</p>
-    </li>
-    <li>
-        100% Made in Italy
-        <p>Tutta la manodopera, stampa e confezionamento sono realizzati nella nostra azienda. anche la struttura è made in Italy.
-        Grazie al <strong>laboratorio interno</strong> possiamo realizzare anche <strong>finiture su misura</strong>, così da rendere la bandiera personalizzata esattamente come la vuole il cliente.</p>
-    </li>
-    <li>
-        Tre Strati con Oscurante
-        <p>Le Bandiere bifacciali personalizzate le realizziamo su <strong>3 strati di tessuto</strong>, due all’esterno, stampati in digitale e uno oscurante all’interno. lo strato di tessuto  interno viene inserito per non far vedere i colori da uno strato stampato all’altro. <strong>Anche contro sole mantiene una buona coprenza</strong>, senza però alterare i colori sul lato visibile della bandiera.</p>
-    </li>
+  <li>
+    Tessuto di Poliestere
+    <p>
+      I tessuti disponibili per realizzare le bandiere bifacciali istituzionali
+      sono 2: Ducato e Raso. Il <strong>Ducato</strong> è un tessuto più
+      <strong>opaco</strong> del raso e più resistente ai graffi e l’usura.
+      Consigliamo quindi il tessuto Ducato per utilizzi fuori sede, come parate
+      di Alpini. Il tessuto <strong>Raso</strong> risulta perfetto per interni e
+      Locazioni Istituzionali, fa <strong>brillare i colori</strong> in maniera
+      impareggiabile.
+    </p>
+  </li>
+  <li>
+    Stampa Sublimatica
+    <p>
+      La <strong>stampa digitale</strong> con tecnologia
+      <strong>sublimatica</strong> è completamente impalpabile, entra nel
+      tessuto e lascia intatte le sue caratteristiche di morbidezza e peso. I
+      colori vengono fissati al tessuto a 200° e acquistano la loro
+      <strong>brillantezza</strong> e <strong>resistenza</strong>, anche ai
+      lavaggi.
+    </p>
+  </li>
+  <li>
+    100% Made in Italy
+    <p>
+      Tutta la manodopera, stampa e confezionamento sono realizzati nella nostra
+      azienda. anche la struttura è made in Italy. Grazie al
+      <strong>laboratorio interno</strong> possiamo realizzare anche
+      <strong>finiture su misura</strong>, così da rendere la bandiera
+      personalizzata esattamente come la vuole il cliente.
+    </p>
+  </li>
+  <li>
+    Tre Strati con Oscurante
+    <p>
+      Le Bandiere bifacciali personalizzate le realizziamo su
+      <strong>3 strati di tessuto</strong>, due all’esterno, stampati in
+      digitale e uno oscurante all’interno. lo strato di tessuto interno viene
+      inserito per non far vedere i colori da uno strato stampato all’altro.
+      <strong>Anche contro sole mantiene una buona coprenza</strong>, senza però
+      alterare i colori sul lato visibile della bandiera.
+    </p>
+  </li>
 </ul>
 <h3 class="middle-title">Galleria immagini</h3>
-<div class="splide gallery-container">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-
-                {% cloudinary halfscreen /assets/images/bandiere_bifacciali/bandiera_bifacciale_completa.png alt="bandiere bifacciali personalizzate modello Veneto completa" class="orizontal-image" %}
-            </li>
-            <li class="splide__slide">
-                {% cloudinary halfscreen /assets/images/bandiere_bifacciali/particolare_lavorazione.png alt="bandiere bifacciali personalizzate partricolare lavorazione" %}
-
-            </li>
-            <li class="splide__slide">
-
-                {% cloudinary halfscreen /assets/images/bandiere_bifacciali/struttura.png alt="bandiere bifacciali personalizzate struttura" class=" vertical-image" %}
-            </li>
-        </ul>
+<div class="swiper-container gallery-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_bifacciali/bandiere_bifacciali_veneto.png
+      --alt bandiere bifacciali personalizzate modello Veneto completa, questa bandiera &egrave; stata realizzata su tessuto raso di alta qualit&agrave;, finiture: passamaneria oro e frangia oro.
+       %}
     </div>
+    <div class="swiper-slide">
+      {% picture slide
+       /bandiere_bifacciali/bandiere_bifacciali_lavorazione.jpg
+      --alt particolare di finitura di bandiera bifacciale %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide 
+	   /bandiere_bifacciali/bandiere_bifacciali_stampa.jpg
+      --alt particoare di bandiera bifacciale su tessuto raso, stampa digitale ad alta definizione.
+      %}
+    </div>
+    <div class="swiper-slide">
+      {% picture slide 
+	   /bandiere_bifacciali/bandiere_bifacciali_struttura.png
+      --alt struttura per bandiere bifacciali in ottone con puntale, sono disponibili anche per mono bandiera o per due bandiere.
+      %}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
 
-<h3 class="middle-title" id="form">richiedi un preventivo</h3>
+<h3 class="middle-title" id="form">richiedi un preventivo per le vostre bandiere</h3>
 <div class="row-primary">
-        <div class="contact-row">
-        {%- include form/form_info.html -%}
-        {%- include form_base.html -%}
-    </div>
+  <div class="contact-row">
+    {%- include form/form_info.html -%} {%- include form_base.html -%}
+  </div>
 </div>
 
 <h3 class="middle-title">Descrizione</h3>
-<p>Le bandiere bifacciali sono realizzate in tessuto poliestere di alta qualit&agrave; raso, il vessillo &egrave; concepito in tessuto accoppiato con anima interna oscurante e, in caso di bandiera istituzionale interna, con frange le quali sono disponibili sia di colore argento che oro.</p>
+<p>
+  Le bandiere bifacciali sono realizzate in tessuto poliestere di alta
+  qualit&agrave; raso, il vessillo &egrave; concepito in tessuto accoppiato con
+  anima interna oscurante e, in caso di bandiera istituzionale interna, con
+  frange le quali sono disponibili sia di colore argento che oro.
+</p>
 
-<p>La bandiera bifacciale &egrave; ideale come vessillo da interni per comuni ed enti, <strong>eleva l'arredo e l'istituzionalit&agrave;</strong> del luogo. La <strong>stampa viene realizzata in alta definizione</strong> per nobilitare il prodotto.</p>
-<p>Le bandiere bifacciali possono venire fornite con struttura a lance in base alle esigenze del cliente </p>
+<p>
+  La bandiera bifacciale &egrave; ideale come vessillo da interni per comuni ed
+  enti, <strong>eleva l'arredo e l'istituzionalit&agrave;</strong> del luogo. La
+  <strong>stampa viene realizzata in alta definizione</strong> per nobilitare il
+  prodotto.
+</p>
+<p>
+  Le bandiere bifacciali possono venire fornite con struttura a lance in base
+  alle esigenze del cliente
+</p>
 <h3 class="middle-title">finiture</h3>
-<p>Il vessillo bifacciale viene realizzato totalmente internamente, sia stampato con <strong>tecnologie di ultima generazione</strong>, che rifinito nei nostri laboratori di cucitura da personale di esperienza attento ai dettagli.</p>
-<p>L'accoppiamento viene pima realizzato a laser per garantire la precisione, viene poi cucito con attenzione ed applicate la passamaneria e le frange richieste dal cliente.</p>
-<p>Ogni fase di produzione viene minuziosamente controllata dal nostro personale, questo nobilita e certifica il prodotto finale.</p>
+<p>
+  Il vessillo bifacciale viene realizzato totalmente internamente, sia stampato
+  con <strong>tecnologie di ultima generazione</strong>, che rifinito nei nostri
+  laboratori di cucitura da personale di esperienza attento ai dettagli.
+</p>
+<p>
+  L'accoppiamento viene pima realizzato a laser per garantire la precisione,
+  viene poi cucito con attenzione ed applicate la passamaneria e le frange
+  richieste dal cliente.
+</p>
+<p>
+  Ogni fase di produzione viene minuziosamente controllata dal nostro personale,
+  questo nobilita e certifica il prodotto finale.
+</p>
 <h3 class="middle-title">struttura</h3>
-<p>La struttura è realizzata in ottone e ferro cromato, dall'assemblaggio rapido grazie all'inserto a vite. La struttura, con base singola, per bandiere bifacciali è disponibile in mono lancia, o fino a 5 lance.</p>
-<p>La punta delle lance pu&ograve; anche avere lo spazio per inserire lo stemma del comune o dell'ente. La base &egrave; formata da un peso e la sua copertura cromata.
+<p>
+  La struttura è realizzata in ottone e ferro cromato, dall'assemblaggio rapido
+  grazie all'inserto a vite. La struttura, con base singola, per bandiere
+  bifacciali è disponibile in mono lancia, o fino a 5 lance.
+</p>
+<p>
+  La punta delle lance pu&ograve; anche avere lo spazio per inserire lo stemma
+  del comune o dell'ente. La base &egrave; formata da un peso e la sua copertura
+  cromata.
 </p>
