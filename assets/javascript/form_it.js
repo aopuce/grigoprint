@@ -469,8 +469,10 @@ function calcolaPrezzo(inputId) {
 	document.getElementById('prezzo').classList.remove('warn')
 	switch (window.document.title) {
 		case 'Grigoprint | Tappeto Personalizzato':
-		case 'Grigoprint | Tappeto Sottomoto':
 			calcolaPrezzoTappeti()
+			break
+		case 'Grigoprint | Tappeto Sottomoto':
+			calcolaPrezzoTappetiSottomoto()
 			break
 		case 'Grigoprint | Tovaglie Pubblicitarie':
 			calcolaPrezzoTovaglie()
@@ -501,6 +503,10 @@ function calcolaPrezzo(inputId) {
 			break
 		case 'Grigoprint | Frame in tessuto':
 			calcolaPrezzoCornice()
+			break
+		// offerte
+		case 'Grigoprint | Offerte ombrelloni da giardino':
+			calcolaPrezzoOfferteOmbrelloniGiardino()
 			break
 		default:
 			scriviPrezzo(
@@ -599,7 +605,80 @@ function calcolaPrezzoTappeti() {
 	}
 	// calcolo finale prezzo (cambiare il prezzo del listino)
 	//         altezzaTessuto/metri lineari-->prezzo
-	var listini = {100: {10: 46.2, 10000: 39}, 150: {10: 66.8, 10000: 56}}
+	var listini = {100: {10: 55.9, 50: 42, 10000: 37.6}, 150: {10: 71.4, 50: 52.3, 10000: 46.4}}
+	var prezzo =
+		ml *
+		listini[altezzaTessuto][getQuantitàListino(ml, listini[altezzaTessuto])]
+
+	scriviPrezzo(
+		prezzo,
+		'Prezzo indicativo che verrà confermato al momento della Richiesta'
+	)
+}
+function calcolaPrezzoTappetiSottomoto() {
+	var ml
+	var altezzaTessuto
+	var altezza = parseInt(getInputValue('altezza'))
+	var larghezza = parseInt(getInputValue('larghezza'))
+	var quantita = parseInt(getInputValue('quantita'))
+
+	// controllo validità input
+	if (isNaN(altezza) || altezza <= 0) {
+		campiPreventivoInvalidi.push('altezza')
+	}
+	if (isNaN(larghezza) || larghezza <= 0) {
+		campiPreventivoInvalidi.push('larghezza')
+	}
+	if (isNaN(quantita) || quantita <= 0) {
+		campiPreventivoInvalidi.push('quantita')
+	}
+	if (campiPreventivoInvalidi.length > 0) return
+
+	// calcolo resa e consumo
+	if (altezza > larghezza) {
+		if (altezza <= 100) {
+			ml = (larghezza / 100) * quantita
+			altezzaTessuto = 100
+		} else if (altezza <= 150) {
+			ml = (larghezza / 100) * quantita
+			altezzaTessuto = 150
+		} else if (larghezza <= 100) {
+			ml = (altezza / 100) * quantita
+			altezzaTessuto = 100
+		} else if (larghezza <= 150) {
+			ml = (altezza / 100) * quantita
+			altezzaTessuto = 150
+		} else {
+			scriviPrezzo(
+				'Richiedi in Azienda',
+				'Misure troppo grandi, vi offriremo piu tappeti giuntati'
+			)
+			return
+		}
+	} else {
+		if (larghezza <= 100) {
+			ml = (altezza / 100) * quantita
+			altezzaTessuto = 100
+		} else if (larghezza <= 150) {
+			ml = (altezza / 100) * quantita
+			altezzaTessuto = 150
+		} else if (altezza <= 100) {
+			ml = (larghezza / 100) * quantita
+			altezzaTessuto = 100
+		} else if (altezza <= 150) {
+			ml = (larghezza / 100) * quantita
+			altezzaTessuto = 150
+		} else {
+			scriviPrezzo(
+				'Richiedi in Azienda',
+				'Misure troppo grandi, vi offriremo più tappeti giuntati'
+			)
+			return
+		}
+	}
+	// calcolo finale prezzo (cambiare il prezzo del listino)
+	//         altezzaTessuto/metri lineari-->prezzo
+	var listini = {100: {10: 41.6, 50: 32, 100: 24.6, 200: 23.1, 10000: 22.1}, 150: {10: 62.3, 50: 47.8, 100: 35, 200: 32.9, 10000: 31.6}}
 	var prezzo =
 		ml *
 		listini[altezzaTessuto][getQuantitàListino(ml, listini[altezzaTessuto])]
@@ -673,7 +752,7 @@ function calcolaPrezzoTovaglie() {
 	}
 	// calcolo finale prezzo (cambiare il prezzo del listino)
 	//         altezzaTessuto/metri lineari-->prezzo
-	var listini = {150: {15: 25, 10000: 20.7}, 300: {15: 58.9, 10000: 50}}
+	var listini = {150: {15: 26, 10000: 21.6}, 300: {15: 61.4, 10000: 52}}
 	var prezzo =
 		ml *
 		listini[altezzaTessuto][getQuantitàListino(ml, listini[altezzaTessuto])]
@@ -719,23 +798,25 @@ function calcolaPrezzoManicheAVento() {
 		'non personalizzata': {
 			poliestere: {
 				400: 'Non Disponibile in Poliestere',
-				350: 'Non Disponibile in Poliestere',
+				360: 'Non Disponibile in Poliestere',
 				300: 150,
 				260: 132,
+				240: 120,
 				200: 106,
 				150: 83,
 				130: 75,
-				108: 68
+				100: 68
 			},
 			acrilico: {
 				400: 730,
-				350: 507,
+				360: 507,
 				300: 330,
 				260: 291,
+				240: 270,
 				200: 234,
 				150: 'Non Disponibile in Acrilico',
 				130: 'Non Disponibile in Acrilico',
-				108: 'Non Disponibile in Acrilico'
+				100: 'Non Disponibile in Acrilico'
 			}
 		},
 		personalizzata: {
@@ -824,9 +905,9 @@ function calcolaPrezzoBandiereBifacciali() {
 	// calcolo finale prezzo (cambiare il prezzo del listino)
 	//         dimensione/quantità-->prezzo
 	var listini = {
-		70: {3: 66, 10000: 60},
-		100: {3: 108, 10000: 99},
-		150: {3: 193, 10000: 177},
+		70: {3: 68, 10000: 63},
+		100: {3: 112, 10000: 103},
+		150: {3: 201, 10000: 184},
 		senza: -10,
 		oro: 0,
 		argento: 0
@@ -1305,7 +1386,86 @@ function calcolaPrezzoOmbrelloniGiardino() {
 
 	var prezzo = listini[modello][struttura][misura][0]
 	if (typeof prezzo === 'number') {
-		prezzo = listini[modello][struttura][misura][0] * 0.7 // da listino gregorio a prezzo vendita
+		prezzo = listini[modello][struttura][misura][0] * 0.75 // da listino gregorio a prezzo vendita
+		prezzo += listini.base[base][0]
+		if (spedizione === 'spedizione') {
+			// se ritiro in sede non conteggio
+			prezzo += listini[modello][struttura][misura][1] + listini.base[base][1]
+			prezzo *= quantita
+		}
+		scriviPrezzo(
+			prezzo,
+			'Prezzo indicativo che verrà confermato al momento della Richiesta'
+		)
+	} else {
+		scriviPrezzo(prezzo, '')
+	}
+}
+function calcolaPrezzoOfferteOmbrelloniGiardino() {
+	var modello = getInputValue('modello')
+	var misura = getInputValue('misura')
+	var struttura = getInputValue('struttura')
+	var base = getInputValue('base')
+	var spedizione = getInputValue('spedizione')
+	var quantita = parseInt(getInputValue('quantita'))
+
+	// controllo validità input
+	// var valido = true
+	if (modello === '') {
+		campiPreventivoInvalidi.push('modello')
+	}
+	if (misura === '') {
+		campiPreventivoInvalidi.push('misura')
+	}
+	if (struttura === '') {
+		campiPreventivoInvalidi.push('struttura')
+	}
+	if (base === '') {
+		campiPreventivoInvalidi.push('base')
+	}
+	if (spedizione === '') {
+		campiPreventivoInvalidi.push('spedizione')
+	}
+	if (isNaN(quantita) || quantita <= 0) {
+		campiPreventivoInvalidi.push('quantita')
+	}
+	if (campiPreventivoInvalidi.length > 0) return
+
+	// calcolo finale prezzo (cambiare il prezzo del listino)
+	// prezzi da inserire: listino pubblico, poi sotto sconto
+	//         modello|struttura|misura|-->[prezzo, spedizione]
+	var listini = {
+		quadrato: {
+			legno: {
+				'3x3': [276, 35],
+				'3.5x3.5': [358, 40],
+				'4x4': [447, 45]
+			}
+		},
+		rettangolare: {
+			legno: {
+				'2x3': [244, 30],
+				'3x4': [358, 40]
+			}
+		},
+		tondo: {
+			legno: {
+				/*'2.5x2.5': [0, 35],*/
+				'3x3': [236, 35],
+				'3.5x3.5': [268, 40],
+				'4x4': [317, 45]
+			}
+		},
+		base: {
+			senza: [0, 0],
+			55: [40, 30],
+			75: [75, 40]
+		}
+	}
+
+	var prezzo = listini[modello][struttura][misura][0]
+	if (typeof prezzo === 'number') {
+		prezzo = listini[modello][struttura][misura][0]  // da listino 40%
 		prezzo += listini.base[base][0]
 		if (spedizione === 'spedizione') {
 			// se ritiro in sede non conteggio
@@ -1440,14 +1600,15 @@ var mappaAggiornaSelect = {
 			tessuto: ['poliestere|Poliestere'],
 			misura: [
 				'|Seleziona miusra',
-				'108|&Oslash;25cm x &#8596;108 cm',
+				'100|&Oslash;25cm x &#8596;100 cm',
 				'130|&Oslash;30cm x &#8596;130 cm',
-				'150|&Oslash;34cm x &#8596;150 cm',
+				'150|&Oslash;35cm x &#8596;150 cm',
 				'200|&Oslash;46cm x &#8596;200 cm',
+				'240|&Oslash;60cm x &#8596;240 cm',
 				'260|&Oslash;60cm x &#8596;260 cm',
-				'300|&Oslash;69cm x &#8596;300 cm',
-				'350|&Oslash;80cm x &#8596;350 cm',
-				'400|&Oslash;92cm x &#8596;400 cm'
+				'300|&Oslash;70cm x &#8596;300 cm',
+				'360|&Oslash;80cm x &#8596;360 cm',
+				'400|&Oslash;95cm x &#8596;400 cm'
 			]
 		},
 		'non personalizzata': {
@@ -1458,15 +1619,15 @@ var mappaAggiornaSelect = {
 			],
 			misura: [
 				'|Seleziona miusra',
-				'108|&Oslash;25cm x &#8596;108 cm',
+				'100|&Oslash;25cm x &#8596;100 cm',
 				'130|&Oslash;30cm x &#8596;130 cm',
-				'150|&Oslash;34cm x &#8596;150 cm',
+				'150|&Oslash;35cm x &#8596;150 cm',
 				'200|&Oslash;46cm x &#8596;200 cm',
+				'240|&Oslash;60cm x &#8596;240 cm',
 				'260|&Oslash;60cm x &#8596;260 cm',
-				'300|&Oslash;69cm x &#8596;300 cm',
-				'350|&Oslash;80cm x &#8596;350 cm',
-				'400|&Oslash;92cm x &#8596;400 cm'
-			]
+				'300|&Oslash;70cm x &#8596;300 cm',
+				'360|&Oslash;80cm x &#8596;360 cm',
+				'400|&Oslash;95cm x &#8596;400 cm'			]
 		},
 		// 'personalizzato':{'tessuto':['poliestere|Poliestere']},
 		// 'non personalizzato':{'tessuto':['|Seleziona una Tessuto','poliestere|Poliestere','acrilico|Acrilico']},
@@ -1522,6 +1683,56 @@ var mappaAggiornaSelect = {
 				'senza|Senza base',
 				'4piastrelle| 4 piastrelle in graniglia da 50Kg cad.',
 				'8piastrelle| 8 zavorre in graniglia da 50Kg cad.'
+			]
+		},
+		tondo: {
+			misura: [
+				'|Seleziona una Misura',
+				'3x3|3x3 metri',
+				'3.5x3.5|3.5x3.5 metri',
+				'4x4|4x4 metri'
+			],
+			struttura: [
+				'legno|Legno classico',
+			],
+			base: [
+				'|Seleziona una Base',
+				'senza|Senza base',
+				'55|55 Kg',
+				'75|75 Kg',
+			]
+		},
+		rettangolare: {
+			misura: [
+				'|Seleziona una Misura',
+				'2x3|2x3 metri',
+				'3x4|3x4 metri'
+			],
+			struttura: [
+				'legno|Legno classico',
+			],
+			base: [
+				'|Seleziona una Base',
+				'senza|Senza base',
+				'55|55 Kg',
+				'75|75 Kg',
+			]
+		},
+		quadrato: {
+			misura: [
+				'|Seleziona una Misura',
+				'3x3|3x3 metri',
+				'3.5x3.5|3.5x3.5 metri',
+				'4x4|4x4 metri'
+			],
+			struttura: [
+				'legno|Legno classico',
+			],
+			base: [
+				'|Seleziona una Base',
+				'senza|Senza base',
+				'55|55 Kg',
+				'75|75 Kg',
 			]
 		}
 	}

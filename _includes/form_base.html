@@ -40,7 +40,10 @@
         <!--</div>
         <div class="col-form prezzo_select">-->
             {% if page.preventivo == true %}
-            <button type="button" name="listino" class="btn btn-default btn-large" id="pricelist" onclick="window.open('http://www.grigoprint.it/listini/catalogo_4.pdf#page={{page.numberp}}')">Apri Listino Prezzi pdf</button>
+                {% if page.hideb == true %}
+                {% else %}
+                <button type="button" name="listino" class="btn btn-default btn-large" id="pricelist" onclick="window.open('http://www.grigoprint.it/listini/catalogo_4.pdf#page={{page.numberp}}')">Apri Listino Prezzi pdf</button>
+                {% endif %}
             <h5 class="btn btn-default btn-collapse btn-large" data-toggle="collapse" data-target="prod">
                 Calcola Preventivo
                 <span class="grigo-icons">
@@ -101,6 +104,8 @@
                 {% include form/tovaglie_f.html %}
                 {% when 'Ombrelloni da giardino' %}
                 {% include form/giardino_f.html %}
+                {% when 'Offerte ombrelloni da giardino' %}
+                {% include form/offerte_o.html %}
             {% endcase %}
         <!--</div>-->
             </div>

@@ -1,5 +1,7 @@
 # _data/picture.yml
 
+base_path: assets
+
 media_queries:
     mobile: "max-width: 600px"
     tablet: "min-width: 601px"

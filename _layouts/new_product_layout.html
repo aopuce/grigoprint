@@ -153,7 +153,11 @@ layout: compress
 	{%- include footer_2.html -%}
 	{%- include static_link.html -%}
 	<!--</div>-->
-	{%- include js_end.html -%}
+	{% if page.title == "Offerte ombrelloni da giardino" %}
+		{%- include js_end_swiper.html -%}
+	{% else %}
+		{%- include js_end.html -%}
+	{% endif %}
 
 </body>
 

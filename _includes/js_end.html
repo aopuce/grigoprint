@@ -8,12 +8,13 @@ source_dir: assets/javascript
 destination_path: /assets/javascript/app 
 baseurl: '{{ site.url }}/' 
 assets: 
+- swiper_init
 - form_it 
 - menu 
-- swiper_init 
 - lazysizes.min 
 {% endminibundle %} 
 {% else %}
+<script src="{{ '/assets/javascript/tabs.js' }}"></script>
 <script src="{{ '/assets/javascript/swiper_init.js' }}"></script>
 <script src="{{ '/assets/javascript/menu.js' }}"></script>
 <script src="{{ '/assets/javascript/form_it.js' }}"></script>

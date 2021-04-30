@@ -36,6 +36,7 @@ plugins:
   - jekyll/minibundle
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-responsive-image
   #- jekyll-compass
 sass:
   style: compressed

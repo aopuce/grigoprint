@@ -73,6 +73,9 @@ body {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: 10px;
+			&.m_products {
+				grid-column: 1 / 5;
+			}
 		}
 		.row-primary {
 			grid-column: 1 / 9;

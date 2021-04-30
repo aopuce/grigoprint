@@ -7,7 +7,7 @@ input, button, submit {
     font-family: $h-font-family;
     display: inline-block;
     text-align: center;
-
+    
     @extend %button_box;
 
     -webkit-transition-property: color, background, box-shadow, transform;
@@ -249,7 +249,7 @@ input, button, submit {
         background: none;
         border: 2px solid tint($long-text, 50%);
         padding: calc(1rem - 2px) 0.8rem;
-        margin: 1rem 0 0;
+        
 
         @include box-shadow(none);
 
